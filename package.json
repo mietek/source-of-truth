@@ -1,0 +1,22 @@
+{
+  "name": "source-of-truth",
+  "version": "1.0.0",
+  "description": "TODO",
+  "author": "Miëtek Bak <hello@mietek.io>",
+  "license": "MIT X11",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mietek/source-of-truth.git"
+  },
+  "dependencies": {
+    "flux": "^2.0.1",
+    "object-assign": "^2.0.0",
+    "relative-date": "^1.1.2"
+  },
+  "devDependencies": {
+    "body-parser": "^1.12.2",
+    "cors": "^2.5.3",
+    "express": "^4.12.3",
+    "request": "^2.55.0"
+  }
+}
