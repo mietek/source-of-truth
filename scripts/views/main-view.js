@@ -162,21 +162,26 @@ var _ = {
             padding:       '1px'
           }
         },
-        isRoot ? null :
-          this.renderColumnHeader(columnId, columnIndex),
-        (isRoot || !entryIds.length) ? null :
-          r.div({
-              className: 'browser-column-heading',
-              style: {
-                color:        '#999',
-                fontSize:     '11px',
-                lineHeight:   '16px',
-                paddingLeft:  '8px'
-              }
-            },
-            r.br(),
-            r.span('',
-              'References')),
+        r.div({
+            style: {
+              paddingLeft:  '8px',
+              paddingRight: '8px'
+            }
+          },
+          isRoot ? null :
+            this.renderColumnHeader(columnId, columnIndex),
+          (isRoot || !entryIds.length) ? null :
+            r.div({
+                className: 'browser-column-heading',
+                style: {
+                  color:        '#999',
+                  fontSize:     '11px',
+                  lineHeight:   '16px'
+                }
+              },
+              r.br(),
+              r.span('',
+                'References'))),
         entryIds.map(function (entryId, entryIndex) {
             return (
               this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
@@ -205,9 +210,8 @@ var _ = {
       r.div({
           className: 'browser-column-header',
           style: {
-            fontSize:     '11px',
-            lineHeight:   '16px',
-            paddingLeft:  '8px'
+            fontSize:   '11px',
+            lineHeight: '16px'
           }
         },
         r.table({
