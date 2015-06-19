@@ -1,15 +1,15 @@
 module.exports = [
   {
-    "author": "D.A. Turner",
-    "title": "Elementary Strong Functional Programming",
+    "author": "David Turner",
+    "title": "Elementary strong functional programming",
     "year": 1995,
     "references": [
       {
         "authors": [
           "R.S. Bird",
-          "P. Wadler"
+          "Philip Wadler"
         ],
-        "title": "Introduction to Functional Programming",
+        "title": "Introduction to functional programming",
         "year": 1988
       },
       {
@@ -31,31 +31,31 @@ module.exports = [
           "Paul Hudak",
           "et al."
         ],
-        "title": "Report on the Programming Language Haskell",
+        "title": "Report on the programming language Haskell",
         "year": 1992
       },
       {
         "author": "A.M. Pitts",
-        "title": "A Co-induction Principle for Recursively Defined Domains",
+        "title": "A co-induction principle for recursively defined domains",
         "year": 1994
       },
       {
         "author": "Colin Runciman",
-        "title": "What about the Natural Numbers",
+        "title": "What about the natural numbers",
         "year": 1989
       },
       {
         "author": "S.J. Thompson",
-        "title": "A Logic for Miranda",
+        "title": "A logic for Miranda",
         "year": 1989
       },
       {
-        "author": "D.A. Turner",
-        "title": "Functional Programming and Proofs of Program Correctness",
+        "author": "David Turner",
+        "title": "Functional programming and proofs of program correctness",
         "year": 1982
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       }
@@ -66,7 +66,7 @@ module.exports = [
       "Alastair Telford",
       "David Turner"
     ],
-    "title": "Ensuring Streams Flow",
+    "title": "Ensuring streams flow",
     "year": 1997,
     "references": [
       {
@@ -92,7 +92,7 @@ module.exports = [
       },
       {
         "author": "E.W. Dijkstra",
-        "title": "A Discipline of Programming",
+        "title": "A discipline of programming",
         "year": 1976
       },
       {
@@ -127,7 +127,7 @@ module.exports = [
       },
       {
         "author": "P. Martin-Löf",
-        "title": "An intuitionistic theory of types: predicative part",
+        "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
@@ -148,23 +148,23 @@ module.exports = [
         "year": 1987
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "Theory of type polymorphism in programming",
+        "author": "Robin Milner",
+        "title": "A theory of type polymorphism in programming",
         "year": 1978
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "A Calculus of Communicating Systems",
+        "author": "Robin Milner",
+        "title": "A calculus of communicating systems",
         "year": 1980
       },
       {
         "author": "L.C. Paulson",
-        "title": "ML for the Working Programmer",
+        "title": "ML for the working programmer",
         "year": 1996
       },
       {
         "author": "J.J.M.M. Rutten",
-        "title": "Universal coalgebra: a theory of systems",
+        "title": "Universal coalgebra: A theory of systems",
         "year": 1996
       },
       {
@@ -174,39 +174,39 @@ module.exports = [
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
         "title": "Ensuring the productivity of infinite structures",
         "year": 1997
       },
       {
         "author": "S.J. Thompson",
-        "title": "Type Theory and Functional Programming",
+        "title": "Type theory and functional programming",
         "year": 1991
       },
       {
         "author": "S.J. Thompson",
-        "title": "Haskell: The Craft of Functional Programming",
+        "title": "Haskell: The craft of functional programming",
         "year": 1996
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       },
       {
-        "author": "D.A. Turner",
-        "title": "Research Topics in Functional Programming",
+        "author": "David Turner",
+        "title": "Research topics in functional programming",
         "year": 1990
       },
       {
-        "author": "D.A. Turner",
-        "title": "Codata",
+        "author": "David Turner",
+        "title": "Co-data",
         "year": 1995
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Elementary strong functional programming",
         "year": 1995
       }
@@ -217,7 +217,7 @@ module.exports = [
       "Alastair Telford",
       "David Turner"
     ],
-    "title": "Ensuring the Productivity of Infinite Structures",
+    "title": "Ensuring the productivity of infinite structures",
     "year": 1997,
     "references": [
       {
@@ -249,14 +249,14 @@ module.exports = [
       {
         "authors": [
           "K. Davis",
-          "P. Wadler"
+          "Philip Wadler"
         ],
         "title": "Strictness analysis in 4D",
         "year": 1991
       },
       {
         "author": "E.W. Dijkstra",
-        "title": "A Discipline of Programming",
+        "title": "A discipline of programming",
         "year": 1976
       },
       {
@@ -280,7 +280,7 @@ module.exports = [
           "P. Taylor",
           "Y. Lafont"
         ],
-        "title": "Proofs and Types",
+        "title": "Proofs and types",
         "year": 1989
       },
       {
@@ -324,7 +324,7 @@ module.exports = [
       },
       {
         "author": "P. Martin-Löf",
-        "title": "An intuitionistic theory of types: predicative part",
+        "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
@@ -345,23 +345,23 @@ module.exports = [
         "year": 1987
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "Theory of type polymorphism in programming",
+        "author": "Robin Milner",
+        "title": "A theory of type polymorphism in programming",
         "year": 1978
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "A Calculus of Communicating Systems",
+        "author": "Robin Milner",
+        "title": "A calculus of communicating systems",
         "year": 1980
       },
       {
         "author": "L.C. Paulson",
-        "title": "ML for the Working Programmer",
+        "title": "ML for the working programmer",
         "year": 1996
       },
       {
         "author": "J.J.M.M. Rutten",
-        "title": "Universal coalgebra: a theory of systems",
+        "title": "Universal coalgebra: A theory of systems",
         "year": 1996
       },
       {
@@ -371,36 +371,36 @@ module.exports = [
       },
       {
         "author": "S.J. Thompson",
-        "title": "Type Theory and Functional Programming",
+        "title": "Type theory and functional programming",
         "year": 1991
       },
       {
         "author": "S.J. Thompson",
-        "title": "Haskell: The Craft of Functional Programming",
+        "title": "Haskell: The craft of functional programming",
         "year": 1996
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       },
       {
-        "author": "D.A. Turner",
-        "title": "Research Topics in Functional Programming",
+        "author": "David Turner",
+        "title": "Research topics in functional programming",
         "year": 1990
       },
       {
-        "author": "D.A. Turner",
-        "title": "Codata",
+        "author": "David Turner",
+        "title": "Co-data",
         "year": 1995
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Elementary strong functional programming",
         "year": 1995
       },
       {
-        "author": "P. Wadler",
+        "author": "Philip Wadler",
         "title": "Comprehending monads",
         "year": 1992
       }
@@ -408,7 +408,7 @@ module.exports = [
   },
   {
     "author": "Alexander Kaganovsky",
-    "title": "Computing with Exact Real Numbers in a Radix-r System",
+    "title": "Computing with exact real numbers in a radix-r system",
     "year": 1999,
     "references": [
       {
@@ -427,7 +427,7 @@ module.exports = [
           "R. Cartwright",
           "et al."
         ],
-        "title": "Exact Real Arithmetic: A Case Study in Higher Order Programming",
+        "title": "Exact real arithmetic: A case study in higher order programming",
         "year": 1986
       },
       {
@@ -435,7 +435,7 @@ module.exports = [
           "H. Boehm",
           "R. Cartwright"
         ],
-        "title": "Exact Real Arithmetic: Formulating Real Numbers as Functions",
+        "title": "Exact real arithmetic: Formulating real numbers as functions",
         "year": 1990
       },
       {
@@ -443,22 +443,22 @@ module.exports = [
           "A. Edalat",
           "P.J. Potts"
         ],
-        "title": "A New Representation for Exact Real Numbers",
+        "title": "A new representation for exact real numbers",
         "year": 1997
       },
       {
         "author": "M.D. Ercegovac",
-        "title": "On-line Arithmetic: an Overview",
+        "title": "On-line arithmetic: An overview",
         "year": 1984
       },
       {
-        "author": "A. Kaganovsky",
-        "title": "Computing with Exact Real Numbers in a Radix-r System",
+        "author": "Alexander Kaganovsky",
+        "title": "Computing with exact real numbers in a radix-r system",
         "year": 1998
       },
       {
         "author": "V. Ménissier-Morain",
-        "title": "Arbitrary Precision Real Arithmetic: Design and Algorithms"
+        "title": "Arbitrary precision real arithmetic: Design and algorithms"
       },
       {
         "author": "J.-M. Muller",
@@ -472,52 +472,52 @@ module.exports = [
       },
       {
         "author": "C.P. Pixley",
-        "title": "Demand-Driven Arithmetic",
+        "title": "Demand-driven arithmetic",
         "year": 1982
       },
       {
         "author": "J.E. Robertson",
-        "title": "A New Class of Digital Division Methods",
+        "title": "A new class of digital division methods",
         "year": 1958
       },
       {
         "author": "J. Schwarz",
-        "title": "Implementing Infinite Precision Arithmetic",
+        "title": "Implementing infinite precision arithmetic",
         "year": 1989
       },
       {
         "author": "D.M. Smith",
-        "title": "A Multiple-Precision Division Algorithm",
+        "title": "A multiple-precision division algorithm",
         "year": 1996
       },
       {
         "author": "K.R. Stromberg",
-        "title": "Introduction to Classical Real Analysis",
+        "title": "Introduction to classical real analysis",
         "year": 1981
       },
       {
-        "author": "A.M. Turing",
-        "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+        "author": "Alan Turing",
+        "title": "On computable numbers, with an application to the Entscheidungsproblem",
         "year": 1936
       },
       {
-        "author": "D.A. Turner",
-        "title": "An Overview of Miranda",
+        "author": "David Turner",
+        "title": "An overview of Miranda",
         "year": 1986
       },
       {
-        "author": "D.A. Turner",
-        "title": "SASL Language Manual",
+        "author": "David Turner",
+        "title": "SASL language manual",
         "year": 1976
       },
       {
         "author": "J.E. Vuillemin",
-        "title": "Exact Real Computer Arithmetic with Continued Fractions",
+        "title": "Exact real computer arithmetic with continued fractions",
         "year": 1990
       },
       {
         "author": "E. Wiedmer",
-        "title": "Computing with Infinite Objects",
+        "title": "Computing with infinite objects",
         "year": 1980
       },
       {
@@ -529,7 +529,7 @@ module.exports = [
   },
   {
     "author": "Alexander Kaganovsky",
-    "title": "Exact Complex Arithmetic in an Imaginary Radix System",
+    "title": "Exact complex arithmetic in an imaginary radix system",
     "year": 1999,
     "references": [
       {
@@ -544,7 +544,7 @@ module.exports = [
           "W.T. Vetterling",
           "B.P. Flannery"
         ],
-        "title": "Numerical Recipes in C: The Art of Scientific Computing",
+        "title": "Numerical recipes in C: The art of scientific computing",
         "year": 1995
       },
       {
@@ -554,7 +554,7 @@ module.exports = [
       },
       {
         "author": "W. Kahan",
-        "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing’s Sign Bit",
+        "title": "Branch cuts for complex elementary functions, or much ado about nothing’s sign bit",
         "year": 1987
       },
       {
@@ -563,7 +563,7 @@ module.exports = [
           "R. Cartwright",
           "et al."
         ],
-        "title": "Exact Real Arithmetic: A Case Study in Higher Order Programming",
+        "title": "Exact real arithmetic: A case study in higher order programming",
         "year": 1986
       },
       {
@@ -571,17 +571,17 @@ module.exports = [
           "H. Boehm",
           "R. Cartwright"
         ],
-        "title": "Exact Real Arithmetic: Formulating Real Numbers as Functions",
+        "title": "Exact real arithmetic: Formulating real numbers as functions",
         "year": 1990
       },
       {
         "author": "E. Wiedmer",
-        "title": "Computing with Infinite Objects",
+        "title": "Computing with infinite objects",
         "year": 1980
       },
       {
         "author": "J.E. Vuillemin",
-        "title": "Exact Real Computer Arithmetic with Continued Fractions",
+        "title": "Exact real computer arithmetic with continued fractions",
         "year": 1990
       },
       {
@@ -589,47 +589,47 @@ module.exports = [
           "A. Edalat",
           "P.J. Potts"
         ],
-        "title": "A New Representation for Exact Real Numbers",
+        "title": "A new representation for exact real numbers",
         "year": 1997
       },
       {
-        "author": "A. Kaganovsky",
-        "title": "Computing with Exact Real Numbers in a Radix-r System",
+        "author": "Alexander Kaganovsky",
+        "title": "Computing with exact real numbers in a radix-r system",
         "year": 1998
       },
       {
         "author": "D.E. Knuth",
-        "title": "An Imaginary Number System",
+        "title": "An imaginary number system",
         "year": 1960
       },
       {
         "author": "W. Penney",
-        "title": "A ‘Binary’ System for Complex Numbers",
+        "title": "A ‘binary’ system for complex numbers",
         "year": 1965
       },
       {
         "author": "T.J. O’Reilly",
-        "title": "A Positional Notation for Complex Numbers",
+        "title": "A positional notation for complex numbers",
         "year": 1974
       },
       {
         "author": "W.N. Holmes",
-        "title": "Representation for Complex Numbers",
+        "title": "Representation for complex numbers",
         "year": 1978
       },
       {
         "author": "L.B. Wadel",
-        "title": "Negative Base Number Systems",
+        "title": "Negative base number systems",
         "year": 1957
       },
       {
         "author": "G.F. Songster",
-        "title": "Negative-Base Number-Representation Systems",
+        "title": "Negative base number representation systems",
         "year": 1963
       },
       {
         "author": "M.P. de Regt",
-        "title": "Negative Radix Arithmetic",
+        "title": "Negative radix arithmetic",
         "year": 1967
       },
       {
@@ -638,12 +638,12 @@ module.exports = [
           "S. Chakrabarti",
           "E.V. Krishnamurthy"
         ],
-        "title": "Arithmetic Algorithms in a Negative Base",
+        "title": "Arithmetic algorithms in a negative base",
         "year": 1973
       },
       {
         "author": "Z. Pawlak",
-        "title": "An Electronic Digital Computer Based on the ‘-2’ System",
+        "title": "An electronic digital computer based on the ‘-2’ system",
         "year": 1959
       },
       {
@@ -653,27 +653,27 @@ module.exports = [
       },
       {
         "author": "C.K. Yuen",
-        "title": "On the Floating Point Representation of Complex Numbers",
+        "title": "On the floating point representation of complex numbers",
         "year": 1975
       },
       {
         "author": "K.R. Stromberg",
-        "title": "Introduction to Classical Real Analysis",
+        "title": "Introduction to classical real analysis",
         "year": 1981
       },
       {
         "author": "J.E. Robertson",
-        "title": "A New Class of Digital Division Methods",
+        "title": "A new class of digital division methods",
         "year": 1958
       },
       {
         "author": "D.M. Smith",
-        "title": "A Multiple-Precision Division Algorithm",
+        "title": "A multiple-precision division algorithm",
         "year": 1996
       },
       {
         "author": "J. Schwarz",
-        "title": "Implementing Infinite Precision Arithmetic",
+        "title": "Implementing infinite precision arithmetic",
         "year": 1989
       }
     ]
@@ -683,12 +683,12 @@ module.exports = [
       "Alastair Telford",
       "David Turner"
     ],
-    "title": "A Hierarchy of Languages with Strong Termination Properties",
+    "title": "A hierarchy of languages with strong termination properties",
     "year": 2000,
     "references": [
       {
         "author": "A. Abel",
-        "title": "Foetus - termination checker for simple functional programs",
+        "title": "Foetus: Termination checker for simple functional programs",
         "year": 1998
       },
       {
@@ -696,7 +696,7 @@ module.exports = [
           "F. Baader",
           "T. Nipkow"
         ],
-        "title": "Term Rewriting and All That",
+        "title": "Term rewriting and all that",
         "year": 1998
       },
       {
@@ -764,10 +764,10 @@ module.exports = [
       {
         "authors": [
           "K. Davis",
-          "P. Wadler"
+          "Philip Wadler"
         ],
         "title": "Strictness analysis in 4D",
-        "year": 1990
+        "year": 1991
       },
       {
         "authors": [
@@ -798,7 +798,7 @@ module.exports = [
           "Carsten K. Gomard",
           "Peter Sestoft"
         ],
-        "title": "Partial Evaluation and Automatic Program Generation",
+        "title": "Partial evaluation and automatic program generation",
         "year": 1993
       },
       {
@@ -808,7 +808,7 @@ module.exports = [
       },
       {
         "author": "P. Martin-Löf",
-        "title": "An intuitionistic theory of types: predicative part",
+        "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
@@ -820,13 +820,13 @@ module.exports = [
         "year": 1996
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "Theory of type polymorphism in programming",
+        "author": "Robin Milner",
+        "title": "A theory of type polymorphism in programming",
         "year": 1978
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "A Calculus of Communicating Systems",
+        "author": "Robin Milner",
+        "title": "A calculus of communicating systems",
         "year": 1980
       },
       {
@@ -836,7 +836,7 @@ module.exports = [
           "R. Harper",
           "D. MacQueen"
         ],
-        "title": "The Definition of Standard ML",
+        "title": "The definition of Standard ML",
         "year": 1997
       },
       {
@@ -868,7 +868,7 @@ module.exports = [
       },
       {
         "author": "C. Reade",
-        "title": "Elements of Functional Programming",
+        "title": "Elements of functional programming",
         "year": 1989
       },
       {
@@ -878,43 +878,43 @@ module.exports = [
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Streams Flow",
+        "title": "Ensuring streams flow",
         "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
         "title": "Ensuring the productivity of infinite structures",
         "year": 1997
       },
       {
         "author": "S.J. Thompson",
-        "title": "Type Theory and Functional Programming",
+        "title": "Type theory and functional programming",
         "year": 1991
       },
       {
         "author": "S.J. Thompson",
-        "title": "Haskell: The Craft of Functional Programming",
+        "title": "Haskell: The craft of functional programming",
         "year": 1996
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Elementary strong functional programming",
         "year": 1995
       },
       {
         "author": "P. Van Hentenryk",
-        "title": "Static Analysis",
+        "title": "Static analysis",
         "year": 1997
       },
       {
@@ -934,12 +934,12 @@ module.exports = [
       "Alastair Telford",
       "David Turner"
     ],
-    "title": "Ensuring Termination in ESFP",
+    "title": "Ensuring termination in ESFP",
     "year": 2000,
     "references": [
       {
         "author": "A. Abel",
-        "title": "Foetus - termination checker for simple functional programs",
+        "title": "Foetus: Termination checker for simple functional programs",
         "year": 1998
       },
       {
@@ -947,7 +947,7 @@ module.exports = [
           "F. Baader",
           "T. Nipkow"
         ],
-        "title": "Term Rewriting and All That",
+        "title": "Term rewriting and all that",
         "year": 1998
       },
       {
@@ -1013,12 +1013,12 @@ module.exports = [
           "Carsten K. Gomard",
           "Peter Sestoft"
         ],
-        "title": "Partial Evaluation and Automatic Program Generation",
+        "title": "Partial evaluation and automatic program generation",
         "year": 1993
       },
       {
         "author": "P. Martin-Löf",
-        "title": "An intuitionistic theory of types: predicative part",
+        "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
@@ -1030,8 +1030,8 @@ module.exports = [
         "year": 1996
       },
       {
-        "author": "A.J.R.G. Milner",
-        "title": "Theory of type polymorphism in programming",
+        "author": "Robin Milner",
+        "title": "A theory of type polymorphism in programming",
         "year": 1978
       },
       {
@@ -1041,7 +1041,7 @@ module.exports = [
           "R. Harper",
           "D. MacQueen"
         ],
-        "title": "The Definition of Standard ML",
+        "title": "The definition of Standard ML",
         "year": 1997
       },
       {
@@ -1068,7 +1068,7 @@ module.exports = [
       },
       {
         "author": "C. Reade",
-        "title": "Elements of Functional Programming",
+        "title": "Elements of functional programming",
         "year": 1989
       },
       {
@@ -1078,35 +1078,35 @@ module.exports = [
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Streams Flow",
+        "title": "Ensuring streams flow",
         "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
         "title": "Ensuring the productivity of infinite structures",
         "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "A Hierarchy of Languages with Strong Termination",
+        "title": "A hierarchy of languages with strong termination properties",
         "year": 2000
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Elementary strong functional programming",
         "year": 1995
       },
@@ -1118,8 +1118,8 @@ module.exports = [
     ]
   },
   {
-    "author": "D.A. Turner",
-    "title": "Elementary Strong Functional Programming",
+    "author": "David Turner",
+    "title": "Final report: Elementary strong functional programming",
     "year": 2000,
     "references": [
       {
@@ -1132,7 +1132,7 @@ module.exports = [
           "Kostas Arkoudas",
           "David McAllester"
         ],
-        "title": "Walther Recursion",
+        "title": "Walther recursion",
         "year": 1996
       },
       {
@@ -1148,12 +1148,12 @@ module.exports = [
           "H.-J. Boehm",
           "R.S. Cartwright"
         ],
-        "title": "Exact Real Arithmetic: Formulating Real Numbers as Functions",
+        "title": "Exact real arithmetic: Formulating real numbers as functions",
         "year": 1990
       },
       {
         "author": "Thierry Coquand",
-        "title": "Infinite Objects in Type Theory",
+        "title": "Infinite objects in type theory",
         "year": 1993
       },
       {
@@ -1162,13 +1162,13 @@ module.exports = [
         "year": 1997
       },
       {
-        "author": "E. Gimenez",
-        "title": "Codifying Guarded Definitions with Recursive Schemes",
-        "year": 1994
+        "author": "E. Giménez",
+        "title": "Codifying guarded definitions with recursive schemes",
+        "year": 1995
       },
       {
         "author": "Martin Hofmann",
-        "title": "Linear Types and Non-size-increasing Polynomial Time Computation",
+        "title": "Linear types and non-size-increasing polynomial time computation",
         "year": 1999
       },
       {
@@ -1177,64 +1177,64 @@ module.exports = [
           "L. Pareto",
           "A. Sabry"
         ],
-        "title": "Proving the Correctness of Reactive Systems using Sized Types",
+        "title": "Proving the correctness of reactive systems using sized types",
         "year": 1996
       },
       {
-        "author": "A.Y. Kaganovsky",
-        "title": "Computing With Exact Real Numbers in a Radix-r System",
+        "author": "Alexander Kaganovsky",
+        "title": "Computing with exact real numbers in a radix-r system",
         "year": 1998
       },
       {
-        "author": "A.Y. Kaganovsky",
-        "title": "Exact Complex Arithmetic in an Imaginary Radix System",
+        "author": "Alexander Kaganovsky",
+        "title": "Exact complex arithmetic in an imaginary radix system",
         "year": 1999
       },
       {
-        "author": "A.Y. Kaganovsky",
-        "title": "Exact Computing in Positional Weighted Systems",
-        "year": 1999
+        "author": "Alexander Kaganovsky",
+        "title": "Exact computing in positional weighted systems",
+        "year": 2001
       },
       {
         "author": "C.P. Pixley",
-        "title": "Demand Driven Arithmetic",
+        "title": "Demand-driven arithmetic",
         "year": 1982
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Streams Flow",
+        "title": "Ensuring streams flow",
         "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring the Productivity of Infinite Structures",
-        "year": 1998
+        "title": "Ensuring the productivity of infinite structures",
+        "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Termination in ESFP",
-        "year": 1999
-      },
-      {
-        "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
-        ],
-        "title": "A Hierarchy of Elementary Languages with Strong Normalisation Properties",
+        "title": "Ensuring termination in ESFP",
         "year": 2000
       },
       {
-        "author": "D.A. Turner",
-        "title": "Elementary Strong Functional Programming",
+        "authors": [
+          "Alastair Telford",
+          "David Turner"
+        ],
+        "title": "A hierarchy of languages with strong termination properties",
+        "year": 2000
+      },
+      {
+        "author": "David Turner",
+        "title": "Elementary strong functional programming",
         "year": 1995
       },
       {
@@ -1244,7 +1244,7 @@ module.exports = [
       },
       {
         "author": "E. Wiedmer",
-        "title": "Computing with Infinite Objects",
+        "title": "Computing with infinite objects",
         "year": 1980
       }
     ]
@@ -1256,12 +1256,12 @@ module.exports = [
     "references": [
       {
         "author": "O. Aberth",
-        "title": "Computable Analysis",
+        "title": "Computable analysis",
         "year": 1980
       },
       {
         "author": "D.P. Agrawal",
-        "title": "Arithmetic Algorithms in a Negative Base",
+        "title": "Arithmetic algorithms in a negative base",
         "year": 1975
       },
       {
@@ -1269,7 +1269,7 @@ module.exports = [
           "G. Alefeld",
           "J. Herzberger"
         ],
-        "title": "Introduction to Interval Computations",
+        "title": "Introduction to interval computations",
         "year": 1983
       },
       {
@@ -1284,7 +1284,7 @@ module.exports = [
       },
       {
         "author": "D.H. Bailey",
-        "title": "Algorithm 719: Multiprecision Translation and Execution of FORTRAN Programs",
+        "title": "Algorithm 719: Multiprecision translation and execution of FORTRAN programs",
         "year": 1993
       },
       {
@@ -1301,7 +1301,7 @@ module.exports = [
           "Errett Bishop",
           "Douglas Bridges"
         ],
-        "title": "Constructive Analysis",
+        "title": "Constructive analysis",
         "year": 1985
       },
       {
@@ -1319,7 +1319,7 @@ module.exports = [
           "R. Cartwright",
           "et al."
         ],
-        "title": "Exact Real Arithmetic: A Case Study in Higher Order Programming",
+        "title": "Exact real arithmetic: A case study in higher order programming",
         "year": 1986
       },
       {
@@ -1327,7 +1327,7 @@ module.exports = [
           "Hans Boehm",
           "Robert Cartwright"
         ],
-        "title": "Exact Real Arithmetic: Formulating Real Numbers as Functions",
+        "title": "Exact real arithmetic: Formulating real numbers as functions",
         "year": 1990
       },
       {
@@ -1336,12 +1336,12 @@ module.exports = [
           "P.B. Borwein",
           "D.H. Bailey"
         ],
-        "title": "Ramanujan, Modular Equations, and Approximations to Pi, or How to Compute One Billion Digits of Pi",
+        "title": "Ramanujan, modular equations, and approximations to pi, or how to compute one billion digits of pi",
         "year": 1989
       },
       {
         "author": "R.P. Brent",
-        "title": "Fast Multiple-Precision Evaluation of Elementary Functions",
+        "title": "Fast multiple-precision evaluation of elementary functions",
         "year": 1976
       },
       {
@@ -1351,12 +1351,12 @@ module.exports = [
       },
       {
         "author": "L.E.J. Brouwer",
-        "title": "De Onbetrouwbaarheid der Logische Principes",
+        "title": "De Onbetrouwbaarheid der logische Principes",
         "year": 1908
       },
       {
         "author": "Georg Cantor",
-        "title": "Contributions to the Founding of the Theory of Transfinite Numbers",
+        "title": "Contributions to the founding of the theory of transfinite numbers",
         "year": 1915
       },
       {
@@ -1366,17 +1366,17 @@ module.exports = [
       },
       {
         "author": "Alonzo Church",
-        "title": "An Unsolvable Problem of Elementary Number Theory",
+        "title": "An unsolvable problem of elementary number theory",
         "year": 1936
       },
       {
         "author": "Richard Dedekind",
-        "title": "Essays on the Theory of Numbers",
+        "title": "Essays on the theory of numbers",
         "year": 1948
       },
       {
         "author": "Richard Dedekind",
-        "title": "Stetigkeit und Irrationale Zahlen",
+        "title": "Stetigkeit und irrationale Zahlen",
         "year": 1872
       },
       {
@@ -1385,12 +1385,12 @@ module.exports = [
           "J.B. Dennis",
           "J.E. Qualitz"
         ],
-        "title": "Machines, Languages, and Computation",
+        "title": "Machines, languages, and computation",
         "year": 1978
       },
       {
         "author": "M.P. de Regt",
-        "title": "Negative Radix Arithmetic",
+        "title": "Negative radix arithmetic",
         "year": 1967
       },
       {
@@ -1408,12 +1408,12 @@ module.exports = [
           "A. Edalat",
           "P.J. Potts"
         ],
-        "title": "A New Representation for Exact Real Numbers",
+        "title": "A new representation for exact real numbers",
         "year": 1997
       },
       {
         "author": "M.D. Ercegovac",
-        "title": "On-line Arithmetic: an Overview",
+        "title": "On-line arithmetic: An overview",
         "year": 1984
       },
       {
@@ -1451,22 +1451,22 @@ module.exports = [
       },
       {
         "author": "W. Gosper",
-        "title": "Continued Fraction Arithmetic",
+        "title": "Continued fraction arithmetic",
         "year": 1972
       },
       {
         "author": "T.L. Heath",
-        "title": "The Works of Archimedes",
+        "title": "The works of archimedes",
         "year": 1952
       },
       {
         "author": "A. Heyting",
-        "title": "Intuitionism, an Introduction",
+        "title": "Intuitionism, an introduction",
         "year": 1966
       },
       {
         "author": "W.N. Holmes",
-        "title": "Representation for Complex Numbers",
+        "title": "Representation for complex numbers",
         "year": 1978
       },
       {
@@ -1474,42 +1474,42 @@ module.exports = [
           "R. Jones",
           "R. Lins"
         ],
-        "title": "Garbage Collection: Algorithms for Automatic Dynamic Memory Management",
+        "title": "Garbage collection: Algorithms for automatic dynamic memory management",
         "year": 1996
       },
       {
-        "author": "A. Kaganovsky",
-        "title": "Computing with Exact Real Numbers in a Radix-r System",
+        "author": "Alexander Kaganovsky",
+        "title": "Computing with exact real numbers in a radix-r system",
         "year": 1998
       },
       {
-        "author": "A. Kaganovsky",
-        "title": "Exact Complex Arithmetic in an Imaginary Radix System",
+        "author": "Alexander Kaganovsky",
+        "title": "Exact complex arithmetic in an imaginary radix system",
         "year": 1999
       },
       {
         "author": "W. Kahan",
-        "title": "Branch Cuts for Complex Elementary Functions, or Much Ado About Nothing’s Sign Bit",
+        "title": "Branch cuts for complex elementary functions, or much ado about nothing’s sign bit",
         "year": 1987
       },
       {
         "author": "S.C. Kleene",
-        "title": "Introduction to Metamathematics",
+        "title": "Introduction to metamathematics",
         "year": 1952
       },
       {
         "author": "D.E. Knuth",
-        "title": "An Imaginary Number System",
+        "title": "An imaginary number system",
         "year": 1960
       },
       {
         "author": "Donald E. Knuth",
-        "title": "Mathematics and Computer Science: Coping with Finiteness",
+        "title": "Mathematics and computer science: Coping with finiteness",
         "year": 1976
       },
       {
         "author": "D. Knuth",
-        "title": "The Art of Computer Programming, Vol. 2 (Seminumerical Algorithms)",
+        "title": "The art of computer programming, vol. 2: Seminumerical algorithms",
         "year": 1981
       },
       {
@@ -1527,7 +1527,7 @@ module.exports = [
       },
       {
         "author": "Serge Lang",
-        "title": "Complex Analysis",
+        "title": "Complex analysis",
         "year": 1999
       },
       {
@@ -1536,21 +1536,21 @@ module.exports = [
           "O.A. Chervonenkis",
           "A.R. Yanpol’skii"
         ],
-        "title": "Handbook for Computing Elementary Functions",
+        "title": "Handbook for computing elementary functions",
         "year": 1965
       },
       {
         "author": "Christophe Mazenc",
-        "title": "On the Redundancy of Real Number Representation Systems",
+        "title": "On the redundancy of real number representation systems",
         "year": 1993
       },
       {
         "author": "V. Ménissier-Morain",
-        "title": "Arbitrary Precision Real Arithmetic: Design and Algorithms"
+        "title": "Arbitrary precision real arithmetic: Design and algorithms"
       },
       {
         "author": "R.E. Moore",
-        "title": "Methods and Applications of Interval Analysis",
+        "title": "Methods and applications of interval analysis",
         "year": 1979
       },
       {
@@ -1560,7 +1560,7 @@ module.exports = [
       },
       {
         "author": "John R. Myhill",
-        "title": "A Complete Theory of Natural, Rational, and Real Numbers",
+        "title": "A complete theory of natural, rational, and real numbers",
         "year": 1950
       },
       {
@@ -1575,22 +1575,22 @@ module.exports = [
           "W.T. Vetterling",
           "B.P. Flannery"
         ],
-        "title": "Numerical Recipes in C: The Art of Scientific Computing",
+        "title": "Numerical recipes in C: The art of scientific computing",
         "year": 1995
       },
       {
         "author": "Amos R. Omondi",
-        "title": "Computer Arithmetic Systems: Algorithms, Architecture and Implementations",
+        "title": "Computer arithmetic systems: Algorithms, architecture and implementations",
         "year": 1994
       },
       {
         "author": "T.J. O’Reilly",
-        "title": "A Positional Notation for Complex Numbers",
+        "title": "A positional notation for complex numbers",
         "year": 1974
       },
       {
         "author": "Z. Pawlak",
-        "title": "An Electronic Digital Computer Based on the ‘-2’ System",
+        "title": "An electronic digital computer based on the ‘-2’ system",
         "year": 1959
       },
       {
@@ -1598,22 +1598,22 @@ module.exports = [
           "Z. Pawlak",
           "A. Wakulicz"
         ],
-        "title": "Use of Expansions with a Negative Basis in the Arithmometer of a Digital Computer",
+        "title": "Use of expansions with a negative basis in the arithmometer of a digital computer",
         "year": 1957
       },
       {
         "author": "W. Penney",
-        "title": "A ‘Binary’ System for Complex Numbers",
+        "title": "A ‘binary’ system for complex numbers",
         "year": 1965
       },
       {
         "author": "C.P. Pixley",
-        "title": "Demand-Driven Arithmetic",
+        "title": "Demand-driven arithmetic",
         "year": 1982
       },
       {
         "author": "D. Plume",
-        "title": "A Calculator for Exact Real Number Computation",
+        "title": "A calculator for exact real number computation",
         "year": 1998
       },
       {
@@ -1621,7 +1621,7 @@ module.exports = [
           "Marian B. Pour-El",
           "Ian J. Richards"
         ],
-        "title": "Computability in Analysis and Physics",
+        "title": "Computability in analysis and physics",
         "year": 1989
       },
       {
@@ -1644,7 +1644,7 @@ module.exports = [
       },
       {
         "author": "J.E. Robertson",
-        "title": "A New Class of Digital Division Methods",
+        "title": "A new class of digital division methods",
         "year": 1958
       },
       {
@@ -1654,12 +1654,12 @@ module.exports = [
       },
       {
         "author": "E. Salamin",
-        "title": "Computation of Pi using Arithmetic-Geometric Mean",
+        "title": "Computation of pi using arithmetic-geometric mean",
         "year": 1976
       },
       {
         "author": "N.A. Sanin",
-        "title": "Constructive Real Numbers and Constructive Function Spaces",
+        "title": "Constructive real numbers and constructive function spaces",
         "year": 1968
       },
       {
@@ -1668,22 +1668,22 @@ module.exports = [
           "S. Chakrabarti",
           "E.V. Krishnamurthy"
         ],
-        "title": "Arithmetic Algorithms in a Negative Base",
+        "title": "Arithmetic algorithms in a negative base",
         "year": 1973
       },
       {
         "author": "J. Schwarz",
-        "title": "Implementing Infinite Precision Arithmetic",
+        "title": "Implementing infinite precision arithmetic",
         "year": 1989
       },
       {
         "author": "Norman R. Scott",
-        "title": "Computer Number Systems and Arithmetic",
+        "title": "Computer number systems and arithmetic",
         "year": 1985
       },
       {
         "author": "A. Simpson",
-        "title": "Lazy Functional Algorithms for Exact Real Functionals",
+        "title": "Lazy functional algorithms for exact real functionals",
         "year": 1998
       },
       {
@@ -1693,27 +1693,27 @@ module.exports = [
       },
       {
         "author": "D.M. Smith",
-        "title": "A Multiple-Precision Division Algorithm",
+        "title": "A multiple-precision division algorithm",
         "year": 1996
       },
       {
         "author": "G.F. Songster",
-        "title": "Negative-Base Number-Representation Systems",
+        "title": "Negative base number representation systems",
         "year": 1963
       },
       {
         "author": "E. Specker",
-        "title": "Nicht Konstructiv beweisbare Sätze der Analysis",
+        "title": "Nicht konstructiv beweisbare Sätze der Analysis",
         "year": 1949
       },
       {
         "author": "Karl R. Stromberg",
-        "title": "Introduction to Classical Real Analysis",
+        "title": "Introduction to classical real analysis",
         "year": 1981
       },
       {
         "author": "Rolf Herken",
-        "title": "The Universal Turing Machine: A Half-Century Survey",
+        "title": "The universal Turing machine: A half-century survey",
         "year": 1988
       },
       {
@@ -1725,38 +1725,38 @@ module.exports = [
         "year": 1977
       },
       {
-        "author": "Alan M. Turing",
-        "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+        "author": "Alan Turing",
+        "title": "On computable numbers, with an application to the Entscheidungsproblem",
         "year": 1936
       },
       {
-        "author": "Alan M. Turing",
-        "title": "On Computable Numbers, with an Application to the Entscheidungsproblem. A Correction",
+        "author": "Alan Turing",
+        "title": "On computable numbers, with an application to the Entscheidungsproblem: A correction",
         "year": 1937
       },
       {
-        "author": "D.A. Turner",
+        "author": "David Turner",
         "title": "Miranda: A non-strict functional language with polymorphic types",
         "year": 1985
       },
       {
         "author": "R.S. Varga",
-        "title": "Scientific Computation on Mathematical Problems and Conjectures",
+        "title": "Scientific computation on mathematical problems and conjectures",
         "year": 1990
       },
       {
         "author": "Jean E. Vuillemin",
-        "title": "Exact Real Computer Arithmetic with Continued Fractions",
+        "title": "Exact real computer arithmetic with continued fractions",
         "year": 1990
       },
       {
         "author": "L.B. Wadel",
-        "title": "Negative Base Number Systems",
+        "title": "Negative base number systems",
         "year": 1957
       },
       {
         "author": "E. Wiedmer",
-        "title": "Computing with Infinite Objects",
+        "title": "Computing with infinite objects",
         "year": 1980
       },
       {
@@ -1766,24 +1766,24 @@ module.exports = [
       },
       {
         "author": "C.K. Yuen",
-        "title": "On the Floating Point Representation of Complex Numbers",
+        "title": "On the floating point representation of complex numbers",
         "year": 1975
       },
       {
         "author": "I.D. Zaslavskii",
-        "title": "Some Properties of Constructive Real Numbers and Constructive Functions",
+        "title": "Some properties of constructive real numbers and constructive functions",
         "year": 1966
       }
     ]
   },
   {
-    "author": "D.A. Turner",
-    "title": "Total Functional Programming",
+    "author": "David Turner",
+    "title": "Total functional programming",
     "year": 2004,
     "references": [
       {
         "author": "Andreas Abel",
-        "title": "A Semantic Analysis of Structural Recursion",
+        "title": "A semantic analysis of structural recursion",
         "year": 1999
       },
       {
@@ -1791,15 +1791,15 @@ module.exports = [
           "Kostas Arkoudas",
           "David McAllester"
         ],
-        "title": "Walther Recursion",
+        "title": "Walther recursion",
         "year": 1996
       },
       {
         "authors": [
           "R.S. Bird",
-          "P. Wadler"
+          "Philip Wadler"
         ],
-        "title": "Introduction to Functional Programming",
+        "title": "Introduction to functional programming",
         "year": 1988
       },
       {
@@ -1821,12 +1821,12 @@ module.exports = [
           "Paul Hudak",
           "et al."
         ],
-        "title": "Report on the Programming Language Haskell",
+        "title": "Report on the programming language Haskell",
         "year": 1992
       },
       {
         "author": "Conor McBride",
-        "title": "First Order Unification by Structural Recursion",
+        "title": "First order unification by structural recursion",
         "year": 2003
       },
       {
@@ -1835,48 +1835,48 @@ module.exports = [
           "K. Petersson",
           "J.M. Smith"
         ],
-        "title": "Programming in Martin-Löf’s Type Theory: An Introduction",
+        "title": "Programming in Martin-Löf’s type theory: An introduction",
         "year": 1990
       },
       {
         "author": "A.M. Pitts",
-        "title": "A Co-induction Principle for Recursively Defined Domains",
+        "title": "A co-induction principle for recursively defined domains",
         "year": 1994
       },
       {
         "author": "Colin Runciman",
-        "title": "What about the Natural Numbers",
+        "title": "What about the natural numbers",
         "year": 1989
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Streams Flow",
+        "title": "Ensuring streams flow",
         "year": 1997
       },
       {
         "authors": [
-          "A.J. Telford",
-          "D.A. Turner"
+          "Alastair Telford",
+          "David Turner"
         ],
-        "title": "Ensuring Termination in ESFP",
+        "title": "Ensuring termination in ESFP",
         "year": 2000
       },
       {
-        "author": "D.A. Turner",
-        "title": "Functional Programming and Proofs of Program Correctness",
+        "author": "David Turner",
+        "title": "Functional programming and proofs of program correctness",
         "year": 1982
       },
       {
-        "author": "D.A. Turner",
-        "title": "An Overview of Miranda",
+        "author": "David Turner",
+        "title": "An overview of Miranda",
         "year": 1986
       },
       {
-        "author": "D.A. Turner",
-        "title": "Elementary Strong Functional Programming",
+        "author": "David Turner",
+        "title": "Elementary strong functional programming",
         "year": 1995
       },
       {
@@ -1892,7 +1892,7 @@ module.exports = [
   },
   {
     "author": "David Turner",
-    "title": "Church’s Thesis and Functional Programming",
+    "title": "Church’s thesis and functional programming",
     "year": 2006,
     "references": [
       {
@@ -1905,17 +1905,17 @@ module.exports = [
       },
       {
         "author": "H.P. Barendregt",
-        "title": "The Lambda Calculus: Its Syntax and Semantics",
+        "title": "The lambda calculus: Its syntax and semantics",
         "year": 1984
       },
       {
         "author": "A. Church",
-        "title": "An Unsolvable Problem of Elementary Number Theory",
+        "title": "An unsolvable problem of elementary number theory",
         "year": 1936
       },
       {
         "author": "A. Church",
-        "title": "Review of A M Turing (1936) “On computable numbers ...”",
+        "title": "Review of A.M. Turing (1936) “On computable numbers…”",
         "year": 1937
       },
       {
@@ -1928,7 +1928,7 @@ module.exports = [
           "R.L. Constable",
           "et al."
         ],
-        "title": "Implementing Mathematics with the Nuprl Proof Development System",
+        "title": "Implementing mathematics with the Nuprl proof development system",
         "year": 1986
       },
       {
@@ -1936,7 +1936,7 @@ module.exports = [
           "Robert L. Constable",
           "Scott F. Smith"
         ],
-        "title": "Computational Foundations of Basic Recursive Function Theory",
+        "title": "Computational foundations of basic recursive function theory",
         "year": 1988
       },
       {
@@ -1944,7 +1944,7 @@ module.exports = [
           "H.B. Curry",
           "R. Feys"
         ],
-        "title": "Combinatory Logic, Vol I",
+        "title": "Combinatory logic, vol. 1",
         "year": 1958
       },
       {
@@ -1963,12 +1963,12 @@ module.exports = [
           "Yves Lafont",
           "Paul Taylor"
         ],
-        "title": "Proofs and Types",
+        "title": "Proofs and types",
         "year": 1989
       },
       {
         "author": "K. Gödel",
-        "title": "On Undecidable Propositions of Formal Mathematical Systems",
+        "title": "On undecidable propositions of formal mathematical systems",
         "year": 1934
       },
       {
@@ -1981,7 +1981,7 @@ module.exports = [
           "N.D. Goodman",
           "J. Myhill"
         ],
-        "title": "Choice Implies Excluded Middle",
+        "title": "Choice implies excluded middle",
         "year": 1978
       },
       {
@@ -1996,32 +1996,32 @@ module.exports = [
       },
       {
         "author": "J. Hughes",
-        "title": "The Design and Implementation of Programming Languages",
+        "title": "The design and implementation of programming languages",
         "year": 1983
       },
       {
         "author": "W. Howard",
-        "title": "The Formulae as Types Notion of Construction",
+        "title": "The formulae as types notion of construction",
         "year": 1969
       },
       {
         "author": "Thomas Johnsson",
-        "title": "Lambda Lifting: Transforming Programs to Recursive Equations",
+        "title": "Lambda lifting: Transforming programs to recursive equations",
         "year": 1985
       },
       {
         "author": "S.C. Kleene",
-        "title": "Lambda-Definability and Recursiveness",
+        "title": "Lambda-definability and recursiveness",
         "year": 1936
       },
       {
         "author": "P.J. Landin",
-        "title": "The Next 700 Programming Languages",
+        "title": "The next 700 programming languages",
         "year": 1966
       },
       {
         "author": "John McCarthy",
-        "title": "Recursive Functions of Symbolic Expressions and their Computation by Machine",
+        "title": "Recursive functions of symbolic expressions and their computation by machine",
         "year": 1960
       },
       {
@@ -2030,22 +2030,22 @@ module.exports = [
           "M. Turcotte",
           "et al."
         ],
-        "title": "The Combination of Symbolic and Numerical Computation for Three-Dimensional Modelling of RNA",
+        "title": "The combination of symbolic and numerical computation for three-dimensional modelling of RNA",
         "year": 1991
       },
       {
         "author": "P. Martin-Löf",
-        "title": "An Intuitionist Theory of Types - Predicative Part",
+        "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
         "author": "P. Martin-Löf",
-        "title": "Constructive Mathematics and Computer Programming",
+        "title": "Constructive mathematics and computer programming",
         "year": 1982
       },
       {
         "author": "R. Milner",
-        "title": "A Theory of Type Polymorphism in Programming",
+        "title": "A theory of type polymorphism in programming",
         "year": 1978
       },
       {
@@ -2063,12 +2063,12 @@ module.exports = [
       },
       {
         "author": "S.L. Peyton Jones",
-        "title": "Implementing lazy functional languages on stock hard-ware: the Spineless Tagless G-machine",
+        "title": "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine",
         "year": 1992
       },
       {
         "author": "S.L. Peyton Jones",
-        "title": "Haskell 98 language and libraries: the Revised Report",
+        "title": "Haskell 98 language and libraries: The revised report",
         "year": 2003
       },
       {
@@ -2083,17 +2083,17 @@ module.exports = [
       },
       {
         "author": "Dana Scott",
-        "title": "Data Types as Lattices",
+        "title": "Data types as lattices",
         "year": 1976
       },
       {
         "author": "Scott F. Smith",
-        "title": "Partial Objects in Type Theory",
+        "title": "Partial objects in type theory",
         "year": 1989
       },
       {
         "author": "Christopher Strachey",
-        "title": "Fundamental Concepts in Programming Languages",
+        "title": "Fundamental concepts in programming languages",
         "year": 1967
       },
       {
@@ -2106,42 +2106,42 @@ module.exports = [
       },
       {
         "author": "Paul Taylor",
-        "title": "Abstract Stone Duality",
+        "title": "Abstract stone duality",
         "year": 2002
       },
       {
-        "author": "A.M. Turing",
-        "title": "On computable numbers with an application to the Entscheidungsproblem",
+        "author": "Alan Turing",
+        "title": "On computable numbers, with an application to the Entscheidungsproblem",
         "year": 1936
       },
       {
-        "author": "D.A. Turner",
-        "title": "SASL Language Manual",
+        "author": "David Turner",
+        "title": "SASL language manual",
         "year": 1976
       },
       {
-        "author": "D.A. Turner",
-        "title": "A New Implementation Technique for Applicative Languages",
+        "author": "David Turner",
+        "title": "A new implementation technique for applicative languages",
         "year": 1979
       },
       {
-        "author": "D.A. Turner",
-        "title": "Another Algorithm for Bracket Abstraction",
+        "author": "David Turner",
+        "title": "Another algorithm for bracket abstraction",
         "year": 1979
       },
       {
-        "author": "D.A. Turner",
-        "title": "An Overview of Miranda",
+        "author": "David Turner",
+        "title": "An overview of Miranda",
         "year": 1986
       },
       {
-        "author": "D.A. Turner",
-        "title": "Total Functional Programming",
+        "author": "David Turner",
+        "title": "Total functional programming",
         "year": 2004
       },
       {
         "author": "C.P. Wadsworth",
-        "title": "The Semantics and Pragmatics of the Lambda Calculus",
+        "title": "The semantics and pragmatics of the lambda calculus",
         "year": 1971
       }
     ]
