@@ -38,11 +38,11 @@ var _ = {
   renderEntry: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
     var entry   = this.state.entriesById[entryId];
     var isOpen  = this.state.path.indexOf(entryId) === columnIndex + 1;
-    var hasRefs = !!entry.referenceIds.length;
+    var hasRefs = entry.referenceIds && entry.referenceIds.length;
     return (
       r.div({
           className: 'browser-entry clickable',
-          key:       'b-c-' + columnId + '-e-' + entryId,
+          key:       'c-' + columnId + '-e-' + entryId,
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, entryId);
@@ -74,8 +74,8 @@ var _ = {
   },
 
   renderEntryWrapper: function (columnId, columnIndex, entryIds) {
-    var isRoot = columnId === 'root';
-    var entryCount = entryIds.length;
+    var isRoot     = columnId === 'root';
+    var entryCount = entryIds && entryIds.length;
     return (
       r.div({
           className: 'browser-entry-wrapper',
@@ -94,7 +94,7 @@ var _ = {
           },
           isRoot ? null :
             this.renderColumnHeader(columnId, columnIndex),
-          (isRoot || !entryIds.length) ? null :
+          (isRoot || !entryCount) ? null :
             r.div({
                 className: 'browser-column-heading',
                 style: {
@@ -106,10 +106,11 @@ var _ = {
               r.br(),
               r.span('',
                 'References'))),
-        entryIds.map(function (entryId, entryIndex) {
-            return (
-              this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
-          }.bind(this))));
+        !entryIds ? null :
+          entryIds.map(function (entryId, entryIndex) {
+              return (
+                this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
+            }.bind(this))));
   },
 
   renderColumnHeader: function (columnId, columnIndex) {
@@ -144,7 +145,9 @@ var _ = {
           r.tbody('',
             rows.map(function (row) {
                 return (
-                  r.tr('',
+                  r.tr({
+                      key: 'r-' + row.key
+                    },
                     r.td({
                         style: {
                           color:         '#999',
@@ -180,7 +183,7 @@ var _ = {
     return (
       r.div({
           className: 'browser-column',
-          key:       'b-c-' + columnId,
+          key:       'c-' + columnId,
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, null);

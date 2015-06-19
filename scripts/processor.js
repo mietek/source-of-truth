@@ -1,5 +1,6 @@
 'use strict';
 
+var assign = require('object-assign');
 var uuid = require('node-uuid');
 var utils = require('./common/utils');
 var rawDb = require('./database');
@@ -10,6 +11,7 @@ module.exports = {
     var authorsById   = {};
 
     function ensureAuthor(authorName) {
+      var author;
       if (!(authorName in authorsByName)) {
         var shortName;
         if (authorName === 'et al.') {
@@ -18,15 +20,17 @@ module.exports = {
           var nameTokens = authorName.split(' ');
           shortName = nameTokens[nameTokens.length - 1];
         }
-        var author = {
+        author = {
           id:        uuid.v4(),
           name:      authorName,
           shortName: shortName
         };
         authorsByName[authorName] = author;
         authorsById[author.id]    = author;
+      } else {
+        author = authorsByName[authorName];
       }
-      return authorsByName[authorName].id;
+      return author.id;
     }
 
     var entriesByName = {};
@@ -49,29 +53,68 @@ module.exports = {
           (' — ' + rawEntry.title));
     }
 
-    function ensureEntry(rawEntry, isReference) {
-      var authorIds    = getAuthorIds(rawEntry);
-      var entryName    = getEntryName(authorIds, rawEntry);
-      var referenceIds = (rawEntry.references || []).map(function (reference) {
-          return ensureEntry(reference, true);
-        });
-      if (!(entryName in entriesByName) || !isReference) {
-        var entry = {
-          id:           uuid.v4(),
+    function ensureReference(rawEntry, citationId) {
+      var authorIds = getAuthorIds(rawEntry);
+      var entryName = getEntryName(authorIds, rawEntry);
+      var entry;
+      if (!(entryName in entriesByName)) {
+        entry = {
+          id:          uuid.v4(),
+          year:        rawEntry.year,
+          authorIds:   authorIds,
+          title:       rawEntry.title,
+          name:        entryName,
+          citationIds: [citationId]
+        };
+      } else {
+        var oldEntry = entriesByName[entryName];
+        entry = assign({}, oldEntry, {
+            citationIds: (oldEntry.citations || []).concat([citationId])
+          });
+      }
+      entriesByName[entryName] = entry;
+      entriesById[entry.id]    = entry;
+      return entry.id;
+    }
+
+    function ensurePublication(rawEntry) {
+      var authorIds = getAuthorIds(rawEntry);
+      var entryName = getEntryName(authorIds, rawEntry);
+      var entry;
+      if (!(entryName in entriesByName)) {
+        var entryId = uuid.v4();
+        entry = {
+          id:           entryId,
           year:         rawEntry.year,
           authorIds:    authorIds,
           title:        rawEntry.title,
           name:         entryName,
-          referenceIds: referenceIds
+          referenceIds: (rawEntry.references || []).map(function (reference) {
+              return ensureReference(reference, entryId);
+            })
         };
         entriesByName[entryName] = entry;
         entriesById[entry.id]    = entry;
+      } else {
+        var oldEntry = entriesByName[entryName];
+        if (!oldEntry.referenceIds) {
+          entry = assign({}, oldEntry, {
+              referenceIds: (rawEntry.references || []).map(function (reference) {
+                  return ensureReference(reference, oldEntry.id);
+                })
+            });
+          entriesByName[entryName] = entry;
+          entriesById[entry.id]    = entry;
+        } else {
+          console.warning('Duplicate publication:', rawEntry);
+          entry = oldEntry;
+        }
       }
-      return entriesByName[entryName].id;
+      return entry.id;
     }
 
-    rawDb.forEach(function (entry) {
-        ensureEntry(entry, false);
+    rawDb.forEach(function (publication) {
+        ensurePublication(publication);
       });
 
     return {
