@@ -15,7 +15,7 @@ module.exports = {
       if (!(authorName in authorsByName)) {
         var shortName;
         if (authorName === 'et al.') {
-          shortName = 'e.a.';
+          shortName = authorName;
         } else {
           var nameTokens = authorName.split(' ');
           shortName = nameTokens[nameTokens.length - 1];
@@ -46,10 +46,15 @@ module.exports = {
         });
     }
 
-    function getEntryName(authorIds, rawEntry) {
+    function getEntrySignature(authorIds, rawEntry) {
       return (
         authorsById[authorIds[0]].shortName +
-          (rawEntry.year ? ' ' + rawEntry.year : '') +
+          (rawEntry.year ? ' ' + rawEntry.year : ''));
+    }
+
+    function getEntryName(authorIds, rawEntry) {
+      return (
+        getEntrySignature(authorIds, rawEntry) +
           (' — ' + rawEntry.title));
     }
 
@@ -62,6 +67,7 @@ module.exports = {
           id:          uuid.v4(),
           title:       rawEntry.title,
           authorIds:   authorIds,
+          signature:   getEntrySignature(authorIds, rawEntry),
           year:        rawEntry.year,
           name:        entryName,
           citationIds: [citationId]
@@ -87,9 +93,11 @@ module.exports = {
           id:           entryId,
           title:        rawEntry.title,
           authorIds:    authorIds,
+          signature:    getEntrySignature(authorIds, rawEntry),
           year:         rawEntry.year,
           name:         entryName,
           citationIds:  [],
+          isFull:       true,
           abstract:     rawEntry.abstract,
           referenceIds: (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
@@ -101,6 +109,7 @@ module.exports = {
         var oldEntry = entriesByName[entryName];
         if (!oldEntry.referenceIds) {
           entry = assign({}, oldEntry, {
+              isFull:       true,
               abstract:     rawEntry.abstract,
               referenceIds: (rawEntry.references || []).map(function (reference) {
                   return ensureReference(reference, oldEntry.id);

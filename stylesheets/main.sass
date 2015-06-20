@@ -1,10 +1,14 @@
 @import "font"
 @include font("nu-sans", "regular")
 
+*, *:before, *:after
+  box-sizing: border-box
+
 body
   font-family: "nu-sans", sans-serif
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
+  color: #000
 
 .clickable
   cursor: pointer
@@ -28,6 +32,7 @@ body
   overflow-x: scroll
   overflow-y: hidden
   user-select: none
+  -webkit-overflow-scrolling: touch
 
 .browser-pane-wrapper
   height: 100%
@@ -41,6 +46,7 @@ body
   display: inline-block
   overflow-x: hidden
   overflow-y: scroll
+  -webkit-overflow-scrolling: touch
 
 .browser-column-wrapper
   padding: 1px
@@ -51,42 +57,77 @@ body
   margin-left: 8px
   margin-right: 8px
 
+.browser-column-metadata
+  width: 100%
+
+.browser-metadata-key
+  color: #999
+  font-variant: small-caps
+  text-transform: lowercase
+  letter-spacing: 1px
+  text-align: right
+  vertical-align: top
+  padding-right: 8px
+  width: 1/4 * 100%
+  display: inline-block
+
+.browser-metadata-value
+  vertical-align: top
+  width: 3/4 * 100%
+  display: inline-block
+
 .browser-column-heading
   color: #999
+  font-variant: small-caps
+  text-transform: lowercase
+  letter-spacing: 1px
   font-size: 12px
   line-height: 16px
   margin-left: 8px
   margin-right: 8px
 
-.browser-table
-  width: 100%
-
-.browser-table-row-key
-  color: #999
-  text-align: right
-  vertical-align: top
-  padding-right: 5px
-  width: 1/3 * 100%
-
-.browser-table-row-value
-  vertical-align: top
-  width: 2/3 * 100%
-
 .browser-entry
   cursor: pointer
   padding-left: 8px
-  padding-right: 16px
+  padding-right: 8px
   border-radius: 512px
+  position: relative
+  background-color: #fff
+  &:after
+    content: "▸"
+    display: block
+    color: #ccc
+    position: absolute
+    top: 0
+    right: 4px
+  &:not(.full)
+    .browser-data-value
+      color: #999
+  &.open
+    color: #fff
+    .browser-data-value
+      color: #fff
+    background-color: #69f
+    &:after
+      color: #fff
+
+.browser-entry-data
   width: 100%
+
+.browser-data-key
+  vertical-align: top
+  padding-right: 8px
+  width: 1/4 * 100%
+  display: inline-block
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
-  position: relative
-  background-color: #fff
-  &.open
-    color: #fff
-    background-color: #69f
-  .ui.icon
-    position: absolute
-    top: 3px
-    right: -3px
+
+.browser-data-value
+  vertical-align: top
+  padding-right: 8px
+  width: 3/4 * 100%
+  display: inline-block
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis

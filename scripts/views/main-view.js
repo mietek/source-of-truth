@@ -36,22 +36,24 @@ var _ = {
   },
 
   renderEntry: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
-    var entry   = this.state.entriesById[entryId];
-    var isOpen  = this.state.path.indexOf(entryId) === columnIndex + 1;
-    var hasRefs = entry.referenceIds && entry.referenceIds.length;
+    var entry  = this.state.entriesById[entryId];
+    var isOpen = this.state.path.indexOf(entryId) === columnIndex + 1;
     return (
       r.div({
-          className: 'browser-entry' + (isOpen ? ' open' : ''),
+          className: 'browser-entry' + (
+            (isOpen ? ' open' : '') +
+            (entry.isFull ? ' full' : '')),
           key:       'e-' + entryId + '-' + entryIndex,
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, entryId);
           }.bind(this)
         },
-        r.span('',
-          entry.name),
-        !hasRefs ? null :
-          r.i('ui icon caret right')));
+        r.div('browser-entry-data',
+          r.span('browser-data-key',
+            entry.signature),
+          r.span('browser-data-value',
+            entry.title))));
   },
 
   renderColumnHeader: function (columnId, columnIndex) {
@@ -71,7 +73,7 @@ var _ = {
         key: 'Year',
         value: entry.year
       },
-      !entry.abstract ? null :
+      !entry.isFull ? null :
         {
           key: 'Abstract',
           value: entry.abstract
@@ -79,19 +81,16 @@ var _ = {
     ];
     return (
       r.div('browser-column-header',
-        r.table('browser-table',
-          r.tbody('',
-            rows.map(function (row) {
-                return (
-                  !row ? null :
-                    r.tr({
-                        key: 'r-' + row.key
-                      },
-                      r.td('browser-table-row-key',
-                        row.key),
-                      r.td('browser-table-row-value',
-                        row.value)));
-              }.bind(this))))));
+        r.div('browser-column-metadata',
+          rows.map(function (row) {
+              return (
+                !row ? null : [
+                    r.span('browser-metadata-key',
+                      row.key),
+                    r.span('browser-metadata-value',
+                      row.value)
+                  ]);
+            }.bind(this)))));
 
   },
 
