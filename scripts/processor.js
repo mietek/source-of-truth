@@ -69,7 +69,7 @@ module.exports = {
       } else {
         var oldEntry = entriesByName[entryName];
         entry = assign({}, oldEntry, {
-            citationIds: (oldEntry.citations || []).concat([citationId])
+            citationIds: (oldEntry.citationIds || []).concat([citationId])
           });
       }
       entriesByName[entryName] = entry;
