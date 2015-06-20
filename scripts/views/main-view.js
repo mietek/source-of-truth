@@ -42,7 +42,7 @@ var _ = {
     return (
       r.div({
           className: 'browser-entry' + (isOpen ? ' open' : ''),
-          key:       'c-' + columnId + '-e-' + entryId,
+          key:       'e-' + entryId + '-' + entryIndex,
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, entryId);
@@ -125,7 +125,7 @@ var _ = {
     return (
       r.div({
           className: 'browser-column',
-          key:       'c-' + columnId,
+          key:       'c-' + columnId + '-' + columnIndex,
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, null);
