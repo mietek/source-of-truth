@@ -1,4 +1,8 @@
+@import "font"
+@include font("nu-sans", "regular")
+
 body
+  font-family: "nu-sans", sans-serif
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
 
@@ -14,3 +18,75 @@ body
 #main
   height: 100%
   width: 100%
+  font-size: 13px
+  line-height: 18px
+
+.browser-pane
+  background-color: #fff
+  height: 100%
+  width: 100%
+  overflow-x: scroll
+  overflow-y: hidden
+  user-select: none
+
+.browser-pane-wrapper
+  height: 100%
+  width: 1/3 * 100% // Dynamic
+
+.browser-column
+  border: 0px #ccc solid
+  border-right-width: 1px
+  height: 100%
+  width: 100% // Dynamic
+  display: inline-block
+  overflow-x: hidden
+  overflow-y: scroll
+
+.browser-column-wrapper
+  padding: 1px
+
+.browser-column-header
+  font-size: 12px
+  line-height: 16px
+  margin-left: 8px
+  margin-right: 8px
+
+.browser-column-heading
+  color: #999
+  font-size: 12px
+  line-height: 16px
+  margin-left: 8px
+  margin-right: 8px
+
+.browser-table
+  width: 100%
+
+.browser-table-row-key
+  color: #999
+  text-align: right
+  vertical-align: top
+  padding-right: 5px
+  width: 1/3 * 100%
+
+.browser-table-row-value
+  vertical-align: top
+  width: 2/3 * 100%
+
+.browser-entry
+  cursor: pointer
+  padding-left: 8px
+  padding-right: 16px
+  border-radius: 512px
+  width: 100%
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  position: relative
+  background-color: #fff
+  &.open
+    color: #fff
+    background-color: #69f
+  .ui.icon
+    position: absolute
+    top: 3px
+    right: -3px
