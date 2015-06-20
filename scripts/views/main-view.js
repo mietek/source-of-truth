@@ -70,7 +70,12 @@ var _ = {
       {
         key: 'Year',
         value: entry.year
-      }
+      },
+      !entry.abstract ? null :
+        {
+          key: 'Abstract',
+          value: entry.abstract
+        }
     ];
     return (
       r.div('browser-column-header',
@@ -78,13 +83,14 @@ var _ = {
           r.tbody('',
             rows.map(function (row) {
                 return (
-                  r.tr({
-                      key: 'r-' + row.key
-                    },
-                    r.td('browser-table-row-key',
-                      row.key),
-                    r.td('browser-table-row-value',
-                      row.value)));
+                  !row ? null :
+                    r.tr({
+                        key: 'r-' + row.key
+                      },
+                      r.td('browser-table-row-key',
+                        row.key),
+                      r.td('browser-table-row-value',
+                        row.value)));
               }.bind(this))))));
 
   },

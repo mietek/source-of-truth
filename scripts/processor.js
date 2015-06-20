@@ -88,6 +88,7 @@ module.exports = {
           title:        rawEntry.title,
           authorIds:    authorIds,
           year:         rawEntry.year,
+          abstract:     rawEntry.abstract,
           name:         entryName,
           referenceIds: (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
@@ -99,6 +100,7 @@ module.exports = {
         var oldEntry = entriesByName[entryName];
         if (!oldEntry.referenceIds) {
           entry = assign({}, oldEntry, {
+              abstract:     rawEntry.abstract,
               referenceIds: (rawEntry.references || []).map(function (reference) {
                   return ensureReference(reference, oldEntry.id);
                 })
