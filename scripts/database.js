@@ -202,7 +202,7 @@ module.exports = [
       },
       {
         "author": "David Turner",
-        "title": "Co-data",
+        "title": "Codata",
         "year": 1995
       },
       {
@@ -391,7 +391,7 @@ module.exports = [
       },
       {
         "author": "David Turner",
-        "title": "Co-data",
+        "title": "Codata",
         "year": 1995
       },
       {
