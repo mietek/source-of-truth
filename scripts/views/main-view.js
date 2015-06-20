@@ -112,14 +112,14 @@ var _ = {
         this.renderColumnHeader(columnId, columnIndex),
         r.div('references' + (entry.referenceStyle === 'direct' ? ' direct' : ''),
           !entry.referenceIds ? null :
-            this.renderColumnHeading('References'),
+            this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
           (entry.referenceIds || []).map(function (entryId, entryIndex) {
               return (
                 this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
             }.bind(this))),
         r.div('citations',
           !entry.citationIds ? null :
-            this.renderColumnHeading('Citations'),
+            this.renderColumnHeading(citationCount === 1 ? '1 citation' : citationCount + ' citations'),
           (entry.citationIds || []).map(function (entryId, entryIndex) {
               return (
                 this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
