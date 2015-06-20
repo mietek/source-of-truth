@@ -60,9 +60,9 @@ module.exports = {
       if (!(entryName in entriesByName)) {
         entry = {
           id:          uuid.v4(),
-          year:        rawEntry.year,
-          authorIds:   authorIds,
           title:       rawEntry.title,
+          authorIds:   authorIds,
+          year:        rawEntry.year,
           name:        entryName,
           citationIds: [citationId]
         };
@@ -85,9 +85,9 @@ module.exports = {
         var entryId = uuid.v4();
         entry = {
           id:           entryId,
-          year:         rawEntry.year,
-          authorIds:    authorIds,
           title:        rawEntry.title,
+          authorIds:    authorIds,
+          year:         rawEntry.year,
           name:         entryName,
           referenceIds: (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
