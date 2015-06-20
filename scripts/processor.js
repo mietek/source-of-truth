@@ -88,8 +88,9 @@ module.exports = {
           title:        rawEntry.title,
           authorIds:    authorIds,
           year:         rawEntry.year,
-          abstract:     rawEntry.abstract,
           name:         entryName,
+          citationIds:  [],
+          abstract:     rawEntry.abstract,
           referenceIds: (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
             })
