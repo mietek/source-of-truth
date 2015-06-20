@@ -108,18 +108,20 @@ var _ = {
     return (
       r.div('browser-column-wrapper',
         this.renderColumnHeader(columnId, columnIndex),
-        !entry.referenceIds ? null :
-          this.renderColumnHeading('References'),
-        (entry.referenceIds || []).map(function (entryId, entryIndex) {
-            return (
-              this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
-          }.bind(this)),
-        !entry.citationIds ? null :
-          this.renderColumnHeading('Citations'),
-        (entry.citationIds || []).map(function (entryId, entryIndex) {
-            return (
-              this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
-          }.bind(this))));
+        r.div('references' + (entry.referenceStyle === 'direct' ? ' direct' : ''),
+          !entry.referenceIds ? null :
+            this.renderColumnHeading('References'),
+          (entry.referenceIds || []).map(function (entryId, entryIndex) {
+              return (
+                this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
+            }.bind(this))),
+        r.div('citations',
+          !entry.citationIds ? null :
+            this.renderColumnHeading('Citations'),
+          (entry.citationIds || []).map(function (entryId, entryIndex) {
+              return (
+                this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
+            }.bind(this)))));
   },
 
   renderRootColumnWrapper: function (entryIds) {

@@ -90,16 +90,17 @@ module.exports = {
       if (!(entryName in entriesByName)) {
         var entryId = uuid.v4();
         entry = {
-          id:           entryId,
-          title:        rawEntry.title,
-          authorIds:    authorIds,
-          signature:    getEntrySignature(authorIds, rawEntry),
-          year:         rawEntry.year,
-          name:         entryName,
-          citationIds:  [],
-          isFull:       true,
-          abstract:     rawEntry.abstract,
-          referenceIds: (rawEntry.references || []).map(function (reference) {
+          id:             entryId,
+          title:          rawEntry.title,
+          authorIds:      authorIds,
+          signature:      getEntrySignature(authorIds, rawEntry),
+          year:           rawEntry.year,
+          name:           entryName,
+          citationIds:    [],
+          isFull:         true,
+          abstract:       rawEntry.abstract,
+          referenceStyle: rawEntry.referenceStyle,
+          referenceIds:   (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
             })
         };
@@ -109,9 +110,10 @@ module.exports = {
         var oldEntry = entriesByName[entryName];
         if (!oldEntry.referenceIds) {
           entry = assign({}, oldEntry, {
-              isFull:       true,
-              abstract:     rawEntry.abstract,
-              referenceIds: (rawEntry.references || []).map(function (reference) {
+              isFull:         true,
+              abstract:       rawEntry.abstract,
+              referenceStyle: rawEntry.referenceStyle,
+              referenceIds:   (rawEntry.references || []).map(function (reference) {
                   return ensureReference(reference, oldEntry.id);
                 })
             });

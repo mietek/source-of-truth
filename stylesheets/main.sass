@@ -1,9 +1,6 @@
 @import "font"
 @include font("nu-sans", "regular")
 
-*, *:before, *:after
-  box-sizing: border-box
-
 body
   font-family: "nu-sans", sans-serif
   text-rendering: optimizeLegibility
@@ -24,6 +21,20 @@ body
   width: 100%
   font-size: 13px
   line-height: 18px
+
+@mixin small-label
+  color: #999
+  font-size: 9px
+  text-transform: uppercase
+  letter-spacing: 1px
+  vertical-align: top
+  position: relative
+  top: 1px
+
+@mixin ellipsis
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
 
 .browser-pane
   background-color: #fff
@@ -61,30 +72,24 @@ body
   width: 100%
 
 .browser-metadata-key
-  color: #999
-  font-variant: small-caps
-  text-transform: lowercase
-  letter-spacing: 1px
-  text-align: right
-  vertical-align: top
-  padding-right: 8px
-  width: 1/4 * 100%
+  @include small-label
+  @include ellipsis
   display: inline-block
+  width: 1/3 * 100%
+  text-align: right
 
 .browser-metadata-value
-  vertical-align: top
-  width: 3/4 * 100%
   display: inline-block
+  width: 2/3 * 100%
+  padding-left: 8px
 
 .browser-column-heading
-  color: #999
-  font-variant: small-caps
-  text-transform: lowercase
-  letter-spacing: 1px
-  font-size: 12px
-  line-height: 16px
+  @include small-label
+  counter-reset: reference
+  width: 1/12 * 100%
   margin-left: 8px
   margin-right: 8px
+  text-align: right
 
 .browser-entry
   cursor: pointer
@@ -95,39 +100,45 @@ body
   background-color: #fff
   &:after
     content: "▸"
-    display: block
-    color: #ccc
+    color: #999
     position: absolute
     top: 0
-    right: 4px
-  &:not(.full)
-    .browser-data-value
-      color: #999
+    right: 8px
+  &:not(.full):after
+    content: "▹"
+  &:not(.full) .browser-data-value
+    color: #999
   &.open
     color: #fff
-    .browser-data-value
-      color: #fff
     background-color: #69f
-    &:after
-      color: #fff
+    &:after, &:not(.full) .browser-data-value, .browser-entry-data:before
+      color: rgba(#fff, 0.8)
 
 .browser-entry-data
   width: 100%
+  &:before
+    @include small-label
+    @include ellipsis
+    content: ""
+    display: inline-block
+    width: 1/12 * 100%
+    text-align: right
+    letter-spacing: 0
+
+.references:not(.direct) .browser-entry-data
+  counter-increment: reference
+  &:before
+    content: counter(reference)
 
 .browser-data-key
-  vertical-align: top
-  padding-right: 8px
-  width: 1/4 * 100%
+  @include ellipsis
   display: inline-block
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+  width: 3/12 * 100%
+  padding-left: 8px
 
 .browser-data-value
-  vertical-align: top
-  padding-right: 8px
-  width: 3/4 * 100%
+  @include ellipsis
   display: inline-block
-  white-space: nowrap
-  overflow: hidden
-  text-overflow: ellipsis
+  width: 2/3 * 100%
+  padding-left: 8px
+  padding-right: 16px
