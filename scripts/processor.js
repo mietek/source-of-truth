@@ -128,6 +128,16 @@ module.exports = {
     rawDb.forEach(function (publication) {
         ensurePublication(publication);
       });
+    Object.keys(entriesByName).forEach(function (entryName) {
+        var oldEntry = entriesByName[entryName];
+        var entry    = assign({}, oldEntry, {
+            citationIds: oldEntry.citationIds.sort(function (c1, c2) {
+                return entriesById[c1].name.localeCompare(entriesById[c2].name);
+              })
+          });
+        entriesByName[entryName] = entry;
+        entriesById[entry.id]    = entry;
+      });
 
     return {
       authorsByName: authorsByName,
