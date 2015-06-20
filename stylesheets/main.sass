@@ -37,12 +37,12 @@ body
   text-overflow: ellipsis
 
 .browser-pane
+  user-select: none
   background-color: #fff
   height: 100%
   width: 100%
   overflow-x: scroll
   overflow-y: hidden
-  user-select: none
   -webkit-overflow-scrolling: touch
 
 .browser-pane-wrapper
@@ -63,8 +63,6 @@ body
   padding: 1px
 
 .browser-column-header
-  font-size: 12px
-  line-height: 16px
   margin-left: 8px
   margin-right: 8px
 
@@ -79,14 +77,20 @@ body
   text-align: right
 
 .browser-metadata-value
+  user-select: text
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
+  padding-right: 16px
+
+.browser-metadata-value + .browser-metadata-value
+  margin-left: 1/3 * 100%
 
 .browser-column-heading
   @include small-label
   counter-reset: reference
   width: 1/12 * 100%
+  margin-top: 18px
   margin-left: 8px
   margin-right: 8px
   text-align: right

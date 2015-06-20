@@ -60,23 +60,23 @@ var _ = {
     var entry = this.state.entriesById[columnId];
     var rows = [
       {
-        key: 'Title',
-        value: entry.title
+        key:    'Title',
+        values: [entry.title]
       },
       {
-        key: 'Authors',
-        value: entry.authorIds.reduce(function (result, authorId, authorIdIndex) {
-            return result + (authorIdIndex ? ', ' : '') + this.state.authorsById[authorId].name;
-          }.bind(this), '')
+        key:    entry.authorIds.length === 1 ? 'Author' : 'Authors',
+        values: entry.authorIds.map(function (authorId) {
+            return this.state.authorsById[authorId].name;
+          }.bind(this))
       },
       {
-        key: 'Year',
-        value: entry.year
+        key:    'Year',
+        values: [entry.year]
       },
       !entry.isFull ? null :
         {
-          key: 'Abstract',
-          value: entry.abstract
+          key:    'Abstract',
+          values: [entry.abstract]
         }
     ];
     return (
@@ -87,8 +87,11 @@ var _ = {
                 !row ? null : [
                     r.span('browser-metadata-key',
                       row.key),
-                    r.span('browser-metadata-value',
-                      row.value)
+                    row.values.map(function (value) {
+                        return (
+                          r.span('browser-metadata-value',
+                            value));
+                      })
                   ]);
             }.bind(this)))));
 
@@ -97,7 +100,6 @@ var _ = {
   renderColumnHeading: function (title) {
     return (
       r.div('browser-column-heading',
-        r.br(),
         r.span('',
           title)));
   },
