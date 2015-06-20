@@ -3,6 +3,7 @@ module.exports = [
     "author": "David Turner",
     "title": "Elementary strong functional programming",
     "year": 1995,
+    "abstract": "Functional programming is a good idea, but we haven’t got it quite right yet. What we have been doing up to now is weak (or partial) functional programming. What we should be doing is strong (or total) functional programming — in which all computations terminate. We propose an elementary discipline of strong functional programming. A key feature of the discipline is that we introduce a type distinction between _data_, which is known to be finite, and _codata_, which is (potentially) infinite.\n",
     "references": [
       {
         "authors": [
@@ -68,6 +69,7 @@ module.exports = [
     ],
     "title": "Ensuring streams flow",
     "year": 1997,
+    "abstract": "It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term _codata_, are productive. This analysis is an extension of the check for _guardedness_ that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.\n",
     "references": [
       {
         "authors": [
@@ -219,6 +221,7 @@ module.exports = [
     ],
     "title": "Ensuring the productivity of infinite structures",
     "year": 1997,
+    "abstract": "It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term _codata_, are productive. This analysis is an extension of the check for _guardedness_ that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.\n",
     "references": [
       {
         "authors": [
@@ -410,6 +413,7 @@ module.exports = [
     "author": "Alexander Kaganovsky",
     "title": "Computing with exact real numbers in a radix-r system",
     "year": 1999,
+    "abstract": "This paper investigates an arithmetic based upon the representation of computable exact real numbers by lazy infinite sequences of signed digits in a positional radix-_r_ system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic.\n",
     "references": [
       {
         "author": "A. Avizienis",
@@ -531,6 +535,7 @@ module.exports = [
     "author": "Alexander Kaganovsky",
     "title": "Exact complex arithmetic in an imaginary radix system",
     "year": 1999,
+    "abstract": "This paper investigates an exact arithmetic based on the single-component representation of complex numbers by sequences of signed digits written to imaginary base _ri_. Algorithms for the four basic arithmetic operations in this representation are described and analyzed. The algorithms are to an unexpected extent scarcely different from their exact real equivalents, which significantly speeds up exact complex number manipulations.\n",
     "references": [
       {
         "author": "S. Lang",
@@ -685,6 +690,7 @@ module.exports = [
     ],
     "title": "A hierarchy of languages with strong termination properties",
     "year": 2000,
+    "abstract": "In previous papers we have proposed an elementary discipline of _strong_ functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between _data_ which is known to be finite, and _codata_ which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.\n",
     "references": [
       {
         "author": "A. Abel",
@@ -936,6 +942,7 @@ module.exports = [
     ],
     "title": "Ensuring termination in ESFP",
     "year": 2000,
+    "abstract": "In previous papers we have proposed an elementary discipline of _strong_ functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between _data_ which is known to be finite, and _codata_ which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.\n",
     "references": [
       {
         "author": "A. Abel",
@@ -1253,6 +1260,7 @@ module.exports = [
     "author": "Alexander Kaganovsky",
     "title": "Exact computing in positional weighted systems",
     "year": 2001,
+    "abstract": "This thesis presents a framework which allows one to perform infinite precision numerical computations using an arithmetic based upon the representation of computable numbers by lazy infinite sequences of digits in a redundant positional radix system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic, and a number of important elementary functions. We investigate the system of real numbers represented in an arbitrary radix _r_, and then show that the radix-_r_ algorithms also lend themselves with little modification to the unified representation of complex numbers in an imaginary radix, which significantly speeds up exact complex number manipulations. A full complexity analysis is given, which suggests that notwithstanding an earlier claim, positional number system representations can lead to efficient implementations of constructive arithmetic, and in particular, our algorithms largely overcome what has been known as the granularity effect. The algorithms have been implemented both in the functional programming language Miranda and imperative language C, and guidelines have been provided for optimizing and improving the existing implementations.\n",
     "references": [
       {
         "author": "O. Aberth",
@@ -1780,6 +1788,7 @@ module.exports = [
     "author": "David Turner",
     "title": "Total functional programming",
     "year": 2004,
+    "abstract": "The driving idea of functional programming is to make programming more closely related to mathematics. A program in a functional language such as Haskell or Miranda consists of equations which are both computation rules and a basis for simple algebraic reasoning about the functions and data structures they define. The existing model of functional programming, although elegant and powerful, is compromised to a greater extent than is commonly recognised by the presence of partial functions. We consider a simple discipline of total functional programming designed to exclude the possibility of non-termination. Among other things this requires a type distinction between data, which is finite, and codata, which is potentially infinite.\n",
     "references": [
       {
         "author": "Andreas Abel",
