@@ -600,7 +600,7 @@ module.exports = [
       {
         "author": "Alexander Kaganovsky",
         "title": "Computing with exact real numbers in a radix-r system",
-        "year": 1998
+        "year": 1999
       },
       {
         "author": "D.E. Knuth",
@@ -1190,7 +1190,7 @@ module.exports = [
       {
         "author": "Alexander Kaganovsky",
         "title": "Computing with exact real numbers in a radix-r system",
-        "year": 1998
+        "year": 1999
       },
       {
         "author": "Alexander Kaganovsky",
@@ -1488,7 +1488,7 @@ module.exports = [
       {
         "author": "Alexander Kaganovsky",
         "title": "Computing with exact real numbers in a radix-r system",
-        "year": 1998
+        "year": 1999
       },
       {
         "author": "Alexander Kaganovsky",
