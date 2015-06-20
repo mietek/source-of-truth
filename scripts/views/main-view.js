@@ -54,25 +54,6 @@ var _ = {
           r.i('ui icon caret right')));
   },
 
-  renderColumnWrapper: function (columnId, columnIndex, entryIds) {
-    var isRoot     = columnId === 'root';
-    var entryCount = entryIds && entryIds.length;
-    return (
-      r.div('browser-column-wrapper',
-        isRoot ? null :
-          this.renderColumnHeader(columnId, columnIndex),
-        (isRoot || !entryCount) ? null :
-          r.div('browser-column-heading',
-            r.br(),
-            r.span('',
-              'References')),
-        !entryIds ? null :
-          entryIds.map(function (entryId, entryIndex) {
-              return (
-                this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
-            }.bind(this))));
-  },
-
   renderColumnHeader: function (columnId, columnIndex) {
     var entry = this.state.entriesById[columnId];
     var rows = [
@@ -108,17 +89,39 @@ var _ = {
 
   },
 
+  renderColumnHeading: function (title) {
+    return (
+      r.div('browser-column-heading',
+        r.br(),
+        r.span('',
+          title)));
+  },
+
+  renderColumnWrapper: function (columnId, columnIndex, entryIds) {
+    var entryCount = entryIds && entryIds.length;
+    return (
+      r.div('browser-column-wrapper',
+        this.renderColumnHeader(columnId, columnIndex),
+        !entryCount ? null :
+          this.renderColumnHeading('References'),
+        (entryIds || []).map(function (entryId, entryIndex) {
+            return (
+              this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
+          }.bind(this))));
+  },
+
+  renderRootColumnWrapper: function (entryIds) {
+    var entryCount = entryIds && entryIds.length;
+    return (
+      r.div('browser-column-wrapper',
+        (entryIds || []).map(function (entryId, entryIndex) {
+            return (
+              this.renderEntry('root', 0, entryId, entryIndex, entryCount));
+          }.bind(this))));
+  },
+
   renderColumn: function (columnId, columnIndex, columnCount) {
-    var isRoot = columnId === 'root';
-    var entryIds;
-    if (isRoot) {
-      entryIds = this.state.entryNames.map(function (entryName) {
-          return (
-            this.state.entriesByName[entryName].id);
-        }.bind(this));
-    } else {
-      entryIds = this.state.entriesById[columnId].referenceIds;
-    }
+    var entryIds = this.state.entriesById[columnId].referenceIds;
     return (
       r.div({
           className: 'browser-column',
@@ -134,6 +137,26 @@ var _ = {
         this.renderColumnWrapper(columnId, columnIndex, entryIds)));
   },
 
+  renderRootColumn: function (columnCount) {
+    var entryIds = this.state.entryNames.map(function (entryName) {
+        return (
+          this.state.entriesByName[entryName].id);
+      }.bind(this));
+    return (
+      r.div({
+          className: 'browser-column',
+          key:       'c-root',
+          onClick:   function (event) {
+            event.stopPropagation();
+            this.updatePath('root', null);
+          }.bind(this),
+          style: {
+            width: '' + 1/columnCount * 100 + '%',
+          }
+        },
+        this.renderRootColumnWrapper(entryIds)));
+  },
+
   renderPaneWrapper: function (columnIds) {
     var columnCount = columnIds.length;
     return (
@@ -145,7 +168,9 @@ var _ = {
         },
         columnIds.map(function (columnId, columnIndex) {
             return (
-              this.renderColumn(columnId, columnIndex, columnCount));
+              columnId === 'root' ?
+                this.renderRootColumn(columnCount) :
+                this.renderColumn(columnId, columnIndex, columnCount));
           }.bind(this))));
   },
 
