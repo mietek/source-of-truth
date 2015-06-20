@@ -1,8 +1,8 @@
 @import "font"
-@include font("nu-sans", "regular")
+@include font("concourse-t3", "regular")
+@include font("concourse-c3", "regular")
 
 body
-  font-family: "nu-sans", sans-serif
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
   color: #000
@@ -19,17 +19,16 @@ body
 #main
   height: 100%
   width: 100%
-  font-size: 13px
-  line-height: 18px
+  font-family: "concourse-t3", sans-serif
+  font-size: 14px
+  line-height: 19px
 
 @mixin small-label
   color: #999
-  font-size: 9px
-  text-transform: uppercase
-  letter-spacing: 1px
+  font-family: "concourse-c3", sans-serif
+  font-size: 14px
+  text-transform: lowercase
   vertical-align: top
-  position: relative
-  top: 1px
 
 @mixin ellipsis
   white-space: nowrap
@@ -89,7 +88,7 @@ body
 .browser-column-heading
   @include small-label
   counter-reset: reference
-  margin-top: 18px
+  margin-top: 19px
   margin-left: 8px
   margin-right: 8px
 
