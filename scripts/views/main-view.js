@@ -97,16 +97,23 @@ var _ = {
           title)));
   },
 
-  renderColumnWrapper: function (columnId, columnIndex, entryIds) {
-    var entryCount = entryIds && entryIds.length;
+  renderColumnWrapper: function (columnId, columnIndex, entry) {
+    var referenceCount = entry.referenceIds && entry.referenceIds.length;
+    var citationCount  = entry.citationIds && entry.citationIds.length;
     return (
       r.div('browser-column-wrapper',
         this.renderColumnHeader(columnId, columnIndex),
-        !entryCount ? null :
+        !referenceCount ? null :
           this.renderColumnHeading('References'),
-        (entryIds || []).map(function (entryId, entryIndex) {
+        (entry.referenceIds || []).map(function (entryId, entryIndex) {
             return (
-              this.renderEntry(columnId, columnIndex, entryId, entryIndex, entryCount));
+              this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
+          }.bind(this)),
+        !citationCount ? null :
+          this.renderColumnHeading('Citations'),
+        (entry.citationIds || []).map(function (entryId, entryIndex) {
+            return (
+              this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
           }.bind(this))));
   },
 
@@ -121,7 +128,7 @@ var _ = {
   },
 
   renderColumn: function (columnId, columnIndex, columnCount) {
-    var entryIds = this.state.entriesById[columnId].referenceIds;
+    var entry = this.state.entriesById[columnId];
     return (
       r.div({
           className: 'browser-column',
@@ -134,7 +141,7 @@ var _ = {
             width: '' + 1/columnCount * 100 + '%',
           }
         },
-        this.renderColumnWrapper(columnId, columnIndex, entryIds)));
+        this.renderColumnWrapper(columnId, columnIndex, entry)));
   },
 
   renderRootColumn: function (columnCount) {
