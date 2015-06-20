@@ -1,0 +1,50 @@
+title: Elementary strong functional programming
+author: David Turner
+year: 1995
+abstract: |
+  Functional programming is a good idea, but we haven’t got it quite right yet. What we have been doing up to now is weak (or partial) functional programming. What we should be doing is strong (or total) functional programming — in which all computations terminate. We propose an elementary discipline of strong functional programming. A key feature of the discipline is that we introduce a type distinction between _data_, which is known to be finite, and _codata_, which is (potentially) infinite.
+collection: Total functional programming
+references:
+
+  - authors:
+      - R.S. Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - author: K. Gödel
+    title: On a hitherto unutilized extension of the finitary standpoint
+    year: 1958
+
+  - authors:
+      - R. Harper
+      - D. MacQueen
+      - R. Milner
+    title: Standard ML
+    year: 1986
+
+  - authors:
+      - Paul Hudak
+      - et al.
+    title: Report on the programming language Haskell
+    year: 1992
+
+  - author: A.M. Pitts
+    title: A co-induction principle for recursively defined domains
+    year: 1994
+
+  - author: Colin Runciman
+    title: What about the natural numbers
+    year: 1989
+
+  - author: S.J. Thompson
+    title: A logic for Miranda
+    year: 1989
+
+  - author: David Turner
+    title: Functional programming and proofs of program correctness
+    year: 1982
+
+  - author: David Turner
+    title: "Miranda: A non-strict functional language with polymorphic types"
+    year: 1985

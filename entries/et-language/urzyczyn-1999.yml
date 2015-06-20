@@ -1,0 +1,76 @@
+title: "The Curry-Howard isomorphism: Remarks on recursive types"
+author: Paweł Urzyczyn
+year: 1999
+collection: ET language
+references:
+
+  - authors:
+      - C. Böhm
+      - A. Berarducci
+    title: Automatic synthesis of typed Λ-programs on term algebras
+    year: 1985
+
+  - authors:
+      - F. Cardone
+      - M. Coppo
+    title: Two extensions of Curry’s type inference system
+    year: 1990
+
+  - author: H. Geuvers
+    title: Inductive and coinductive types with iteration and recursion
+    year: 1992
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - J.-L. Krivine
+      - M. Parigot
+    title: Programming with proofs
+    year: 1990
+
+  - author: D. Leivant
+    title: Reasoning about functional programs and complexity classes associated with type disciplines
+    year: 1983
+
+  - author: D. Leivant
+    title: Contracting proofs to programs
+    year: 1990
+
+  - authors:
+      - M.H Sørensen
+      - P. Urzyczyn
+    title: Lectures on the Curry-Howard isomorphism
+    year: 1998
+
+  - author: N.P. Mendler
+    title: Recursive types and type constraints in the second-order lambda calculus
+    year: 1987
+
+  - author: N.P. Mendler
+    title: Inductive types and type constraints in the second-order lambda calculus
+    year: 1991
+
+  - author: M. Parigot
+    title: On the representation of data in lambda-calculus
+    year: 1990
+
+  - author: M. Parigot
+    title: Recursive programming with proofs
+    year: 1992
+
+  - author: Z. Spławski
+    title: Proof-theoretic approach to inductive definitions in ML-like programming languages vs. second-order lambda calculus
+    year: 1993
+
+  - author: P. Urzyczyn
+    title: Positive recursive type assignment
+    year: 1996
+
+  - author: G.C. Wraith
+    title: A note on categorical data types
+    year: 1989

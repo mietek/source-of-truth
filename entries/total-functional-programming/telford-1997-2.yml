@@ -1,0 +1,154 @@
+title: Ensuring the productivity of infinite structures
+authors:
+  - Alastair Telford
+  - David Turner
+year: 1997
+abstract: |
+  It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term _codata_, are productive. This analysis is an extension of the check for _guardedness_ that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.
+collection: Total functional programming
+references:
+
+  - authors:
+      - INRIA
+      - CNRS
+    title: The Coq project
+    year: 1996
+
+  - author: T. Coquand
+    title: Infinite objects in type theory
+    year: 1993
+
+  - author: P. Cousot
+    title: Types as abstract interpretations
+    year: 1997
+
+  - authors:
+      - P. Cousot
+      - R. Cousot
+    title: Inductive definitions, semantics and abstract interpretation
+    year: 1992
+
+  - authors:
+      - K. Davis
+      - Philip Wadler
+    title: Strictness analysis in 4D
+    year: 1991
+
+  - author: E.W. Dijkstra
+    title: A discipline of programming
+    year: 1976
+
+  - author: J. Giesl
+    title: Termination of nested and mutually recursive algorithms
+    year: 1997
+
+  - author: E. Giménez
+    title: Codifying guarded definitions with recursive schemes
+    year: 1995
+
+  - author: E. Giménez
+    title: Guardedness algorithm for co-inductive types
+    year: 1997
+
+  - authors:
+      - J.-Y. Girard
+      - P. Taylor
+      - Y. Lafont
+    title: Proofs and types
+    year: 1990
+
+  - author: J.R. Hindley
+    title: The principal type scheme of an object in combinatory logic
+    year: 1969
+
+  - author: R.J.M. Hughes
+    title: Backwards analysis of functional programs
+    year: 1988
+
+  - author: R.J.M. Hughes
+    title: Compile-time analysis of functional programs
+    year: 1990
+
+  - author: R.J.M. Hughes
+    title: Why functional programming matters
+    year: 1990
+
+  - authors:
+      - R.J.M. Hughes
+      - L. Pareto
+      - A. Sabry
+    title: Proving the correctness of reactive systems using sized types
+    year: 1996
+
+  - author: S. Kamin
+    title: Head-strictness is not a monotonic abstract property
+    year: 1992
+
+  - author: H. Mairson
+    title: Deciding ML typability is complete for deterministic exponential time
+    year: 1990
+
+  - author: P. Martin-Löf
+    title: "An intuitionistic theory of types: Predicative part"
+    year: 1973
+
+  - authors:
+      - D. McAllester
+      - K. Arkoudas
+    title: Walther recursion
+    year: 1996
+
+  - authors:
+      - P.F. Mendler
+      - P. Panangaden
+      - R.L. Constable
+    title: Infinite objects in type theory
+    year: 1987
+
+  - author: Robin Milner
+    title: A theory of type polymorphism in programming
+    year: 1978
+
+  - author: Robin Milner
+    title: A calculus of communicating systems
+    year: 1980
+
+  - author: L.C. Paulson
+    title: ML for the working programmer
+    year: 1996
+
+  - author: J.J.M.M. Rutten
+    title: "Universal coalgebra: A theory of systems"
+    year: 1996
+
+  - author: B.A. Sijtsma
+    title: On the productivity of recursive list definitions
+    year: 1989
+
+  - author: S.J. Thompson
+    title: Type theory and functional programming
+    year: 1991
+
+  - author: S.J. Thompson
+    title: "Haskell: The craft of functional programming"
+    year: 1996
+
+  - author: David Turner
+    title: "Miranda: A non-strict functional language with polymorphic types"
+    year: 1985
+
+  - author: David Turner
+    title: Research topics in functional programming
+    year: 1990
+
+  - author: David Turner
+    title: Codata
+    year: 1995
+
+  - author: David Turner
+    title: Elementary strong functional programming
+    year: 1995
+
+  - author: Philip Wadler
+    title: Comprehending monads
+    year: 1992

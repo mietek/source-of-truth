@@ -1,0 +1,97 @@
+title: Computing with exact real numbers in a radix-r system
+author: Alexander Kaganovsky
+year: 1999
+abstract: |
+  This paper investigates an arithmetic based upon the representation of computable exact real numbers by lazy infinite sequences of signed digits in a positional radix-_r_ system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic.
+collection: Total functional programming
+references:
+
+  - author: A. Avizienis
+    title: Binary-compatible signed-digit arithmetic
+    year: 1964
+
+  - author: A. Avizienis
+    title: Signed-digit number representations for fast parallel arithmetic
+    year: 1961
+
+  - authors:
+      - H.-J. Boehm
+      - R. Cartwright
+      - et al.
+    title: "Exact real arithmetic: A case study in higher order programming"
+    year: 1986
+
+  - authors:
+      - H. Boehm
+      - R. Cartwright
+    title: "Exact real arithmetic: Formulating real numbers as functions"
+    year: 1990
+
+  - authors:
+      - A. Edalat
+      - P.J. Potts
+    title: A new representation for exact real numbers
+    year: 1997
+
+  - author: M.D. Ercegovac
+    title: "On-line arithmetic: An overview"
+    year: 1984
+
+  - author: Alexander Kaganovsky
+    title: Computing with exact real numbers in a radix-r system
+    year: 1998
+
+  - author: V. Ménissier-Morain
+    title: "Arbitrary precision real arithmetic: Design and algorithms"
+
+  - author: J.-M. Muller
+    title: Arithmétique des ordinateurs
+    year: 1989
+
+  - author: J. Myhill
+    title: What is a real number?
+    year: 1972
+
+  - author: C.P. Pixley
+    title: Demand-driven arithmetic
+    year: 1982
+
+  - author: J.E. Robertson
+    title: A new class of digital division methods
+    year: 1958
+
+  - author: J. Schwarz
+    title: Implementing infinite precision arithmetic
+    year: 1989
+
+  - author: D.M. Smith
+    title: A multiple-precision division algorithm
+    year: 1996
+
+  - author: K.R. Stromberg
+    title: Introduction to classical real analysis
+    year: 1981
+
+  - author: Alan Turing
+    title: On computable numbers, with an application to the Entscheidungsproblem
+    year: 1936
+
+  - author: David Turner
+    title: An overview of Miranda
+    year: 1986
+
+  - author: David Turner
+    title: SASL language manual
+    year: 1976
+
+  - author: J.E. Vuillemin
+    title: Exact real computer arithmetic with continued fractions
+    year: 1990
+
+  - author: E. Wiedmer
+    title: Computing with infinite objects
+    year: 1980
+
+  - author: E. Wiedmer
+    title: Exaktes Rechnen mit reellen Zahlen und anderen unendlichen Objekten
+    year: 1977

@@ -1,0 +1,17 @@
+title: IPL by examples
+author: Zdzisław Spławski
+year: 1993
+collection: ET language
+references:
+
+  - author: Martin Hofmann
+    title: Non strictly positive datatypes for breadth first search
+    year: 1993
+
+  - author: J.Y-. Girard
+    title: On the unity of logic
+    year: 1993
+
+  - author: P. Wadler
+    title: A taste of linear logic
+    year: 1993

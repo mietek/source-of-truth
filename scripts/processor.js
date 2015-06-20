@@ -3,7 +3,7 @@
 var assign = require('object-assign');
 var uuid = require('node-uuid');
 var utils = require('./common/utils');
-var rawDb = require('./database');
+var rawEntries = require('./entries');
 
 module.exports = {
   processDb: function () {
@@ -127,8 +127,8 @@ module.exports = {
       return entry.id;
     }
 
-    rawDb.forEach(function (publication) {
-        ensurePublication(publication);
+    rawEntries.forEach(function (rawEntry) {
+        ensurePublication(rawEntry);
       });
     Object.keys(entriesByName).forEach(function (entryName) {
         var oldEntry = entriesByName[entryName];

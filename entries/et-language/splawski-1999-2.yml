@@ -1,0 +1,156 @@
+title: "Type fixpoints: Iteration vs. recursion"
+authors:
+  - Zdzisław Spławski
+  - Paweł Urzyczyn
+year: 1999
+abstract: |
+  Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus **λ2** (System **F**) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus **λ2U** of recursive types with the operators **Fold** : _σ[μα.σ/α] → μα.σ_ and **Unfold** : _μα.σ → σ[μα.σ/α]_, where the composition **Unfold** ◦ **Fold** reduces to identity.
+  It is known that systems with iterators can be defined within **λ2**, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system **λ2U** does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type _σ_ is embedded into another type _τ_ then _τ_ must be of depth at least equal to the depth of _σ_.
+collection: ET language
+references:
+
+  - authors:
+      - A. Asperti
+      - V. Danos
+      - C. Laneve
+      - L. Regnier
+    title: Paths in the lambda-calculus
+    year: 1994
+
+  - authors:
+      - A. Asperti
+      - S. Guerrini
+    title: The optimal implementation of functional programming languages
+    year: 1998
+
+  - authors:
+      - S. van Bakel
+      - L. Liquori
+      - S. Ronchi Della Rocca
+      - P. Urzyczyn
+    title: Comparing cubes of typed and type assignment systems
+    year: 1997
+
+  - authors:
+      - C. Böhm
+      - A. Berarducci
+    title: Automatic synthesis of typed Λ-programs on term algebras
+    year: 1985
+
+  - authors:
+      - K. Bruce
+      - G. Longo
+    title: Provable isomorphisms and domain equations in models of typed languages
+    year: 1985
+
+  - authors:
+      - F. Cardone
+      - M. Coppo
+    title: Two extensions of Curry’s type inference system
+    year: 1990
+
+  - authors:
+      - V. Danos
+      - L. Regnier
+    title: Proof-nets and the Hilbert space
+    year: 1995
+
+  - author: M. Dezani
+    title: Characterization of normal forms posessing an inverse in the λβη-calculus
+    year: 1976
+
+  - author: R. Di Cosmo
+    title: "Isomorphisms of types: From lambda-calculus to information retrieval and language design"
+    year: 1995
+
+  - author: H. Geuvers
+    title: Inductive and coinductive types with iteration and recursion
+    year: 1992
+
+  - author: J.-Y. Girard
+    title: "Geometry of interaction I: Interpretation of system F"
+    year: 1989
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - R. Harper
+      - F. Honsell
+      - G. Plotkin
+    title: A framework for defining logics
+    year: 1993
+
+  - authors:
+      - J.-L. Krivine
+      - M. Parigot
+    title: Programming with proofs
+    year: 1990
+
+  - author: D. Leivant
+    title: Reasoning about functional programs and complexity classes associated with type disciplines
+    year: 1983
+
+  - author: D. Leivant
+    title: Contracting proofs to programs
+    year: 1990
+
+  - author: D. Leivant
+    title: Functions over free algebras definable in the simply typed lambda calculus
+    year: 1993
+
+  - authors:
+      - I. Margaria
+      - M. Zacchi
+    title: Right and left invertibility in λ-β-calculus
+    year: 1983
+
+  - author: R. Matthes
+    title: Extensions of system F by iteration and primitive recursion on monotone inductive types
+    year: 1998
+
+  - author: N.P. Mendler
+    title: Recursive types and type constraints in the second-order lambda calculus
+    year: 1987
+
+  - author: N.P. Mendler
+    title: Inductive types and type constraints in the second-order lambda calculus
+    year: 1991
+
+  - author: M. Parigot
+    title: On the representation of data in lambda-calculus
+    year: 1990
+
+  - author: M. Parigot
+    title: Recursive programming with proofs
+    year: 1992
+
+  - author: J.C. Reynolds
+    title: Polymorphism is not set-theoretic
+    year: 1984
+
+  - authors:
+      - J.C. Reynolds
+      - G.D. Plotkin
+    title: On functors expressible in the polymorphic typed lambda calculus
+    year: 1993
+
+  - author: Z. Spławski
+    title: Proof-theoretic approach to inductive definitions in ML-like programming languages vs. second-order lambda calculus
+    year: 1993
+
+  - author: P. Urzyczyn
+    title: Positive recursive type assignment
+    year: 1996
+
+  - author: P. Urzyczyn
+    title: Recursive types and type embeddings
+    year: 1999
+
+  - author: G.C. Wraith
+    title: A note on categorical data types
+    year: 1989

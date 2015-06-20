@@ -1,0 +1,91 @@
+title: Total functional programming
+author: David Turner
+year: 2004
+abstract: |
+  The driving idea of functional programming is to make programming more closely related to mathematics. A program in a functional language such as Haskell or Miranda consists of equations which are both computation rules and a basis for simple algebraic reasoning about the functions and data structures they define. The existing model of functional programming, although elegant and powerful, is compromised to a greater extent than is commonly recognised by the presence of partial functions. We consider a simple discipline of total functional programming designed to exclude the possibility of non-termination. Among other things this requires a type distinction between data, which is finite, and codata, which is potentially infinite.
+collection: Total functional programming
+numbered: n
+references:
+
+  - author: Andreas Abel
+    title: A semantic analysis of structural recursion
+    year: 1999
+
+  - authors:
+      - Kostas Arkoudas
+      - David McAllester
+    title: Walther recursion
+    year: 1996
+
+  - authors:
+      - R.S. Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - author: K. Gödel
+    title: On a hitherto unutilized extension of the finitary standpoint
+    year: 1958
+
+  - authors:
+      - R. Harper
+      - D. MacQueen
+      - R. Milner
+    title: Standard ML
+    year: 1986
+
+  - authors:
+      - Paul Hudak
+      - et al.
+    title: Report on the programming language Haskell
+    year: 1992
+
+  - author: Conor McBride
+    title: First order unification by structural recursion
+    year: 2003
+
+  - authors:
+      - B. Nordstrom
+      - K. Petersson
+      - J.M. Smith
+    title: "Programming in Martin-Löf’s type theory: An introduction"
+    year: 1990
+
+  - author: A.M. Pitts
+    title: A co-induction principle for recursively defined domains
+    year: 1994
+
+  - author: Colin Runciman
+    title: What about the natural numbers
+    year: 1989
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring streams flow
+    year: 1997
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring termination in ESFP
+    year: 2000
+
+  - author: David Turner
+    title: Functional programming and proofs of program correctness
+    year: 1982
+
+  - author: David Turner
+    title: An overview of Miranda
+    year: 1986
+
+  - author: David Turner
+    title: Elementary strong functional programming
+    year: 1995
+
+  - authors:
+      - Philip Wadler
+      - Walid Taha
+      - David McQueen
+    title: How to add laziness to a strict language without even being odd
+    year: 1998

@@ -1,0 +1,121 @@
+title: Exact complex arithmetic in an imaginary radix system
+author: Alexander Kaganovsky
+year: 1999
+abstract: |
+  This paper investigates an exact arithmetic based on the single-component representation of complex numbers by sequences of signed digits written to imaginary base _ri_. Algorithms for the four basic arithmetic operations in this representation are described and analyzed. The algorithms are to an unexpected extent scarcely different from their exact real equivalents, which significantly speeds up exact complex number manipulations.
+collection: Total functional programming
+references:
+
+  - author: S. Lang
+    title: Algebra
+    year: 1992
+
+  - authors:
+      - W.H. Press
+      - S.A. Teukolsky
+      - W.T. Vetterling
+      - B.P. Flannery
+    title: "Numerical recipes in C: The art of scientific computing"
+    year: 1995
+
+  - author: J.-M. Muller
+    title: Arithmétique des ordinateurs
+    year: 1989
+
+  - author: W. Kahan
+    title: Branch cuts for complex elementary functions, or much ado about nothing’s sign bit
+    year: 1987
+
+  - authors:
+      - H.-J. Boehm
+      - R. Cartwright
+      - et al.
+    title: "Exact real arithmetic: A case study in higher order programming"
+    year: 1986
+
+  - authors:
+      - H. Boehm
+      - R. Cartwright
+    title: "Exact real arithmetic: Formulating real numbers as functions"
+    year: 1990
+
+  - author: E. Wiedmer
+    title: Computing with infinite objects
+    year: 1980
+
+  - author: J.E. Vuillemin
+    title: Exact real computer arithmetic with continued fractions
+    year: 1990
+
+  - authors:
+      - A. Edalat
+      - P.J. Potts
+    title: A new representation for exact real numbers
+    year: 1997
+
+  - author: Alexander Kaganovsky
+    title: Computing with exact real numbers in a radix-r system
+    year: 1999
+
+  - author: D.E. Knuth
+    title: An imaginary number system
+    year: 1960
+
+  - author: W. Penney
+    title: A ‘binary’ system for complex numbers
+    year: 1965
+
+  - author: T.J. O’Reilly
+    title: A positional notation for complex numbers
+    year: 1974
+
+  - author: W.N. Holmes
+    title: Representation for complex numbers
+    year: 1978
+
+  - author: L.B. Wadel
+    title: Negative base number systems
+    year: 1957
+
+  - author: G.F. Songster
+    title: Negative base number representation systems
+    year: 1963
+
+  - author: M.P. de Regt
+    title: Negative radix arithmetic
+    year: 1967
+
+  - authors:
+      - P.V. Sankar
+      - S. Chakrabarti
+      - E.V. Krishnamurthy
+    title: Arithmetic algorithms in a negative base
+    year: 1973
+
+  - author: Z. Pawlak
+    title: An electronic digital computer based on the ‘-2’ system
+    year: 1959
+
+  - author: A. Avizienis
+    title: Signed-digit number representations for fast parallel arithmetic
+    year: 1961
+
+  - author: C.K. Yuen
+    title: On the floating point representation of complex numbers
+    year: 1975
+
+  - author: K.R. Stromberg
+    title: Introduction to classical real analysis
+    year: 1981
+
+  - author: J.E. Robertson
+    title: A new class of digital division methods
+    year: 1958
+
+  - author: D.M. Smith
+    title: A multiple-precision division algorithm
+    year: 1996
+
+  - author: J. Schwarz
+    title: Implementing infinite precision arithmetic
+    year: 1989

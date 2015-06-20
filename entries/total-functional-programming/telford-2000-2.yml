@@ -1,0 +1,147 @@
+title: Ensuring termination in ESFP
+authors:
+  - Alastair Telford
+  - David Turner
+year: 2000
+abstract: |
+  In previous papers we have proposed an elementary discipline of _strong_ functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between _data_ which is known to be finite, and _codata_ which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.
+collection: Total functional programming
+references:
+
+  - author: A. Abel
+    title: "Foetus: Termination checker for simple functional programs"
+    year: 1998
+
+  - authors:
+      - F. Baader
+      - T. Nipkow
+    title: Term rewriting and all that
+    year: 1998
+
+  - authors:
+      - J. Brauburger
+      - J. Giesl
+    title: Termination analysis by inductive evaluation
+    year: 1998
+
+  - author: T. Coquand
+    title: Infinite objects in type theory
+    year: 1993
+
+  - author: P. Cousot
+    title: Abstract interpretation
+    year: 1996
+
+  - author: P. Cousot
+    title: Types as abstract interpretations
+    year: 1997
+
+  - authors:
+      - P. Cousot
+      - R. Cousot
+    title: Systematic design of program analysis frameworks
+    year: 1979
+
+  - authors:
+      - P. Cousot
+      - R. Cousot
+    title: Comparing the Galois connection and widening/narrowing approaches to abstract interpretation
+    year: 1992
+
+  - authors:
+      - M.C.F. Ferreira
+      - H. Zantema
+    title: Syntactical analysis of total termination
+    year: 1994
+
+  - author: J. Giesl
+    title: Termination of nested and mutually recursive algorithms
+    year: 1997
+
+  - author: E. Giménez
+    title: Codifying guarded definitions with recursive schemes
+    year: 1995
+
+  - authors:
+      - Neil D. Jones
+      - Carsten K. Gomard
+      - Peter Sestoft
+    title: Partial evaluation and automatic program generation
+    year: 1993
+
+  - author: P. Martin-Löf
+    title: "An intuitionistic theory of types: Predicative part"
+    year: 1973
+
+  - authors:
+      - D. McAllester
+      - K. Arkoudas
+    title: Walther recursion
+    year: 1996
+
+  - author: Robin Milner
+    title: A theory of type polymorphism in programming
+    year: 1978
+
+  - authors:
+      - R. Milner
+      - M. Tofte
+      - R. Harper
+      - D. MacQueen
+    title: The definition of Standard ML
+    year: 1997
+
+  - author: Eric G.J.M.H. Nöcker
+    title: Strictness analysis using abstract reduction
+    year: 1993
+
+  - authors:
+      - S. Panitz
+      - M. Schmidt-Shauß
+    title: "TEA: Automatically proving termination of programs in a non-strict higher-order functional language"
+    year: 1997
+
+  - authors:
+      - S.L. Peyton Jones
+      - R.J.M. Hughes
+      - et al.
+    title: "Haskell 98: A non-strict, purely functional language"
+    year: 1999
+
+  - author: C. Reade
+    title: Elements of functional programming
+    year: 1989
+
+  - author: K. Slind
+    title: "TFL: An environment for terminating functional programs"
+    year: 1998
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring streams flow
+    year: 1997
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring the productivity of infinite structures
+    year: 1997
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: A hierarchy of languages with strong termination properties
+    year: 2000
+
+  - author: David Turner
+    title: "Miranda: A non-strict functional language with polymorphic types"
+    year: 1985
+
+  - author: David Turner
+    title: Elementary strong functional programming
+    year: 1995
+
+  - author: H. Zantema
+    title: Termination of context-sensitive rewriting
+    year: 1997

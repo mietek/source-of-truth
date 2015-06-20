@@ -1,0 +1,17 @@
+title: On the implementation of IPL
+author: Tomasz Wierzbicki
+year: 1993
+collection: ET language
+references:
+
+  - author: C. Reade
+    title: Elements of functional programming
+    year: 1989
+
+  - author: Z. Spławski
+    title: Proof-theoretic approach to inductive definitions in ML-like programming languages vs. second-order lambda calculus
+    year: 1993
+
+  - author: M. Tofte
+    title: Four lectures on Standard ML
+    year: 1989

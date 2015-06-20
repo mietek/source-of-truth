@@ -1,0 +1,102 @@
+title: "Final report: Elementary strong functional programming"
+author: David Turner
+year: 2000
+collection: Total functional programming
+references:
+
+  - author: Andreas Abel
+    title: A semantic analysis of structural recursion
+    year: 1999
+
+  - authors:
+      - Kostas Arkoudas
+      - David McAllester
+    title: Walther recursion
+    year: 1996
+
+  - authors:
+      - J.W. de Bakker
+      - J.N. Kok
+    title: Towards a uniform topological treatment of streams and functions over streams
+    year: 1984
+
+  - authors:
+      - H.-J. Boehm
+      - R.S. Cartwright
+    title: "Exact real arithmetic: Formulating real numbers as functions"
+    year: 1990
+
+  - author: Thierry Coquand
+    title: Infinite objects in type theory
+    year: 1993
+
+  - author: P. Cousot
+    title: Types as abstract interpretations
+    year: 1997
+
+  - author: E. Giménez
+    title: Codifying guarded definitions with recursive schemes
+    year: 1995
+
+  - author: Martin Hofmann
+    title: Linear types and non-size-increasing polynomial time computation
+    year: 1999
+
+  - authors:
+      - R.J.M. Hughes
+      - L. Pareto
+      - A. Sabry
+    title: Proving the correctness of reactive systems using sized types
+    year: 1996
+
+  - author: Alexander Kaganovsky
+    title: Computing with exact real numbers in a radix-r system
+    year: 1999
+
+  - author: Alexander Kaganovsky
+    title: Exact complex arithmetic in an imaginary radix system
+    year: 1999
+
+  - author: Alexander Kaganovsky
+    title: Exact computing in positional weighted systems
+    year: 2001
+
+  - author: C.P. Pixley
+    title: Demand-driven arithmetic
+    year: 1982
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring streams flow
+    year: 1997
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring the productivity of infinite structures
+    year: 1997
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: Ensuring termination in ESFP
+    year: 2000
+
+  - authors:
+      - Alastair Telford
+      - David Turner
+    title: A hierarchy of languages with strong termination properties
+    year: 2000
+
+  - author: David Turner
+    title: Elementary strong functional programming
+    year: 1995
+
+  - author: Philip Wadler
+    title: Strictness analysis aids time analysis
+    year: 1988
+
+  - author: E. Wiedmer
+    title: Computing with infinite objects
+    year: 1980

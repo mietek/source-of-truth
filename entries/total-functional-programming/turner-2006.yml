@@ -1,0 +1,202 @@
+title: Church’s thesis and functional programming
+author: David Turner
+year: 2006
+collection: Total functional programming
+numbered: n
+references:
+
+  - authors:
+      - S. Abramsky
+      - A. Jung
+    title: Domain theory
+    year: 1994
+
+  - author: H.P. Barendregt
+    title: "The lambda calculus: Its syntax and semantics"
+    year: 1984
+
+  - author: A. Church
+    title: An unsolvable problem of elementary number theory
+    year: 1936
+
+  - author: A. Church
+    title: Review of A.M. Turing (1936) “On computable numbers…”
+    year: 1937
+
+  - author: A. Church
+    title: The calculi of lambda conversion
+    year: 1941
+
+  - authors:
+      - R.L. Constable
+      - et al.
+    title: Implementing mathematics with the Nuprl proof development system
+    year: 1986
+
+  - authors:
+      - Robert L. Constable
+      - Scott F. Smith
+    title: Computational foundations of basic recursive function theory
+    year: 1988
+
+  - authors:
+      - H.B. Curry
+      - R. Feys
+    title: Combinatory logic, vol. 1
+    year: 1958
+
+  - author: M.H. Escardo
+    title: Real PCF extended with existential is universal
+    year: 1996
+
+  - author: J.-Y. Girard
+    title: Une extension de l'interprétation de Gödel à l'analyse et son application à l'élimination des coupures dans l'analyse et la théorie des types
+    year: 1971
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - author: K. Gödel
+    title: On undecidable propositions of formal mathematical systems
+    year: 1934
+
+  - author: K. Gödel
+    title: On a hitherto unutilized extension of the finitary standpoint
+    year: 1958
+
+  - authors:
+      - N.D. Goodman
+      - J. Myhill
+    title: Choice implies excluded middle
+    year: 1978
+
+  - author: J. Herbrand
+    title: Sur la non-contradiction de l’arithmetique
+    year: 1932
+
+  - author: Andrew Hodges
+    title: Did Church and Turing have a thesis about machines?
+    year: 2006
+
+  - author: J. Hughes
+    title: The design and implementation of programming languages
+    year: 1983
+
+  - author: W. Howard
+    title: The formulae as types notion of construction
+    year: 1969
+
+  - author: Thomas Johnsson
+    title: "Lambda lifting: Transforming programs to recursive equations"
+    year: 1985
+
+  - author: S.C. Kleene
+    title: Lambda-definability and recursiveness
+    year: 1936
+
+  - author: P.J. Landin
+    title: The next 700 programming languages
+    year: 1966
+
+  - author: John McCarthy
+    title: Recursive functions of symbolic expressions and their computation by machine
+    year: 1960
+
+  - authors:
+      - F. Major
+      - M. Turcotte
+      - et al.
+    title: The combination of symbolic and numerical computation for three-dimensional modelling of RNA
+    year: 1991
+
+  - author: P. Martin-Löf
+    title: "An intuitionistic theory of types: Predicative part"
+    year: 1973
+
+  - author: P. Martin-Löf
+    title: Constructive mathematics and computer programming
+    year: 1982
+
+  - author: R. Milner
+    title: A theory of type polymorphism in programming
+    year: 1978
+
+  - author: J. Myhill
+    title: Constructive set theory
+    year: 1975
+
+  - authors:
+      - Rex L. Page
+      - Brian D. Moe
+    title: Experience with a large scientific application in a functional language
+    year: 1993
+
+  - author: S.L. Peyton Jones
+    title: "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine"
+    year: 1992
+
+  - author: S.L. Peyton Jones
+    title: "Haskell 98 language and libraries: The revised report"
+    year: 2003
+
+  - author: G. Plotkin
+    title: LCF considered as a programming language
+    year: 1977
+
+  - author: Moses Schönfinkel
+    title: Über die Bausteine der mathematischen Logik
+    year: 1924
+
+  - author: Dana Scott
+    title: Data types as lattices
+    year: 1976
+
+  - author: Scott F. Smith
+    title: Partial objects in type theory
+    year: 1989
+
+  - author: Christopher Strachey
+    title: Fundamental concepts in programming languages
+    year: 1967
+
+  - authors:
+      - Dana Scott
+      - Christopher Strachey
+    title: Toward a mathematical semantics for computer languages
+    year: 1971
+
+  - author: Paul Taylor
+    title: Abstract stone duality
+    year: 2002
+
+  - author: Alan Turing
+    title: On computable numbers, with an application to the Entscheidungsproblem
+    year: 1936
+
+  - author: David Turner
+    title: SASL language manual
+    year: 1976
+
+  - author: David Turner
+    title: A new implementation technique for applicative languages
+    year: 1979
+
+  - author: David Turner
+    title: Another algorithm for bracket abstraction
+    year: 1979
+
+  - author: David Turner
+    title: An overview of Miranda
+    year: 1986
+
+  - author: David Turner
+    title: Total functional programming
+    year: 2004
+
+  - author: C.P. Wadsworth
+    title: The semantics and pragmatics of the lambda calculus
+    year: 1971
