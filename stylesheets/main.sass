@@ -89,12 +89,9 @@ body
 .browser-column-heading
   @include small-label
   counter-reset: reference
-  width: 1/12 * 100%
   margin-top: 18px
   margin-left: 8px
   margin-right: 8px
-  text-align: right
-  white-space: nowrap
 
 .browser-entry
   cursor: pointer
@@ -109,14 +106,14 @@ body
     position: absolute
     top: 0
     right: 8px
-  &:not(.full):after
+  &.missing:after
     content: "▹"
-  &:not(.full) .browser-data-value
+  &.missing .browser-data-value
     color: #999
   &.open
     color: #fff
     background-color: #69f
-    &:after, &:not(.full) .browser-data-value, .browser-entry-data:before
+    &:after, &.missing .browser-data-value, .browser-entry-data:before
       color: rgba(#fff, 0.8)
 
 .browser-entry-data
@@ -130,7 +127,7 @@ body
     text-align: right
     letter-spacing: 0
 
-.references:not(.direct) .browser-entry-data
+.numbered.references .browser-entry-data
   counter-increment: reference
   &:before
     content: counter(reference)

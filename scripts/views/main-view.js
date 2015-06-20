@@ -42,7 +42,7 @@ var _ = {
       r.div({
           className: 'browser-entry' + (
             (isOpen ? ' open' : '') +
-            (entry.isFull ? ' full' : '')),
+            (entry.isMissing ? ' missing' : '')),
           key:       'e-' + entryId + '-' + entryIndex,
           onClick:   function (event) {
             event.stopPropagation();
@@ -73,7 +73,7 @@ var _ = {
         key:    'Year',
         values: [entry.year]
       },
-      !entry.isFull ? null :
+      (!entry.abstract && entry.isMissing) ? null :
         {
           key:    'Abstract',
           values: [entry.abstract]
@@ -110,20 +110,20 @@ var _ = {
     return (
       r.div('browser-column-wrapper',
         this.renderColumnHeader(columnId, columnIndex),
-        r.div('references' + (entry.referenceStyle === 'direct' ? ' direct' : ''),
-          !entry.referenceIds ? null :
+        (!entry.referenceIds || entry.isMissing) ? null :
+          r.div(entry.isNumbered ? 'numbered references' : 'references',
             this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
-          (entry.referenceIds || []).map(function (entryId, entryIndex) {
-              return (
-                this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
-            }.bind(this))),
-        r.div('citations',
-          !entry.citationIds ? null :
+            (entry.referenceIds || []).map(function (entryId, entryIndex) {
+                return (
+                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
+              }.bind(this))),
+        (!entry.citationIds || (!citationCount && entry.isMissing)) ? null :
+          r.div('citations',
             this.renderColumnHeading(citationCount === 1 ? '1 citation' : citationCount + ' citations'),
-          (entry.citationIds || []).map(function (entryId, entryIndex) {
-              return (
-                this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
-            }.bind(this)))));
+            (entry.citationIds || []).map(function (entryId, entryIndex) {
+                return (
+                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
+              }.bind(this)))));
   },
 
   renderRootColumnWrapper: function (entryIds) {

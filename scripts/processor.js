@@ -64,13 +64,17 @@ module.exports = {
       var entry;
       if (!(entryName in entriesByName)) {
         entry = {
-          id:          uuid.v4(),
-          title:       rawEntry.title,
-          authorIds:   authorIds,
-          signature:   getEntrySignature(authorIds, rawEntry),
-          year:        rawEntry.year,
-          name:        entryName,
-          citationIds: [citationId]
+          id:           uuid.v4(),
+          authorIds:    authorIds,
+          year:         rawEntry.year,
+          signature:    getEntrySignature(authorIds, rawEntry),
+          title:        rawEntry.title,
+          name:         entryName,
+          abstract:     undefined,
+          isNumbered:   undefined,
+          referenceIds: undefined,
+          isMissing:    true,
+          citationIds:  [citationId]
         };
       } else {
         var oldEntry = entriesByName[entryName];
@@ -91,18 +95,18 @@ module.exports = {
         var entryId = uuid.v4();
         entry = {
           id:             entryId,
-          title:          rawEntry.title,
           authorIds:      authorIds,
-          signature:      getEntrySignature(authorIds, rawEntry),
           year:           rawEntry.year,
+          signature:      getEntrySignature(authorIds, rawEntry),
+          title:          rawEntry.title,
           name:           entryName,
-          citationIds:    [],
-          isFull:         true,
           abstract:       rawEntry.abstract,
-          referenceStyle: rawEntry.referenceStyle,
+          isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
           referenceIds:   (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
-            })
+            }),
+          isMissing:      rawEntry.missing === 'y',
+          citationIds:    []
         };
         entriesByName[entryName] = entry;
         entriesById[entry.id]    = entry;
@@ -110,12 +114,12 @@ module.exports = {
         var oldEntry = entriesByName[entryName];
         if (!oldEntry.referenceIds) {
           entry = assign({}, oldEntry, {
-              isFull:         true,
               abstract:       rawEntry.abstract,
-              referenceStyle: rawEntry.referenceStyle,
+              isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
               referenceIds:   (rawEntry.references || []).map(function (reference) {
                   return ensureReference(reference, oldEntry.id);
-                })
+                }),
+              isMissing:      rawEntry.missing === 'y'
             });
           entriesByName[entryName] = entry;
           entriesById[entry.id]    = entry;
