@@ -3,7 +3,8 @@ module.exports = [
     "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
     "author": "Marek Łach",
     "year": 1998,
-    "collection": "ET language"
+    "collection": "ET language",
+    "missing": "y"
   },
   {
     "title": "Teoriodowodowe podejście do programów funkcyjnych i typów danych",
