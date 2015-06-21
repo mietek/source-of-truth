@@ -26,9 +26,10 @@ body
 @mixin small-label
   color: #999
   font-family: "concourse-c3", sans-serif
-  font-size: 14px
   text-transform: lowercase
   vertical-align: top
+  position: relative
+  top: 1px
 
 @mixin ellipsis
   white-space: nowrap
@@ -99,22 +100,40 @@ body
   border-radius: 512px
   position: relative
   background-color: #fff
-  &:after
+  height: 19px
+  &:before, &:after
     content: "▸"
     color: #999
     position: absolute
     top: 0
+  &:before
+    display: none
+    transform: rotate(180deg)
+    left: 8px
+  &:after
     right: 8px
-  &.missing:after
+  &.missing:before, &.missing:after
     content: "▹"
     color: #ccc
+  &.missing:before
+    transform: rotate(180deg)
   &.missing .browser-data-value
     color: #999
-  &.open
+  &.active
     color: #fff
     background-color: #69f
-    &:after, &.missing .browser-data-value, .browser-entry-data:before
+    &:before, &:after, &.missing .browser-data-value, .browser-entry-data:before
       color: rgba(#fff, 0.8)
+  &.open
+    cursor: auto
+    pointer-events: none
+    color: #69f
+    &:before
+      display: block
+    &:after
+      display: none
+    &:before, &.missing .browser-data-value, .browser-entry-data:before
+      color: rgba(#69f, 0.8)
 
 .browser-entry-data
   width: 100%
@@ -125,7 +144,6 @@ body
     display: inline-block
     width: 1/12 * 100%
     text-align: right
-    letter-spacing: 0
 
 .numbered.references .browser-entry-data
   counter-increment: reference

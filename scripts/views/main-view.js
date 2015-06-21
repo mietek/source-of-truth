@@ -36,12 +36,14 @@ var _ = {
   },
 
   renderEntry: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
-    var entry  = this.state.entriesById[entryId];
-    var isOpen = this.state.path.indexOf(entryId) === columnIndex + 1;
+    var entry     = this.state.entriesById[entryId];
+    var pathIndex = this.state.path.indexOf(entryId);
+    var isActive  = pathIndex !== -1 && pathIndex === columnIndex + 1;
+    var isOpen    = pathIndex !== -1 && pathIndex <= columnIndex;
     return (
       r.div({
           className: 'browser-entry' + (
-            (isOpen ? ' open' : '') +
+            (isActive ? ' active' : (isOpen ? ' open' : '')) +
             (entry.isMissing ? ' missing' : '')),
           key:       'e-' + entryId + '-' + entryIndex,
           onClick:   function (event) {
