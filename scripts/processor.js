@@ -58,7 +58,7 @@ module.exports = {
           (' — ' + rawEntry.title));
     }
 
-    function ensureReference(rawEntry, citationId) {
+    function ensureReference(rawEntry, reverseId) {
       var authorIds = getAuthorIds(rawEntry);
       var entryName = getEntryName(authorIds, rawEntry);
       var entry;
@@ -74,12 +74,12 @@ module.exports = {
           isNumbered:   undefined,
           referenceIds: undefined,
           isMissing:    true,
-          citationIds:  [citationId]
+          reverseIds:   [reverseId]
         };
       } else {
         var oldEntry = entriesByName[entryName];
         entry = assign({}, oldEntry, {
-            citationIds: (oldEntry.citationIds || []).concat([citationId])
+            reverseIds: (oldEntry.reverseIds || []).concat([reverseId])
           });
       }
       entriesByName[entryName] = entry;
@@ -106,7 +106,7 @@ module.exports = {
               return ensureReference(reference, entryId);
             }),
           isMissing:      rawEntry.missing === 'y',
-          citationIds:    []
+          reverseIds :    []
         };
         entriesByName[entryName] = entry;
         entriesById[entry.id]    = entry;
@@ -137,7 +137,7 @@ module.exports = {
     Object.keys(entriesByName).forEach(function (entryName) {
         var oldEntry = entriesByName[entryName];
         var entry    = assign({}, oldEntry, {
-            citationIds: oldEntry.citationIds.sort(function (c1, c2) {
+            reverseIds: oldEntry.reverseIds.sort(function (c1, c2) {
                 return entriesById[c1].name.localeCompare(entriesById[c2].name);
               })
           });

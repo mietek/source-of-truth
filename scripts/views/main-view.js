@@ -108,7 +108,7 @@ var _ = {
 
   renderColumnWrapper: function (columnId, columnIndex, entry) {
     var referenceCount = entry.referenceIds && entry.referenceIds.length;
-    var citationCount  = entry.citationIds && entry.citationIds.length;
+    var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
         this.renderColumnHeader(columnId, columnIndex),
@@ -121,12 +121,12 @@ var _ = {
                 return (
                   this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
               }.bind(this))),
-        (!entry.citationIds || (!citationCount && entry.isMissing)) ? null :
-          r.div('citations',
-            this.renderColumnHeading(citationCount === 1 ? '1 citation' : citationCount + ' citations'),
-            (entry.citationIds || []).map(function (entryId, entryIndex) {
+        (!entry.reverseIds || (!reverseCount && entry.isMissing)) ? null :
+          r.div('reverse-references',
+            this.renderColumnHeading(reverseCount === 1 ? '1 reverse reference' : reverseCount + ' reverse references'),
+            (entry.reverseIds || []).map(function (entryId, entryIndex) {
                 return (
-                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, citationCount));
+                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, reverseCount));
               }.bind(this)))));
   },
 
