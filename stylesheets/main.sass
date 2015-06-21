@@ -1,11 +1,30 @@
 @import "font"
+
 @include font("concourse-t3", "regular")
 @include font("concourse-c3", "regular")
+
+
+$black: #000
+$black6: #666
+$black9: #999
+$blackC: #ccc
+
+$blue: #3f96f0
+$blue6: rgba($blue, 1-(3/15))
+$blue9: rgba($blue, 1-(6/15))
+$blueC: rgba($blue, 1-(9/15))
+
+$white: #fff
+$white6: rgba($white, 1-(3/15))
+$white9: rgba($white, 1-(6/15))
+$whiteC: rgba($white, 1-(9/15))
+
 
 body
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
-  color: #000
+  color: $black
+
 
 .clickable
   cursor: pointer
@@ -16,6 +35,7 @@ body
 .unselectable
   user-select: none
 
+
 #main
   height: 100%
   width: 100%
@@ -23,8 +43,9 @@ body
   font-size: 14px
   line-height: 19px
 
+
 @mixin small-label
-  color: #999
+  color: $black9
   font-family: "concourse-c3", sans-serif
   text-transform: lowercase
   vertical-align: top
@@ -36,9 +57,10 @@ body
   overflow: hidden
   text-overflow: ellipsis
 
+
 .browser-pane
   user-select: none
-  background-color: #fff
+  background-color: $white
   height: 100%
   width: 100%
   overflow-x: scroll
@@ -49,8 +71,9 @@ body
   height: 100%
   width: 1/3 * 100% // Dynamic
 
+
 .browser-column
-  border: 0px #ccc solid
+  border: 0px $blackC solid
   border-right-width: 1px
   height: 100%
   width: 100% // Dynamic
@@ -59,15 +82,19 @@ body
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
 
+
 .browser-column-wrapper
   padding: 1px
+
 
 .browser-column-header
   margin-left: 8px
   margin-right: 8px
 
+
 .browser-column-metadata
   width: 100%
+
 
 .browser-metadata-key
   @include small-label
@@ -86,6 +113,7 @@ body
 .browser-metadata-value + .browser-metadata-value
   margin-left: 1/3 * 100%
 
+
 .browser-column-heading
   @include small-label
   counter-reset: reference
@@ -93,62 +121,73 @@ body
   margin-left: 8px
   margin-right: 8px
 
+
 .browser-entry
   cursor: pointer
   padding-left: 8px
   padding-right: 8px
   border-radius: 512px
   position: relative
-  background-color: #fff
+  background-color: $white
   height: 19px
-  &:before, &:after
-    content: "▸"
-    color: #999
-    position: absolute
-    top: 0
-  &:before
-    display: none
-    transform: rotate(180deg)
-    left: 8px
-  &:after
-    right: 8px
-  &.missing:before, &.missing:after
-    content: "▹"
-    color: #ccc
-  &.missing:before
-    transform: rotate(180deg)
-  &.missing .browser-data-value
-    color: #999
-  &.active
-    color: #fff
-    background-color: #3f96f0
-    &:before, &:after, &.missing .browser-data-value, .browser-entry-data:before
-      color: rgba(#fff, 0.8)
-  &.open
-    cursor: auto
-    pointer-events: none
-    color: #3f96f0
-    &:before
-      display: block
-    &:after
-      display: none
-    &:before, &.missing .browser-data-value, .browser-entry-data:before
-      color: rgba(#3f96f0, 0.8)
+
+.browser-entry.active
+  color: $white
+  background-color: $blue
+
+.browser-entry.open
+  cursor: auto
+  pointer-events: none
+  color: $blue
+
+.browser-entry:after
+  content: "▸"
+  color: $black6
+  position: absolute
+  top: 0
+  right: 8px
+
+.browser-entry.active:after
+  color: $white6
+
+.browser-entry.open:after
+  content: "■"
+  right: 8px
+  color: $blue6
+
+.browser-entry.missing:after
+  color: $blackC
+
+.browser-entry.missing.active:after
+  color: $whiteC
+
+.browser-entry.missing.open:after
+  color: $blueC
+
 
 .browser-entry-data
   width: 100%
-  &:before
-    @include small-label
-    @include ellipsis
-    content: ""
-    display: inline-block
-    width: 1/12 * 100%
-    text-align: right
 
-.numbered.references .browser-entry-data
+.browser-entry-data:before
+  @include small-label
+  @include ellipsis
+  content: ""
+  display: inline-block
+  width: 1/12 * 100%
+  text-align: right
+
+.browser-entry.active .browser-entry-data:before
+  color: $white9
+
+.browser-entry.open .browser-entry-data:before
+  color: $blue9
+
+.references.numbered .browser-entry-data
   counter-increment: reference
-  &:before
-    content: counter(reference)
+
+.references.numbered .browser-entry-data:before
+  content: counter(reference)
+
 
 .browser-data-key
   @include ellipsis
@@ -156,9 +195,19 @@ body
   width: 3/12 * 100%
   padding-left: 8px
 
+
 .browser-data-value
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
+
+.browser-entry.missing .browser-data-value
+  color: $black9
+
+.browser-entry.missing.active .browser-data-value
+  color: $white9
+
+.browser-entry.missing.open .browser-data-value
+  color: $blue9
