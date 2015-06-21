@@ -110,6 +110,8 @@ var _ = {
     return (
       r.div('browser-column-wrapper',
         this.renderColumnHeader(columnId, columnIndex),
+        !entry.isMissing ? null :
+          this.renderColumnHeading('Not available'),
         (!entry.referenceIds || entry.isMissing) ? null :
           r.div(entry.isNumbered ? 'numbered references' : 'references',
             this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
