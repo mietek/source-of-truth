@@ -2499,12 +2499,12 @@ module.exports = [
       },
       {
         "author": "N.P. Mendler",
-        "title": "Inductive types and type constraints in the second-order λ calculus",
+        "title": "Inductive types and type constraints in the second-order lambda calculus",
         "year": 1991
       },
       {
         "author": "N.P. Mendler",
-        "title": "Recursive types and type constraints in the second-order λ calculus",
+        "title": "Recursive types and type constraints in the second-order lambda calculus",
         "year": 1987
       },
       {
