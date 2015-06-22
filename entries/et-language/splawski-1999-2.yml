@@ -4,6 +4,7 @@ authors:
   - Paweł Urzyczyn
 year: 1999
 collection: ET language
+url: https://github.com/mietek/et-language/raw/master/doc/pdf/1999-splawski-urzyczyn-type-fixpoints-iteration-vs-recursion.pdf
 abstract: |
   Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus **λ2** (System **F**) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus **λ2U** of recursive types with the operators **Fold** : _σ[μα.σ/α] → μα.σ_ and **Unfold** : _μα.σ → σ[μα.σ/α]_, where the composition **Unfold** ◦ **Fold** reduces to identity.
   It is known that systems with iterators can be defined within **λ2**, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system **λ2U** does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type _σ_ is embedded into another type _τ_ then _τ_ must be of depth at least equal to the depth of _σ_.
