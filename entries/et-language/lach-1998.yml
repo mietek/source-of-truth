@@ -3,3 +3,67 @@ author: Marek Łach
 year: 1998
 collection: ET language
 url: http://sourceoftruth.net/_entries/lach-1998.pdf
+references:
+
+  - author: A.W. Appel
+    title: "Modern compiler implementation in ML: Basic techniques"
+    year: 1997
+
+  - author: H.P. Barendregt
+    title: Lambda calculi with types
+    year: 1992
+
+  - author: A. Diller
+    title: Compiling functional languages
+    year: 1988
+
+  - authors:
+      - A.J. Field
+      - P.G. Harrison
+    title: Functional programming
+    year: 1988
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - author: J.R. Hindley
+    title: Basic simple type theory
+    year: 1996
+
+  - author: W. Narkiewicz
+    title: Teoria liczb
+    year: 1990
+
+  - author: L. Paulson
+    title: ML for the working programmer
+    year: 1996
+
+  - authors:
+      - M. Ryan
+      - M. Sadler
+    title: Valuation systems and consequence relations
+    year: 1992
+
+  - author: Z. Spławski
+    title: Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus
+    year: 1993
+
+  - author: Z. Spławski
+    title: Proving equalities in λ→ with positive (co-)inductive data types
+    year: 1995
+
+  - authors:
+      - A.S. Troelstra
+      - D. van Dalen
+    title: "Constructivism in mathematics: An introduction"
+    year: 1988
+
+  - authors:
+      - A.S. Troelstra
+      - H. Schwichtenberg
+    title: Basic proof theory
+    year: 1996
