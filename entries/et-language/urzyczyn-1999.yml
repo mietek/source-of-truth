@@ -5,7 +5,7 @@ collection: ET language
 references:
 
   - authors:
-      - C. Böhm
+      - Corrado Böhm
       - A. Berarducci
     title: Automatic synthesis of typed Λ-programs on term algebras
     year: 1985
@@ -72,5 +72,5 @@ references:
     year: 1996
 
   - author: G.C. Wraith
-    title: A note on categorical data types
+    title: A note on categorical datatypes
     year: 1989

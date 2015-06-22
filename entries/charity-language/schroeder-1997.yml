@@ -1,0 +1,147 @@
+title: Higher-order Charity
+author: Marc Schroeder
+year: 1997
+collection: Charity language
+abstract: |
+  This thesis describes the higher-order Charity programming language which is an extension of first-order Charity. This results from extending the coinductive datatype definition mechanism to allow a new class of higher-order datatypes with parameterized destructors. This adds significant expressive power to the language. In particular it allows one to create “objects”. The language is “higher-order” in the traditional sense that the exponential datatype can be defined, and so that functions can be treated as values.
+  The higher-order extension is traced from the extension of the syntax and the expressive gains delivered to the Charity programmer, down through the innards of the language and the modifications required in the implementation.
+references:
+
+  - authors:
+      - Martín Abadi
+      - Luca Cardelli
+    title: A theory of objects
+    year: 1996
+
+  - author: H.P. Barendregt
+    title: "The lambda calculus: Its syntax and semantics"
+    year: 1984
+
+  - authors:
+      - Michael Barr
+      - Charles Wells
+    title: Category theory for computing science
+    year: 1990
+
+  - authors:
+      - Richard Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: "Strong categorical datatypes II: A term logic for categorical programming"
+    year: 1992
+
+  - author: Roy L. Crole
+    title: Categories for types
+    year: 1993
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: Mike Hermann
+    title: "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)"
+    year: 1992
+
+  - authors:
+      - Paul Hudak
+      - Simon Peyton Jones
+      - Philip Wadler
+      - et al.
+    title: "Report on the programming language Haskell: A non-strict, purely functional language"
+    year: 1992
+
+  - authors:
+      - P. Katis
+      - N. Sabadini
+      - R.F.C. Walters
+    title: The bicategory of circuits
+    year: 1994
+
+  - authors:
+      - E. Meijer
+      - M.M. Fokkinga
+      - R. Paterson
+    title: Functional programming with bananas, lenses, envelopes and barbed wire
+    year: 1991
+
+  - authors:
+      - Erik Meijer
+      - Graham Hutton
+    title: "Bananas in space: Extending fold and unfold to exponential types"
+    year: 1995
+
+  - author: Erik Meijer and Johan Jeuring
+    title: Merging monads and folds for functional programming
+    year: 1995
+
+  - authors:
+      - Robin Milner
+      - Mads Tofte
+    title: Commentary on Standard ML
+    year: 1991
+
+  - authors:
+      - Robin Milner
+      - Mads Tofte
+      - Robert Harper
+    title: The definition of Standard ML
+    year: 1990
+
+  - author: Simon Peyton Jones
+    title: The implementation of functional programming languages
+    year: 1987
+
+  - authors:
+      - D.E. Rydeheard
+      - R.M. Burstall
+    title: Computational category theory
+    year: 1988
+
+  - author: Dwight Spencer
+    title: Categorical programming with functorial strength
+    year: 1993
+
+  - author: Charles Tuckey
+    title: The implementation of pattern matching in Charity
+    year: 1994
+
+  - author: Charles Tuckey
+    title: Pattern matching in Charity
+    year: 1997
+
+  - author: David Turner
+    title: An overview of Miranda
+    year: 1986
+
+  - author: Peter Vesely
+    title: Typechecking the Charity term logic
+    year: 1997
+
+  - author: Peter Vesely
+    title: Categorical combinators for Charity
+    year: 1996
+
+  - author: R.F.C. Walters
+    title: Categories and computer science
+    year: 1991
+
+  - author: Barry Yee
+    title: Implementing the Charity abstract machine
+    year: 1995

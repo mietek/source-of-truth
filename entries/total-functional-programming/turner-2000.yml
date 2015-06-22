@@ -43,7 +43,7 @@ references:
     year: 1999
 
   - authors:
-      - R.J.M. Hughes
+      - John Hughes
       - L. Pareto
       - A. Sabry
     title: Proving the correctness of reactive systems using sized types

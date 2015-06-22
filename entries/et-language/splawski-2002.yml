@@ -1,24 +1,24 @@
 title: Defining recursors by solving equations in second-order lambda calculus
 author: Zdzisław Spławski
 year: 2002
+collection: ET language
 abstract: |
   Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus **λ2** (System **F**) in several different ways, depending on the choice of the elimination operator. Known extensions of **λ2** fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within **λ2** by means of beta reductions, and it is conjectured that systems with recursors cannot.
   In this paper we define the general form of mutual iteration scheme in **λ2** and we show that the explicit solution for particular functions defines recursors within **λ2**, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient _equational_ inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.
-collection: ET language
 references:
 
   - authors:
-      - C. Böhm
+      - Corrado Böhm
       - A. Berarducci
     title: Automatic synthesis of typed Λ-programs on term algebras
     year: 1985
 
-  - author: C. Böhm
+  - author: Corrado Böhm
     title: Reducing recursion to iteration by means of pairs and n-tuples
     year: 1988
 
-  - author: J.Y. Girard
-    title: Une extension de l'interprétation de Gödel à l'analyse et son application à l'élimination des coupures dans l'analyse et la théorie des types
+  - author: J.-Y. Girard
+    title: Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types
     year: 1971
 
   - authors:
@@ -53,7 +53,7 @@ references:
     year: 1974
 
   - author: J.C. Reynolds
-    title: Types, abstraction and parametric polymorphism
+    title: Types, abstraction, and parametric polymorphism
     year: 1983
 
   - authors:

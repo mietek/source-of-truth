@@ -1,0 +1,269 @@
+title: Categorical programming with functorial strength
+author: Dwight Spencer
+year: 1993
+collection: Charity language
+abstract: |
+  We show that significant _categorical_ programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the _structures of data_ drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.
+references:
+
+  - authors:
+      - A. Asperti
+      - G. Longo
+    title: Categories, types, and structures
+    year: 1991
+
+  - authors:
+      - M. Barr
+      - C. Wells
+    title: Category theory for computing science
+    year: 1990
+
+  - author: J. Bénabou
+    title: Fibrations petites et localement petites
+    year: 1975
+
+  - author: J. Bénabou
+    title: Fibred categories and the foundations of naive category theory
+    year: 1985
+
+  - authors:
+      - R.M. Burstall
+      - J. Darlington
+    title: A transformation system for developing recursive programs
+    year: 1977
+
+  - author: J. Cartmell
+    title: Generalized algebraic theories and contextual categories
+    year: 1986
+
+  - author: Robin Cockett
+    title: Distributive logic
+    year: 1989
+
+  - author: Robin Cockett
+    title: "List-arithmetic distributive categories: Locoi"
+    year: 1990
+
+  - author: Robin Cockett
+    title: Conditional control is not quite categorical control
+    year: 1991
+
+  - author: Robin Cockett
+    title: The term logic of precartesian categories
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - authors:
+      - J.A. Goguen
+      - R.D. Burstall
+    title: "Institutions: Abstract model theory for specification and programming"
+    year: 1992
+
+  - author: J.W. Gray
+    title: Fibred and cofibred categories
+    year: 1965
+
+  - author: J.W. Gray
+    title: "Formal category theory I: Adjointness for 2-categories"
+    year: 1974
+
+  - author: J. Greiner
+    title: Programming with inductive and co-inductive types
+    year: 1992
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: R. Hasegawa
+    title: Categorical data types in parametric polymorphism
+    year: 1994
+
+  - author: R. Hasegawa
+    title: Parametricity of extensionally collapsed term models of polymorphism and their categorical properties
+    year: 1991
+
+  - authors:
+      - B.P. Hilken
+      - D.E. Rydeheard
+    title: Indexed categories for program development
+    year: 1990
+
+  - authors:
+      - B.P. Hilken
+      - D.E. Rydeheard
+    title: "Towards a categorical semantics of type classes: Technical report"
+    year: 1991
+
+  - authors:
+      - B.P. Hilken
+      - D.E. Rydeheard
+    title: Towards a categorical semantics of type classes
+    year: 1991
+
+  - authors:
+      - J.M.E. Hyland
+      - A.M. Pitts
+    title: "The theory of constructions: Categorical semantics and topos-theoretic models"
+    year: 1989
+
+  - author: B. Jacobs
+    title: Categorical type theory
+    year: 1991
+
+  - author: C.B. Jay
+    title: Tail recursion from universal invariants
+    year: 1991
+
+  - authors:
+      - P.T. Johnstone
+      - R. Paré
+    title: Indexed categories and their applications
+    year: 1978
+
+  - author: G.M. Kelly
+    title: Elementary observations on 2-categorical limits
+    year: 1989
+
+  - authors:
+      - G.M. Kelly
+      - S. MacLane
+    title: Closed coherence for a natural transformation
+    year: 1972
+
+  - authors:
+      - G.M. Kelly
+      - R. Street
+    title: Review of the elements of 2-categories
+    year: 1974
+
+  - author: A. Kock
+    title: Strong functors and monoidal monads
+    year: 1972
+
+  - authors:
+      - J. Lambek
+      - P.J. Scott
+    title: Introduction to higher order categorical logic
+    year: 1986
+
+  - authors:
+      - F.W. Lawvere
+      - S. Schanuel
+    title: Conceptual mathematics
+    year: 1991
+
+  - author: H.G. Mairson
+    title: Outline of a proof theory of parametricity
+    year: 1991
+
+  - author: G. Malcolm
+    title: Algebraic data types and program transformation
+    year: 1990
+
+  - author: G. Malcolm
+    title: Data structures and program transformation
+    year: 1990
+
+  - authors:
+      - E.G. Manes
+      - M.A. Arbib
+    title: Parametrized datatypes do not need highly constrained parameters
+    year: 1982
+
+  - author: C. McLarty
+    title: Elementary categories, elementary toposes
+    year: 1992
+
+  - author: E. Moggi
+    title: An abstract view of programming languages
+    year: 1989
+
+  - author: E. Moggi
+    title: Computational lambda-calculus and monads
+    year: 1989
+
+  - author: E. Moggi
+    title: Notions of computation and monads
+    year: 1991
+
+  - authors:
+      - P. Panangaden
+      - P. Mendler
+      - M. Schwartzbach
+    title: Recursively defined types in constructive type theory
+    year: 1989
+
+  - author: D. Pavlović
+    title: Predicates and fibrations
+    year: 1990
+
+  - author: W. Phoa
+    title: Fibrations
+    year: 1992
+
+  - author: B. Pierce
+    title: Basic category theory for computer scientists
+    year: 1991
+
+  - author: J.C. Reynolds
+    title: Types, abstraction, and parametric polymorphism
+    year: 1983
+
+  - author: L. Román
+    title: On recursive principles in cartesian categories
+
+  - authors:
+      - M. Smyth
+      - G. Plotkin
+    title: The category theoretic solution of recursive domain equations
+    year: 1982
+
+  - author: A. Stoughton
+    title: Substitution revisited
+    year: 1988
+
+  - author: P. Taylor
+    title: Recursive domains, indexed category theory, and polymorphism
+    year: 1986
+
+  - author: David Turner
+    title: Duality and De Morgan principles for lists
+    year: 1991
+
+  - author: Philip Wadler
+    title: Theorems for free!
+    year: 1989
+
+  - author: R.F.C. Walters
+    title: Data types in distributive categories
+    year: 1989
+
+  - author: R.F.C. Walters
+    title: Categories and computer science
+    year: 1991
+
+  - author: C. Wells
+    title: A generalization of the concept of sketch
+    year: 1990
+
+  - authors:
+      - C. Wells
+      - M. Barr
+    title: The formal description of data types using sketches
+    year: 1987
+
+  - author: G.C. Wraith
+    title: A note on categorical datatypes
+    year: 1989

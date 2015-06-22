@@ -1,0 +1,69 @@
+title: "The Charm project: A back end to the Charity interpreter"
+author: Barry Yee
+year: 1993
+collection: Charity language
+abstract: |
+  The Charm project is an attempt to build an efficient and portable abstract machine for the Charity language. The abstract machine is implemented in C programming language to make the system more portable across different computer platforms. In this paper, the Charity system is composed of a set of rewrite rules that are converted to state transitions that defines an abstract machine. The implementation of the system is divided into two levels, the macro–level and micro–level. Macro–instructions are instructions that specify the state transitions while the micro–instructions perform the actions that change the state of the machine.
+numbered: n
+references:
+
+  - authors:
+      - G. Cousineau
+      - P.-L. Curien
+      - M. Mauny
+    title: The categorical abstract machine
+    year: 1985
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - author: A. Diller
+    title: Compiling functional languages
+    year: 1988
+
+  - author: J. Fairbairn
+    title: A simple abstract machine to execute supercombinators
+    year: 1986
+
+  - author: Tom Fukushima
+    title: Charity user manual
+    year: 1991
+
+  - authors:
+      - J. Fairbairn
+      - S. Wray
+    title: "Tim: A simple, lazy abstract machine to execute supercombinators"
+    year: 1987
+
+  - author: M.J.C. Gordon
+    title: Programming language theory and its implementation
+    year: 1988
+
+  - author: J. Hannan
+    title: Making abstract machines less abstract
+    year: 1991
+
+  - author: Mike Hermann
+    title: "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)"
+    year: 1992
+
+  - author: T. Johnsson
+    title: Target code generation from G-machine code
+    year: 1986
+
+  - author: Simon Peyton Jones
+    title: "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine"
+    year: 1992
+
+  - authors:
+      - Simon Peyton Jones
+      - David Lester
+    title: "Implementing functional languages: A tutorial"
+    year: 1992
+
+  - author: R.F.C. Walters
+    title: Categories and computer science
+    year: 1991

@@ -3,3 +3,346 @@ author: Zdzisław Spławski
 year: 1993
 collection: ET language
 missing: y
+numbered: n
+references:
+
+  - authors:
+      - Roland Backhouse
+      - Paul Chisholm
+      - Grant Malcom
+      - Erik Saaman
+    title: Do-it-yourself type theory
+    year: 1989
+
+  - author: H.P. Barendregt
+    title: "The lambda calculus: Its syntax and semantics"
+    year: 1984
+
+  - author: H.P. Barendregt
+    title: Functional programming and lambda calculus
+    year: 1990
+
+  - author: H.P. Barendregt
+    title: Lambda calculi with types
+    year: 1992
+
+  - authors:
+      - G. Bellin
+      - P.J. Scott
+    title: On the π-calculus and linear logic
+    year: 1992
+
+  - authors:
+      - Corrado Böhm
+      - A. Berarducci
+    title: Automatic synthesis of typed Λ-programs on term algebras
+    year: 1985
+
+  - author: R.M. Burstall
+    title: Inductively defined functions in functional programming languages
+    year: 1987
+
+  - author: A. Church
+    title: A formulation of the simple theory of types
+    year: 1940
+
+  - author: A. Church
+    title: "The calculi of lambda-conversion"
+    year: 1941
+
+  - authors:
+      - R.L. Constable
+      - et al.
+    title: Implementing mathematics with the Nuprl proof development system
+    year: 1986
+
+  - author: T. Coquand
+    title: Metamathematical investigations of a calculus of constructions
+    year: 1990
+
+  - authors:
+      - T. Coquand
+      - G. Huet
+    title: The calculus of constructions
+    year: 1988
+
+  - authors:
+      - H.B. Curry
+      - R. Feys
+    title: Combinatory logic, vol. 1
+    year: 1958
+
+  - authors:
+      - H.B. Curry
+      - J.R. Hindley
+      - J.P. Seldin
+    title: Combinatory logic, vol. 2
+    year: 1972
+
+  - author: N.G. de Bruijn
+    title: The mathematical language Automath
+    year: 1970
+
+  - author: N.G. de Bruijn
+    title: "Lambda calculus notation with nameless dummies: A tool for automatic formula manipulation, with application to the Church-Rosser theorem"
+    year: 1972
+
+  - author: D.M. Gabbay
+    title: On 2nd order intuitionistic propositional calculus with full comprehension
+    year: 1974
+
+  - author: J.H. Gallier
+    title: On Girard’s “Candidats de réductibilité”
+    year: 1990
+
+  - author: J.H. Gallier
+    title: "Constructive logics, part I: A tutorial on proof systems and typed λ-calculi"
+    year: 1993
+
+  - author: G. Gentzen
+    title: Untersuchungen über das logische Schließen
+    year: 1969
+
+  - author: H. Geuvers
+    title: Inductive and coinductive types with iteration and recursion
+    year: 1992
+
+  - author: J.-Y. Girard
+    title: Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types
+    year: 1971
+
+  - author: J.-Y. Girard
+    title: The system F of variable types, fifteen years later
+    year: 1986
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - author: K. Gödel
+    title: Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes
+    year: 1958
+
+  - author: M. Gordon
+    title: "Hol: A machine oriented formulation of higher-oreder logic"
+    year: 1985
+
+  - authors:
+      - M.J. Gordon
+      - A.J. Milner
+      - C.P. Wadsworth
+    title: Edinburgh LCF
+    year: 1979
+
+  - author: I. Hacking
+    title: What is logic?
+    year: 1979
+
+  - author: T. Hagino
+    title: A typed lambda calculus with categorical type constructors
+    year: 1987
+
+  - author: A. Heyting
+    title: "Intuitionism: An introduction"
+    year: 1956
+
+  - author: W.A. Howard
+    title: The formulae-as-types notion of construction
+    year: 1980
+
+  - author: G. Huet
+    title: "Confluent reductions: Abstract properties and applications to term rewriting systems"
+    year: 1980
+
+  - author: I. Johansson
+    title: "Der Minimalkalkül: Ein reduzierter intuitionistischer Formalismus"
+    year: 1937
+
+  - author: J.-L. Krivine
+    title: "Lambda-calcul: Types et modèles"
+    year: 1990
+
+  - authors:
+      - J.-L. Krivine
+      - M. Parigot
+    title: Programming with proofs
+    year: 1990
+
+  - author: H. Läuchli
+    title: An abstract notion of realizability for which intuitionistic predicate calculus is complete
+    year: 1970
+
+  - author: D. Leivant
+    title: Contradicting proofs in programs
+    year: 1990
+
+  - author: A.A. Markov
+    title: Konstruktivnaja logika
+    year: 1950
+
+  - author: P. Martin-Löf
+    title: Constructive mathematics and computer programming
+    year: 1982
+
+  - author: P. Martin-Löf
+    title: Intuitionistic type theory
+    year: 1984
+
+  - author: N.P. Mendler
+    title: Inductive types and type constraints in the second-order λ calculus
+    year: 1991
+
+  - author: N.P. Mendler
+    title: Recursive types and type constraints in the second-order λ calculus
+    year: 1987
+
+  - author: G. Michaelson
+    title: An introduction to functional programming through λ calculus
+    year: 1989
+
+  - author: D. Miller
+    title: "The π-calculus as a theory in linear logic: Preliminary results"
+    year: 1992
+
+  - author: R. Milner
+    title: A theory of type polymorphism in programming
+    year: 1978
+
+  - author: R. Milner
+    title: "The polyadic π-calculus: A tutorial"
+    year: 1991
+
+  - author: R. Milner
+    title: "Elements of interaction"
+    year: 1993
+
+  - authors:
+      - R. Milner
+      - M. Tofte
+      - R. Harper
+    title: The definition of Standard ML
+    year: 1990
+
+  - author: J.C. Mitchell
+    title: Type systems for programming languages
+    year: 1990
+
+  - author: D. Nelson
+    title: Constructible falsity
+    year: 1949
+
+  - author: M.H.A. Newman
+    title: On theories with a combinatorial definition of “equivalence”
+    year: 1942
+
+  - authors:
+      - B. Nordström
+      - K. Petersson
+      - J.M. Smith
+    title: "Programming in Martin-Löf’s type theory: An introduction"
+    year: 1990
+
+  - author: M. Parigot
+    title: "Programming with proofs: A second order type theory"
+    year: 1988
+
+  - author: M. Parigot
+    title: Recursive programming with proofs
+    year: 1992
+
+  - author: L.C. Paulson
+    title: Co-induction and co-recursion in Hol
+    year: 1993
+
+  - author: L.C. Paulson
+    title: Intro to Isabelle
+    year: 1993
+
+  - authors:
+      - F. Pfenning
+      - Ch. Paulin-Mohring
+    title: Inductively defined types in the calculus of constructions
+    year: 1990
+
+  - author: D. Prawitz
+    title: "Natural deduction: A proof-theoretical study"
+    year: 1965
+
+  - author: D. Prawitz
+    title: Ideas and results in proof theory
+    year: 1971
+
+  - author: D. Prawitz
+    title: Proofs and the meaning and completeness of the logical constants
+    year: 1978
+
+  - author: J.C. Reynolds
+    title: Towards a theory of type structure
+    year: 1974
+
+  - author: P. Schroeder-Heister
+    title: A natural extension of natural deduction
+    year: 1984
+
+  - author: D.S. Scott
+    title: Constructive validity
+    year: 1970
+
+  - author: D.S. Scott
+    title: Continuous lattices
+    year: 1972
+
+  - authors:
+      - J.P. Seldin
+      - J.R. Hindley
+    title: INtroduction to combinators and λ-calculus
+    year: 1986
+
+  - authors:
+      - D.J. Shoesmith
+      - T.J. Smiley
+    title: Multiple-conclusion logic
+    year: 1978
+
+  - author: T. Skolem
+    title: Einige Bemerkungen zur axiomatischen Begründung der Mengenlehre
+    year: 1922
+
+  - author: S. Stenlund
+    title: Combinators, lambda-terms, and proof theory
+    year: 1972
+
+  - author: G. Sundholm
+    title: Proof theory and meaning
+    year: 1986
+
+  - author: J. Tiuryn
+    title: "Type inference problems: A survey"
+    year: 1990
+
+  - authors:
+      - A.S. Troelstra
+      - D. van Dalen
+    title: "Constructivism in mathematics: An introduction"
+    year: 1988
+
+  - author: P. Urzyczyn
+    title: A remark on quantified vs. recursive types
+    year: 1992
+
+  - author: S.G. Vorobyov
+    title: Undecidability of F? It’s extremely simple!
+    year: 1993
+
+  - author: J.B. Wells
+    title: Typability and type checking in the second-order λ-calculus are equivalent and undecidable
+    year: 1998
+
+  - authors:
+      - J.I. Zucker
+      - R.S. Tragesser
+    title: The adequacy problem for inferential logic
+    year: 1978

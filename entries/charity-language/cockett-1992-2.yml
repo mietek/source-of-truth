@@ -1,0 +1,101 @@
+title: About Charity
+authors:
+  - Robin Cockett
+  - Tom Fukushima
+year: 1992
+collection: Charity language
+abstract: |
+  Charity is a categorical programming language based on distributive categories (in the sense of Schanuel and Lawvere) with strong datatypes (in the sense of Hagino). Distributive categories come with a term logic which can express most standard programs; and they are fundamental to computer science because they permit proof by case analysis and, when strong datatypes are introduced, proof by structural induction.
+  Charity is functional and polymorphic in style, and is strongly normalizing. As a categorical programming language it provides a unique marriage of computer science and mathematical thought. The above aspects are particularly important for the production of verified programs as the naturality of morphisms gives us “theorems for free”, termination proofs are not required, and mathemathical specifications can be used.
+numbered: n
+references:
+
+  - authors:
+      - J.D. Ullman
+      - A.V. Aho
+      - J.E. Hopcroft
+    title: The design and analysis of computer algorithms
+    year: 1974
+
+  - author: R. Burstall
+    title: Inductively defined functions in functional programming languages
+    year: 1987
+
+  - authors:
+      - M. Barr
+      - C. Wells
+    title: Toposes, triples and theories
+    year: 1985
+
+  - authors:
+      - Robin Cockett
+      - H.G. Chen
+    title: Categorical combinators
+
+  - author: Robin Cockett
+    title: "List-arithmetic distributive categories: Locoi"
+    year: 1990
+
+  - author: Robin Cockett
+    title: The fundamental theorem of data structures for a locos
+    year: 1991
+
+  - author: Robin Cockett
+    title: Notes on strength, datatypes, and shape
+    year: 1991
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: "Strong categorical datatypes II: A term logic for categorical programming"
+    year: 1992
+
+  - authors:
+      - M. Fokkinga
+      - E. Meijer
+      - R. Paterson
+    title: Functional programming with bananas, lenses, envelopes and barbed wire
+    year: 1991
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: G.M. Kelly
+    title: On clubs and data-type constructors
+
+  - author: G.M. Kelly
+    title: Structures defined by finite limits in the enriched context I
+    year: 1982
+
+  - author: J. Lambek
+    title: "Deductive systems and categories II: Standard constructions and closed categories"
+    year: 1969
+
+  - author: E. Moggi
+    title: Computational lambda-calculus and monads
+    year: 1989
+
+  - author: David Turner
+    title: Another algorithm for bracket abstraction
+    year: 1979
+
+  - author: David Turner
+    title: A new implementation technique for applicative languages
+    year: 1979
+
+  - author: Philip Wadler
+    title: Theorems for free!
+    year: 1989
+
+  - author: Philip Wadler
+    title: Comprehending monads
+    year: 1992
+
+  - author: R.F.C. Walters
+    title: Categories and computer science
+    year: 1991
+
+  - author: G.C. Wraith
+    title: A note on categorical datatypes
+    year: 1989

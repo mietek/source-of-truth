@@ -1,0 +1,65 @@
+title: Sequentializing programs defined by pattern matching
+authors:
+  - Todd Simpson
+  - Robin Cockett
+year: 1992
+collection: Charity language
+abstract: |
+  A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.
+  A program definition using patterns is a parallel specification and does not determine a sequential evaluation. A problem arises, therefore, in attempting to preserve as far as possible the intended parallel meaning during the translation to sequential form. In particular, a sequentialized program may be forced to evaluate patterns which need not be evaluated when parallelism is available. It is known that some definitions using patterns, called _sequentializable_ definitions, can be translated without semantic loss, and algorithms to sequentialize these definitions have been documented. In this paper we present an algorithm which works uniformly over _all_ definitions—it handles sequentializable definitions correctly, but also optimizes the sequential realization of other definitions.
+references:
+
+  - author: Lennart Augustsson
+    title: Compiling pattern matching
+    year: 1985
+
+  - author: G. Berry
+    title: Stable models of typed lambda-calculi
+    year: 1978
+
+  - author: Robin Cockett
+    title: "Discrete decision theory: Manipulations"
+    year: 1987
+
+  - authors:
+      - Robin Cockett
+      - J. Herrera
+    title: Decision tree reduction
+    year: 1990
+
+  - authors:
+      - Robin Cockett
+      - Todd Simpson
+    title: Distributive logic
+
+  - authors:
+      - G. Huet
+      - J. Levy
+    title: Call by need computations in nonambiguous linear term rewriting systems
+    year: 1979
+
+  - author: A. Laville
+    title: Lazy pattern matching in the ML language
+    year: 1987
+
+  - authors:
+      - L. Puel
+      - A. Suárez
+    title: Compiling pattern matching by term decomposition
+    year: 1990
+
+  - authors:
+      - R. Sekar
+      - R. Ramesh
+      - I. Ramakrishnan
+    title: Adaptive pattern matching
+    year: 1992
+
+  - authors:
+      - Todd Simpson
+      - Robin Cockett
+    title: On pattern matching
+
+  - author: Philip Wadler
+    title: Efficient compilation of pattern matching
+    year: 1986

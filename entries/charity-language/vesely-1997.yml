@@ -1,0 +1,15 @@
+title: Typechecking the Charity term logic
+author: Peter Vesely
+year: 1997
+collection: Charity language
+references:
+
+  - authors:
+      - J.P. Jouannaud
+      - C. Kirchner
+    title: "Solving equations in abstract algebras: A rule-based survey of unification"
+    year: 1990
+
+  - author: R. Milner
+    title: A theory of type polymorphism in programming
+    year: 1978

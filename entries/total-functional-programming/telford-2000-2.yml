@@ -3,9 +3,9 @@ authors:
   - Alastair Telford
   - David Turner
 year: 2000
+collection: Total functional programming
 abstract: |
   In previous papers we have proposed an elementary discipline of _strong_ functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between _data_ which is known to be finite, and _codata_ which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.
-collection: Total functional programming
 references:
 
   - author: A. Abel
@@ -98,12 +98,12 @@ references:
   - authors:
       - S. Panitz
       - M. Schmidt-Shauß
-    title: "TEA: Automatically proving termination of programs in a non-strict higher-order functional language"
+    title: "Tea: Automatically proving termination of programs in a non-strict higher-order functional language"
     year: 1997
 
   - authors:
-      - S.L. Peyton Jones
-      - R.J.M. Hughes
+      - Simon Peyton Jones
+      - John Hughes
       - et al.
     title: "Haskell 98: A non-strict, purely functional language"
     year: 1999

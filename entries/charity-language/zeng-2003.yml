@@ -1,0 +1,191 @@
+title: An implementation of Charity
+author: Min Zeng
+year: 2003
+collection: Charity language
+abstract: |
+  This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.
+  The design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.
+  The core-Charity compiler concentrates on providing an efficient implementation of core Charity code into the virtual machine. Previous implementations suffered from excessive heap usage which necessitated frequent garbage collection. In this implementation a variety of techniques are used to reduce heap usage and improve execution speed.
+  The resulting Charity programs are substantially faster than those produced by previous Charity implementations.
+references:
+
+  - author: A.W. Appel
+    title: Garbage collection can be faster than stack allocation
+    year: 1987
+
+  - authors:
+      - A.W. Appel
+      - D.B. MacQueen
+    title: Standard ML of New Jersey
+    year: 1991
+
+  - author: A.W. Appel
+    title: Runtime tags aren’t necessary
+    year: 1989
+
+  - author: A.W. Appel
+    title: Simple generational garbage collection and fast allocation
+    year: 1989
+
+  - author: A.W. Appel
+    title: Garbage collection
+    year: 1991
+
+  - author: A.W. Appel
+    title: Compiling with continuations
+    year: 1992
+
+  - author: J. Backus
+    title: Can programming be liberated from the von Neumann style? A functional style and its algebra of programs
+    year: 1978
+
+  - authors:
+      - Richard Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - authors:
+      - Guy E. Blelloch
+      - Jonathan C. Hardwick
+      - Jay Sipelstein
+      - Marco Zgha
+      - Siddhartha Chatterjee
+    title: Implementation of a portable nested data-parallel language
+    year: 1994
+
+  - author: Robin Cockett
+    title: Charitable thoughts
+    year: 1996
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - G. Cousineau
+      - P.L. Curien
+      - M. Mauny
+    title: The categorical abstract machine
+    year: 1985
+
+  - authors:
+      - J. Fairbairn
+      - S. Wray
+    title: "Tim: A simple, lazy abstract machine to execute supercombinators"
+    year: 1987
+
+  - authors:
+      - R.R. Fenichel
+      - J.C. Yochelson
+    title: A Lisp garbage-collector for virtual memory computer systems
+    year: 1969
+
+  - author: Robert Harper
+    title: Introduction to Standard ML
+    year: 1986
+
+  - authors:
+      - Robert Harper
+      - Greg Morrisett
+    title: Compiling polymorphism using intensional type analysis
+    year: 1995
+
+  - author: Mike Hermann
+    title: "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)"
+    year: 1992
+
+  - authors:
+      - Paul Hudak
+      - Simon Peyton Jones
+      - Philip Wadler
+      - et al.
+    title: "Report on the programming language Haskell: A non-strict, purely functional language"
+    year: 1992
+
+  - author: T. Johnsson
+    title: Efficient compilation of lazy evaluation
+    year: 1984
+
+  - author: T. Johnsson
+    title: "Lambda lifting: Transforming programs to recursive equations"
+    year: 1985
+
+  - author: Mark P. Jones
+    title: Dictionary-free overloading by partial evaluation
+    year: 1994
+
+  - author: Simon Peyton Jones
+    title: "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine"
+    year: 1992
+
+  - author: Xavier Leroy
+    title: Unboxed objects and polymorphic typing
+    year: 1992
+
+  - authors:
+      - Henry Lieberman
+      - Carl E. Hewitt
+    title: A real-time garbage collector based on the lifetimes of objects
+    year: 1983
+
+  - authors:
+      - R. Milner
+      - M. Tofte
+      - R. Harper
+    title: The definition of Standard ML
+    year: 1990
+
+  - authors:
+      - R. Plasmeijer
+      - M. van Eekelen
+    title: Functional programming and parallel graph rewriting
+    year: 1993
+
+  - authors:
+      - P.M. Sansom
+      - Simon Peyton Jones
+    title: Generational garbage collection for Haskell
+    year: 1993
+
+  - author: Marc Schroeder
+    title: Higher-order Charity
+    year: 1997
+
+  - authors:
+      - Sjaak Smesters
+      - Erick Nöcker
+      - Jon van Gronigen
+      - Rinus Plasmeijer
+    title: Generating efficient code lazy functional languages
+    year: 1991
+
+  - author: Dwight Spencer
+    title: Categorical programming with functorial strength
+    year: 1993
+
+  - author: Peter Thiemann
+    title: Unboxed values and polymorphic typing revisited
+    year: 1995
+
+  - author: Charles Tuckey
+    title: Pattern matching in Charity
+    year: 1997
+
+  - author: Peter Vesely
+    title: Typechecking the Charity term logic
+    year: 1997
+
+  - author: Stephanie Weirich
+    title: Encoding intensional type analysis
+    year: 2001
+
+  - author: Paul R. Wilson
+    title: Uniprocessor garbage collection techniques
+    year: 1992
+
+  - author: Barry Yee
+    title: Implementing the Charity abstract machine
+    year: 1995

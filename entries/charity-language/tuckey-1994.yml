@@ -1,0 +1,78 @@
+title: The implementation of pattern matching in Charity
+author: Charles Tuckey
+year: 1994
+collection: Charity language
+abstract: |
+  Charity is a functional type language recently developed at the University of Calgary by Dr. J.R.B. Cockett. This paper is a report on a project to add pattern matching capability to Charity. The project involved defining an extended term logic for Charity, developing an appropriate syntax to express the new term logic, doing type checking in the term logic, and refining an algorithm to translate the extended term logic to the core term logic. The preceding work is discussed and a blueprint is given for future work.
+numbered: n
+references:
+
+  - author: J. Backus
+    title: Can programming be liberated from the von Neumann style? A functional style and its algebra of programs
+    year: 1978
+
+  - authors:
+      - Richard Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - authors:
+      - Robin Cockett
+      - J.A. Herrera
+    title: Decision tree reduction
+    year: 1990
+
+  - author: Robin Cockett
+    title: Charitable thoughts
+    year: 1996
+
+  - author: Robin Cockett
+    title: Developing an interpreter
+    year: 1993
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Todd Simpson
+    title: More on compiling pattern matched definitions
+    year: 1993
+
+  - author: Tom Fukushima
+    title: Charity user manual
+    year: 1991
+
+  - author: I. Holyer
+    title: Functional programming with Miranda
+    year: 1991
+
+  - author: John Hughes
+    title: Why functional programming matters
+    year: 1989
+
+  - author: Simon Peyton Jones
+    title: The implementation of functional programming languages
+    year: 1987
+
+  - author: Marc Schroeder
+    title: "Chirp: A front end for Charity"
+    year: 1993
+
+  - authors:
+      - D.R. Tarditi
+      - A.W. Appel
+    title: "ML-Yacc: A user’s manual"
+    year: 1991
+
+  - author: R.F.C Walters
+    title: Categories and computer science
+    year: 1991
+
+  - author: Barry Yee
+    title: "The Charm project: A back end to the Charity interpreter"
+    year: 1993

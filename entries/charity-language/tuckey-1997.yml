@@ -1,0 +1,96 @@
+title: Pattern matching in Charity
+author: Charles Tuckey
+year: 1997
+collection: Charity language
+abstract: |
+  Charity, a functional style programming language based in the mathematics of category theory, was developed at the University of Calgary by the Charity group under the direction of Dr. Cockett. Key to the usefulness of such languages is the ability to define functions using pattern matching. This thesis describes an extended type theory for a Charity term logic with sophisticated pattern matching capabilities. It gives a translation of this extended term logic to Charity’s core term logic, enabling programs written in the extended term logic to be evaluated. The translation closely mirrors the type theory.
+  In addition, this work introduces a new pattern matching feature which is not found in other functional style languages. It shows how the facility of guarding patterns with boolean functions, available in many functional languages, can be extended so that functions of arbitrary types can be used as pattern guards.
+numbered: n
+references:
+
+  - author: Lennart Augustsson
+    title: Compiling pattern matching
+    year: 1985
+
+  - authors:
+      - Robin Cockett
+      - Y. Zhu
+    title: A new incremental learning technique for decision trees with thresholds
+    year: 1989
+
+  - author: Robin Cockett
+    title: "Notes on coinductive data types and examples"
+    year: 1992
+
+  - author: Robin Cockett
+    title: Charitable thoughts
+    year: 1996
+
+  - author: Robin Cockett
+    title: "CPSC 501: Advanced programming techniques"
+    year: 1993
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: "Strong categorical datatypes II: A term logic for categorical programming"
+    year: 1992
+
+  - authors:
+      - Tom Fukushima
+      - Charlie Tuckey
+    title: Charity user manual
+    year: 1996
+
+  - author: I. Holyer
+    title: Functional programming with Miranda
+    year: 1991
+
+  - author: A. Laville
+    title: Lazy pattern matching in the ML language
+    year: 1987
+
+  - author: L.C. Paulson
+    title: ML for the working programmer
+    year: 1991
+
+  - author: Simon Peyton Jones
+    title: The implementation of functional programming languages
+    year: 1987
+
+  - author: Marc Schroeder
+    title: Higher-order Charity
+    year: 1997
+
+  - authors:
+      - R.C. Sekar
+      - R. Ramesh
+      - I.V. Ramakrishnan
+    title: Adaptive pattern matching
+    year: 1992
+
+  - authors:
+      - Todd Simpson
+      - Robin Cockett
+    title: Sequentializing programs defined by pattern matching
+    year: 1992
+
+  - author: Peter Vesely
+    title: Typechecking the Charity term logic
+    year: 1997
+
+  - author: Barry Yee
+    title: Implementing the Charity abstract machine
+    year: 1995

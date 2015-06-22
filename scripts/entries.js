@@ -1,5 +1,2194 @@
 module.exports = [
   {
+    "title": "Introduction to distributive categories",
+    "author": "Robin Cockett",
+    "year": 1991,
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "M. Barr",
+          "C. Wells"
+        ],
+        "title": "Toposes, triples and theories",
+        "year": 1985
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Distributive logic",
+        "year": 1989
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Conditional control is not quite categorical control",
+        "year": 1991
+      },
+      {
+        "author": "Y. Diers",
+        "title": "Categories of boolean sheaves of simple algebras",
+        "year": 1985
+      },
+      {
+        "author": "A.W.M. Dress",
+        "title": "Contributions to the theory of induced representations",
+        "year": 1973
+      },
+      {
+        "authors": [
+          "P. Gabriel",
+          "M. Zisman"
+        ],
+        "title": "Calculus of fractions and homotopy theory",
+        "year": 1967
+      },
+      {
+        "authors": [
+          "A. Grothendieck",
+          "J.L. Verdier"
+        ],
+        "title": "Théorie des topos",
+        "year": 1972
+      },
+      {
+        "author": "P.T. Johnstone",
+        "title": "Topos theory",
+        "year": 1977
+      },
+      {
+        "author": "H. Lintner",
+        "title": "A remark on Mackey-functors",
+        "year": 1976
+      },
+      {
+        "author": "S. MacLane",
+        "title": "Categories for the working mathematician",
+        "year": 1971
+      },
+      {
+        "author": "R.H. Street",
+        "title": "Fibrations in bicategories",
+        "year": 1980
+      },
+      {
+        "authors": [
+          "D. Schumacher",
+          "R.H. Street"
+        ],
+        "title": "Some parameterized categorical concepts",
+        "year": 1988
+      },
+      {
+        "author": "et al.",
+        "title": "Sydney category seminar abstracts",
+        "year": 1988
+      },
+      {
+        "author": "et al.",
+        "title": "Sydney category seminar abstracts",
+        "year": 1990
+      }
+    ]
+  },
+  {
+    "title": "Distributive logic",
+    "author": "Robin Cockett",
+    "year": 1992,
+    "abstract": "Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.\nThis paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.\n",
+    "collection": "Charity language"
+  },
+  {
+    "title": "About Charity",
+    "authors": [
+      "Robin Cockett",
+      "Tom Fukushima"
+    ],
+    "year": 1992,
+    "abstract": "Charity is a categorical programming language based on distributive categories (in the sense of Schanuel and Lawvere) with strong datatypes (in the sense of Hagino). Distributive categories come with a term logic which can express most standard programs; and they are fundamental to computer science because they permit proof by case analysis and, when strong datatypes are introduced, proof by structural induction.\nCharity is functional and polymorphic in style, and is strongly normalizing. As a categorical programming language it provides a unique marriage of computer science and mathematical thought. The above aspects are particularly important for the production of verified programs as the naturality of morphisms gives us “theorems for free”, termination proofs are not required, and mathemathical specifications can be used.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "J.D. Ullman",
+          "A.V. Aho",
+          "J.E. Hopcroft"
+        ],
+        "title": "The design and analysis of computer algorithms",
+        "year": 1974
+      },
+      {
+        "author": "R. Burstall",
+        "title": "Inductively defined functions in functional programming languages",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "M. Barr",
+          "C. Wells"
+        ],
+        "title": "Toposes, triples and theories",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "H.G. Chen"
+        ],
+        "title": "Categorical combinators"
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "List-arithmetic distributive categories: Locoi",
+        "year": 1990
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "The fundamental theorem of data structures for a locos",
+        "year": 1991
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Notes on strength, datatypes, and shape",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "M. Fokkinga",
+          "E. Meijer",
+          "R. Paterson"
+        ],
+        "title": "Functional programming with bananas, lenses, envelopes and barbed wire",
+        "year": 1991
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "G.M. Kelly",
+        "title": "On clubs and data-type constructors"
+      },
+      {
+        "author": "G.M. Kelly",
+        "title": "Structures defined by finite limits in the enriched context I",
+        "year": 1982
+      },
+      {
+        "author": "J. Lambek",
+        "title": "Deductive systems and categories II: Standard constructions and closed categories",
+        "year": 1969
+      },
+      {
+        "author": "E. Moggi",
+        "title": "Computational lambda-calculus and monads",
+        "year": 1989
+      },
+      {
+        "author": "David Turner",
+        "title": "Another algorithm for bracket abstraction",
+        "year": 1979
+      },
+      {
+        "author": "David Turner",
+        "title": "A new implementation technique for applicative languages",
+        "year": 1979
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Theorems for free!",
+        "year": 1989
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Comprehending monads",
+        "year": 1992
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Strong categorical datatypes I",
+    "authors": [
+      "Robin Cockett",
+      "Dwight Spencer"
+    ],
+    "year": 1992,
+    "abstract": "An endofunctor of a cartesian closed category is often called strong if it is enriched over the exponential. Equivalently this strength can be provided as a natural transformation _θA;X : F(A)×X ⟶ F(A×X)_ satisfying some elementary coherence conditions. This latter formulation does not require exponentials, relies only on the presence of an **X**-action over an **X**-strong category, and thereby provides a first-order viewpoint of strength.\nThe 2-category of **X**-strong categories is not finitely complete. It particularly lacks many standard constructions including the Eilenberg-Moore construction. Thankfully, the suggestion — attributed to Plotkin by Moggi — that strength can also be equivalently framed in terms of fibrations using projections to **X**-objects as display maps can be fully realized. The equivalence can be portrayed as an embedding of **X**-strong categories into the 2-category of **X**-indexed categories or split fibrations over X. This embedding can be used to give a coherent declarative implementation of parametrized datatypes-with-strength and their constructors/destructors in the style of Hagino.\nThe initiality and finality conditions associated with the strong datatype construction in the split fibration setting generate a strongly normalizing weak-head categorical combinator reduction system. The reduction rules permit both “eager” usage of initial datatypes and “lazy” usage of final datatypes to achieve reasonable computing strength. An X-action over a strong datatype can be computed in terms of programmed state transformations over its component datatypes. These reduction rules form the abstract engine for computation within the Charity categorical programming system.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "authors": [
+          "R.M. Burstall",
+          "J. Darlington"
+        ],
+        "title": "A transformation system for developing recursive programs",
+        "year": 1977
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "List-arithmetic distributive categories: Locoi",
+        "year": 1990
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Conditional control is not quite categorical control",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "author": "J.W. Gray",
+        "title": "Fibred and cofibred categories",
+        "year": 1965
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "C.B. Jay",
+        "title": "Tail recursion from universal invariants",
+        "year": 1991
+      },
+      {
+        "author": "G.M. Kelly",
+        "title": "Elementary observations on 2-categorical limits",
+        "year": 1989
+      },
+      {
+        "author": "A. Kock",
+        "title": "Strong functors and monoidal monads",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "J. Lambek",
+          "P.J. Scott"
+        ],
+        "title": "Introduction to higher order categorical logic",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "E.G. Manes",
+          "M.A. Arbib"
+        ],
+        "title": "Parametrized datatypes do not need highly constrained parameters",
+        "year": 1982
+      },
+      {
+        "author": "E. Moggi",
+        "title": "Computational lambda-calculus and monads",
+        "year": 1989
+      },
+      {
+        "author": "E. Moggi",
+        "title": "An abstract view of programming languages",
+        "year": 1989
+      },
+      {
+        "author": "E. Moggi",
+        "title": "Notions of computation and monads",
+        "year": 1991
+      },
+      {
+        "author": "G. Malcolm",
+        "title": "Data structures and program transformation",
+        "year": 1990
+      },
+      {
+        "author": "G. Malcolm",
+        "title": "Algebraic data types and program transformation",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "P. Panangaden",
+          "P. Mendler",
+          "M. Schwartzbach"
+        ],
+        "title": "Recursively defined types in constructive type theory",
+        "year": 1989
+      },
+      {
+        "author": "L. Román",
+        "title": "On recursive principles in cartesian categories"
+      },
+      {
+        "authors": [
+          "M. Smyth",
+          "G. Plotkin"
+        ],
+        "title": "The category theoretic solution of recursive domain equations",
+        "year": 1982
+      },
+      {
+        "author": "D. Spencer",
+        "title": "A survey of categorical computation: fixed points, partiality, combinators, … control?",
+        "year": 1991
+      },
+      {
+        "author": "P. Taylor",
+        "title": "Recursive domains, indexed category theory, and polymorphism",
+        "year": 1986
+      },
+      {
+        "author": "David Turner",
+        "title": "Duality and De Morgan principles for lists",
+        "year": 1991
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Data types in distributive categories",
+        "year": 1989
+      },
+      {
+        "author": "R.J. Wood",
+        "title": "V-indexed categories",
+        "year": 1978
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Strong categorical datatypes II: A term logic for categorical programming",
+    "authors": [
+      "Robin Cockett",
+      "Dwight Spencer"
+    ],
+    "year": 1992,
+    "abstract": "This paper lifts the category-theoretic results of [4] to the level of an abstract language suitable for basing categorical programming language implementations. The earlier work built a fibration-based strongly-normalizing categorical combinator reduction system based entirely on functorial strength that allows the distribution of context to the interior of a strong data structure. Strong type-forming functors accompanied by (1) a collection of constructor combinators (initial datatypes) or destructor combinators (final datatypes) and (2) a capability for building new state-transforming combinators that operate with structures of the datatypes formed by these functors can be abstractly declared in a Hagino-Wraith style to form a reasonably expressive computing environment.\nHowever, the high complexity of programming exclusively in combinators warrants the development of categorical programming languages that are isomorphic to the distributive category settings in which strong datatypes can be declared. Towards this goal, a distributive term logic is developed and proven consistent with and equivalent to the combinator theory. Due to its basis in strength higher-order operations, such as generalized map operators, are directly expressible in this first-order language. The term logic forms the underlying base of the Charity categorical programming system. The resulting categorical programming paradigm of structurally inductive state transforms is illustrated by several examples that accompany the term logic reduction rules.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "author": "Robin Cockett",
+        "title": "Distributive logic",
+        "year": 1989
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "The term logic of precartesian categories",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "H.G. Mairson",
+        "title": "Outline of a proof theory of parametricity",
+        "year": 1991
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Types, abstraction, and parametric polymorphism",
+        "year": 1983
+      },
+      {
+        "author": "A. Stoughton",
+        "title": "Substitution revisited",
+        "year": 1988
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Theorems for free!",
+        "year": 1989
+      },
+      {
+        "author": "C. Wells",
+        "title": "A generalization of the concept of sketch",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "C. Wells",
+          "M. Barr"
+        ],
+        "title": "The formal description of data types using sketches",
+        "year": 1987
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Examples of Charity term logic proofs",
+    "author": "Robin Cockett",
+    "year": 1993,
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "author": "G. Malcolm",
+        "title": "Algebraic data types and program transformation",
+        "year": 1990
+      },
+      {
+        "author": "Dwight Spencer",
+        "title": "Categorical programming with functorial strength",
+        "year": 1993
+      }
+    ]
+  },
+  {
+    "title": "Charitable thoughts",
+    "author": "Robin Cockett",
+    "year": 1996,
+    "collection": "Charity language"
+  },
+  {
+    "title": "Charity user manual",
+    "author": "Tom Fukushima",
+    "year": 1991,
+    "collection": "Charity language"
+  },
+  {
+    "title": "Charity user manual",
+    "authors": [
+      "Tom Fukushima",
+      "Charles Tuckey"
+    ],
+    "year": 1996,
+    "collection": "Charity language"
+  },
+  {
+    "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+    "author": "Mike Hermann",
+    "year": 1992,
+    "collection": "Charity language",
+    "missing": "y"
+  },
+  {
+    "title": "Charity grammar",
+    "author": "Marc Schroeder",
+    "year": 1993,
+    "collection": "Charity language"
+  },
+  {
+    "title": "Chirp: A front end for Charity",
+    "author": "Marc Schroeder",
+    "year": 1993,
+    "abstract": "Chirp is the front end of the interpreter for Charity, a categorical programming language currently under development. Chirp interfaces neatly with Barry Yee’s Charm abstract machine, the back end, to form a coherent system for the definition and execution of Charity programs. Chirp has been designed to be fast, portable, and extensible.\nChapter 1 provides a brief introduction to Chirp and the Charity language. Chapter 2 presents Charity in slightly more detail, discussing categorical programming as well as issues in the language. Chapters 3–9 explore the workings of the Chirp system in detail, while chapter 10 explains the Chirp/Charm interface. Finally, chapter 11 comments on some possible directions in the continued development of Chirp and Charity. The appendices specify the grammar for Charity, and other technical or useful details of the system and language. An example Chirp session is also listed.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "authors": [
+          "A.V. Aho",
+          "R. Sethi",
+          "J.D. Ullman"
+        ],
+        "title": "Compilers: Principles, techniques, and tools",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "M. Barr",
+          "C. Wells"
+        ],
+        "title": "Category theory for computing science",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Philip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "H.G. Chen"
+        ],
+        "title": "Categorical combinators"
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Notes on strength, datatypes, and shape",
+        "year": 1991
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "12 lectures on categorical programming",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Conditional control is not quite categorical control",
+        "year": 1991
+      },
+      {
+        "author": "P.-L. Curien",
+        "title": "Categorical combinators, sequential algorithms, and functional programming",
+        "year": 1986
+      },
+      {
+        "author": "Tom Fukushima",
+        "title": "Charity user manual",
+        "year": 1991
+      },
+      {
+        "author": "A.D. Gordon",
+        "title": "Functional programming and input/output",
+        "year": 1992
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "Mike Hermann",
+        "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Paul Hudak",
+          "R.S. Sundaresh"
+        ],
+        "title": "On the expressiveness of purely functional I/O systems",
+        "year": 1989
+      },
+      {
+        "author": "Marc Schroeder",
+        "title": "Proposal: Chirp: A front end for Charity",
+        "year": 1992
+      },
+      {
+        "author": "Dwight Spencer",
+        "title": "A survey of categorical computation: fixed points, partiality, combinators, … control?",
+        "year": 1991
+      },
+      {
+        "author": "P. Taylor",
+        "title": "Recursive domains, indexed category theory, and polymorphism",
+        "year": 1986
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Data types in distributive categories",
+        "year": 1989
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      },
+      {
+        "author": "Barry Yee",
+        "title": "The Charm project: A back end to the Charity interpreter",
+        "year": 1993
+      }
+    ]
+  },
+  {
+    "title": "Higher-order Charity",
+    "author": "Marc Schroeder",
+    "year": 1997,
+    "abstract": "This thesis describes the higher-order Charity programming language which is an extension of first-order Charity. This results from extending the coinductive datatype definition mechanism to allow a new class of higher-order datatypes with parameterized destructors. This adds significant expressive power to the language. In particular it allows one to create “objects”. The language is “higher-order” in the traditional sense that the exponential datatype can be defined, and so that functions can be treated as values.\nThe higher-order extension is traced from the extension of the syntax and the expressive gains delivered to the Charity programmer, down through the innards of the language and the modifications required in the implementation.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "authors": [
+          "Martín Abadi",
+          "Luca Cardelli"
+        ],
+        "title": "A theory of objects",
+        "year": 1996
+      },
+      {
+        "author": "H.P. Barendregt",
+        "title": "The lambda calculus: Its syntax and semantics",
+        "year": 1984
+      },
+      {
+        "authors": [
+          "Michael Barr",
+          "Charles Wells"
+        ],
+        "title": "Category theory for computing science",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Philip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "author": "Roy L. Crole",
+        "title": "Categories for types",
+        "year": 1993
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "Mike Hermann",
+        "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Paul Hudak",
+          "Simon Peyton Jones",
+          "Philip Wadler",
+          "et al."
+        ],
+        "title": "Report on the programming language Haskell: A non-strict, purely functional language",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "P. Katis",
+          "N. Sabadini",
+          "R.F.C. Walters"
+        ],
+        "title": "The bicategory of circuits",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "E. Meijer",
+          "M.M. Fokkinga",
+          "R. Paterson"
+        ],
+        "title": "Functional programming with bananas, lenses, envelopes and barbed wire",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Erik Meijer",
+          "Graham Hutton"
+        ],
+        "title": "Bananas in space: Extending fold and unfold to exponential types",
+        "year": 1995
+      },
+      {
+        "author": "Erik Meijer and Johan Jeuring",
+        "title": "Merging monads and folds for functional programming",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "Robin Milner",
+          "Mads Tofte"
+        ],
+        "title": "Commentary on Standard ML",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Robin Milner",
+          "Mads Tofte",
+          "Robert Harper"
+        ],
+        "title": "The definition of Standard ML",
+        "year": 1990
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "The implementation of functional programming languages",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "D.E. Rydeheard",
+          "R.M. Burstall"
+        ],
+        "title": "Computational category theory",
+        "year": 1988
+      },
+      {
+        "author": "Dwight Spencer",
+        "title": "Categorical programming with functorial strength",
+        "year": 1993
+      },
+      {
+        "author": "Charles Tuckey",
+        "title": "The implementation of pattern matching in Charity",
+        "year": 1994
+      },
+      {
+        "author": "Charles Tuckey",
+        "title": "Pattern matching in Charity",
+        "year": 1997
+      },
+      {
+        "author": "David Turner",
+        "title": "An overview of Miranda",
+        "year": 1986
+      },
+      {
+        "author": "Peter Vesely",
+        "title": "Typechecking the Charity term logic",
+        "year": 1997
+      },
+      {
+        "author": "Peter Vesely",
+        "title": "Categorical combinators for Charity",
+        "year": 1996
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "Barry Yee",
+        "title": "Implementing the Charity abstract machine",
+        "year": 1995
+      }
+    ]
+  },
+  {
+    "title": "Sequentializing programs defined by pattern matching",
+    "authors": [
+      "Todd Simpson",
+      "Robin Cockett"
+    ],
+    "year": 1992,
+    "abstract": "A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.\nA program definition using patterns is a parallel specification and does not determine a sequential evaluation. A problem arises, therefore, in attempting to preserve as far as possible the intended parallel meaning during the translation to sequential form. In particular, a sequentialized program may be forced to evaluate patterns which need not be evaluated when parallelism is available. It is known that some definitions using patterns, called _sequentializable_ definitions, can be translated without semantic loss, and algorithms to sequentialize these definitions have been documented. In this paper we present an algorithm which works uniformly over _all_ definitions—it handles sequentializable definitions correctly, but also optimizes the sequential realization of other definitions.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "author": "Lennart Augustsson",
+        "title": "Compiling pattern matching",
+        "year": 1985
+      },
+      {
+        "author": "G. Berry",
+        "title": "Stable models of typed lambda-calculi",
+        "year": 1978
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Discrete decision theory: Manipulations",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "J. Herrera"
+        ],
+        "title": "Decision tree reduction",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Todd Simpson"
+        ],
+        "title": "Distributive logic"
+      },
+      {
+        "authors": [
+          "G. Huet",
+          "J. Levy"
+        ],
+        "title": "Call by need computations in nonambiguous linear term rewriting systems",
+        "year": 1979
+      },
+      {
+        "author": "A. Laville",
+        "title": "Lazy pattern matching in the ML language",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "L. Puel",
+          "A. Suárez"
+        ],
+        "title": "Compiling pattern matching by term decomposition",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "R. Sekar",
+          "R. Ramesh",
+          "I. Ramakrishnan"
+        ],
+        "title": "Adaptive pattern matching",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Todd Simpson",
+          "Robin Cockett"
+        ],
+        "title": "On pattern matching"
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Efficient compilation of pattern matching",
+        "year": 1986
+      }
+    ]
+  },
+  {
+    "title": "Categorical programming with functorial strength",
+    "author": "Dwight Spencer",
+    "year": 1993,
+    "abstract": "We show that significant _categorical_ programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the _structures of data_ drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "authors": [
+          "A. Asperti",
+          "G. Longo"
+        ],
+        "title": "Categories, types, and structures",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "M. Barr",
+          "C. Wells"
+        ],
+        "title": "Category theory for computing science",
+        "year": 1990
+      },
+      {
+        "author": "J. Bénabou",
+        "title": "Fibrations petites et localement petites",
+        "year": 1975
+      },
+      {
+        "author": "J. Bénabou",
+        "title": "Fibred categories and the foundations of naive category theory",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "R.M. Burstall",
+          "J. Darlington"
+        ],
+        "title": "A transformation system for developing recursive programs",
+        "year": 1977
+      },
+      {
+        "author": "J. Cartmell",
+        "title": "Generalized algebraic theories and contextual categories",
+        "year": 1986
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Distributive logic",
+        "year": 1989
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "List-arithmetic distributive categories: Locoi",
+        "year": 1990
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Conditional control is not quite categorical control",
+        "year": 1991
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "The term logic of precartesian categories",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "J.A. Goguen",
+          "R.D. Burstall"
+        ],
+        "title": "Institutions: Abstract model theory for specification and programming",
+        "year": 1992
+      },
+      {
+        "author": "J.W. Gray",
+        "title": "Fibred and cofibred categories",
+        "year": 1965
+      },
+      {
+        "author": "J.W. Gray",
+        "title": "Formal category theory I: Adjointness for 2-categories",
+        "year": 1974
+      },
+      {
+        "author": "J. Greiner",
+        "title": "Programming with inductive and co-inductive types",
+        "year": 1992
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "R. Hasegawa",
+        "title": "Categorical data types in parametric polymorphism",
+        "year": 1994
+      },
+      {
+        "author": "R. Hasegawa",
+        "title": "Parametricity of extensionally collapsed term models of polymorphism and their categorical properties",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "B.P. Hilken",
+          "D.E. Rydeheard"
+        ],
+        "title": "Indexed categories for program development",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "B.P. Hilken",
+          "D.E. Rydeheard"
+        ],
+        "title": "Towards a categorical semantics of type classes: Technical report",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "B.P. Hilken",
+          "D.E. Rydeheard"
+        ],
+        "title": "Towards a categorical semantics of type classes",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "J.M.E. Hyland",
+          "A.M. Pitts"
+        ],
+        "title": "The theory of constructions: Categorical semantics and topos-theoretic models",
+        "year": 1989
+      },
+      {
+        "author": "B. Jacobs",
+        "title": "Categorical type theory",
+        "year": 1991
+      },
+      {
+        "author": "C.B. Jay",
+        "title": "Tail recursion from universal invariants",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "P.T. Johnstone",
+          "R. Paré"
+        ],
+        "title": "Indexed categories and their applications",
+        "year": 1978
+      },
+      {
+        "author": "G.M. Kelly",
+        "title": "Elementary observations on 2-categorical limits",
+        "year": 1989
+      },
+      {
+        "authors": [
+          "G.M. Kelly",
+          "S. MacLane"
+        ],
+        "title": "Closed coherence for a natural transformation",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "G.M. Kelly",
+          "R. Street"
+        ],
+        "title": "Review of the elements of 2-categories",
+        "year": 1974
+      },
+      {
+        "author": "A. Kock",
+        "title": "Strong functors and monoidal monads",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "J. Lambek",
+          "P.J. Scott"
+        ],
+        "title": "Introduction to higher order categorical logic",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "F.W. Lawvere",
+          "S. Schanuel"
+        ],
+        "title": "Conceptual mathematics",
+        "year": 1991
+      },
+      {
+        "author": "H.G. Mairson",
+        "title": "Outline of a proof theory of parametricity",
+        "year": 1991
+      },
+      {
+        "author": "G. Malcolm",
+        "title": "Algebraic data types and program transformation",
+        "year": 1990
+      },
+      {
+        "author": "G. Malcolm",
+        "title": "Data structures and program transformation",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "E.G. Manes",
+          "M.A. Arbib"
+        ],
+        "title": "Parametrized datatypes do not need highly constrained parameters",
+        "year": 1982
+      },
+      {
+        "author": "C. McLarty",
+        "title": "Elementary categories, elementary toposes",
+        "year": 1992
+      },
+      {
+        "author": "E. Moggi",
+        "title": "An abstract view of programming languages",
+        "year": 1989
+      },
+      {
+        "author": "E. Moggi",
+        "title": "Computational lambda-calculus and monads",
+        "year": 1989
+      },
+      {
+        "author": "E. Moggi",
+        "title": "Notions of computation and monads",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "P. Panangaden",
+          "P. Mendler",
+          "M. Schwartzbach"
+        ],
+        "title": "Recursively defined types in constructive type theory",
+        "year": 1989
+      },
+      {
+        "author": "D. Pavlović",
+        "title": "Predicates and fibrations",
+        "year": 1990
+      },
+      {
+        "author": "W. Phoa",
+        "title": "Fibrations",
+        "year": 1992
+      },
+      {
+        "author": "B. Pierce",
+        "title": "Basic category theory for computer scientists",
+        "year": 1991
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Types, abstraction, and parametric polymorphism",
+        "year": 1983
+      },
+      {
+        "author": "L. Román",
+        "title": "On recursive principles in cartesian categories"
+      },
+      {
+        "authors": [
+          "M. Smyth",
+          "G. Plotkin"
+        ],
+        "title": "The category theoretic solution of recursive domain equations",
+        "year": 1982
+      },
+      {
+        "author": "A. Stoughton",
+        "title": "Substitution revisited",
+        "year": 1988
+      },
+      {
+        "author": "P. Taylor",
+        "title": "Recursive domains, indexed category theory, and polymorphism",
+        "year": 1986
+      },
+      {
+        "author": "David Turner",
+        "title": "Duality and De Morgan principles for lists",
+        "year": 1991
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Theorems for free!",
+        "year": 1989
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Data types in distributive categories",
+        "year": 1989
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "C. Wells",
+        "title": "A generalization of the concept of sketch",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "C. Wells",
+          "M. Barr"
+        ],
+        "title": "The formal description of data types using sketches",
+        "year": 1987
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "The implementation of pattern matching in Charity",
+    "author": "Charles Tuckey",
+    "year": 1994,
+    "abstract": "Charity is a functional type language recently developed at the University of Calgary by Dr. J.R.B. Cockett. This paper is a report on a project to add pattern matching capability to Charity. The project involved defining an extended term logic for Charity, developing an appropriate syntax to express the new term logic, doing type checking in the term logic, and refining an algorithm to translate the extended term logic to the core term logic. The preceding work is discussed and a blueprint is given for future work.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "author": "J. Backus",
+        "title": "Can programming be liberated from the von Neumann style? A functional style and its algebra of programs",
+        "year": 1978
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Philip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "J.A. Herrera"
+        ],
+        "title": "Decision tree reduction",
+        "year": 1990
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Charitable thoughts",
+        "year": 1996
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Developing an interpreter",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Todd Simpson"
+        ],
+        "title": "More on compiling pattern matched definitions",
+        "year": 1993
+      },
+      {
+        "author": "Tom Fukushima",
+        "title": "Charity user manual",
+        "year": 1991
+      },
+      {
+        "author": "I. Holyer",
+        "title": "Functional programming with Miranda",
+        "year": 1991
+      },
+      {
+        "author": "John Hughes",
+        "title": "Why functional programming matters",
+        "year": 1989
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "The implementation of functional programming languages",
+        "year": 1987
+      },
+      {
+        "author": "Marc Schroeder",
+        "title": "Chirp: A front end for Charity",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "D.R. Tarditi",
+          "A.W. Appel"
+        ],
+        "title": "ML-Yacc: A user’s manual",
+        "year": 1991
+      },
+      {
+        "author": "R.F.C Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "Barry Yee",
+        "title": "The Charm project: A back end to the Charity interpreter",
+        "year": 1993
+      }
+    ]
+  },
+  {
+    "title": "Pattern matching in Charity",
+    "author": "Charles Tuckey",
+    "year": 1997,
+    "abstract": "Charity, a functional style programming language based in the mathematics of category theory, was developed at the University of Calgary by the Charity group under the direction of Dr. Cockett. Key to the usefulness of such languages is the ability to define functions using pattern matching. This thesis describes an extended type theory for a Charity term logic with sophisticated pattern matching capabilities. It gives a translation of this extended term logic to Charity’s core term logic, enabling programs written in the extended term logic to be evaluated. The translation closely mirrors the type theory.\nIn addition, this work introduces a new pattern matching feature which is not found in other functional style languages. It shows how the facility of guarding patterns with boolean functions, available in many functional languages, can be extended so that functions of arbitrary types can be used as pattern guards.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "author": "Lennart Augustsson",
+        "title": "Compiling pattern matching",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Y. Zhu"
+        ],
+        "title": "A new incremental learning technique for decision trees with thresholds",
+        "year": 1989
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Notes on coinductive data types and examples",
+        "year": 1992
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Charitable thoughts",
+        "year": 1996
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "CPSC 501: Advanced programming techniques",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Tom Fukushima",
+          "Charlie Tuckey"
+        ],
+        "title": "Charity user manual",
+        "year": 1996
+      },
+      {
+        "author": "I. Holyer",
+        "title": "Functional programming with Miranda",
+        "year": 1991
+      },
+      {
+        "author": "A. Laville",
+        "title": "Lazy pattern matching in the ML language",
+        "year": 1987
+      },
+      {
+        "author": "L.C. Paulson",
+        "title": "ML for the working programmer",
+        "year": 1991
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "The implementation of functional programming languages",
+        "year": 1987
+      },
+      {
+        "author": "Marc Schroeder",
+        "title": "Higher-order Charity",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "R.C. Sekar",
+          "R. Ramesh",
+          "I.V. Ramakrishnan"
+        ],
+        "title": "Adaptive pattern matching",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Todd Simpson",
+          "Robin Cockett"
+        ],
+        "title": "Sequentializing programs defined by pattern matching",
+        "year": 1992
+      },
+      {
+        "author": "Peter Vesely",
+        "title": "Typechecking the Charity term logic",
+        "year": 1997
+      },
+      {
+        "author": "Barry Yee",
+        "title": "Implementing the Charity abstract machine",
+        "year": 1995
+      }
+    ]
+  },
+  {
+    "title": "Categorical combinators for Charity",
+    "author": "Peter Vesely",
+    "year": 1996,
+    "abstract": "A 2-categorical notion of _parametric combinator_ is introduced. These combinators are operations for constructing arrows in a category and satisfy a 2-categorical abstraction of parametricity for strictly covariant functors. Inductive and co-inductive datatypes are compatible with these combinators and their universal properties are closely related to parametricity. The Charity programming language is based on _strong datatypes_ which are a specialization of 2-categorical datatypes. _Strong combinators_ (which are an appropriate specialization of 2-categorical combinators) provide a model of polymorphic functions in Charity.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "M. Abadi",
+          "L. Cardelli",
+          "P.L. Curien"
+        ],
+        "title": "Formal parametric polymorphism",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "E.S. Bainbridge",
+          "P.J. Freyd",
+          "A. Scedrov",
+          "P.J. Scott"
+        ],
+        "title": "Functorial polymorphism",
+        "year": 1990
+      },
+      {
+        "author": "F. Borceux",
+        "title": "Handbook of categorical algebra 1: Basic category theory",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Philip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes I",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Tom Fukushima",
+          "Charles Tuckey"
+        ],
+        "title": "Charity user manual",
+        "year": 1996
+      },
+      {
+        "author": "Tatsuya Hagino",
+        "title": "A categorical programming language",
+        "year": 1987
+      },
+      {
+        "author": "R. Hasegawa",
+        "title": "Categorical data types in parametric polymorphism",
+        "year": 1994
+      },
+      {
+        "author": "J.R. Hindley",
+        "title": "Combinators and lambda calculus",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "J.R. Hindley",
+          "B. Lercher",
+          "J.P. Seldin"
+        ],
+        "title": "Introduction to combinatory logic",
+        "year": 1972
+      },
+      {
+        "author": "B. Jacobs",
+        "title": "Categorical logic and type theory",
+        "year": 1999
+      },
+      {
+        "author": "B. Jay",
+        "title": "Covariant types",
+        "year": 1996
+      },
+      {
+        "author": "G.M. Kelly",
+        "title": "Elementary observations on 2-categorical limits",
+        "year": 1989
+      },
+      {
+        "authors": [
+          "G.M. Kelly",
+          "R. Street"
+        ],
+        "title": "Review of the elements of 2-categories",
+        "year": 1974
+      },
+      {
+        "authors": [
+          "G. Plotkin",
+          "M. Abadi"
+        ],
+        "title": "A logic for parametric polymorphism",
+        "year": 1993
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Types, abstraction, and parametric polymorphism",
+        "year": 1983
+      },
+      {
+        "author": "E. Robinson",
+        "title": "Notes on the second-order lambda calculus",
+        "year": 1992
+      },
+      {
+        "author": "D.L. Spencer",
+        "title": "Categorical programming with functorial strength",
+        "year": 1993
+      },
+      {
+        "author": "S. Thompson",
+        "title": "Type theory and functional programming",
+        "year": 1991
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Theorems for free!",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Typechecking the Charity term logic",
+    "author": "Peter Vesely",
+    "year": 1997,
+    "collection": "Charity language",
+    "references": [
+      {
+        "authors": [
+          "J.P. Jouannaud",
+          "C. Kirchner"
+        ],
+        "title": "Solving equations in abstract algebras: A rule-based survey of unification",
+        "year": 1990
+      },
+      {
+        "author": "R. Milner",
+        "title": "A theory of type polymorphism in programming",
+        "year": 1978
+      }
+    ]
+  },
+  {
+    "title": "The Charm project: A back end to the Charity interpreter",
+    "author": "Barry Yee",
+    "year": 1993,
+    "abstract": "The Charm project is an attempt to build an efficient and portable abstract machine for the Charity language. The abstract machine is implemented in C programming language to make the system more portable across different computer platforms. In this paper, the Charity system is composed of a set of rewrite rules that are converted to state transitions that defines an abstract machine. The implementation of the system is divided into two levels, the macro–level and micro–level. Macro–instructions are instructions that specify the state transitions while the micro–instructions perform the actions that change the state of the machine.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "G. Cousineau",
+          "P.-L. Curien",
+          "M. Mauny"
+        ],
+        "title": "The categorical abstract machine",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "author": "A. Diller",
+        "title": "Compiling functional languages",
+        "year": 1988
+      },
+      {
+        "author": "J. Fairbairn",
+        "title": "A simple abstract machine to execute supercombinators",
+        "year": 1986
+      },
+      {
+        "author": "Tom Fukushima",
+        "title": "Charity user manual",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "J. Fairbairn",
+          "S. Wray"
+        ],
+        "title": "Tim: A simple, lazy abstract machine to execute supercombinators",
+        "year": 1987
+      },
+      {
+        "author": "M.J.C. Gordon",
+        "title": "Programming language theory and its implementation",
+        "year": 1988
+      },
+      {
+        "author": "J. Hannan",
+        "title": "Making abstract machines less abstract",
+        "year": 1991
+      },
+      {
+        "author": "Mike Hermann",
+        "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+        "year": 1992
+      },
+      {
+        "author": "T. Johnsson",
+        "title": "Target code generation from G-machine code",
+        "year": 1986
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Simon Peyton Jones",
+          "David Lester"
+        ],
+        "title": "Implementing functional languages: A tutorial",
+        "year": 1992
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      }
+    ]
+  },
+  {
+    "title": "Implementing the Charity abstract machine",
+    "author": "Barry Yee",
+    "year": 1995,
+    "abstract": "This thesis describes a series of three abstract machines, with associated compilation procedures, for the Charity programming language. Each machine is a refinement of the previous, getting closer to the level of the physical machine.\nThe current C implementation of Charity is based on the last of these machines and is roughly twenty times faster than the original SML implementation, which was based on the first.\n",
+    "collection": "Charity language",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "A.V. Aho",
+          "R. Sethi",
+          "J.D. Ullman"
+        ],
+        "title": "Compilers: Principles, techniques, and tools",
+        "year": 1986
+      },
+      {
+        "author": "J.W. Backus",
+        "title": "Can programming be liberated from the von Neumann style? A functional style and its algebra of programs",
+        "year": 1978
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Phillip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "G. Cousineau",
+          "P.-L. Curien",
+          "M. Mauny"
+        ],
+        "title": "The categorical abstract machine",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Lecture notes in applied mathematics: Seminar on category theory"
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Dwight Spencer"
+        ],
+        "title": "Strong categorical datatypes II: A term logic for categorical programming",
+        "year": 1992
+      },
+      {
+        "author": "P.-L. Curien",
+        "title": "Categorical combinators, sequential algorithms, and functional programming",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "A.J. Field",
+          "P.G. Harrison"
+        ],
+        "title": "Functional programming",
+        "year": 1988
+      },
+      {
+        "author": "Tom Fukushima",
+        "title": "Charity user manual",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Jon Fairbairn",
+          "Stuart C. Wray"
+        ],
+        "title": "Tim: A simple, lazy abstract machine to execute supercombinators",
+        "year": 1987
+      },
+      {
+        "author": "M.J.C. Gordon",
+        "title": "Programming language theory and its implementation",
+        "year": 1988
+      },
+      {
+        "author": "J. Hannan",
+        "title": "Making abstract machines less abstract",
+        "year": 1991
+      },
+      {
+        "author": "P. Henderson",
+        "title": "Functional programming: Applications and implementation",
+        "year": 1980
+      },
+      {
+        "author": "Mike Hermann",
+        "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+        "year": 1992
+      },
+      {
+        "author": "John Hughes",
+        "title": "The design and implementation of programming languages",
+        "year": 1984
+      },
+      {
+        "author": "John Hughes",
+        "title": "Why functional programming matters",
+        "year": 1989
+      },
+      {
+        "authors": [
+          "Simon Peyton Jones",
+          "David Lester"
+        ],
+        "title": "Implementing functional languages: A tutorial",
+        "year": 1992
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine",
+        "year": 1992
+      },
+      {
+        "author": "Richard B. Kieburtz",
+        "title": "The G-machine: A fast, graph-reduction evaluator",
+        "year": 1985
+      },
+      {
+        "author": "P.J. Landin",
+        "title": "The mechanical evaluation of expressions",
+        "year": 1964
+      },
+      {
+        "author": "L. Paulson",
+        "title": "ML for the working programmer",
+        "year": 1991
+      },
+      {
+        "author": "R. Sethi",
+        "title": "Programming languages concepts and constructs",
+        "year": 1989
+      },
+      {
+        "author": "Dwight Spencer",
+        "title": "Categorical programming with functorial strength",
+        "year": 1993
+      },
+      {
+        "author": "David Turner",
+        "title": "A new implementation technique for applicative languages",
+        "year": 1979
+      },
+      {
+        "author": "David Turner",
+        "title": "Miranda: A non-strict functional language with polymorphic types",
+        "year": 1985
+      },
+      {
+        "author": "R.F.C. Walters",
+        "title": "Categories and computer science",
+        "year": 1991
+      },
+      {
+        "author": "Barry Yee",
+        "title": "The Charm project: A back end to the Charity interpreter",
+        "year": 1993
+      }
+    ]
+  },
+  {
+    "title": "An implementation of Charity",
+    "author": "Min Zeng",
+    "year": 2003,
+    "abstract": "This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.\nThe design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.\nThe core-Charity compiler concentrates on providing an efficient implementation of core Charity code into the virtual machine. Previous implementations suffered from excessive heap usage which necessitated frequent garbage collection. In this implementation a variety of techniques are used to reduce heap usage and improve execution speed.\nThe resulting Charity programs are substantially faster than those produced by previous Charity implementations.\n",
+    "collection": "Charity language",
+    "references": [
+      {
+        "author": "A.W. Appel",
+        "title": "Garbage collection can be faster than stack allocation",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "A.W. Appel",
+          "D.B. MacQueen"
+        ],
+        "title": "Standard ML of New Jersey",
+        "year": 1991
+      },
+      {
+        "author": "A.W. Appel",
+        "title": "Runtime tags aren’t necessary",
+        "year": 1989
+      },
+      {
+        "author": "A.W. Appel",
+        "title": "Simple generational garbage collection and fast allocation",
+        "year": 1989
+      },
+      {
+        "author": "A.W. Appel",
+        "title": "Garbage collection",
+        "year": 1991
+      },
+      {
+        "author": "A.W. Appel",
+        "title": "Compiling with continuations",
+        "year": 1992
+      },
+      {
+        "author": "J. Backus",
+        "title": "Can programming be liberated from the von Neumann style? A functional style and its algebra of programs",
+        "year": 1978
+      },
+      {
+        "authors": [
+          "Richard Bird",
+          "Philip Wadler"
+        ],
+        "title": "Introduction to functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "Guy E. Blelloch",
+          "Jonathan C. Hardwick",
+          "Jay Sipelstein",
+          "Marco Zgha",
+          "Siddhartha Chatterjee"
+        ],
+        "title": "Implementation of a portable nested data-parallel language",
+        "year": 1994
+      },
+      {
+        "author": "Robin Cockett",
+        "title": "Charitable thoughts",
+        "year": 1996
+      },
+      {
+        "authors": [
+          "Robin Cockett",
+          "Tom Fukushima"
+        ],
+        "title": "About Charity",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "G. Cousineau",
+          "P.L. Curien",
+          "M. Mauny"
+        ],
+        "title": "The categorical abstract machine",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "J. Fairbairn",
+          "S. Wray"
+        ],
+        "title": "Tim: A simple, lazy abstract machine to execute supercombinators",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "R.R. Fenichel",
+          "J.C. Yochelson"
+        ],
+        "title": "A Lisp garbage-collector for virtual memory computer systems",
+        "year": 1969
+      },
+      {
+        "author": "Robert Harper",
+        "title": "Introduction to Standard ML",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "Robert Harper",
+          "Greg Morrisett"
+        ],
+        "title": "Compiling polymorphism using intensional type analysis",
+        "year": 1995
+      },
+      {
+        "author": "Mike Hermann",
+        "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Paul Hudak",
+          "Simon Peyton Jones",
+          "Philip Wadler",
+          "et al."
+        ],
+        "title": "Report on the programming language Haskell: A non-strict, purely functional language",
+        "year": 1992
+      },
+      {
+        "author": "T. Johnsson",
+        "title": "Efficient compilation of lazy evaluation",
+        "year": 1984
+      },
+      {
+        "author": "T. Johnsson",
+        "title": "Lambda lifting: Transforming programs to recursive equations",
+        "year": 1985
+      },
+      {
+        "author": "Mark P. Jones",
+        "title": "Dictionary-free overloading by partial evaluation",
+        "year": 1994
+      },
+      {
+        "author": "Simon Peyton Jones",
+        "title": "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine",
+        "year": 1992
+      },
+      {
+        "author": "Xavier Leroy",
+        "title": "Unboxed objects and polymorphic typing",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Henry Lieberman",
+          "Carl E. Hewitt"
+        ],
+        "title": "A real-time garbage collector based on the lifetimes of objects",
+        "year": 1983
+      },
+      {
+        "authors": [
+          "R. Milner",
+          "M. Tofte",
+          "R. Harper"
+        ],
+        "title": "The definition of Standard ML",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "R. Plasmeijer",
+          "M. van Eekelen"
+        ],
+        "title": "Functional programming and parallel graph rewriting",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "P.M. Sansom",
+          "Simon Peyton Jones"
+        ],
+        "title": "Generational garbage collection for Haskell",
+        "year": 1993
+      },
+      {
+        "author": "Marc Schroeder",
+        "title": "Higher-order Charity",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "Sjaak Smesters",
+          "Erick Nöcker",
+          "Jon van Gronigen",
+          "Rinus Plasmeijer"
+        ],
+        "title": "Generating efficient code lazy functional languages",
+        "year": 1991
+      },
+      {
+        "author": "Dwight Spencer",
+        "title": "Categorical programming with functorial strength",
+        "year": 1993
+      },
+      {
+        "author": "Peter Thiemann",
+        "title": "Unboxed values and polymorphic typing revisited",
+        "year": 1995
+      },
+      {
+        "author": "Charles Tuckey",
+        "title": "Pattern matching in Charity",
+        "year": 1997
+      },
+      {
+        "author": "Peter Vesely",
+        "title": "Typechecking the Charity term logic",
+        "year": 1997
+      },
+      {
+        "author": "Stephanie Weirich",
+        "title": "Encoding intensional type analysis",
+        "year": 2001
+      },
+      {
+        "author": "Paul R. Wilson",
+        "title": "Uniprocessor garbage collection techniques",
+        "year": 1992
+      },
+      {
+        "author": "Barry Yee",
+        "title": "Implementing the Charity abstract machine",
+        "year": 1995
+      }
+    ]
+  },
+  {
     "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
     "author": "Marek Łach",
     "year": 1998,
@@ -37,7 +2226,7 @@ module.exports = [
         "year": 1993
       },
       {
-        "author": "P. Wadler",
+        "author": "Philip Wadler",
         "title": "A taste of linear logic",
         "year": 1993
       }
@@ -48,7 +2237,443 @@ module.exports = [
     "author": "Zdzisław Spławski",
     "year": 1993,
     "collection": "ET language",
-    "missing": "y"
+    "missing": "y",
+    "numbered": "n",
+    "references": [
+      {
+        "authors": [
+          "Roland Backhouse",
+          "Paul Chisholm",
+          "Grant Malcom",
+          "Erik Saaman"
+        ],
+        "title": "Do-it-yourself type theory",
+        "year": 1989
+      },
+      {
+        "author": "H.P. Barendregt",
+        "title": "The lambda calculus: Its syntax and semantics",
+        "year": 1984
+      },
+      {
+        "author": "H.P. Barendregt",
+        "title": "Functional programming and lambda calculus",
+        "year": 1990
+      },
+      {
+        "author": "H.P. Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "G. Bellin",
+          "P.J. Scott"
+        ],
+        "title": "On the π-calculus and linear logic",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Corrado Böhm",
+          "A. Berarducci"
+        ],
+        "title": "Automatic synthesis of typed Λ-programs on term algebras",
+        "year": 1985
+      },
+      {
+        "author": "R.M. Burstall",
+        "title": "Inductively defined functions in functional programming languages",
+        "year": 1987
+      },
+      {
+        "author": "A. Church",
+        "title": "A formulation of the simple theory of types",
+        "year": 1940
+      },
+      {
+        "author": "A. Church",
+        "title": "The calculi of lambda-conversion",
+        "year": 1941
+      },
+      {
+        "authors": [
+          "R.L. Constable",
+          "et al."
+        ],
+        "title": "Implementing mathematics with the Nuprl proof development system",
+        "year": 1986
+      },
+      {
+        "author": "T. Coquand",
+        "title": "Metamathematical investigations of a calculus of constructions",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "T. Coquand",
+          "G. Huet"
+        ],
+        "title": "The calculus of constructions",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "R. Feys"
+        ],
+        "title": "Combinatory logic, vol. 1",
+        "year": 1958
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "J.R. Hindley",
+          "J.P. Seldin"
+        ],
+        "title": "Combinatory logic, vol. 2",
+        "year": 1972
+      },
+      {
+        "author": "N.G. de Bruijn",
+        "title": "The mathematical language Automath",
+        "year": 1970
+      },
+      {
+        "author": "N.G. de Bruijn",
+        "title": "Lambda calculus notation with nameless dummies: A tool for automatic formula manipulation, with application to the Church-Rosser theorem",
+        "year": 1972
+      },
+      {
+        "author": "D.M. Gabbay",
+        "title": "On 2nd order intuitionistic propositional calculus with full comprehension",
+        "year": 1974
+      },
+      {
+        "author": "J.H. Gallier",
+        "title": "On Girard’s “Candidats de réductibilité”",
+        "year": 1990
+      },
+      {
+        "author": "J.H. Gallier",
+        "title": "Constructive logics, part I: A tutorial on proof systems and typed λ-calculi",
+        "year": 1993
+      },
+      {
+        "author": "G. Gentzen",
+        "title": "Untersuchungen über das logische Schließen",
+        "year": 1969
+      },
+      {
+        "author": "H. Geuvers",
+        "title": "Inductive and coinductive types with iteration and recursion",
+        "year": 1992
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
+        "year": 1971
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "The system F of variable types, fifteen years later",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "author": "K. Gödel",
+        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
+        "year": 1958
+      },
+      {
+        "author": "M. Gordon",
+        "title": "Hol: A machine oriented formulation of higher-oreder logic",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "M.J. Gordon",
+          "A.J. Milner",
+          "C.P. Wadsworth"
+        ],
+        "title": "Edinburgh LCF",
+        "year": 1979
+      },
+      {
+        "author": "I. Hacking",
+        "title": "What is logic?",
+        "year": 1979
+      },
+      {
+        "author": "T. Hagino",
+        "title": "A typed lambda calculus with categorical type constructors",
+        "year": 1987
+      },
+      {
+        "author": "A. Heyting",
+        "title": "Intuitionism: An introduction",
+        "year": 1956
+      },
+      {
+        "author": "W.A. Howard",
+        "title": "The formulae-as-types notion of construction",
+        "year": 1980
+      },
+      {
+        "author": "G. Huet",
+        "title": "Confluent reductions: Abstract properties and applications to term rewriting systems",
+        "year": 1980
+      },
+      {
+        "author": "I. Johansson",
+        "title": "Der Minimalkalkül: Ein reduzierter intuitionistischer Formalismus",
+        "year": 1937
+      },
+      {
+        "author": "J.-L. Krivine",
+        "title": "Lambda-calcul: Types et modèles",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "J.-L. Krivine",
+          "M. Parigot"
+        ],
+        "title": "Programming with proofs",
+        "year": 1990
+      },
+      {
+        "author": "H. Läuchli",
+        "title": "An abstract notion of realizability for which intuitionistic predicate calculus is complete",
+        "year": 1970
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Contradicting proofs in programs",
+        "year": 1990
+      },
+      {
+        "author": "A.A. Markov",
+        "title": "Konstruktivnaja logika",
+        "year": 1950
+      },
+      {
+        "author": "P. Martin-Löf",
+        "title": "Constructive mathematics and computer programming",
+        "year": 1982
+      },
+      {
+        "author": "P. Martin-Löf",
+        "title": "Intuitionistic type theory",
+        "year": 1984
+      },
+      {
+        "author": "N.P. Mendler",
+        "title": "Inductive types and type constraints in the second-order λ calculus",
+        "year": 1991
+      },
+      {
+        "author": "N.P. Mendler",
+        "title": "Recursive types and type constraints in the second-order λ calculus",
+        "year": 1987
+      },
+      {
+        "author": "G. Michaelson",
+        "title": "An introduction to functional programming through λ calculus",
+        "year": 1989
+      },
+      {
+        "author": "D. Miller",
+        "title": "The π-calculus as a theory in linear logic: Preliminary results",
+        "year": 1992
+      },
+      {
+        "author": "R. Milner",
+        "title": "A theory of type polymorphism in programming",
+        "year": 1978
+      },
+      {
+        "author": "R. Milner",
+        "title": "The polyadic π-calculus: A tutorial",
+        "year": 1991
+      },
+      {
+        "author": "R. Milner",
+        "title": "Elements of interaction",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "R. Milner",
+          "M. Tofte",
+          "R. Harper"
+        ],
+        "title": "The definition of Standard ML",
+        "year": 1990
+      },
+      {
+        "author": "J.C. Mitchell",
+        "title": "Type systems for programming languages",
+        "year": 1990
+      },
+      {
+        "author": "D. Nelson",
+        "title": "Constructible falsity",
+        "year": 1949
+      },
+      {
+        "author": "M.H.A. Newman",
+        "title": "On theories with a combinatorial definition of “equivalence”",
+        "year": 1942
+      },
+      {
+        "authors": [
+          "B. Nordström",
+          "K. Petersson",
+          "J.M. Smith"
+        ],
+        "title": "Programming in Martin-Löf’s type theory: An introduction",
+        "year": 1990
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Programming with proofs: A second order type theory",
+        "year": 1988
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Recursive programming with proofs",
+        "year": 1992
+      },
+      {
+        "author": "L.C. Paulson",
+        "title": "Co-induction and co-recursion in Hol",
+        "year": 1993
+      },
+      {
+        "author": "L.C. Paulson",
+        "title": "Intro to Isabelle",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "F. Pfenning",
+          "Ch. Paulin-Mohring"
+        ],
+        "title": "Inductively defined types in the calculus of constructions",
+        "year": 1990
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Natural deduction: A proof-theoretical study",
+        "year": 1965
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Ideas and results in proof theory",
+        "year": 1971
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Proofs and the meaning and completeness of the logical constants",
+        "year": 1978
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Towards a theory of type structure",
+        "year": 1974
+      },
+      {
+        "author": "P. Schroeder-Heister",
+        "title": "A natural extension of natural deduction",
+        "year": 1984
+      },
+      {
+        "author": "D.S. Scott",
+        "title": "Constructive validity",
+        "year": 1970
+      },
+      {
+        "author": "D.S. Scott",
+        "title": "Continuous lattices",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "J.P. Seldin",
+          "J.R. Hindley"
+        ],
+        "title": "INtroduction to combinators and λ-calculus",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "D.J. Shoesmith",
+          "T.J. Smiley"
+        ],
+        "title": "Multiple-conclusion logic",
+        "year": 1978
+      },
+      {
+        "author": "T. Skolem",
+        "title": "Einige Bemerkungen zur axiomatischen Begründung der Mengenlehre",
+        "year": 1922
+      },
+      {
+        "author": "S. Stenlund",
+        "title": "Combinators, lambda-terms, and proof theory",
+        "year": 1972
+      },
+      {
+        "author": "G. Sundholm",
+        "title": "Proof theory and meaning",
+        "year": 1986
+      },
+      {
+        "author": "J. Tiuryn",
+        "title": "Type inference problems: A survey",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction",
+        "year": 1988
+      },
+      {
+        "author": "P. Urzyczyn",
+        "title": "A remark on quantified vs. recursive types",
+        "year": 1992
+      },
+      {
+        "author": "S.G. Vorobyov",
+        "title": "Undecidability of F? It’s extremely simple!",
+        "year": 1993
+      },
+      {
+        "author": "J.B. Wells",
+        "title": "Typability and type checking in the second-order λ-calculus are equivalent and undecidable",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "J.I. Zucker",
+          "R.S. Tragesser"
+        ],
+        "title": "The adequacy problem for inferential logic",
+        "year": 1978
+      }
+    ]
   },
   {
     "title": "Proving equalities in λ→ with positive (co-)inductive data types",
@@ -115,9 +2740,9 @@ module.exports = [
       },
       {
         "authors": [
-          "S. van Bakel",
+          "S. van Bakel",
           "L. Liquori",
-          "S. Ronchi Della Rocca",
+          "S. Ronchi Della Rocca",
           "P. Urzyczyn"
         ],
         "title": "Comparing cubes of typed and type assignment systems",
@@ -125,7 +2750,7 @@ module.exports = [
       },
       {
         "authors": [
-          "C. Böhm",
+          "Corrado Böhm",
           "A. Berarducci"
         ],
         "title": "Automatic synthesis of typed Λ-programs on term algebras",
@@ -279,7 +2904,7 @@ module.exports = [
       },
       {
         "author": "G.C. Wraith",
-        "title": "A note on categorical data types",
+        "title": "A note on categorical datatypes",
         "year": 1989
       }
     ]
@@ -293,20 +2918,20 @@ module.exports = [
     "references": [
       {
         "authors": [
-          "C. Böhm",
+          "Corrado Böhm",
           "A. Berarducci"
         ],
         "title": "Automatic synthesis of typed Λ-programs on term algebras",
         "year": 1985
       },
       {
-        "author": "C. Böhm",
+        "author": "Corrado Böhm",
         "title": "Reducing recursion to iteration by means of pairs and n-tuples",
         "year": 1988
       },
       {
-        "author": "J.Y. Girard",
-        "title": "Une extension de l'interprétation de Gödel à l'analyse et son application à l'élimination des coupures dans l'analyse et la théorie des types",
+        "author": "J.-Y. Girard",
+        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
         "year": 1971
       },
       {
@@ -351,7 +2976,7 @@ module.exports = [
       },
       {
         "author": "J.C. Reynolds",
-        "title": "Types, abstraction and parametric polymorphism",
+        "title": "Types, abstraction, and parametric polymorphism",
         "year": 1983
       },
       {
@@ -372,7 +2997,7 @@ module.exports = [
     "references": [
       {
         "authors": [
-          "C. Böhm",
+          "Corrado Böhm",
           "A. Berarducci"
         ],
         "title": "Automatic synthesis of typed Λ-programs on term algebras",
@@ -458,7 +3083,7 @@ module.exports = [
       },
       {
         "author": "G.C. Wraith",
-        "title": "A note on categorical data types",
+        "title": "A note on categorical datatypes",
         "year": 1989
       }
     ]
@@ -514,7 +3139,7 @@ module.exports = [
       },
       {
         "authors": [
-          "H. Boehm",
+          "H.-J. Boehm",
           "R. Cartwright"
         ],
         "title": "Exact real arithmetic: Formulating real numbers as functions",
@@ -652,7 +3277,7 @@ module.exports = [
       },
       {
         "authors": [
-          "H. Boehm",
+          "H.-J. Boehm",
           "R. Cartwright"
         ],
         "title": "Exact real arithmetic: Formulating real numbers as functions",
@@ -1338,17 +3963,17 @@ module.exports = [
         "year": 1969
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Backwards analysis of functional programs",
         "year": 1988
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Compile-time analysis of functional programs",
         "year": 1990
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Why functional programming matters",
         "year": 1990
       },
@@ -1523,23 +4148,23 @@ module.exports = [
         "year": 1969
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Backwards analysis of functional programs",
         "year": 1988
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Compile-time analysis of functional programs",
         "year": 1990
       },
       {
-        "author": "R.J.M. Hughes",
+        "author": "John Hughes",
         "title": "Why functional programming matters",
         "year": 1990
       },
       {
         "authors": [
-          "R.J.M. Hughes",
+          "John Hughes",
           "L. Pareto",
           "A. Sabry"
         ],
@@ -1818,13 +4443,13 @@ module.exports = [
           "S. Panitz",
           "M. Schmidt-Shauß"
         ],
-        "title": "TEA: Automatically proving termination of programs in a non-strict higher-order functional language",
+        "title": "Tea: Automatically proving termination of programs in a non-strict higher-order functional language",
         "year": 1997
       },
       {
         "authors": [
-          "S.L. Peyton Jones",
-          "R.J.M. Hughes",
+          "Simon Peyton Jones",
+          "John Hughes",
           "et al."
         ],
         "title": "Haskell 98: A non-strict, purely functional language",
@@ -1877,7 +4502,7 @@ module.exports = [
         "year": 1995
       },
       {
-        "author": "P. Van Hentenryk",
+        "author": "P. Van Hentenryck",
         "title": "Static analysis",
         "year": 1997
       },
@@ -2020,13 +4645,13 @@ module.exports = [
           "S. Panitz",
           "M. Schmidt-Shauß"
         ],
-        "title": "TEA: Automatically proving termination of programs in a non-strict higher-order functional language",
+        "title": "Tea: Automatically proving termination of programs in a non-strict higher-order functional language",
         "year": 1997
       },
       {
         "authors": [
-          "S.L. Peyton Jones",
-          "R.J.M. Hughes",
+          "Simon Peyton Jones",
+          "John Hughes",
           "et al."
         ],
         "title": "Haskell 98: A non-strict, purely functional language",
@@ -2100,7 +4725,7 @@ module.exports = [
       },
       {
         "author": "K. Gödel",
-        "title": "On a hitherto unutilized extension of the finitary standpoint",
+        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
         "year": 1958
       },
       {
@@ -2115,9 +4740,11 @@ module.exports = [
       {
         "authors": [
           "Paul Hudak",
+          "Simon Peyton Jones",
+          "Philip Wadler",
           "et al."
         ],
-        "title": "Report on the programming language Haskell",
+        "title": "Report on the programming language Haskell: A non-strict, purely functional language",
         "year": 1992
       },
       {
@@ -2204,7 +4831,7 @@ module.exports = [
       },
       {
         "authors": [
-          "R.J.M. Hughes",
+          "John Hughes",
           "L. Pareto",
           "A. Sabry"
         ],
@@ -2311,7 +4938,7 @@ module.exports = [
       },
       {
         "author": "K. Gödel",
-        "title": "On a hitherto unutilized extension of the finitary standpoint",
+        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
         "year": 1958
       },
       {
@@ -2326,9 +4953,11 @@ module.exports = [
       {
         "authors": [
           "Paul Hudak",
+          "Simon Peyton Jones",
+          "Philip Wadler",
           "et al."
         ],
-        "title": "Report on the programming language Haskell",
+        "title": "Report on the programming language Haskell: A non-strict, purely functional language",
         "year": 1992
       },
       {
@@ -2338,7 +4967,7 @@ module.exports = [
       },
       {
         "authors": [
-          "B. Nordstrom",
+          "B. Nordström",
           "K. Petersson",
           "J.M. Smith"
         ],
@@ -2463,7 +5092,7 @@ module.exports = [
       },
       {
         "author": "J.-Y. Girard",
-        "title": "Une extension de l'interprétation de Gödel à l'analyse et son application à l'élimination des coupures dans l'analyse et la théorie des types",
+        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
         "year": 1971
       },
       {
@@ -2482,7 +5111,7 @@ module.exports = [
       },
       {
         "author": "K. Gödel",
-        "title": "On a hitherto unutilized extension of the finitary standpoint",
+        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
         "year": 1958
       },
       {
@@ -2504,14 +5133,14 @@ module.exports = [
         "year": 2006
       },
       {
-        "author": "J. Hughes",
+        "author": "John Hughes",
         "title": "The design and implementation of programming languages",
-        "year": 1983
+        "year": 1984
       },
       {
         "author": "W. Howard",
-        "title": "The formulae as types notion of construction",
-        "year": 1969
+        "title": "The formulae-as-types notion of construction",
+        "year": 1980
       },
       {
         "author": "Thomas Johnsson",
@@ -2571,12 +5200,12 @@ module.exports = [
         "year": 1993
       },
       {
-        "author": "S.L. Peyton Jones",
+        "author": "Simon Peyton Jones",
         "title": "Implementing lazy functional languages on stock hardware: The spineless tagless G-machine",
         "year": 1992
       },
       {
-        "author": "S.L. Peyton Jones",
+        "author": "Simon Peyton Jones",
         "title": "Haskell 98 language and libraries: The revised report",
         "year": 2003
       },

@@ -1,0 +1,64 @@
+title: "Strong categorical datatypes II: A term logic for categorical programming"
+authors:
+  - Robin Cockett
+  - Dwight Spencer
+year: 1992
+collection: Charity language
+abstract: |
+  This paper lifts the category-theoretic results of [4] to the level of an abstract language suitable for basing categorical programming language implementations. The earlier work built a fibration-based strongly-normalizing categorical combinator reduction system based entirely on functorial strength that allows the distribution of context to the interior of a strong data structure. Strong type-forming functors accompanied by (1) a collection of constructor combinators (initial datatypes) or destructor combinators (final datatypes) and (2) a capability for building new state-transforming combinators that operate with structures of the datatypes formed by these functors can be abstractly declared in a Hagino-Wraith style to form a reasonably expressive computing environment.
+  However, the high complexity of programming exclusively in combinators warrants the development of categorical programming languages that are isomorphic to the distributive category settings in which strong datatypes can be declared. Towards this goal, a distributive term logic is developed and proven consistent with and equivalent to the combinator theory. Due to its basis in strength higher-order operations, such as generalized map operators, are directly expressible in this first-order language. The term logic forms the underlying base of the Charity categorical programming system. The resulting categorical programming paradigm of structurally inductive state transforms is illustrated by several examples that accompany the term logic reduction rules.
+references:
+
+  - author: Robin Cockett
+    title: Distributive logic
+    year: 1989
+
+  - author: Robin Cockett
+    title: The term logic of precartesian categories
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: H.G. Mairson
+    title: Outline of a proof theory of parametricity
+    year: 1991
+
+  - author: J.C. Reynolds
+    title: Types, abstraction, and parametric polymorphism
+    year: 1983
+
+  - author: A. Stoughton
+    title: Substitution revisited
+    year: 1988
+
+  - author: Philip Wadler
+    title: Theorems for free!
+    year: 1989
+
+  - author: C. Wells
+    title: A generalization of the concept of sketch
+    year: 1990
+
+  - authors:
+      - C. Wells
+      - M. Barr
+    title: The formal description of data types using sketches
+    year: 1987
+
+  - author: G.C. Wraith
+    title: A note on categorical datatypes
+    year: 1989

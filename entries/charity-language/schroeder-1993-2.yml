@@ -1,0 +1,116 @@
+title: "Chirp: A front end for Charity"
+author: Marc Schroeder
+year: 1993
+collection: Charity language
+abstract: |
+  Chirp is the front end of the interpreter for Charity, a categorical programming language currently under development. Chirp interfaces neatly with Barry Yee’s Charm abstract machine, the back end, to form a coherent system for the definition and execution of Charity programs. Chirp has been designed to be fast, portable, and extensible.
+  Chapter 1 provides a brief introduction to Chirp and the Charity language. Chapter 2 presents Charity in slightly more detail, discussing categorical programming as well as issues in the language. Chapters 3–9 explore the workings of the Chirp system in detail, while chapter 10 explains the Chirp/Charm interface. Finally, chapter 11 comments on some possible directions in the continued development of Chirp and Charity. The appendices specify the grammar for Charity, and other technical or useful details of the system and language. An example Chirp session is also listed.
+references:
+
+  - authors:
+      - A.V. Aho
+      - R. Sethi
+      - J.D. Ullman
+    title: "Compilers: Principles, techniques, and tools"
+    year: 1986
+
+  - authors:
+      - M. Barr
+      - C. Wells
+    title: Category theory for computing science
+    year: 1990
+
+  - authors:
+      - Richard Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - H.G. Chen
+    title: Categorical combinators
+
+  - author: Robin Cockett
+    title: Notes on strength, datatypes, and shape
+    year: 1991
+
+  - author: Robin Cockett
+    title: 12 lectures on categorical programming
+    year: 1990
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: "Strong categorical datatypes II: A term logic for categorical programming"
+    year: 1992
+
+  - author: Robin Cockett
+    title: Conditional control is not quite categorical control
+    year: 1991
+
+  - author: P.-L. Curien
+    title: Categorical combinators, sequential algorithms, and functional programming
+    year: 1986
+
+  - author: Tom Fukushima
+    title: Charity user manual
+    year: 1991
+
+  - author: A.D. Gordon
+    title: Functional programming and input/output
+    year: 1992
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: Mike Hermann
+    title: "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)"
+    year: 1992
+
+  - authors:
+      - Paul Hudak
+      - R.S. Sundaresh
+    title: On the expressiveness of purely functional I/O systems
+    year: 1989
+
+  - author: Marc Schroeder
+    title: "Proposal: Chirp: A front end for Charity"
+    year: 1992
+
+  - author: Dwight Spencer
+    title: "A survey of categorical computation: fixed points, partiality, combinators, … control?"
+    year: 1991
+
+  - author: P. Taylor
+    title: Recursive domains, indexed category theory, and polymorphism
+    year: 1986
+
+  - author: R.F.C. Walters
+    title: Categories and computer science
+    year: 1991
+
+  - author: R.F.C. Walters
+    title: Data types in distributive categories
+    year: 1989
+
+  - author: G.C. Wraith
+    title: A note on categorical datatypes
+    year: 1989
+
+  - author: Barry Yee
+    title: "The Charm project: A back end to the Charity interpreter"
+    year: 1993

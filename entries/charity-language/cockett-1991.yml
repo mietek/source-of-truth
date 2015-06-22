@@ -1,0 +1,70 @@
+title: Introduction to distributive categories
+author: Robin Cockett
+year: 1991
+collection: Charity language
+numbered: n
+references:
+
+  - authors:
+      - M. Barr
+      - C. Wells
+    title: Toposes, triples and theories
+    year: 1985
+
+  - author: Robin Cockett
+    title: Distributive logic
+    year: 1989
+
+  - author: Robin Cockett
+    title: Conditional control is not quite categorical control
+    year: 1991
+
+  - author: Y. Diers
+    title: Categories of boolean sheaves of simple algebras
+    year: 1985
+
+  - author: A.W.M. Dress
+    title: Contributions to the theory of induced representations
+    year: 1973
+
+  - authors:
+      - P. Gabriel
+      - M. Zisman
+    title: Calculus of fractions and homotopy theory
+    year: 1967
+
+  - authors:
+      - A. Grothendieck
+      - J.L. Verdier
+    title: Théorie des topos
+    year: 1972
+
+  - author: P.T. Johnstone
+    title: Topos theory
+    year: 1977
+
+  - author: H. Lintner
+    title: A remark on Mackey-functors
+    year: 1976
+
+  - author: S. MacLane
+    title: Categories for the working mathematician
+    year: 1971
+
+  - author: R.H. Street
+    title: Fibrations in bicategories
+    year: 1980
+
+  - authors:
+      - D. Schumacher
+      - R.H. Street
+    title: Some parameterized categorical concepts
+    year: 1988
+
+  - author: et al.
+    title: Sydney category seminar abstracts
+    year: 1988
+
+  - author: et al.
+    title: Sydney category seminar abstracts
+    year: 1990

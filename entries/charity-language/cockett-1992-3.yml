@@ -1,0 +1,123 @@
+title: Strong categorical datatypes I
+authors:
+  - Robin Cockett
+  - Dwight Spencer
+year: 1992
+collection: Charity language
+abstract: |
+  An endofunctor of a cartesian closed category is often called strong if it is enriched over the exponential. Equivalently this strength can be provided as a natural transformation _θA;X : F(A)×X ⟶ F(A×X)_ satisfying some elementary coherence conditions. This latter formulation does not require exponentials, relies only on the presence of an **X**-action over an **X**-strong category, and thereby provides a first-order viewpoint of strength.
+  The 2-category of **X**-strong categories is not finitely complete. It particularly lacks many standard constructions including the Eilenberg-Moore construction. Thankfully, the suggestion — attributed to Plotkin by Moggi — that strength can also be equivalently framed in terms of fibrations using projections to **X**-objects as display maps can be fully realized. The equivalence can be portrayed as an embedding of **X**-strong categories into the 2-category of **X**-indexed categories or split fibrations over X. This embedding can be used to give a coherent declarative implementation of parametrized datatypes-with-strength and their constructors/destructors in the style of Hagino.
+  The initiality and finality conditions associated with the strong datatype construction in the split fibration setting generate a strongly normalizing weak-head categorical combinator reduction system. The reduction rules permit both “eager” usage of initial datatypes and “lazy” usage of final datatypes to achieve reasonable computing strength. An X-action over a strong datatype can be computed in terms of programmed state transformations over its component datatypes. These reduction rules form the abstract engine for computation within the Charity categorical programming system.
+references:
+
+  - authors:
+      - R.M. Burstall
+      - J. Darlington
+    title: A transformation system for developing recursive programs
+    year: 1977
+
+  - author: Robin Cockett
+    title: "List-arithmetic distributive categories: Locoi"
+    year: 1990
+
+  - author: Robin Cockett
+    title: Conditional control is not quite categorical control
+    year: 1991
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - author: J.W. Gray
+    title: Fibred and cofibred categories
+    year: 1965
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: C.B. Jay
+    title: Tail recursion from universal invariants
+    year: 1991
+
+  - author: G.M. Kelly
+    title: Elementary observations on 2-categorical limits
+    year: 1989
+
+  - author: A. Kock
+    title: Strong functors and monoidal monads
+    year: 1972
+
+  - authors:
+      - J. Lambek
+      - P.J. Scott
+    title: Introduction to higher order categorical logic
+    year: 1986
+
+  - authors:
+      - E.G. Manes
+      - M.A. Arbib
+    title: Parametrized datatypes do not need highly constrained parameters
+    year: 1982
+
+  - author: E. Moggi
+    title: Computational lambda-calculus and monads
+    year: 1989
+
+  - author: E. Moggi
+    title: An abstract view of programming languages
+    year: 1989
+
+  - author: E. Moggi
+    title: Notions of computation and monads
+    year: 1991
+
+  - author: G. Malcolm
+    title: Data structures and program transformation
+    year: 1990
+
+  - author: G. Malcolm
+    title: Algebraic data types and program transformation
+    year: 1990
+
+  - authors:
+      - P. Panangaden
+      - P. Mendler
+      - M. Schwartzbach
+    title: Recursively defined types in constructive type theory
+    year: 1989
+
+  - author: L. Román
+    title: On recursive principles in cartesian categories
+
+  - authors:
+      - M. Smyth
+      - G. Plotkin
+    title: The category theoretic solution of recursive domain equations
+    year: 1982
+
+  - author: D. Spencer
+    title: "A survey of categorical computation: fixed points, partiality, combinators, … control?"
+    year: 1991
+
+  - author: P. Taylor
+    title: Recursive domains, indexed category theory, and polymorphism
+    year: 1986
+
+  - author: David Turner
+    title: Duality and De Morgan principles for lists
+    year: 1991
+
+  - author: R.F.C. Walters
+    title: Data types in distributive categories
+    year: 1989
+
+  - author: R.J. Wood
+    title: V-indexed categories
+    year: 1978
+
+  - author: G.C. Wraith
+    title: A note on categorical datatypes
+    year: 1989

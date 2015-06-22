@@ -1,0 +1,120 @@
+title: Categorical combinators for Charity
+author: Peter Vesely
+year: 1996
+collection: Charity language
+abstract: |
+  A 2-categorical notion of _parametric combinator_ is introduced. These combinators are operations for constructing arrows in a category and satisfy a 2-categorical abstraction of parametricity for strictly covariant functors. Inductive and co-inductive datatypes are compatible with these combinators and their universal properties are closely related to parametricity. The Charity programming language is based on _strong datatypes_ which are a specialization of 2-categorical datatypes. _Strong combinators_ (which are an appropriate specialization of 2-categorical combinators) provide a model of polymorphic functions in Charity.
+numbered: n
+references:
+
+  - authors:
+      - M. Abadi
+      - L. Cardelli
+      - P.L. Curien
+    title: Formal parametric polymorphism
+    year: 1993
+
+  - authors:
+      - E.S. Bainbridge
+      - P.J. Freyd
+      - A. Scedrov
+      - P.J. Scott
+    title: Functorial polymorphism
+    year: 1990
+
+  - author: F. Borceux
+    title: "Handbook of categorical algebra 1: Basic category theory"
+    year: 1994
+
+  - authors:
+      - Richard Bird
+      - Philip Wadler
+    title: Introduction to functional programming
+    year: 1988
+
+  - authors:
+      - Robin Cockett
+      - Tom Fukushima
+    title: About Charity
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: Strong categorical datatypes I
+    year: 1992
+
+  - authors:
+      - Robin Cockett
+      - Dwight Spencer
+    title: "Strong categorical datatypes II: A term logic for categorical programming"
+    year: 1992
+
+  - authors:
+      - Tom Fukushima
+      - Charles Tuckey
+    title: Charity user manual
+    year: 1996
+
+  - author: Tatsuya Hagino
+    title: A categorical programming language
+    year: 1987
+
+  - author: R. Hasegawa
+    title: Categorical data types in parametric polymorphism
+    year: 1994
+
+  - author: J.R. Hindley
+    title: Combinators and lambda calculus
+    year: 1985
+
+  - authors:
+      - J.R. Hindley
+      - B. Lercher
+      - J.P. Seldin
+    title: Introduction to combinatory logic
+    year: 1972
+
+  - author: B. Jacobs
+    title: Categorical logic and type theory
+    year: 1999
+
+  - author: B. Jay
+    title: Covariant types
+    year: 1996
+
+  - author: G.M. Kelly
+    title: Elementary observations on 2-categorical limits
+    year: 1989
+
+  - authors:
+      - G.M. Kelly
+      - R. Street
+    title: Review of the elements of 2-categories
+    year: 1974
+
+  - authors:
+      - G. Plotkin
+      - M. Abadi
+    title: A logic for parametric polymorphism
+    year: 1993
+
+  - author: J.C. Reynolds
+    title: Types, abstraction, and parametric polymorphism
+    year: 1983
+
+  - author: E. Robinson
+    title: Notes on the second-order lambda calculus
+    year: 1992
+
+  - author: D.L. Spencer
+    title: Categorical programming with functorial strength
+    year: 1993
+
+  - author: S. Thompson
+    title: Type theory and functional programming
+    year: 1991
+
+  - author: Philip Wadler
+    title: Theorems for free!
+    year: 1989

@@ -3,9 +3,9 @@ authors:
   - Alastair Telford
   - David Turner
 year: 1997
+collection: Total functional programming
 abstract: |
   It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term _codata_, are productive. This analysis is an extension of the check for _guardedness_ that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.
-collection: Total functional programming
 references:
 
   - authors:
@@ -61,20 +61,20 @@ references:
     title: The principal type scheme of an object in combinatory logic
     year: 1969
 
-  - author: R.J.M. Hughes
+  - author: John Hughes
     title: Backwards analysis of functional programs
     year: 1988
 
-  - author: R.J.M. Hughes
+  - author: John Hughes
     title: Compile-time analysis of functional programs
     year: 1990
 
-  - author: R.J.M. Hughes
+  - author: John Hughes
     title: Why functional programming matters
     year: 1990
 
   - authors:
-      - R.J.M. Hughes
+      - John Hughes
       - L. Pareto
       - A. Sabry
     title: Proving the correctness of reactive systems using sized types
