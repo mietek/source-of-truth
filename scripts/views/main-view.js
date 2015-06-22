@@ -36,26 +36,29 @@ var _ = {
   },
 
   renderEntry: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
-    var entry     = this.state.entriesById[entryId];
-    var pathIndex = this.state.path.indexOf(entryId);
-    var isActive  = pathIndex !== -1 && pathIndex === columnIndex + 1;
-    var isOpen    = pathIndex !== -1 && pathIndex <= columnIndex;
+    var column         = this.state.entriesById[columnId];
+    var isNumbered     = column && column.isNumbered;
+    var entry          = this.state.entriesById[entryId];
+    var pathIndex      = this.state.path.indexOf(entryId);
+    var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
+    var isSemiSelected = pathIndex !== -1 && pathIndex <= columnIndex;
     return (
       r.div({
-          className: 'browser-entry' + (
-            (isActive ? ' active' : (isOpen ? ' open' : '')) +
-            (entry.isMissing ? ' missing' : '')),
           key:       'e-' + entryId + '-' + entryIndex,
+          className: 'citation' + (
+            (isNumbered ? ' numbered' : '') +
+            (isSelected ? ' selected' : '') +
+            (isSemiSelected ? ' semi-selected' : '') +
+            (entry.isMissing ? ' missing' : '')),
           onClick:   function (event) {
             event.stopPropagation();
             this.updatePath(columnId, entryId);
           }.bind(this)
         },
-        r.div('browser-entry-data',
-          r.span('browser-data-key',
-            entry.signature),
-          r.span('browser-data-value',
-            entry.title))));
+        r.span('signature',
+          entry.signature),
+        r.span('title',
+          entry.title)));
   },
 
   renderColumnHeader: function (columnId, columnIndex) {
@@ -123,7 +126,7 @@ var _ = {
         this.renderColumnHeader(columnId, columnIndex),
         (!entry.referenceIds || (!referenceCount && entry.isMissing)) ?
           this.renderColumnHeading('References not available') :
-          r.div(entry.isNumbered ? 'numbered references' : 'references',
+          r.div('',
             this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
             (entry.referenceIds || []).map(function (entryId, entryIndex) {
                 return (
@@ -131,7 +134,7 @@ var _ = {
               }.bind(this))),
         (!entry.reverseIds || (!reverseCount && entry.isMissing)) ?
           this.renderColumnHeading('Reverse references not available') :
-          r.div('reverse-references',
+          r.div('',
             this.renderColumnHeading(reverseCount === 1 ? '1 reverse reference' : reverseCount + ' reverse references'),
             (entry.reverseIds || []).map(function (entryId, entryIndex) {
                 return (

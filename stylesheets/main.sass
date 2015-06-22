@@ -162,51 +162,15 @@ body
   margin-top: 0
 
 
-.browser-entry
+.citation
   @include clickable
+  counter-increment: citation
   padding-left: 8px
   padding-right: 8px
   position: relative
   height: 19px
 
-.browser-entry.active
-  color: $white
-  background-color: $blue
-  border-radius: 512px
-
-.browser-entry.open
-  @include unclickable
-  color: $blue
-
-.browser-entry:after
-  content: "▸"
-  color: $black6
-  position: absolute
-  top: 0
-  right: 8px
-
-.browser-entry.active:after
-  color: $white6
-
-.browser-entry.open:after
-  content: ""
-  right: 8px
-  color: $blue6
-
-.browser-entry.missing:after
-  color: $blackC
-
-.browser-entry.missing.active:after
-  color: $whiteC
-
-.browser-entry.missing.open:after
-  color: $blueC
-
-
-.browser-entry-data
-  width: 100%
-
-.browser-entry-data:before
+.citation:before
   @include small-label
   @include ellipsis
   content: ""
@@ -214,38 +178,68 @@ body
   width: 1/12 * 100%
   text-align: right
 
-.browser-entry.active .browser-entry-data:before
-  color: $white9
+.citation.numbered:before
+  content: counter(citation)
 
-.browser-entry.open .browser-entry-data:before
-  color: $blue9
-
-.references.numbered .browser-entry-data
-  counter-increment: reference
-
-.references.numbered .browser-entry-data:before
-  content: counter(reference)
-
-
-.browser-data-key
+.citation .signature
   @include ellipsis
   display: inline-block
   width: 3/12 * 100%
   padding-left: 8px
 
-
-.browser-data-value
+.citation .title
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
 
-.browser-entry.missing .browser-data-value
+.citation:after
+  content: "▸"
+  color: $black6
+  position: absolute
+  top: 0
+  right: 8px
+
+
+.citation.missing .title
   color: $black9
 
-.browser-entry.missing.active .browser-data-value
+.citation.missing:after
+  color: $blackC
+
+
+.citation.selected
+  color: $white
+  background-color: $blue
+  border-radius: 512px
+
+.citation.selected:before
   color: $white9
 
-.browser-entry.missing.open .browser-data-value
+.citation.selected.missing .title
+  color: $white9
+
+.citation.selected:after
+  color: $white6
+
+.citation.selected.missing:after
+  color: $whiteC
+
+
+.citation.semi-selected
+  @include unclickable
+  color: $blue
+
+.citation.semi-selected:before
   color: $blue9
+
+.citation.semi-selected.missing .title
+  color: $blue9
+
+.citation.semi-selected:after
+  content: ""
+  color: $blue6
+
+.citation.semi-selected.missing:after
+  color: $blueC
