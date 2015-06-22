@@ -4,6 +4,8 @@ var assign = require('object-assign');
 var r = require('../common/react');
 var processor = require('../processor');
 
+var citationListItem = require('./citation-list-item');
+
 var _ = {
   getInitialState: function () {
     var db = processor.processDb();
@@ -35,7 +37,7 @@ var _ = {
       });
   },
 
-  renderEntry: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
+  renderCitationListItem: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
     var column         = this.state.entriesById[columnId];
     var isNumbered     = column && column.isNumbered;
     var entry          = this.state.entriesById[entryId];
@@ -43,22 +45,18 @@ var _ = {
     var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
     var isSemiSelected = pathIndex !== -1 && pathIndex <= columnIndex;
     return (
-      r.div({
-          key:       'e-' + entryId + '-' + entryIndex,
-          className: 'citation' + (
-            (isNumbered ? ' numbered' : '') +
-            (isSelected ? ' selected' : '') +
-            (isSemiSelected ? ' semi-selected' : '') +
-            (entry.isMissing ? ' missing' : '')),
-          onClick:   function (event) {
-            event.stopPropagation();
+      citationListItem({
+          key:            'e-' + entryId + '-' + entryIndex,
+          signature:      entry.signature,
+          title:          entry.title,
+          isNumbered:     isNumbered,
+          isSelected:     isSelected,
+          isSemiSelected: isSemiSelected,
+          isMissing:      entry.isMissing,
+          onClick:        function () {
             this.updatePath(columnId, entryId);
           }.bind(this)
-        },
-        r.span('signature',
-          entry.signature),
-        r.span('title',
-          entry.title)));
+        }));
   },
 
   renderColumnHeader: function (columnId, columnIndex) {
@@ -130,7 +128,7 @@ var _ = {
             this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
             (entry.referenceIds || []).map(function (entryId, entryIndex) {
                 return (
-                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
+                  this.renderCitationListItem(columnId, columnIndex, entryId, entryIndex, referenceCount));
               }.bind(this))),
         (!entry.reverseIds || (!reverseCount && entry.isMissing)) ?
           this.renderColumnHeading('Reverse references not available') :
@@ -138,7 +136,7 @@ var _ = {
             this.renderColumnHeading(reverseCount === 1 ? '1 reverse reference' : reverseCount + ' reverse references'),
             (entry.reverseIds || []).map(function (entryId, entryIndex) {
                 return (
-                  this.renderEntry(columnId, columnIndex, entryId, entryIndex, reverseCount));
+                  this.renderCitationListItem(columnId, columnIndex, entryId, entryIndex, reverseCount));
               }.bind(this)))));
   },
 
@@ -148,7 +146,7 @@ var _ = {
       r.div('browser-column-wrapper',
         (entryIds || []).map(function (entryId, entryIndex) {
             return (
-              this.renderEntry('root', 0, entryId, entryIndex, entryCount));
+              this.renderCitationListItem('root', 0, entryId, entryIndex, entryCount));
           }.bind(this))));
   },
 
