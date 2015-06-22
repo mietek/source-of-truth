@@ -58,6 +58,14 @@ var _ = {
             entry.title))));
   },
 
+  renderFullText: function (url) {
+    return (
+      r.div('browser-full-text',
+        r.iframe({
+            src: url
+          })));
+  },
+
   renderColumnHeader: function (columnId, columnIndex) {
     var entry = this.state.entriesById[columnId];
     var rows = [
@@ -75,23 +83,21 @@ var _ = {
         key:    'Year',
         values: [entry.year]
       },
-      !entry.collection ? null :
-        {
-          key:    'Collection',
-          values: [entry.collection]
-        },
-      !entry.abstract ? null :
-        {
-          key:    'Abstract',
-          values: [entry.abstract]
-        }
+      {
+        key:    'Collection',
+        values: entry.collection && [entry.collection]
+      },
+      {
+        key:    'Abstract',
+        values: entry.abstract && [entry.abstract]
+      }
     ];
     return (
       r.div('browser-column-header',
         r.div('browser-column-metadata',
           rows.map(function (row) {
               return (
-                !row ? null : [
+                !row.values ? null : [
                     r.span('browser-metadata-key',
                       row.key),
                     row.values.map(function (value) {
@@ -116,6 +122,8 @@ var _ = {
     var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
+        !entry.url ? null :
+          this.renderFullText(entry.url),
         this.renderColumnHeader(columnId, columnIndex),
         (!entry.referenceIds || (!referenceCount && entry.isMissing)) ?
           this.renderColumnHeading('References not available') :
