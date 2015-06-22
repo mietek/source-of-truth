@@ -1,8 +1,8 @@
 title: "Final report: Elementary strong functional programming"
 author: David Turner
 year: 2000
+basename: turner-2000
 collection: Total functional programming
-url: http://sourceoftruth.net/_entries/turner-2000.pdf
 references:
 
   - author: Andreas Abel

@@ -1,8 +1,8 @@
 title: Categorical combinators for Charity
 author: Peter Vesely
 year: 1996
+basename: vesely-1996
 collection: Charity language
-url: http://sourceoftruth.net/_entries/vesely-1996.pdf
 abstract: |
   A 2-categorical notion of _parametric combinator_ is introduced. These combinators are operations for constructing arrows in a category and satisfy a 2-categorical abstraction of parametricity for strictly covariant functors. Inductive and co-inductive datatypes are compatible with these combinators and their universal properties are closely related to parametricity. The Charity programming language is based on _strong datatypes_ which are a specialization of 2-categorical datatypes. _Strong combinators_ (which are an appropriate specialization of 2-categorical combinators) provide a model of polymorphic functions in Charity.
 numbered: n

@@ -1,8 +1,8 @@
 title: Computing with exact real numbers in a radix-r system
 author: Alexander Kaganovsky
 year: 1999
+basename: kaganovsky-1999a
 collection: Total functional programming
-url: http://sourceoftruth.net/_entries/kaganovsky-1999a.pdf
 abstract: |
   This paper investigates an arithmetic based upon the representation of computable exact real numbers by lazy infinite sequences of signed digits in a positional radix-_r_ system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic.
 references:

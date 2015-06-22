@@ -1,8 +1,8 @@
 title: Pattern matching in Charity
 author: Charles Tuckey
 year: 1997
+basename: tuckey-1997
 collection: Charity language
-url: http://sourceoftruth.net/_entries/tuckey-1997.pdf
 abstract: |
   Charity, a functional style programming language based in the mathematics of category theory, was developed at the University of Calgary by the Charity group under the direction of Dr. Cockett. Key to the usefulness of such languages is the ability to define functions using pattern matching. This thesis describes an extended type theory for a Charity term logic with sophisticated pattern matching capabilities. It gives a translation of this extended term logic to Charity’s core term logic, enabling programs written in the extended term logic to be evaluated. The translation closely mirrors the type theory.
   In addition, this work introduces a new pattern matching feature which is not found in other functional style languages. It shows how the facility of guarding patterns with boolean functions, available in many functional languages, can be extended so that functions of arbitrary types can be used as pattern guards.

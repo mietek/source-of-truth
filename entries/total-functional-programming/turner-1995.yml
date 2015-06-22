@@ -1,8 +1,8 @@
 title: Elementary strong functional programming
 author: David Turner
 year: 1995
+basename: turner-1995
 collection: Total functional programming
-url: http://sourceoftruth.net/_entries/turner-1995.pdf
 abstract: |
   Functional programming is a good idea, but we haven’t got it quite right yet. What we have been doing up to now is weak (or partial) functional programming. What we should be doing is strong (or total) functional programming — in which all computations terminate. We propose an elementary discipline of strong functional programming. A key feature of the discipline is that we introduce a type distinction between _data_, which is known to be finite, and _codata_, which is (potentially) infinite.
 references:

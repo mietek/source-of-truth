@@ -1,8 +1,8 @@
 title: "The Charm project: A back end to the Charity interpreter"
 author: Barry Yee
 year: 1993
+basename: yee-1993
 collection: Charity language
-url: http://sourceoftruth.net/_entries/yee-1993.pdf
 abstract: |
   The Charm project is an attempt to build an efficient and portable abstract machine for the Charity language. The abstract machine is implemented in C programming language to make the system more portable across different computer platforms. In this paper, the Charity system is composed of a set of rewrite rules that are converted to state transitions that defines an abstract machine. The implementation of the system is divided into two levels, the macro–level and micro–level. Macro–instructions are instructions that specify the state transitions while the micro–instructions perform the actions that change the state of the machine.
 numbered: n
