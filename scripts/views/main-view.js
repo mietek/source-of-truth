@@ -114,11 +114,11 @@ var _ = {
     var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
-        this.renderColumnHeading('Full text' + (!entry.url ? ' not available' : '')),
-        !entry.url ? null :
+        this.renderColumnHeading('Full text' + (!entry.basename ? ' not available' : '')),
+        !entry.basename ? null :
           r.div('browser-full-text',
-            r.iframe({
-                src: entry.url
+            r.img({
+                src: 'http://sourceoftruth.net/_previews/' + entry.basename + '.png'
               })),
         this.renderColumnHeader(columnId, columnIndex),
         (!entry.referenceIds || (!referenceCount && entry.isMissing)) ?

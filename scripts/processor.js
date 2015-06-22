@@ -71,8 +71,8 @@ module.exports = {
           title:        rawEntry.title,
           name:         entryName,
           abstract:     undefined,
+          basename:     undefined,
           collection:   undefined,
-          url:          undefined,
           isNumbered:   undefined,
           referenceIds: undefined,
           isMissing:    true,
@@ -103,8 +103,8 @@ module.exports = {
           title:          rawEntry.title,
           name:           entryName,
           abstract:       rawEntry.abstract,
+          basename:       rawEntry.basename,
           collection:     rawEntry.collection,
-          url:            rawEntry.url,
           isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
           referenceIds:   (rawEntry.references || []).map(function (reference) {
               return ensureReference(reference, entryId);
@@ -119,8 +119,8 @@ module.exports = {
         if (oldEntry.isMissing) {
           entry = assign({}, oldEntry, {
               abstract:       rawEntry.abstract,
+              basename:       rawEntry.basename,
               collection:     rawEntry.collection,
-              url:            rawEntry.url,
               isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
               referenceIds:   (rawEntry.references || []).map(function (reference) {
                   return ensureReference(reference, oldEntry.id);
