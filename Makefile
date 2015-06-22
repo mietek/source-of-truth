@@ -147,6 +147,7 @@ vpath %.ico   $(file-roots)
 vpath %.jpg   $(file-roots)
 vpath %.js    $(file-roots)
 vpath %.otf   $(file-roots)
+vpath %.pdf   $(file-roots)
 vpath %.png   $(file-roots)
 vpath %.svg   $(file-roots)
 vpath %.ttf   $(file-roots)
@@ -161,6 +162,7 @@ define files-macro
   out/$(mode)/%.jpg   : %.jpg   ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.js    : %.js    ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.otf   : %.otf   ; mkdir -p $$(@D) && cp $$< $$@
+  out/$(mode)/%.pdf   : %.pdf   ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.png   : %.png   ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.svg   : %.svg   ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.ttf   : %.ttf   ; mkdir -p $$(@D) && cp $$< $$@
