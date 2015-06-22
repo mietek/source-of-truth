@@ -75,7 +75,12 @@ var _ = {
         key:    'Year',
         values: [entry.year]
       },
-      (!entry.abstract && entry.isMissing) ? null :
+      !entry.collection ? null :
+        {
+          key:    'Collection',
+          values: [entry.collection]
+        },
+      !entry.abstract ? null :
         {
           key:    'Abstract',
           values: [entry.abstract]
