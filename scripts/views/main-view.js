@@ -114,8 +114,8 @@ var _ = {
     var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
-        this.renderColumnHeading('Full text' + (!entry.basename ? ' not available' : '')),
-        !entry.basename ? null :
+        !entry.basename ?
+          this.renderColumnHeading('Full text not available') :
           r.div('browser-full-text',
             r.img({
                 src: 'http://sourceoftruth.net/_previews/' + entry.basename + '.png'
