@@ -26,13 +26,15 @@ body
   color: $black
 
 
-.clickable
+@mixin clickable
   cursor: pointer
+  -webkit-tap-highlight-color: transparent
 
-.unclickable
+@mixin unclickable
+  cursor: auto
   pointer-events: none
 
-.unselectable
+@mixin unselectable
   user-select: none
 
 
@@ -59,7 +61,7 @@ body
 
 
 .browser-pane
-  user-select: none
+  @include unselectable
   background-color: $white
   height: 100%
   width: 100%
@@ -143,7 +145,7 @@ body
 
 
 .browser-entry
-  cursor: pointer
+  @include clickable
   padding-left: 8px
   padding-right: 8px
   position: relative
@@ -155,8 +157,7 @@ body
   border-radius: 512px
 
 .browser-entry.open
-  cursor: auto
-  pointer-events: none
+  @include unclickable
   color: $blue
 
 .browser-entry:after
