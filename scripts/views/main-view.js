@@ -58,14 +58,6 @@ var _ = {
             entry.title))));
   },
 
-  renderFullText: function (url) {
-    return (
-      r.div('browser-full-text',
-        r.iframe({
-            src: url
-          })));
-  },
-
   renderColumnHeader: function (columnId, columnIndex) {
     var entry = this.state.entriesById[columnId];
     var rows = [
@@ -122,8 +114,12 @@ var _ = {
     var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
+        this.renderColumnHeading('Full text' + (!entry.url ? ' not available' : '')),
         !entry.url ? null :
-          this.renderFullText(entry.url),
+          r.div('browser-full-text',
+            r.iframe({
+                src: entry.url
+              })),
         this.renderColumnHeader(columnId, columnIndex),
         (!entry.referenceIds || (!referenceCount && entry.isMissing)) ?
           this.renderColumnHeading('References not available') :
@@ -133,7 +129,8 @@ var _ = {
                 return (
                   this.renderEntry(columnId, columnIndex, entryId, entryIndex, referenceCount));
               }.bind(this))),
-        (!entry.reverseIds || (!reverseCount && entry.isMissing)) ? null :
+        (!entry.reverseIds || (!reverseCount && entry.isMissing)) ?
+          this.renderColumnHeading('Reverse references not available') :
           r.div('reverse-references',
             this.renderColumnHeading(reverseCount === 1 ? '1 reverse reference' : reverseCount + ' reverse references'),
             (entry.reverseIds || []).map(function (entryId, entryIndex) {
