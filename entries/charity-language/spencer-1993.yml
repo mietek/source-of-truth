@@ -2,7 +2,7 @@ title: Categorical programming with functorial strength
 author: Dwight Spencer
 year: 1993
 collection: Charity language
-url: https://github.com/mietek/charity-language/raw/master/doc/pdf/1993-spencer-categorical-programming-with-functorial-strength.pdf
+url: http://sourceoftruth.net/_entries/spencer-1993.pdf
 abstract: |
   We show that significant _categorical_ programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the _structures of data_ drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.
 references:

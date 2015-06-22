@@ -4,7 +4,7 @@ authors:
   - David Turner
 year: 1997
 collection: Total functional programming
-url: https://github.com/mietek/total-functional-programming/raw/master/doc/pdf/1997-telford-turner-ensuring-the-productivity-of-infinite-structures.pdf
+url: http://sourceoftruth.net/_entries/telford-1997b.pdf
 abstract: |
   It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term _codata_, are productive. This analysis is an extension of the check for _guardedness_ that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.
 references:
