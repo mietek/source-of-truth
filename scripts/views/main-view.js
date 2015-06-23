@@ -4,6 +4,7 @@ var assign = require('object-assign');
 var r = require('../common/react');
 var processor = require('../processor');
 
+var abstract = require('./abstract');
 var citationList = require('./citation-list');
 
 var _ = {
@@ -57,10 +58,6 @@ var _ = {
       {
         key:    'Collection',
         values: entry.collection && [entry.collection]
-      },
-      {
-        key:    'Abstract',
-        values: entry.abstract && [entry.abstract]
       }
     ];
     return (
@@ -164,6 +161,9 @@ var _ = {
                 src: 'http://sourceoftruth.net/_previews/' + entry.basename + '.png'
               })),
         this.renderColumnHeader(columnId, columnIndex),
+        abstract({
+            content: entry.abstract
+          }),
         this.renderCitations(columnId, columnIndex, entry),
         this.renderReverseCitations(columnId, columnIndex, entry)));
   },
