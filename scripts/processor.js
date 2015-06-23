@@ -1,6 +1,5 @@
 'use strict';
 
-var uuid = require('node-uuid');
 var utils = require('./common/utils');
 
 var rawEntries = require('./entries');
@@ -21,7 +20,7 @@ module.exports = {
           shortName = nameTokens[nameTokens.length - 1];
         }
         author = {
-          id:        uuid.v4(),
+          id:        utils.getRandomUuid(),
           name:      authorName,
           shortName: shortName
         };
@@ -65,7 +64,7 @@ module.exports = {
       var entry;
       if (!(entryName in entriesByName)) {
         entry = {
-          id:           uuid.v4(),
+          id:           utils.getRandomUuid(),
           authorIds:    authorIds,
           year:         rawEntry.year,
           signature:    getEntrySignature(authorIds, rawEntry),
@@ -95,7 +94,7 @@ module.exports = {
       var entryName = getEntryName(authorIds, rawEntry);
       var entry;
       if (!(entryName in entriesByName)) {
-        var entryId = uuid.v4();
+        var entryId = utils.getRandomUuid();
         entry = {
           id:             entryId,
           authorIds:      authorIds,

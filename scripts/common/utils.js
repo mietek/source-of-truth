@@ -16,6 +16,8 @@ var _ = module.exports = {
     return object[key];
   },
 
+  getRandomUuid: require('node-uuid').v4,
+
   getSortedKeys: function (object, compare) {
     return Object.keys(object || {}).sort(compare || function (key1, key2) {
         return key1.localeCompare(key2);
