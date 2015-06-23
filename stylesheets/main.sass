@@ -112,7 +112,7 @@ body
 
 .cartridge .title:after
   content: "▸"
-  color: $black6
+  color: $black9
   padding-left: 4px
   padding-right: 4px
 
@@ -211,9 +211,13 @@ body
   padding-left: 8px
   padding-right: 16px
 
-.citation:after
+
+.citation:not(.semi-selected)
+  @include clickable
+
+.citation:not(.semi-selected):after
   content: "▸"
-  color: $black6
+  color: $black9
   position: absolute
   top: 0
   right: 8px
@@ -221,9 +225,6 @@ body
 
 .citation.missing .title
   color: $black9
-
-.citation.missing:after
-  color: $blackC
 
 
 .citation.selected
@@ -238,31 +239,7 @@ body
   color: $white9
 
 .citation.selected:after
-  color: $white6
-
-.citation.selected.missing:after
-  color: $whiteC
-
-
-.citation.semi-selected
-  color: $blue
-
-.citation.semi-selected.numbered .signature:before
-  color: $blue9
-
-.citation.semi-selected.missing .title
-  color: $blue9
-
-.citation.semi-selected:after
-  content: ""
-  color: $blue6
-
-.citation.semi-selected.missing:after
-  color: $blueC
-
-
-.citation:not(.semi-selected)
-  @include clickable
+  color: $white9
 
 
 .preview
