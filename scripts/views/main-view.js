@@ -6,6 +6,7 @@ var processor = require('../processor');
 
 var abstract = require('./abstract');
 var citationList = require('./citation-list');
+var description = require('./description');
 
 var _ = {
   getInitialState: function () {
@@ -36,46 +37,6 @@ var _ = {
     this.setState({
         path: path
       });
-  },
-
-  renderColumnHeader: function (columnId, columnIndex) {
-    var entry = this.state.entriesById[columnId];
-    var rows = [
-      {
-        key:    'Title',
-        values: [entry.title]
-      },
-      {
-        key:    entry.authorIds.length === 1 ? 'Author' : 'Authors',
-        values: entry.authorIds.map(function (authorId) {
-            return this.state.authorsById[authorId].name;
-          }.bind(this))
-      },
-      {
-        key:    'Year',
-        values: [entry.year]
-      },
-      {
-        key:    'Collection',
-        values: entry.collection && [entry.collection]
-      }
-    ];
-    return (
-      r.div('browser-column-header',
-        r.div('browser-column-metadata',
-          rows.map(function (row) {
-              return (
-                !row.values ? null : [
-                    r.span('browser-metadata-key',
-                      row.key),
-                    row.values.map(function (value) {
-                        return (
-                          r.span('browser-metadata-value',
-                            value));
-                      })
-                  ]);
-            }.bind(this)))));
-
   },
 
   renderCitations: function (columnId, columnIndex, columnEntry) {
