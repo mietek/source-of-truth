@@ -15,7 +15,7 @@ var _ = {
 
   render: function () {
     return (
-      r.div('collection',
+      r.div('wrapper',
         collectionDescription({
             name: this.props.name
           }),

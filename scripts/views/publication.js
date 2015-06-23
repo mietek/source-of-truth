@@ -16,7 +16,7 @@ var _ = {
 
   render: function () {
     return (
-      r.div('publication',
+      r.div('wrapper',
         publicationDescription({
             title:       this.props.title,
             authors:     this.props.authors,
