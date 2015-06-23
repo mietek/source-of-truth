@@ -37,18 +37,19 @@ module.exports = {
     var entriesById   = {};
 
     function getAuthorNames(rawEntry) {
-      return rawEntry.author ? [rawEntry.author] : (rawEntry.authors || []);
+      return rawEntry.author ? [rawEntry.author] : rawEntry.authors;
     }
 
     function getAuthorIds(rawEntry) {
-      return getAuthorNames(rawEntry).map(function (authorName) {
+      var authorNames = getAuthorNames(rawEntry);
+      return authorNames && authorNames.map(function (authorName) {
           return ensureAuthor(authorName);
         });
     }
 
     function getEntrySignature(authorIds, rawEntry) {
       return (
-        authorsById[authorIds[0]].shortName +
+        ((authorIds && authorIds.length) ? authorsById[authorIds[0]].shortName : 'unknown') +
           (rawEntry.year ? ' ' + rawEntry.year : ''));
     }
 
