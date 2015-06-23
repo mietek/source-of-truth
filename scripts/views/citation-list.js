@@ -7,8 +7,9 @@ var citation = require('./citation');
 var _ = {
   propTypes: function () {
     return {
-      heading: r.propTypes.string,
-      items:   r.propTypes.array
+      heading:   r.propTypes.string.isRequired,
+      items:     r.propTypes.array,
+      isSwapped: r.propTypes.bool
     };
   },
 
@@ -35,7 +36,9 @@ var _ = {
                   }
                 }.bind(this)
               },
-              this.props.heading + ' ' + this.props.items.length + (
+              (this.props.isSwapped ?
+                (this.props.heading + ' ' + this.props.items.length) :
+                (this.props.items.length + ' ' + this.props.heading)) + (
                 (this.state.isHidden ? ' …' : ''))),
           this.state.isHidden ? null :
             this.props.items.map(function (item) {

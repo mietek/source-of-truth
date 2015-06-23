@@ -4,25 +4,20 @@ var r = require('../common/react');
 
 var abstract = require('./abstract');
 var citationList = require('./citation-list');
-var description = require('./description');
+var publicationDescription = require('./publication-description');
 
 var _ = {
   propTypes: function () {
     return {
-      title:            r.propTypes.string.isRequired,
-      authors:          r.propTypes.array,
-      year:             r.propTypes.number,
-      collections:      r.propTypes.array,
-      abstract:         r.propTypes.string,
-      citations:        r.propTypes.array,
-      reverseCitations: r.propTypes.array
+      name:      r.propTypes.string.isRequired,
+      citations: r.propTypes.array
     };
   },
 
   render: function () {
     return (
       r.div('publication',
-        description({
+        publicationDescription({
             title:       this.props.title,
             authors:     this.props.authors,
             year:        this.props.year,
@@ -32,12 +27,14 @@ var _ = {
             content: this.props.abstract
           }),
         citationList({
-            heading: 'Cites',
-            items:   this.props.citations
+            heading:   'Cites',
+            items:     this.props.citations,
+            isSwapped: true
           }),
         citationList({
-            heading: 'Cited by',
-            items:   this.props.reverseCitations
+            heading:   'Cited by',
+            items:     this.props.reverseCitations,
+            isSwapped: true
           })));
   }
 };

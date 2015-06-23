@@ -3,6 +3,7 @@
 var r = require('../common/react');
 
 var citationList = require('./citation-list');
+var collectionDescription = require('./collection-description');
 
 var _ = {
   propTypes: function () {
@@ -15,10 +16,12 @@ var _ = {
   render: function () {
     return (
       r.div('collection',
-        r.div('heading',
-          this.props.name),
+        collectionDescription({
+            name: this.props.name
+          }),
         citationList({
-            items: this.props.citations
+            heading: 'Publications',
+            items:   this.props.citations
           })));
   }
 };
