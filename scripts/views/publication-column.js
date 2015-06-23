@@ -8,11 +8,10 @@ var _ = {
   propTypes: function () {
     return {
       columnId:    r.propTypes.string.isRequired,
-      columnCount: r.propTypes.number.isRequired,
       authorsById: r.propTypes.object,
       entriesById: r.propTypes.object,
       selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      onSelect:    r.propTypes.func.isRequired
     };
   },
 
@@ -48,33 +47,23 @@ var _ = {
         };
       }.bind(this));
     return (
-      r.div({
-          className: 'column',
-          onClick:   function (event) {
-            event.stopPropagation();
-            this.props.onSelect(null);
-          }.bind(this),
-          style: {
-            width: '' + 1/this.props.columnCount * 100 + '%',
-          }
-        },
-        publication({
-            title:            columnCitation.title,
-            authors:          columnCitation.authorIds && columnCitation.authorIds.map(function (authorId) {
-                return {
-                  id:   authorId,
-                  name: this.props.authorsById[authorId].name
-                };
-              }.bind(this)),
-            year:             columnCitation.year,
-            collections:      columnCitation.collection && [{
-                id:   'TODO',
-                name: columnCitation.collection
-              }],
-            abstract:         columnCitation.abstract,
-            citations:        citations,
-            reverseCitations: reverseCitations
-          })));
+      publication({
+          title:            columnCitation.title,
+          authors:          columnCitation.authorIds && columnCitation.authorIds.map(function (authorId) {
+              return {
+                id:   authorId,
+                name: this.props.authorsById[authorId].name
+              };
+            }.bind(this)),
+          year:             columnCitation.year,
+          collections:      columnCitation.collection && [{
+              id:   'TODO',
+              name: columnCitation.collection
+            }],
+          abstract:         columnCitation.abstract,
+          citations:        citations,
+          reverseCitations: reverseCitations
+        }));
   }
 };
 

@@ -7,10 +7,9 @@ var collection = require('./collection');
 var _ = {
   propTypes: function () {
     return {
-      columnCount: r.propTypes.number.isRequired,
       entriesById: r.propTypes.object,
       selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      onSelect:    r.propTypes.func.isRequired
     };
   },
 
@@ -30,20 +29,10 @@ var _ = {
         };
       }.bind(this));
     return (
-      r.div({
-          className: 'column',
-          onClick:   function (event) {
-            event.stopPropagation();
-            this.props.onSelect(null);
-          }.bind(this),
-          style: {
-            width: '' + 1/this.props.columnCount * 100 + '%',
-          }
-        },
-        collection({
-            name:      'Source of Truth',
-            citations: citations
-          })));
+      collection({
+          name:      'Source of Truth',
+          citations: citations
+        }));
   }
 };
 
