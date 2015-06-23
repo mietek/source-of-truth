@@ -4,7 +4,7 @@ var assign = require('object-assign');
 var r = require('../common/react');
 var processor = require('../processor');
 
-var citationList = require('./citation-list');
+var collection = require('./collection');
 var publication = require('./publication');
 
 var _ = {
@@ -76,24 +76,24 @@ var _ = {
       }.bind(this));
     return (
       publication({
-            title:            columnEntry.title,
-            authors:          columnEntry.authorIds.map(function (authorId) {
-                return {
-                  name: this.state.authorsById[authorId].name
-                };
-              }.bind(this)),
-            year:             columnEntry.year,
-            collections:      columnEntry.collection && [{
-                name: columnEntry.collection
-              }],
-            abstract:         columnEntry.abstract,
-            citations:        citations,
-            reverseCitations: reverseCitations
-          }));
+          title:            columnEntry.title,
+          authors:          columnEntry.authorIds.map(function (authorId) {
+              return {
+                name: this.state.authorsById[authorId].name
+              };
+            }.bind(this)),
+          year:             columnEntry.year,
+          collections:      columnEntry.collection && [{
+              name: columnEntry.collection
+            }],
+          abstract:         columnEntry.abstract,
+          citations:        citations,
+          reverseCitations: reverseCitations
+        }));
   },
 
   renderRootColumnWrapper: function (entryIds) {
-    var items = (entryIds || []).map(function (entryId, entryIndex) {
+    var citations = (entryIds || []).map(function (entryId, entryIndex) {
         var entry      = this.state.entriesById[entryId];
         var pathIndex  = this.state.path.indexOf(entryId);
         var isSelected = pathIndex !== -1 && pathIndex === 1;
@@ -109,11 +109,10 @@ var _ = {
         };
       }.bind(this));
     return (
-      r.div('publication',
-        citationList({
-            heading: '',
-            items:   items
-          })));
+      collection({
+          name:      'Source of Truth',
+          citations: citations
+        }));
   },
 
   renderColumn: function (columnId, columnIndex, columnCount) {

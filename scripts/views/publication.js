@@ -19,11 +19,6 @@ var _ = {
     };
   },
 
-  getInitialState: function () {
-    return {
-    };
-  },
-
   render: function () {
     return (
       r.div('publication',
