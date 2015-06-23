@@ -1,8 +1,8 @@
 'use strict';
 
-var assign = require('object-assign');
 var uuid = require('node-uuid');
 var utils = require('./common/utils');
+
 var rawEntries = require('./entries');
 
 module.exports = {
@@ -81,7 +81,7 @@ module.exports = {
         };
       } else {
         var oldEntry = entriesByName[entryName];
-        entry = assign({}, oldEntry, {
+        entry = utils.assign({}, oldEntry, {
             reverseIds: (oldEntry.reverseIds || []).concat([reverseId])
           });
       }
@@ -118,7 +118,7 @@ module.exports = {
       } else {
         var oldEntry = entriesByName[entryName];
         if (oldEntry.isMissing) {
-          entry = assign({}, oldEntry, {
+          entry = utils.assign({}, oldEntry, {
               abstract:       rawEntry.abstract,
               basename:       rawEntry.basename,
               collection:     rawEntry.collection,
@@ -143,7 +143,7 @@ module.exports = {
       });
     Object.keys(entriesByName).forEach(function (entryName) {
         var oldEntry = entriesByName[entryName];
-        var entry    = assign({}, oldEntry, {
+        var entry    = utils.assign({}, oldEntry, {
             reverseIds: oldEntry.reverseIds.sort(function (c1, c2) {
                 return entriesById[c1].name.localeCompare(entriesById[c2].name);
               })
