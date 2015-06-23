@@ -12,6 +12,12 @@ var _ = {
     };
   },
 
+  getInitialState: function () {
+    return {
+      isHidden: false
+    };
+  },
+
   render: function () {
     return (
       !this.props.items ? null :
@@ -19,12 +25,25 @@ var _ = {
             key:       this.props.key,
             className: 'citation-list'
           },
-          r.span('heading',
-            this.props.heading + ' ' + this.props.items.length),
-          this.props.items.map(function (item) {
-              return (
-                citationListItem(item));
-            })));
+          r.span({
+              className: 'heading' + (
+                (!this.props.items.length ? ' empty' : '')),
+              onClick:   function (event) {
+                event.stopPropagation();
+                if (this.props.items.length) {
+                  this.setState({
+                      isHidden: !this.state.isHidden
+                    });
+                }
+              }.bind(this)
+            },
+            this.props.heading + ' ' + this.props.items.length + (
+              (this.state.isHidden ? ' …' : ''))),
+          this.state.isHidden ? null :
+            this.props.items.map(function (item) {
+                return (
+                  citationListItem(item));
+              })));
   }
 };
 
