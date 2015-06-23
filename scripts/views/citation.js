@@ -5,12 +5,12 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      signature:      r.propTypes.string.isRequired,
-      title:          r.propTypes.string.isRequired,
-      isNumbered:     r.propTypes.bool,
-      isSelected:     r.propTypes.bool,
-      isSemiSelected: r.propTypes.bool,
-      isMissing:      r.propTypes.bool
+      id:         r.propTypes.string.isRequired,
+      signature:  r.propTypes.string.isRequired,
+      title:      r.propTypes.string.isRequired,
+      isNumbered: r.propTypes.bool,
+      isSelected: r.propTypes.bool,
+      isMissing:  r.propTypes.bool
     };
   },
 
@@ -21,7 +21,6 @@ var _ = {
           className: 'citation' + (
             (this.props.isNumbered ? ' numbered' : '') +
             (this.props.isSelected ? ' selected' : '') +
-            (this.props.isSemiSelected ? ' semi-selected' : '') +
             (this.props.isMissing ? ' missing' : '')),
           onClick:   function (event) {
             event.stopPropagation();

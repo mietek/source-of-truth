@@ -80,12 +80,13 @@ body
   overflow-y: hidden
   -webkit-overflow-scrolling: touch
 
-.browser-pane-wrapper
+
+.column-list
   height: 100%
   width: 1/3 * 100% // Dynamic
 
 
-.browser-column
+.column
   border: 0px $blackC solid
   border-right-width: 1px
   height: 100%
@@ -190,11 +191,19 @@ body
 
 
 .citation
+  @include clickable
   counter-increment: citation
   padding-left: 8px
   padding-right: 8px
   position: relative
   height: 19px
+
+.citation:after
+  content: "▸"
+  color: $black9
+  position: absolute
+  top: 0
+  right: 8px
 
 .citation .signature
   @include ellipsis
@@ -219,17 +228,6 @@ body
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
-
-
-.citation:not(.semi-selected)
-  @include clickable
-
-.citation:not(.semi-selected):after
-  content: "▸"
-  color: $black9
-  position: absolute
-  top: 0
-  right: 8px
 
 
 .citation.missing .title
