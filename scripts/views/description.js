@@ -27,7 +27,10 @@ var _ = {
         !this.props.authors ? null :
           this.props.authors.map(function (author) {
               return (
-                r.span('value',
+                r.span({
+                    key:       author.id,
+                    className: 'value'
+                  },
                   author.name));
             }),
         !this.props.year ? null :
@@ -44,7 +47,10 @@ var _ = {
         !this.props.collections ? null :
           this.props.collections.map(function (collection) {
               return (
-                r.span('value',
+                r.span({
+                    key:       collection.id,
+                    className: 'value'
+                  },
                   collection.name));
             })));
   }

@@ -21,10 +21,7 @@ var _ = {
   render: function () {
     return (
       !this.props.items ? null :
-        r.div({
-            key:       this.props.key,
-            className: 'citation-list'
-          },
+        r.div('citation-list',
           !this.props.heading ? null :
             r.div({
                 className: 'heading' + (

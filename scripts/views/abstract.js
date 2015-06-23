@@ -18,10 +18,7 @@ var _ = {
   render: function () {
     return (
       !this.props.content ? null :
-        r.div({
-            key:       this.props.key,
-            className: 'abstract'
-          },
+        r.div('abstract',
           r.div({
               className: 'heading',
               onClick:   function (event) {

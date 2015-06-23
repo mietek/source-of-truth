@@ -11,10 +11,7 @@ var _ = {
 
   render: function () {
     return (
-      r.span({
-          key:       this.props.key,
-          className: this.props.className + ' cartridge',
-        },
+      r.span('cartridge',
         r.span('title',
           this.props.title)));
   }
