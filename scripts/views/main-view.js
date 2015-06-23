@@ -5,6 +5,7 @@ var utils = require('../common/utils');
 var processor = require('../processor');
 
 var column = require('./column');
+var objectColumn = require('./object-column');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
@@ -17,7 +18,13 @@ var _ = {
   },
 
   render: function () {
-    var columnCount = this.state.path.length + 1;
+    var lastId       = this.state.path.length && this.state.path[this.state.path.length - 1];
+    var lastPub      = lastId && this.state.pubsById[lastId];
+    var lastBasename = lastPub && lastPub.basename;
+    var columnCount  = (
+      !lastBasename ?
+        1 + this.state.path.length :
+        1 + this.state.path.length + 1);
     return (
       r.div('browser-pane',
         r.div({
@@ -62,7 +69,15 @@ var _ = {
                             path: pubId ? basePath.concat([pubId]) : basePath
                           });
                       }.bind(this)})));
-            }.bind(this)))));
+            }.bind(this)),
+          !lastBasename ? null :
+            column({
+                columnCount: columnCount,
+                isDouble:    false
+              },
+              objectColumn({
+                  basename: lastBasename
+                })))));
   }
 };
 
