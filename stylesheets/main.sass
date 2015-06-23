@@ -47,6 +47,9 @@ body
   cursor: auto
   pointer-events: none
 
+@mixin selectable
+  user-select: text
+
 @mixin unselectable
   user-select: none
 
@@ -130,7 +133,7 @@ body
   text-align: right
 
 .description .value
-  user-select: text
+  @include selectable
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
@@ -152,6 +155,7 @@ body
   margin-top: 19px
 
 .abstract .content
+  @include selectable
   margin-left: 1/9 * 100%
   padding-right: 16px
 
