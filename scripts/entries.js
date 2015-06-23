@@ -2218,7 +2218,7 @@ module.exports = [
     "references": [
       {
         "author": "A.W. Appel",
-        "title": "Modern compiler implementation in ML: Basic techniques",
+        "title": "Modern compiler implementation in ML",
         "year": 1997
       },
       {
