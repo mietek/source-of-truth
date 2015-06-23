@@ -27,19 +27,14 @@ var _ = {
             }
           },
           column({
-              columnCount: columnCount,
-              onDeselect:  function () {
-                this.setState({
-                    path: []
-                  });
-              }.bind(this)
+              columnCount: columnCount
             },
             rootColumn({
                 entriesById: this.state.entriesById,
                 selectedId:  this.state.path.length > 0 && this.state.path[0],
                 onSelect:    function (entryId) {
                   this.setState({
-                      path: [entryId]
+                      path: entryId ? [entryId] : []
                     });
                 }.bind(this)
               })),
@@ -49,12 +44,7 @@ var _ = {
               return (
                 column({
                     key:         columnId + '-' + columnIndex,
-                    columnCount: columnCount,
-                    onDeselect:  function () {
-                      this.setState({
-                          path: basePath
-                        });
-                    }.bind(this)
+                    columnCount: columnCount
                   },
                   publicationColumn({
                       columnId:    columnId,
@@ -63,7 +53,7 @@ var _ = {
                       selectedId:  selectedId,
                       onSelect:    function (entryId) {
                         this.setState({
-                            path: basePath.concat([entryId])
+                            path: entryId ? basePath.concat([entryId]) : basePath
                           });
                       }.bind(this)})));
             }.bind(this)))));
