@@ -8,7 +8,6 @@ var _ = {
   propTypes: function () {
     return {
       columnId:    r.propTypes.string.isRequired,
-      columnIndex: r.propTypes.number.isRequired,
       columnCount: r.propTypes.number.isRequired,
       authorsById: r.propTypes.object,
       entriesById: r.propTypes.object,
@@ -19,7 +18,7 @@ var _ = {
 
   render: function () {
     var columnCitation = this.props.entriesById[this.props.columnId];
-    var citations      = columnCitation.referenceIds && columnCitation.referenceIds.map(function (citationId, citationIndex) {
+    var citations      = columnCitation.referenceIds && columnCitation.referenceIds.map(function (citationId) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {
@@ -34,7 +33,7 @@ var _ = {
           }.bind(this)
         };
       }.bind(this));
-    var reverseCitations = columnCitation.reverseIds && columnCitation.reverseIds.map(function (citationId, citationIndex) {
+    var reverseCitations = columnCitation.reverseIds && columnCitation.reverseIds.map(function (citationId) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {

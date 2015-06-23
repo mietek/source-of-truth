@@ -15,7 +15,7 @@ var _ = {
   },
 
   render: function () {
-    var citations = Object.keys(this.props.entriesById || {}).map(function (citationId, citationIndex) {
+    var citations = Object.keys(this.props.entriesById || {}).map(function (citationId) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {

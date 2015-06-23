@@ -10,7 +10,8 @@ var _ = {
       title:      r.propTypes.string.isRequired,
       isNumbered: r.propTypes.bool,
       isSelected: r.propTypes.bool,
-      isMissing:  r.propTypes.bool
+      isMissing:  r.propTypes.bool,
+      onClick:    r.propTypes.func
     };
   },
 
