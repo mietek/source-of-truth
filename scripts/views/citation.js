@@ -18,7 +18,7 @@ var _ = {
     return (
       r.div({
           key:       this.props.key,
-          className: 'citation-list-item' + (
+          className: 'citation' + (
             (this.props.isNumbered ? ' numbered' : '') +
             (this.props.isSelected ? ' selected' : '') +
             (this.props.isSemiSelected ? ' semi-selected' : '') +
@@ -35,4 +35,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('CitationListItem', _);
+module.exports = r.makeClassFactory('Citation', _);

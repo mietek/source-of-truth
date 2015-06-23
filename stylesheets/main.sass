@@ -189,38 +189,38 @@ body
   @include clickable
 
 
-.citation-list-item
-  counter-increment: citation-list-item
+.citation
+  counter-increment: citation
   padding-left: 8px
   padding-right: 8px
   position: relative
   height: 19px
 
-.citation-list-item .signature
+.citation .signature
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
 
-.citation-list-item.numbered .signature:before
+.citation.numbered .signature:before
   @include small-label
   @include ellipsis
-  content: counter(citation-list-item)
+  content: counter(citation)
   display: inline-block
   width: 1/3 * 100%
   padding-right: 8px
   text-align: right
 
-.citation-list-item:not(.numbered) .signature
+.citation:not(.numbered) .signature
   padding-left: 1/9 * 100%
 
-.citation-list-item .title
+.citation .title
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
 
-.citation-list-item:after
+.citation:after
   content: "▸"
   color: $black6
   position: absolute
@@ -228,47 +228,47 @@ body
   right: 8px
 
 
-.citation-list-item.missing .title
+.citation.missing .title
   color: $black9
 
-.citation-list-item.missing:after
+.citation.missing:after
   color: $blackC
 
 
-.citation-list-item.selected
+.citation.selected
   color: $white
   background-color: $blue
   border-radius: 512px
 
-.citation-list-item.selected.numbered .signature:before
+.citation.selected.numbered .signature:before
   color: $white9
 
-.citation-list-item.selected.missing .title
+.citation.selected.missing .title
   color: $white9
 
-.citation-list-item.selected:after
+.citation.selected:after
   color: $white6
 
-.citation-list-item.selected.missing:after
+.citation.selected.missing:after
   color: $whiteC
 
 
-.citation-list-item.semi-selected
+.citation.semi-selected
   color: $blue
 
-.citation-list-item.semi-selected.numbered .signature:before
+.citation.semi-selected.numbered .signature:before
   color: $blue9
 
-.citation-list-item.semi-selected.missing .title
+.citation.semi-selected.missing .title
   color: $blue9
 
-.citation-list-item.semi-selected:after
+.citation.semi-selected:after
   content: ""
   color: $blue6
 
-.citation-list-item.semi-selected.missing:after
+.citation.semi-selected.missing:after
   color: $blueC
 
 
-.citation-list-item:not(.semi-selected)
+.citation:not(.semi-selected)
   @include clickable

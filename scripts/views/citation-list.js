@@ -2,7 +2,7 @@
 
 var r = require('../common/react');
 
-var citationListItem = require('./citation-list-item');
+var citation = require('./citation');
 
 var _ = {
   propTypes: function () {
@@ -42,7 +42,7 @@ var _ = {
           this.state.isHidden ? null :
             this.props.items.map(function (item) {
                 return (
-                  citationListItem(item));
+                  citation(item));
               })));
   }
 };
