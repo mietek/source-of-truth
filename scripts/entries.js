@@ -352,7 +352,7 @@ module.exports = [
       },
       {
         "author": "D. Spencer",
-        "title": "A survey of categorical computation: fixed points, partiality, combinators, … control?",
+        "title": "A survey of categorical computation: Fixed points, partiality, combinators, … control?",
         "year": 1991
       },
       {
@@ -649,7 +649,7 @@ module.exports = [
       },
       {
         "author": "Dwight Spencer",
-        "title": "A survey of categorical computation: fixed points, partiality, combinators, … control?",
+        "title": "A survey of categorical computation: Fixed points, partiality, combinators, … control?",
         "year": 1991
       },
       {
