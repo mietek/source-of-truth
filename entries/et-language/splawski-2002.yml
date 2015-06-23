@@ -4,8 +4,8 @@ year: 2002
 basename: splawski-2002
 collection: ET language
 abstract: |
-  Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus **λ2** (System **F**) in several different ways, depending on the choice of the elimination operator. Known extensions of **λ2** fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within **λ2** by means of beta reductions, and it is conjectured that systems with recursors cannot.
-  In this paper we define the general form of mutual iteration scheme in **λ2** and we show that the explicit solution for particular functions defines recursors within **λ2**, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient _equational_ inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.
+  <p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. Known extensions of λ2 fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within λ2 by means of beta reductions, and it is conjectured that systems with recursors cannot.</p>
+  <p>In this paper we define the general form of mutual iteration scheme in λ2 and we show that the explicit solution for particular functions defines recursors within λ2, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient <i>equational</i> inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.</p>
 references:
 
   - authors:
