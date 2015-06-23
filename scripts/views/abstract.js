@@ -34,8 +34,12 @@ var _ = {
             'Abstract' +
               (this.state.isHidden ? ' …' : '')),
           this.state.isHidden ? null :
-            r.div('content',
-              this.props.content)));
+            r.div({
+                className: 'content',
+                dangerouslySetInnerHTML: {
+                  __html: this.props.content
+                }
+              })));
   }
 };
 

@@ -2,6 +2,8 @@
 @import "font"
 
 @include font("concourse-t3", "regular")
+@include font("concourse-t3", "italic")
+@include font("concourse-t4", "regular")
 @include font("concourse-c3", "regular")
 
 
@@ -136,6 +138,18 @@ body
 .abstract .content
   margin-left: 1/9 * 100%
   padding-right: 16px
+
+.abstract .content p:not(:first-of-type)
+  text-indent: 1/27 * 100%
+
+.abstract .content b
+  font-family: "concourse-t4"
+
+.abstract .content i
+  font-style: italic
+
+.abstract .content sub, .abstract .content sup
+  font-size: 3/4 * 1em
 
 
 .citation-list
