@@ -7,7 +7,7 @@ var citation = require('./citation');
 var _ = {
   propTypes: function () {
     return {
-      heading: r.propTypes.string.isRequired,
+      heading: r.propTypes.string,
       items:   r.propTypes.array
     };
   },
@@ -25,20 +25,21 @@ var _ = {
             key:       this.props.key,
             className: 'citation-list'
           },
-          r.span({
-              className: 'heading' + (
-                (!this.props.items.length ? ' empty' : '')),
-              onClick:   function (event) {
-                event.stopPropagation();
-                if (this.props.items.length) {
-                  this.setState({
-                      isHidden: !this.state.isHidden
-                    });
-                }
-              }.bind(this)
-            },
-            this.props.heading + ' ' + this.props.items.length + (
-              (this.state.isHidden ? ' …' : ''))),
+          !this.props.heading ? null :
+            r.div({
+                className: 'heading' + (
+                  (!this.props.items.length ? ' empty' : '')),
+                onClick:   function (event) {
+                  event.stopPropagation();
+                  if (this.props.items.length) {
+                    this.setState({
+                        isHidden: !this.state.isHidden
+                      });
+                  }
+                }.bind(this)
+              },
+              this.props.heading + ' ' + this.props.items.length + (
+                (this.state.isHidden ? ' …' : ''))),
           this.state.isHidden ? null :
             this.props.items.map(function (item) {
                 return (

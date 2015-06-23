@@ -22,7 +22,7 @@ var _ = {
             key:       this.props.key,
             className: 'abstract'
           },
-          r.span({
+          r.div({
               className: 'heading',
               onClick:   function (event) {
                 event.stopPropagation();
