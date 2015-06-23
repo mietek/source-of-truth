@@ -19,7 +19,7 @@ var _ = {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {
-          id:         citation.id,
+          key:        citation.id,
           signature:  citation.signature,
           title:      citation.title,
           isMissing:  citation.isMissing,
@@ -32,7 +32,6 @@ var _ = {
     return (
       r.div({
           className: 'column',
-          key:       'root',
           onClick:   function (event) {
             event.stopPropagation();
             this.props.onSelect(null);

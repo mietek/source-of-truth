@@ -17,7 +17,6 @@ var _ = {
   render: function () {
     return (
       r.div({
-          key:       this.props.id,
           className: 'citation' + (
             (this.props.isNumbered ? ' numbered' : '') +
             (this.props.isSelected ? ' selected' : '') +

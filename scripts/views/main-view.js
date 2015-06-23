@@ -20,6 +20,7 @@ var _ = {
     var selectedId = this.state.path.length > (columnIndex + 1) && this.state.path[columnIndex + 1];
     return (
       publicationColumn({
+          key:         columnId + '-' + columnIndex,
           columnId:    columnId,
           columnIndex: columnIndex,
           columnCount: columnCount,
