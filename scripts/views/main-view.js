@@ -4,7 +4,7 @@ var assign = require('object-assign');
 var r = require('../common/react');
 var processor = require('../processor');
 
-var citationListItem = require('./citation-list-item');
+var citationList = require('./citation-list');
 
 var _ = {
   getInitialState: function () {
@@ -35,28 +35,6 @@ var _ = {
     this.setState({
         path: path
       });
-  },
-
-  renderCitationListItem: function (columnId, columnIndex, entryId, entryIndex, entryCount) {
-    var column         = this.state.entriesById[columnId];
-    var isNumbered     = column && column.isNumbered;
-    var entry          = this.state.entriesById[entryId];
-    var pathIndex      = this.state.path.indexOf(entryId);
-    var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
-    var isSemiSelected = pathIndex !== -1 && pathIndex <= columnIndex;
-    return (
-      citationListItem({
-          key:            'e-' + entryId + '-' + entryIndex,
-          signature:      entry.signature,
-          title:          entry.title,
-          isNumbered:     isNumbered,
-          isSelected:     isSelected,
-          isSemiSelected: isSemiSelected,
-          isMissing:      entry.isMissing,
-          onClick:        function () {
-            this.updatePath(columnId, entryId);
-          }.bind(this)
-        }));
   },
 
   renderColumnHeader: function (columnId, columnIndex) {
@@ -103,51 +81,97 @@ var _ = {
 
   },
 
-  renderColumnHeading: function (title) {
+  renderCitations: function (columnId, columnIndex, columnEntry) {
+    var items = columnEntry.referenceIds && columnEntry.referenceIds.map(function (entryId, entryIndex) {
+        var entry          = this.state.entriesById[entryId];
+        var pathIndex      = this.state.path.indexOf(entryId);
+        var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
+        var isSemiSelected = pathIndex !== -1 && pathIndex <= columnIndex;
+        return {
+          key:            entryIndex,
+          signature:      entry.signature,
+          title:          entry.title,
+          isNumbered:     columnEntry.isNumbered,
+          isSelected:     isSelected,
+          isSemiSelected: isSemiSelected,
+          isMissing:      entry.isMissing,
+          onClick:        function () {
+            this.updatePath(columnId, entryId);
+          }.bind(this)
+        };
+      }.bind(this));
     return (
-      r.div('browser-column-heading',
-        r.span('',
-          title)));
+      citationList({
+          heading: 'Cites',
+          items:   items
+        }));
+  },
+
+  renderReverseCitations: function (columnId, columnIndex, columnEntry) {
+    var items = columnEntry.reverseIds && columnEntry.reverseIds.map(function (entryId, entryIndex) {
+        var entry          = this.state.entriesById[entryId];
+        var pathIndex      = this.state.path.indexOf(entryId);
+        var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
+        var isSemiSelected = pathIndex !== -1 && pathIndex <= columnIndex;
+        return {
+          key:            entryIndex,
+          signature:      entry.signature,
+          title:          entry.title,
+          isSelected:     isSelected,
+          isSemiSelected: isSemiSelected,
+          isMissing:      entry.isMissing,
+          onClick:        function () {
+            this.updatePath(columnId, entryId);
+          }.bind(this)
+        };
+      }.bind(this));
+    return (
+      citationList({
+          heading: 'Cited by',
+          items:   items
+        }));
+  },
+
+  renderRootCitations: function (entryIds) {
+    var items = (entryIds || []).map(function (entryId, entryIndex) {
+        var entry      = this.state.entriesById[entryId];
+        var pathIndex  = this.state.path.indexOf(entryId);
+        var isSelected = pathIndex !== -1 && pathIndex === 1;
+        return {
+          key:            entryIndex,
+          signature:      entry.signature,
+          title:          entry.title,
+          isSelected:     isSelected,
+          isMissing:      entry.isMissing,
+          onClick:        function () {
+            this.updatePath('root', entryId);
+          }.bind(this)
+        };
+      }.bind(this));
+    return (
+      citationList({
+          heading: '',
+          items:   items
+        }));
   },
 
   renderColumnWrapper: function (columnId, columnIndex, entry) {
-    var referenceCount = entry.referenceIds && entry.referenceIds.length;
-    var reverseCount   = entry.reverseIds && entry.reverseIds.length;
     return (
       r.div('browser-column-wrapper',
-        !entry.basename ?
-          this.renderColumnHeading('Full text not available') :
+        !entry.basename ? null :
           r.div('browser-full-text',
             r.img({
                 src: 'http://sourceoftruth.net/_previews/' + entry.basename + '.png'
               })),
         this.renderColumnHeader(columnId, columnIndex),
-        (!entry.referenceIds || (!referenceCount && entry.isMissing)) ?
-          this.renderColumnHeading('References not available') :
-          r.div('',
-            this.renderColumnHeading(referenceCount === 1 ? '1 reference' : referenceCount + ' references'),
-            (entry.referenceIds || []).map(function (entryId, entryIndex) {
-                return (
-                  this.renderCitationListItem(columnId, columnIndex, entryId, entryIndex, referenceCount));
-              }.bind(this))),
-        (!entry.reverseIds || (!reverseCount && entry.isMissing)) ?
-          this.renderColumnHeading('Reverse references not available') :
-          r.div('',
-            this.renderColumnHeading(reverseCount === 1 ? '1 reverse reference' : reverseCount + ' reverse references'),
-            (entry.reverseIds || []).map(function (entryId, entryIndex) {
-                return (
-                  this.renderCitationListItem(columnId, columnIndex, entryId, entryIndex, reverseCount));
-              }.bind(this)))));
+        this.renderCitations(columnId, columnIndex, entry),
+        this.renderReverseCitations(columnId, columnIndex, entry)));
   },
 
   renderRootColumnWrapper: function (entryIds) {
-    var entryCount = entryIds && entryIds.length;
     return (
       r.div('browser-column-wrapper',
-        (entryIds || []).map(function (entryId, entryIndex) {
-            return (
-              this.renderCitationListItem('root', 0, entryId, entryIndex, entryCount));
-          }.bind(this))));
+        this.renderRootCitations(entryIds)));
   },
 
   renderColumn: function (columnId, columnIndex, columnCount) {
