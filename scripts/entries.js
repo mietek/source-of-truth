@@ -80,12 +80,10 @@ module.exports = [
         "year": 1988
       },
       {
-        "author": "et al.",
         "title": "Sydney category seminar abstracts",
         "year": 1988
       },
       {
-        "author": "et al.",
         "title": "Sydney category seminar abstracts",
         "year": 1990
       }
