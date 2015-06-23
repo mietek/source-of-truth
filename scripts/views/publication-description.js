@@ -25,10 +25,10 @@ var _ = {
               'Author' :
               'Authors'),
         !this.props.authors ? null :
-          this.props.authors.map(function (author) {
+          this.props.authors.map(function (author, index) {
               return (
                 r.span({
-                    key:       author.id,
+                    key:       author.id + '-' + index,
                     className: 'value'
                   },
                   author.name));
@@ -45,10 +45,10 @@ var _ = {
               'Collection' :
               'Collections'),
         !this.props.collections ? null :
-          this.props.collections.map(function (collection) {
+          this.props.collections.map(function (collection, index) {
               return (
                 r.span({
-                    key:       collection.id,
+                    key:       collection.id + '-' + index,
                     className: 'value'
                   },
                   collection.name));

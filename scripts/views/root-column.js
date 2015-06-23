@@ -14,11 +14,11 @@ var _ = {
   },
 
   render: function () {
-    var citations = Object.keys(this.props.entriesById || {}).map(function (citationId) {
+    var citations = Object.keys(this.props.entriesById || {}).map(function (citationId, citationIndex) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {
-          key:        citation.id,
+          key:        citationId + '-' + citationIndex,
           signature:  citation.signature,
           title:      citation.title,
           isMissing:  citation.isMissing,

@@ -17,11 +17,11 @@ var _ = {
 
   render: function () {
     var columnCitation = this.props.entriesById[this.props.columnId];
-    var citations      = columnCitation.referenceIds && columnCitation.referenceIds.map(function (citationId) {
+    var citations      = columnCitation.referenceIds && columnCitation.referenceIds.map(function (citationId, citationIndex) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {
-          key:        citation.id,
+          key:        citationId + '-' + citationIndex,
           signature:  citation.signature,
           title:      citation.title,
           isMissing:  citation.isMissing,
@@ -32,11 +32,11 @@ var _ = {
           }.bind(this)
         };
       }.bind(this));
-    var reverseCitations = columnCitation.reverseIds && columnCitation.reverseIds.map(function (citationId) {
+    var reverseCitations = columnCitation.reverseIds && columnCitation.reverseIds.map(function (citationId, citationIndex) {
         var citation   = this.props.entriesById[citationId];
         var isSelected = citationId === this.props.selectedId;
         return {
-          key:        citation.id,
+          key:        citationId + '-' + citationIndex,
           signature:  citation.signature,
           title:      citation.title,
           isMissing:  citation.isMissing,

@@ -48,7 +48,7 @@ var _ = {
               var selectedId = this.state.path.length > (columnIndex + 1) && this.state.path[columnIndex + 1];
               return (
                 column({
-                    key:         columnIndex,
+                    key:         columnId + '-' + columnIndex,
                     columnCount: columnCount,
                     onDeselect:  function () {
                       this.setState({
