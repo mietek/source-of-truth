@@ -2169,7 +2169,7 @@ module.exports = [
           "Jon van Gronigen",
           "Rinus Plasmeijer"
         ],
-        "title": "Generating efficient code lazy functional languages",
+        "title": "Generating efficient code for lazy functional languages",
         "year": 1991
       },
       {
