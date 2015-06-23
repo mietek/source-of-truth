@@ -4,9 +4,8 @@ var assign = require('object-assign');
 var r = require('../common/react');
 var processor = require('../processor');
 
-var abstract = require('./abstract');
 var citationList = require('./citation-list');
-var description = require('./description');
+var publication = require('./publication');
 
 var _ = {
   getInitialState: function () {
@@ -39,8 +38,8 @@ var _ = {
       });
   },
 
-  renderCitations: function (columnId, columnIndex, columnEntry) {
-    var items = columnEntry.referenceIds && columnEntry.referenceIds.map(function (entryId, entryIndex) {
+  renderColumnWrapper: function (columnId, columnIndex, columnEntry) {
+    var citations = columnEntry.referenceIds && columnEntry.referenceIds.map(function (entryId, entryIndex) {
         var entry          = this.state.entriesById[entryId];
         var pathIndex      = this.state.path.indexOf(entryId);
         var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
@@ -58,15 +57,7 @@ var _ = {
           }.bind(this)
         };
       }.bind(this));
-    return (
-      citationList({
-          heading: 'Cites',
-          items:   items
-        }));
-  },
-
-  renderReverseCitations: function (columnId, columnIndex, columnEntry) {
-    var items = columnEntry.reverseIds && columnEntry.reverseIds.map(function (entryId, entryIndex) {
+    var reverseCitations = columnEntry.reverseIds && columnEntry.reverseIds.map(function (entryId, entryIndex) {
         var entry          = this.state.entriesById[entryId];
         var pathIndex      = this.state.path.indexOf(entryId);
         var isSelected     = pathIndex !== -1 && pathIndex === columnIndex + 1;
@@ -84,13 +75,24 @@ var _ = {
         };
       }.bind(this));
     return (
-      citationList({
-          heading: 'Cited by',
-          items:   items
-        }));
+      publication({
+            title:            columnEntry.title,
+            authors:          columnEntry.authorIds.map(function (authorId) {
+                return {
+                  name: this.state.authorsById[authorId].name
+                };
+              }.bind(this)),
+            year:             columnEntry.year,
+            collections:      columnEntry.collection && [{
+                name: columnEntry.collection
+              }],
+            abstract:         columnEntry.abstract,
+            citations:        citations,
+            reverseCitations: reverseCitations
+          }));
   },
 
-  renderRootCitations: function (entryIds) {
+  renderRootColumnWrapper: function (entryIds) {
     var items = (entryIds || []).map(function (entryId, entryIndex) {
         var entry      = this.state.entriesById[entryId];
         var pathIndex  = this.state.path.indexOf(entryId);
@@ -107,32 +109,11 @@ var _ = {
         };
       }.bind(this));
     return (
-      citationList({
-          heading: '',
-          items:   items
-        }));
-  },
-
-  renderColumnWrapper: function (columnId, columnIndex, entry) {
-    return (
-      r.div('browser-column-wrapper',
-        !entry.basename ? null :
-          r.div('browser-full-text',
-            r.img({
-                src: 'http://sourceoftruth.net/_previews/' + entry.basename + '.png'
-              })),
-        this.renderColumnHeader(columnId, columnIndex),
-        abstract({
-            content: entry.abstract
-          }),
-        this.renderCitations(columnId, columnIndex, entry),
-        this.renderReverseCitations(columnId, columnIndex, entry)));
-  },
-
-  renderRootColumnWrapper: function (entryIds) {
-    return (
-      r.div('browser-column-wrapper',
-        this.renderRootCitations(entryIds)));
+      r.div('publication',
+        citationList({
+            heading: '',
+            items:   items
+          })));
   },
 
   renderColumn: function (columnId, columnIndex, columnCount) {
