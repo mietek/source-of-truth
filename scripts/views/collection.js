@@ -2,26 +2,26 @@
 
 var r = require('../common/react');
 
-var citationList = require('./citation-list');
-var collectionDescription = require('./collection-description');
+var collectionMap = require('./collection-map');
+var pubList = require('./pub-list');
 
 var _ = {
   propTypes: function () {
     return {
-      name:      r.propTypes.string.isRequired,
-      citations: r.propTypes.array
+      name: r.propTypes.string.isRequired,
+      pubs: r.propTypes.array
     };
   },
 
   render: function () {
     return (
       r.div('wrapper',
-        collectionDescription({
+        collectionMap({
             name: this.props.name
           }),
-        citationList({
+        pubList({
             heading: 'Publications',
-            items:   this.props.citations
+            pubs:    this.props.pubs
           })));
   }
 };

@@ -2,13 +2,13 @@
 
 var r = require('../common/react');
 
-var citation = require('./citation');
+var pubListItem = require('./pub-list-item');
 
 var _ = {
   propTypes: function () {
     return {
       heading:   r.propTypes.string.isRequired,
-      items:     r.propTypes.array,
+      pubs:      r.propTypes.array,
       isSwapped: r.propTypes.bool
     };
   },
@@ -21,15 +21,15 @@ var _ = {
 
   render: function () {
     return (
-      !this.props.items ? null :
-        r.div('citation-list',
+      !this.props.pubs ? null :
+        r.div('pub-list',
           !this.props.heading ? null :
             r.div({
                 className: 'heading' + (
-                  (!this.props.items.length ? ' empty' : '')),
+                  (!this.props.pubs.length ? ' empty' : '')),
                 onClick:   function (event) {
                   event.stopPropagation();
-                  if (this.props.items.length) {
+                  if (this.props.pubs.length) {
                     this.setState({
                         isHidden: !this.state.isHidden
                       });
@@ -37,15 +37,15 @@ var _ = {
                 }.bind(this)
               },
               (this.props.isSwapped ?
-                (this.props.heading + ' ' + this.props.items.length) :
-                (this.props.items.length + ' ' + this.props.heading)) + (
+                (this.props.heading + ' ' + this.props.pubs.length) :
+                (this.props.pubs.length + ' ' + this.props.heading)) + (
                 (this.state.isHidden ? ' …' : ''))),
           this.state.isHidden ? null :
-            this.props.items.map(function (item) {
+            this.props.pubs.map(function (pub) {
                 return (
-                  citation(item));
+                  pubListItem(pub));
               })));
   }
 };
 
-module.exports = r.makeClassFactory('CitationList', _);
+module.exports = r.makeClassFactory('PubList', _);

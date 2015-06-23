@@ -11,7 +11,7 @@ var _ = {
 
   render: function () {
     return (
-      r.div('description',
+      r.div('map',
         r.span('key',
           'Collection'),
         r.span('value',
@@ -19,4 +19,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('CollectionDescription', _);
+module.exports = r.makeClassFactory('CollectionMap', _);

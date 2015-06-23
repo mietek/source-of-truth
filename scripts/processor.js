@@ -90,7 +90,7 @@ module.exports = {
       return entry.id;
     }
 
-    function ensurePublication(rawEntry) {
+    function ensurePub(rawEntry) {
       var authorIds = getAuthorIds(rawEntry);
       var entryName = getEntryName(authorIds, rawEntry);
       var entry;
@@ -131,7 +131,7 @@ module.exports = {
           entriesByName[entryName] = entry;
           entriesById[entry.id]    = entry;
         } else {
-          console.warning('Duplicate publication:', rawEntry);
+          console.warning('Duplicate pub:', rawEntry);
           entry = oldEntry;
         }
       }
@@ -139,7 +139,7 @@ module.exports = {
     }
 
     rawEntries.forEach(function (rawEntry) {
-        ensurePublication(rawEntry);
+        ensurePub(rawEntry);
       });
     Object.keys(entriesByName).forEach(function (entryName) {
         var oldEntry = entriesByName[entryName];

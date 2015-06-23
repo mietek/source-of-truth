@@ -18,7 +18,7 @@ var _ = {
   render: function () {
     return (
       r.div({
-          className: 'citation' + (
+          className: 'pub-list-item' + (
             (this.props.isNumbered ? ' numbered' : '') +
             (this.props.isSelected ? ' selected' : '') +
             (this.props.isMissing ? ' missing' : '')),
@@ -34,4 +34,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('Citation', _);
+module.exports = r.makeClassFactory('PubListItem', _);

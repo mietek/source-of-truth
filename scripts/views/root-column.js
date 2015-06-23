@@ -14,24 +14,24 @@ var _ = {
   },
 
   render: function () {
-    var citations = Object.keys(this.props.entriesById || {}).map(function (citationId, citationIndex) {
-        var citation   = this.props.entriesById[citationId];
-        var isSelected = citationId === this.props.selectedId;
+    var pubs = Object.keys(this.props.entriesById || {}).map(function (pubId, index) {
+        var pub        = this.props.entriesById[pubId];
+        var isSelected = pubId === this.props.selectedId;
         return {
-          key:        citationId + '-' + citationIndex,
-          signature:  citation.signature,
-          title:      citation.title,
-          isMissing:  citation.isMissing,
+          key:        pubId + '-' + index,
+          signature:  pub.signature,
+          title:      pub.title,
+          isMissing:  pub.isMissing,
           isSelected: isSelected,
           onClick:    function () {
-            this.props.onSelect(isSelected ? null : citationId);
+            this.props.onSelect(isSelected ? null : pubId);
           }.bind(this)
         };
       }.bind(this));
     return (
       collection({
-          name:      'Source of Truth',
-          citations: citations
+          name: 'Source of Truth',
+          pubs: pubs
         }));
   }
 };

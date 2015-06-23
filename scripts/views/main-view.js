@@ -5,7 +5,7 @@ var utils = require('../common/utils');
 var processor = require('../processor');
 
 var column = require('./column');
-var publicationColumn = require('./publication-column');
+var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
 var _ = {
@@ -46,7 +46,7 @@ var _ = {
                     key:         columnId + '-' + columnIndex,
                     columnCount: columnCount
                   },
-                  publicationColumn({
+                  pubColumn({
                       columnId:    columnId,
                       authorsById: this.state.authorsById,
                       entriesById: this.state.entriesById,

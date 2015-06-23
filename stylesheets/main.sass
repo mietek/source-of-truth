@@ -126,26 +126,26 @@ body
   padding-right: 4px
 
 
-.description
+.map
   width: 100%
   padding-left: 8px
   padding-right: 8px
 
-.description .key
+.map .key
   @include small-label
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
   text-align: right
 
-.description .value
+.map .value
   @include selectable
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
 
-.description .value + .value
+.map .value + .value
   margin-left: 1/3 * 100%
 
 
@@ -175,51 +175,51 @@ body
   font-size: 3/4 * 1em
 
 
-.citation-list
+.pub-list
   counter-reset: reference
 
-.citation-list .heading
+.pub-list .heading
   @include small-label
   margin-top: 19px
   padding-left: 8px
 
-.citation-list .heading:not(.empty)
+.pub-list .heading:not(.empty)
   @include clickable
 
 
-.citation
+.pub-list-item
   @include clickable
-  counter-increment: citation
+  counter-increment: pub-list-item
   padding-left: 8px
   padding-right: 8px
   position: relative
   height: 19px
 
-.citation:after
+.pub-list-item:after
   content: "▸"
   color: $black9
   position: absolute
   top: 0
   right: 8px
 
-.citation .signature
+.pub-list-item .signature
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
 
-.citation.numbered .signature:before
+.pub-list-item.numbered .signature:before
   @include small-label
   @include ellipsis
-  content: counter(citation)
+  content: counter(pub-list-item)
   display: inline-block
   width: 1/3 * 100%
   padding-right: 8px
   text-align: right
 
-.citation:not(.numbered) .signature
+.pub-list-item:not(.numbered) .signature
   padding-left: 1/9 * 100%
 
-.citation .title
+.pub-list-item .title
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
@@ -227,22 +227,22 @@ body
   padding-right: 16px
 
 
-.citation.missing .title
+.pub-list-item.missing .title
   color: $black9
 
 
-.citation.selected
+.pub-list-item.selected
   color: $white
   background-color: $blue
   border-radius: 512px
 
-.citation.selected.numbered .signature:before
+.pub-list-item.selected.numbered .signature:before
   color: $white9
 
-.citation.selected.missing .title
+.pub-list-item.selected.missing .title
   color: $white9
 
-.citation.selected:after
+.pub-list-item.selected:after
   color: $white9
 
 
