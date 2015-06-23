@@ -30,30 +30,36 @@ var _ = {
               columnCount: columnCount
             },
             rootColumn({
-                entriesById: this.state.entriesById,
-                selectedId:  this.state.path.length > 0 && this.state.path[0],
-                onSelect:    function (entryId) {
+                pubs:       this.state.pubs,
+                selectedId: this.state.path.length > 0 && this.state.path[0],
+                onSelect:   function (pubId) {
                   this.setState({
-                      path: entryId ? [entryId] : []
+                      path: pubId ? [pubId] : []
                     });
                 }.bind(this)
               })),
-          this.state.path.map(function (columnId, columnIndex) {
-              var basePath   = this.state.path.slice(0, columnIndex + 1);
-              var selectedId = this.state.path.length > (columnIndex + 1) && this.state.path[columnIndex + 1];
+          this.state.path.map(function (id, index) {
+              var pub        = this.state.pubsById[id];
+              var basePath   = this.state.path.slice(0, index + 1);
+              var selectedId = this.state.path.length > (index + 1) && this.state.path[index + 1];
               return (
                 column({
-                    key:         columnId + '-' + columnIndex,
+                    key:         id + '-' + index,
                     columnCount: columnCount
                   },
                   pubColumn({
-                      columnId:    columnId,
-                      authorsById: this.state.authorsById,
-                      entriesById: this.state.entriesById,
-                      selectedId:  selectedId,
-                      onSelect:    function (entryId) {
+                      title:            pub.title,
+                      authors:          pub.authors,
+                      year:             pub.year,
+                      collections:      pub.collections,
+                      abstract:         pub.abstract,
+                      citations:        pub.citations,
+                      reverseCitations: pub.reverseCitations,
+                      isNumbered:       pub.isNumbered,
+                      selectedId:       selectedId,
+                      onSelect:         function (pubId) {
                         this.setState({
-                            path: entryId ? basePath.concat([entryId]) : basePath
+                            path: pubId ? basePath.concat([pubId]) : basePath
                           });
                       }.bind(this)})));
             }.bind(this)))));

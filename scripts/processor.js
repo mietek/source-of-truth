@@ -2,168 +2,207 @@
 
 var utils = require('./common/utils');
 
-var rawEntries = require('./entries');
+var rawPubs = require('./entries');
+
+var authors           = [];
+var authorsByName     = {};
+var authorsById       = {};
+
+var collections       = [];
+var collectionsByName = {};
+var collectionsById   = {};
+
+var pubs              = [];
+var pubsByName        = {};
+var pubsById          = {};
+
+var years             = [];
+var yearsByName       = {};
+var yearsById         = {};
+
+function getAuthorBasename(authorName) {
+  if (authorName === 'et al.') {
+    return 'et al.';
+  }
+  var tokens = authorName.split(' ');
+  return (
+    tokens[tokens.length - 1]);
+}
+
+function ensureAuthor(authorName) {
+  if (!(authorName in authorsByName)) {
+    var author = {
+      id:       utils.getRandomUuid(),
+      name:     authorName,
+      basename: getAuthorBasename(authorName),
+      pubs:     []
+    };
+    authors.push(author);
+    authorsByName[authorName] = author;
+    authorsById[author.id]    = author;
+    return author;
+  }
+  return authorsByName[authorName];
+}
+
+function ensureCollection(collectionName) {
+  if (collectionName in collectionsByName) {
+    return collectionsByName[collectionName];
+  }
+  var collection = {
+    id:   utils.getRandomUuid(),
+    name: collectionName,
+    pubs: []
+  };
+  collections.push(collection);
+  collectionsByName[collectionName] = collection;
+  collectionsById[collection.id]    = collection;
+  return collection;
+}
+
+function ensureYear(yearName) {
+  if (yearName in yearsByName) {
+    return yearsByName[yearName];
+  }
+  var year = {
+    id:   utils.getRandomUuid(),
+    name: yearName,
+    pubs: []
+  };
+  years.push(year);
+  yearsByName[yearName] = year;
+  yearsById[year.id]    = year;
+  return year;
+}
+
+function getPubAuthors(rawPub) {
+  var authorNames = (
+    rawPub.author ?
+      [rawPub.author] :
+      rawPub.authors);
+  return (
+    authorNames && authorNames.map(function (authorName) {
+        return ensureAuthor(authorName);
+      }));
+}
+
+function getPubCollections(rawPub) {
+  var collectionNames = (
+    rawPub.collection ?
+      [rawPub.collection] :
+      rawPub.collections);
+  return (
+    collectionNames && collectionNames.map(function (collectionName) {
+        return ensureCollection(collectionName);
+      }));
+}
+
+function getPubYear(rawPub) {
+  return (
+    rawPub.year && ensureYear(rawPub.year));
+}
+
+function getPubSignature(authors, rawPub) {
+  var firstBasename = (
+    (authors && authors.length) ?
+      authors[0].basename :
+      'unknown');
+  return (
+    firstBasename + (
+      (rawPub.year ? ' ' + rawPub.year : '')));
+}
+
+function getPubName(authors, rawPub) {
+  return (
+    getPubSignature(authors, rawPub) +
+      (' — ' + rawPub.title));
+}
+
+function ensureCitation(rawPub, reverseCitation) {
+  var pubAuthors = getPubAuthors(rawPub);
+  var pubName    = getPubName(pubAuthors, rawPub);
+  var pub;
+  if (!(pubName in pubsByName)) {
+    pub = {
+      id:        utils.getRandomUuid(),
+      title:     rawPub.title,
+      authors:   pubAuthors,
+      year:      getPubYear(rawPub),
+      signature: getPubSignature(pubAuthors, rawPub),
+      name:      pubName,
+      isMissing: true
+    };
+    pubs.push(pub);
+    pubsByName[pubName] = pub;
+    pubsById[pub.id]    = pub;
+  } else {
+    pub = pubsByName[pubName];
+  }
+  utils.assign(pub, {
+      reverseCitations: (pub.reverseCitations || []).concat([reverseCitation])
+    });
+  return pub;
+}
+
+function ensurePub(rawPub) {
+  var pubAuthors = getPubAuthors(rawPub);
+  var pubName    = getPubName(pubAuthors, rawPub);
+  var pub;
+  if (!(pubName in pubsByName)) {
+    pub = {
+      id:               utils.getRandomUuid(),
+      title:            rawPub.title,
+      authors:          pubAuthors,
+      year:             getPubYear(rawPub),
+      signature:        getPubSignature(pubAuthors, rawPub),
+      name:             pubName,
+      citations:        [],
+      reverseCitations: []
+    };
+    pubs.push(pub);
+    pubsByName[pubName] = pub;
+    pubsById[pub.id]    = pub;
+  } else {
+    pub = pubsByName[pubName];
+    if (!pub.isMissing) {
+      console.warning('Duplicate pub:', rawPub, pub);
+    }
+  }
+  utils.assign(pub, {
+      citations:   (rawPub.references || []).map(function (citation) { // TODO
+          return ensureCitation(citation, pub);
+        }),
+      basename:    rawPub.basename,
+      collections: getPubCollections(rawPub),
+      abstract:    rawPub.abstract,
+      isNumbered:  !rawPub.numbered || rawPub.numbered === 'y',
+      isMissing:   rawPub.missing === 'y'
+    });
+  return pub;
+}
 
 module.exports = {
   processDb: function () {
-    var authorsByName = {};
-    var authorsById   = {};
-
-    function ensureAuthor(authorName) {
-      var author;
-      if (!(authorName in authorsByName)) {
-        var shortName;
-        if (authorName === 'et al.') {
-          shortName = authorName;
-        } else {
-          var nameTokens = authorName.split(' ');
-          shortName = nameTokens[nameTokens.length - 1];
-        }
-        author = {
-          id:        utils.getRandomUuid(),
-          name:      authorName,
-          shortName: shortName
-        };
-        authorsByName[authorName] = author;
-        authorsById[author.id]    = author;
-      } else {
-        author = authorsByName[authorName];
-      }
-      return author.id;
-    }
-
-    var entriesByName = {};
-    var entriesById   = {};
-
-    function getAuthorNames(rawEntry) {
-      return rawEntry.author ? [rawEntry.author] : rawEntry.authors;
-    }
-
-    function getAuthorIds(rawEntry) {
-      var authorNames = getAuthorNames(rawEntry);
-      return authorNames && authorNames.map(function (authorName) {
-          return ensureAuthor(authorName);
-        });
-    }
-
-    function getEntrySignature(authorIds, rawEntry) {
-      return (
-        ((authorIds && authorIds.length) ? authorsById[authorIds[0]].shortName : 'unknown') +
-          (rawEntry.year ? ' ' + rawEntry.year : ''));
-    }
-
-    function getEntryName(authorIds, rawEntry) {
-      return (
-        getEntrySignature(authorIds, rawEntry) +
-          (' — ' + rawEntry.title));
-    }
-
-    function ensureReference(rawEntry, reverseId) {
-      var authorIds = getAuthorIds(rawEntry);
-      var entryName = getEntryName(authorIds, rawEntry);
-      var entry;
-      if (!(entryName in entriesByName)) {
-        entry = {
-          id:           utils.getRandomUuid(),
-          authorIds:    authorIds,
-          year:         rawEntry.year,
-          signature:    getEntrySignature(authorIds, rawEntry),
-          title:        rawEntry.title,
-          name:         entryName,
-          abstract:     undefined,
-          basename:     undefined,
-          collection:   undefined,
-          isNumbered:   undefined,
-          referenceIds: undefined,
-          isMissing:    true,
-          reverseIds:   [reverseId]
-        };
-      } else {
-        var oldEntry = entriesByName[entryName];
-        entry = utils.assign({}, oldEntry, {
-            reverseIds: (oldEntry.reverseIds || []).concat([reverseId])
-          });
-      }
-      entriesByName[entryName] = entry;
-      entriesById[entry.id]    = entry;
-      return entry.id;
-    }
-
-    function ensurePub(rawEntry) {
-      var authorIds = getAuthorIds(rawEntry);
-      var entryName = getEntryName(authorIds, rawEntry);
-      var entry;
-      if (!(entryName in entriesByName)) {
-        var entryId = utils.getRandomUuid();
-        entry = {
-          id:             entryId,
-          authorIds:      authorIds,
-          year:           rawEntry.year,
-          signature:      getEntrySignature(authorIds, rawEntry),
-          title:          rawEntry.title,
-          name:           entryName,
-          abstract:       rawEntry.abstract,
-          basename:       rawEntry.basename,
-          collection:     rawEntry.collection,
-          isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
-          referenceIds:   (rawEntry.references || []).map(function (reference) {
-              return ensureReference(reference, entryId);
-            }),
-          isMissing:      rawEntry.missing === 'y',
-          reverseIds :    []
-        };
-        entriesByName[entryName] = entry;
-        entriesById[entry.id]    = entry;
-      } else {
-        var oldEntry = entriesByName[entryName];
-        if (oldEntry.isMissing) {
-          entry = utils.assign({}, oldEntry, {
-              abstract:       rawEntry.abstract,
-              basename:       rawEntry.basename,
-              collection:     rawEntry.collection,
-              isNumbered:     !rawEntry.numbered || rawEntry.numbered === 'y',
-              referenceIds:   (rawEntry.references || []).map(function (reference) {
-                  return ensureReference(reference, oldEntry.id);
-                }),
-              isMissing:      rawEntry.missing === 'y'
-            });
-          entriesByName[entryName] = entry;
-          entriesById[entry.id]    = entry;
-        } else {
-          console.warning('Duplicate pub:', rawEntry);
-          entry = oldEntry;
-        }
-      }
-      return entry.id;
-    }
-
-    rawEntries.forEach(function (rawEntry) {
-        ensurePub(rawEntry);
+    rawPubs.forEach(function (rawPub) {
+        ensurePub(rawPub);
       });
-    Object.keys(entriesByName).forEach(function (entryName) {
-        var oldEntry = entriesByName[entryName];
-        var entry    = utils.assign({}, oldEntry, {
-            reverseIds: oldEntry.reverseIds.sort(function (c1, c2) {
-                return entriesById[c1].name.localeCompare(entriesById[c2].name);
-              })
+    pubs.forEach(function (pub) {
+        pub.reverseCitations.sort(function (citation1, citation2) {
+            return citation1.name.localeCompare(citation2.name);
           });
-        entriesByName[entryName] = entry;
-        entriesById[entry.id]    = entry;
       });
-
+    pubs.sort(function (pub1, pub2) {
+        return pub1.name.localeCompare(pub2.name);
+      });
     return {
-      authorsByName: authorsByName,
-      authorsById:   authorsById,
-      authorNames:   utils.getSortedKeys(authorsByName, function (n1, n2) {
-          var ts1 = n1.split(' ');
-          var ts2 = n2.split(' ');
-          var t1 = ts1[ts1.length - 1];
-          var t2 = ts2[ts2.length - 1];
-          return t1.localeCompare(t2);
-        }),
-      entriesByName: entriesByName,
-      entriesById:   entriesById,
-      entryNames:    utils.getSortedKeys(entriesByName)
+      authors:         authors,
+      authorsById:     authorsById,
+      collections:     collections,
+      collectionsById: collectionsById,
+      pubs:            pubs,
+      pubsById:        pubsById,
+      years:           years,
+      yearsById:       yearsById
     };
   }
 };

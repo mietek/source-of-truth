@@ -207,7 +207,7 @@ body
   display: inline-block
   width: 1/3 * 100%
 
-.pub-list-item.numbered .signature:before
+.pub-list.numbered .pub-list-item .signature:before
   @include small-label
   @include ellipsis
   content: counter(pub-list-item)
@@ -216,7 +216,7 @@ body
   padding-right: 8px
   text-align: right
 
-.pub-list-item:not(.numbered) .signature
+.pub-list:not(.numbered) .pub-list-item .signature
   padding-left: 1/9 * 100%
 
 .pub-list-item .title
@@ -236,7 +236,7 @@ body
   background-color: $blue
   border-radius: 512px
 
-.pub-list-item.selected.numbered .signature:before
+.pub-list.numbered .pub-list-item.selected .signature:before
   color: $white9
 
 .pub-list-item.selected.missing .title

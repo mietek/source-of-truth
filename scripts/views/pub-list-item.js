@@ -9,22 +9,24 @@ var _ = {
       signature:  r.propTypes.string.isRequired,
       title:      r.propTypes.string.isRequired,
       isNumbered: r.propTypes.bool,
-      isSelected: r.propTypes.bool,
       isMissing:  r.propTypes.bool,
-      onClick:    r.propTypes.func
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func.isRequired
     };
   },
 
   render: function () {
+    var isSelected = (
+      this.props.id === this.props.selectedId);
     return (
       r.div({
           className: 'pub-list-item' + (
             (this.props.isNumbered ? ' numbered' : '') +
-            (this.props.isSelected ? ' selected' : '') +
+            (isSelected ? ' selected' : '') +
             (this.props.isMissing ? ' missing' : '')),
           onClick:   function (event) {
             event.stopPropagation();
-            this.props.onClick();
+            this.props.onSelect(isSelected ? null : this.props.id);
           }.bind(this)
         },
         r.span('signature',

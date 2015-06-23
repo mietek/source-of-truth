@@ -7,7 +7,7 @@ var _ = {
     return {
       title:       r.propTypes.string.isRequired,
       authors:     r.propTypes.array,
-      year:        r.propTypes.number,
+      year:        r.propTypes.object,
       collections: r.propTypes.array
     };
   },
@@ -38,7 +38,7 @@ var _ = {
             'Year'),
         !this.props.year ? null :
           r.span('value',
-            this.props.year),
+            this.props.year.name),
         !this.props.collections ? null :
           r.span('key',
             this.props.collections.length === 1 ?

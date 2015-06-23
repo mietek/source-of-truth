@@ -7,9 +7,12 @@ var pubListItem = require('./pub-list-item');
 var _ = {
   propTypes: function () {
     return {
-      heading:   r.propTypes.string.isRequired,
-      pubs:      r.propTypes.array,
-      isSwapped: r.propTypes.bool
+      heading:    r.propTypes.string.isRequired,
+      pubs:       r.propTypes.array,
+      isSwapped:  r.propTypes.bool,
+      isNumbered: r.propTypes.bool,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func.isRequired
     };
   },
 
@@ -22,7 +25,8 @@ var _ = {
   render: function () {
     return (
       !this.props.pubs ? null :
-        r.div('pub-list',
+        r.div('pub-list' + (
+            (this.props.isNumbered ? ' numbered' : '')),
           !this.props.heading ? null :
             r.div({
                 className: 'heading' + (
@@ -41,10 +45,19 @@ var _ = {
                 (this.props.pubs.length + ' ' + this.props.heading)) + (
                 (this.state.isHidden ? ' …' : ''))),
           this.state.isHidden ? null :
-            this.props.pubs.map(function (pub) {
+            this.props.pubs.map(function (pub, index) {
                 return (
-                  pubListItem(pub));
-              })));
+                  pubListItem({
+                      key:        index,
+                      id:         pub.id,
+                      signature:  pub.signature,
+                      title:      pub.title,
+                      isNumbered: pub.isNumbered,
+                      isMissing:  pub.isMissing,
+                      selectedId: this.props.selectedId,
+                      onSelect:   this.props.onSelect
+                    }));
+              }.bind(this))));
   }
 };
 
