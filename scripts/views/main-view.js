@@ -76,6 +76,7 @@ var _ = {
                 isDouble:    false
               },
               pdfColumn({
+                  key:      lastId,
                   basename: lastBasename
                 })))));
   }

@@ -13,10 +13,9 @@ var _ = {
 
   render: function () {
     return (
-      r.div('preview',
-        pdf({
-            url: document.location.origin + '/_entries/' + this.props.basename + '.pdf'
-          })));
+      pdf({
+          url: document.location.origin + '/_entries/' + this.props.basename + '.pdf'
+        }));
   }
 };
 

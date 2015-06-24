@@ -12,13 +12,31 @@ var _ = {
     };
   },
 
+  getInitialState: function () {
+    return {
+      pdf: null
+    };
+  },
+
+  componentWillMount: function () {
+    PDFJS.getDocument(this.props.url).then(function (pdf) {
+        this.setState({
+            pdf: pdf
+          });
+      }.bind(this));
+  },
+
   componentDidMount: function () {
-    this.onPaint();
     addEventListener('resize', this.onResize);
+    this.onPaint();
   },
 
   componentWillUnmount: function () {
     removeEventListener('resize', this.onResize);
+    var node = r.findDOMNode(this);
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
+    }
   },
 
   componentDidUpdate: function () {
@@ -30,29 +48,49 @@ var _ = {
     }, 500),
 
   onPaint: function () {
-    var canvas   = r.findDOMNode(this);
-    var computed = getComputedStyle(canvas);
-    var context  = canvas.getContext('2d');
-    PDFJS.getDocument(this.props.url).then(function (pdf) {
-      pdf.getPage(1).then(function (page) {
-        var viewport       = page.getViewport(1);
-        var width          = parseFloat(computed.width);
-        var scale          = width / viewport.width;
-        var scaledViewport = page.getViewport(scale * 2);
-        canvas.width  = scaledViewport.width;
-        canvas.height = scaledViewport.height;
-        page.render({
-            canvasContext: context,
-            viewport:      scaledViewport
-          });
-      });
-    });
+    if (!this.state.pdf) {
+      return;
+    }
+    var pdf       = this.state.pdf;
+    var pageCount = pdf.numPages;
+    var node      = r.findDOMNode(this);
+    var computed  = getComputedStyle(node);
+    var width     = parseFloat(computed.width);
+    var height    = parseFloat(computed.height);
+    while (node.childNodes.length < pageCount) {
+      var child = document.createElement('canvas');
+      child.width  = width;
+      child.height = height;
+      node.appendChild(child);
+    }
+    function paintPage(pageNumber) {
+      pdf.getPage(pageNumber).then(function (page) {
+          var viewport = page.getViewport(1);
+          var scale    = width / viewport.width;
+          var scaled   = page.getViewport(scale * 2);
+          for (var i = pageNumber - 1; i < pageCount; i += 1) {
+            var child = node.childNodes[i];
+            child.width  = scaled.width;
+            child.height = scaled.height;
+          }
+          var canvas  = node.childNodes[pageNumber - 1];
+          var context = canvas.getContext('2d');
+          page.render({
+              canvasContext: context,
+              viewport:      scaled
+            }).promise.then(function () {
+                if (pageNumber < pageCount) {
+                  paintPage(pageNumber + 1);
+                }
+              });
+        });
+    }
+    paintPage(1);
   },
 
   render: function () {
     return (
-      !this.props.url ? null :
-        r.canvas());
+      r.div('pdf'));
   }
 };
 
