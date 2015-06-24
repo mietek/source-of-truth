@@ -1,5 +1,7 @@
 'use strict';
 
+var easeScroll = require('ease-scroll');
+
 var r = require('../common/react');
 var utils = require('../common/utils');
 var processor = require('../processor');
@@ -71,11 +73,20 @@ var _ = {
     }
   },
 
+  componentDidUpdate: function () {
+    var node   = r.findDOMNode(this);
+    var startX = node.scrollLeft;
+    var maxX   = node.scrollWidth - node.clientWidth;
+    easeScroll.tween(startX, maxX, maxX, 500, function (x) {
+        node.scrollLeft = x;
+      });
+  },
+
   render: function () {
-    var lastId   = this.state.path.length && this.state.path[this.state.path.length - 1];
-    var lastItem = lastId && this.state.itemsById[lastId];
-    var hasPdf   = lastItem && lastItem.type === 'pub' && lastItem.basename;
-    var columnCount  = (
+    var lastId      = this.state.path.length && this.state.path[this.state.path.length - 1];
+    var lastItem    = lastId && this.state.itemsById[lastId];
+    var hasPdf      = lastItem && lastItem.type === 'pub' && lastItem.basename;
+    var columnCount = (
       1 + this.state.path.length + (
         hasPdf ? 1 : 0));
     return (
