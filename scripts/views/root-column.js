@@ -2,7 +2,6 @@
 
 var r = require('../common/react');
 
-var collectionMap = require('./collection-map');
 var pubList = require('./pub-list');
 
 var _ = {
@@ -16,10 +15,7 @@ var _ = {
 
   render: function () {
     return (
-      r.div('wrapper',
-        collectionMap({
-            name: 'Source of Truth'
-          }),
+      r.div('root wrapper',
         pubList({
             heading:    'Publications',
             pubs:       this.props.pubs,

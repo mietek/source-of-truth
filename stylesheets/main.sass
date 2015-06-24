@@ -180,8 +180,10 @@ body
 
 .pub-list .heading
   @include small-label
-  margin-top: 19px
   padding-left: 8px
+
+.wrapper:not(.root) .pub-list .heading
+  margin-top: 19px
 
 .pub-list .heading:not(.empty)
   @include clickable
