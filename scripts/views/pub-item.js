@@ -5,28 +5,25 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      id:         r.propTypes.string.isRequired,
-      signature:  r.propTypes.string.isRequired,
-      title:      r.propTypes.string.isRequired,
-      isNumbered: r.propTypes.bool,
-      isMissing:  r.propTypes.bool,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func.isRequired
+      pubId:       r.propTypes.string.isRequired,
+      signature:   r.propTypes.string.isRequired,
+      title:       r.propTypes.string.isRequired,
+      isPartial:   r.propTypes.bool,
+      selectedId:  r.propTypes.string,
+      onSelect:    r.propTypes.func
     };
   },
 
   render: function () {
-    var isSelected = (
-      this.props.id === this.props.selectedId);
+    var isSelected = this.props.pubId === this.props.selectedId;
     return (
       r.div({
-          className: 'pub-item' + (
-            (this.props.isNumbered ? ' numbered' : '') +
-            (isSelected ? ' selected' : '') +
-            (this.props.isMissing ? ' missing' : '')),
+          className: 'item clickable' + (
+            (this.props.isPartial ? ' partial' : '') +
+            (isSelected ? ' selected' : '')),
           onClick:   function (event) {
             event.stopPropagation();
-            this.props.onSelect(isSelected ? null : this.props.id);
+            this.props.onSelect(isSelected ? null : this.props.pubId);
           }.bind(this)
         },
         r.span('signature',

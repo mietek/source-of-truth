@@ -16,27 +16,30 @@ var _ = {
   },
 
   render: function () {
+    if (!this.props.content) {
+      return null;
+    }
     return (
-      !this.props.content ? null :
-        r.div('abstract',
+      r.div('abstract',
+        r.div('spacer',
+          r.span({
+            className: 'label clickable',
+            onClick:   function (event) {
+              event.stopPropagation();
+              this.setState({
+                  isHidden: !this.state.isHidden
+                });
+            }.bind(this)
+          },
+          'Abstract' +
+            (this.state.isHidden ? ' …' : ''))),
+        this.state.isHidden ? null :
           r.div({
-              className: 'heading',
-              onClick:   function (event) {
-                event.stopPropagation();
-                this.setState({
-                    isHidden: !this.state.isHidden
-                  });
-              }.bind(this)
-            },
-            'Abstract' +
-              (this.state.isHidden ? ' …' : '')),
-          this.state.isHidden ? null :
-            r.div({
-                className: 'content',
-                dangerouslySetInnerHTML: {
-                  __html: this.props.content
-                }
-              })));
+              className: 'content',
+              dangerouslySetInnerHTML: {
+                __html: this.props.content
+              }
+            })));
   }
 };
 

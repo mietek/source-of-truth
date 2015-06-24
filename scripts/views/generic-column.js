@@ -2,29 +2,30 @@
 
 var r = require('../common/react');
 
-var collectionMap = require('./collection-map');
+var genericHeader = require('./generic-header');
 var pubList = require('./pub-list');
 
 var _ = {
   propTypes: function () {
     return {
-      name:       r.propTypes.string.isRequired,
+      label:      r.propTypes.string.isRequired,
+      value:      r.propTypes.string.isRequired,
       pubs:       r.propTypes.array,
       selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func.isRequired
+      onSelect:   r.propTypes.func
     };
   },
 
   render: function () {
     return (
       r.div('wrapper',
-        collectionMap({
-            name:       this.props.name,
+        genericHeader({
+            label:      this.props.label,
+            value:      this.props.value,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
           }),
         pubList({
-            heading:    'Publications',
             pubs:       this.props.pubs,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
@@ -32,4 +33,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('CollectionColumn', _);
+module.exports = r.makeClassFactory('GenericColumn', _);

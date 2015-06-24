@@ -7,14 +7,14 @@ var pdf = require('./pdf');
 var _ = {
   propTypes: function () {
     return {
-      basename: r.propTypes.string.isRequired
+      url: r.propTypes.string.isRequired
     };
   },
 
   render: function () {
     return (
       pdf({
-          url: document.location.origin + '/_entries/' + this.props.basename + '.pdf'
+          url: this.props.url
         }));
   }
 };

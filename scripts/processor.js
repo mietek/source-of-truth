@@ -6,19 +6,13 @@ var rawPubs = require('./entries');
 
 var pubs              = [];
 var pubsByName        = {};
-var pubsById          = {};
-
 var authors           = [];
 var authorsByName     = {};
-var authorsById       = {};
-
 var collections       = [];
 var collectionsByName = {};
-var collectionsById   = {};
-
 var years             = [];
 var yearsByName       = {};
-var yearsById         = {};
+var itemsById         = {};
 
 function getAuthorBasename(name) {
   if (name === 'et al.') {
@@ -32,14 +26,16 @@ function getAuthorBasename(name) {
 function ensureAuthor(name) {
   if (!(name in authorsByName)) {
     var author = {
+      type:     'author',
       id:       utils.getRandomUuid(),
       name:     name,
       basename: getAuthorBasename(name),
-      pubs:     []
+      pubs:     [],
+      fullPubs: []
     };
     authors.push(author);
-    authorsByName[name]    = author;
-    authorsById[author.id] = author;
+    authorsByName[name]  = author;
+    itemsById[author.id] = author;
     return author;
   }
   return authorsByName[name];
@@ -50,13 +46,15 @@ function ensureCollection(name) {
     return collectionsByName[name];
   }
   var collection = {
-    id:   utils.getRandomUuid(),
-    name: name,
-    pubs: []
+    type:     'collection',
+    id:       utils.getRandomUuid(),
+    name:     name,
+    pubs:     [],
+    fullPubs: []
   };
   collections.push(collection);
-  collectionsByName[name]        = collection;
-  collectionsById[collection.id] = collection;
+  collectionsByName[name]  = collection;
+  itemsById[collection.id] = collection;
   return collection;
 }
 
@@ -65,13 +63,15 @@ function ensureYear(name) {
     return yearsByName[name];
   }
   var year = {
-    id:   utils.getRandomUuid(),
-    name: name,
-    pubs: []
+    type:     'year',
+    id:       utils.getRandomUuid(),
+    name:     name,
+    pubs:     [],
+    fullPubs: []
   };
   years.push(year);
   yearsByName[name]  = year;
-  yearsById[year.id] = year;
+  itemsById[year.id] = year;
   return year;
 }
 
@@ -121,18 +121,19 @@ function ensurePartialPub(rawPub, reverseCitation) {
   var pub;
   if (!(name in pubsByName)) {
     pub = {
+      type:             'pub',
       id:               utils.getRandomUuid(),
       title:            rawPub.title,
       authors:          authors,
       year:             year,
       signature:        getPubSignature(authors, rawPub),
       name:             name,
-      isMissing:        true,
+      isPartial:        true,
       reverseCitations: []
     };
     pubs.push(pub);
-    pubsByName[name] = pub;
-    pubsById[pub.id] = pub;
+    pubsByName[name]  = pub;
+    itemsById[pub.id] = pub;
   } else {
     pub = pubsByName[name];
   }
@@ -157,7 +158,7 @@ function ensurePartialPub(rawPub, reverseCitation) {
 function ensurePub(rawPub) {
   var collections = getPubCollections(rawPub);
   var pub         = ensurePartialPub(rawPub);
-  if (!pub.isMissing) {
+  if (!pub.isPartial) {
     console.warning('Duplicate pub:', rawPub, pub);
   }
   utils.assign(pub, {
@@ -168,7 +169,7 @@ function ensurePub(rawPub) {
       collections: collections,
       abstract:    rawPub.abstract,
       isNumbered:  !rawPub.numbered || rawPub.numbered === 'y',
-      isMissing:   rawPub.missing === 'y'
+      isPartial:   rawPub.missing === 'y' // TODO: Tweak database naming
     });
   if (collections) {
     collections.forEach(function (collection) {
@@ -193,8 +194,15 @@ module.exports = {
         pub.reverseCitations.sort(function (citation1, citation2) {
             return citation1.name.localeCompare(citation2.name);
           });
-        if (!pub.isMissing) {
+        if (!pub.isPartial) {
           fullPubs.push(pub);
+          (pub.authors || []).forEach(function (author) {
+              author.fullPubs.push(pub);
+            });
+          (pub.collections || []).forEach(function (collection) {
+              collection.fullPubs.push(pub);
+            });
+          pub.year.fullPubs.push(pub);
         }
       });
     authors.sort(function (author1, author2) {
@@ -209,13 +217,10 @@ module.exports = {
     return {
       pubs:            pubs,
       fullPubs:        fullPubs,
-      pubsById:        pubsById,
       authors:         authors,
-      authorsById:     authorsById,
       collections:     collections,
-      collectionsById: collectionsById,
       years:           years,
-      yearsById:       yearsById
+      itemsById:       itemsById
     };
   }
 };

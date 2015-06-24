@@ -5,21 +5,16 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      columnCount: r.propTypes.number.isRequired,
-      isDouble:    r.propTypes.bool
+      columnCount: r.propTypes.number.isRequired
     };
   },
 
   render: function () {
-    var width = (
-      !this.props.isDouble ?
-        1/this.props.columnCount :
-        2/this.props.columnCount);
     return (
       r.div({
           className: 'column',
           style:     {
-            width: '' + width * 100 + '%',
+            width: '' + 1/this.props.columnCount * 100 + '%',
           }
         },
         this.props.children));

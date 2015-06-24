@@ -3,8 +3,8 @@
 var r = require('../common/react');
 
 var abstract = require('./abstract');
+var pubHeader = require('./pub-header');
 var pubList = require('./pub-list');
-var pubMap = require('./pub-map');
 
 var _ = {
   propTypes: function () {
@@ -18,14 +18,14 @@ var _ = {
       reverseCitations: r.propTypes.array,
       isNumbered:       r.propTypes.bool,
       selectedId:       r.propTypes.string,
-      onSelect:         r.propTypes.func.isRequired
+      onSelect:         r.propTypes.func
     };
   },
 
   render: function () {
     return (
       r.div('wrapper',
-        pubMap({
+        pubHeader({
             title:       this.props.title,
             authors:     this.props.authors,
             year:        this.props.year,
@@ -37,7 +37,7 @@ var _ = {
             content: this.props.abstract
           }),
         pubList({
-            heading:    'Cites',
+            label:      'Cites',
             pubs:       this.props.citations,
             isSwapped:  true,
             isNumbered: this.props.isNumbered,
@@ -45,7 +45,7 @@ var _ = {
             onSelect:   this.props.onSelect
           }),
         pubList({
-            heading:    'Cited by',
+            label:      'Cited by',
             pubs:       this.props.reverseCitations,
             isSwapped:  true,
             selectedId: this.props.selectedId,

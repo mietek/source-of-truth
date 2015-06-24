@@ -79,74 +79,146 @@ body
   text-overflow: ellipsis
 
 
-.browser-pane
+.browser
   @include unselectable
-  background-color: $white
-  height: 100%
   width: 100%
+  height: 100%
   overflow-x: scroll
   overflow-y: hidden
   -webkit-overflow-scrolling: touch
+  background-color: $white
 
 
 .column-list
-  height: 100%
   width: 1/3 * 100% // Dynamic
+  height: 100%
 
 
 .column
-  border: 0px $blackC solid
-  border-right-width: 1px
-  height: 100%
   width: 100% // Dynamic
+  height: 100%
   display: inline-block
   overflow-x: hidden
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
+  border: 0px $blackC solid
+  border-right-width: 1px
 
 
 .wrapper
-  padding: 1px
   height: 100%
-
-
-.cartridge
-  font-size: 12px
-  line-height: 18px
-
-.cartridge .title
-  border: 1px $blackC solid
-  border-radius: 512px
-  padding-left: 8px
-
-.cartridge .title:after
-  content: "▸"
-  color: $black9
-  padding-left: 4px
-  padding-right: 4px
-
-
-.map
   width: 100%
+  padding: 1px
+
+
+.header
+  width: 100%
+
+.header .heading
   padding-left: 8px
   padding-right: 8px
+  margin-bottom: 19px
 
-.map .key
+.header .label
   @include small-label
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
   text-align: right
 
-.map .value
-  @include selectable
+.item.selected .label
+  color: $white9
+
+.header .value
   display: inline-block
   width: 2/3 * 100%
   padding-left: 8px
   padding-right: 16px
 
-.map .value + .value
+.header .heading .value
+  @include selectable
+
+.header .item .value
+  @include ellipsis
+
+.header .item .value:first-child
   margin-left: 1/3 * 100%
+
+
+.pub-list
+  width: 100%
+  counter-reset: item
+
+.pub-list .label
+  @include small-label
+  padding-left: 8px
+
+.wrapper:not(.root) .pub-list .spacer
+  margin-top: 19px
+
+.pub-list .label.clickable
+  @include clickable
+
+
+.item
+  counter-increment: item
+  padding-left: 8px
+  padding-right: 8px
+  height: 19px
+  position: relative
+
+.item.clickable
+  @include clickable
+
+.item.clickable:after
+  content: "▸"
+  color: $black9
+  position: absolute
+  top: 0
+  right: 8px
+
+.item.selected
+  color: $white
+  background-color: $blue
+  border-radius: 512px
+
+.item.selected:after
+  color: $white9
+
+
+.item .signature
+  @include ellipsis
+  display: inline-block
+  width: 1/3 * 100%
+
+.pub-list:not(.numbered) .item .signature
+  padding-left: 1/9 * 100%
+
+.pub-list.numbered .item .signature:before
+  @include small-label
+  @include ellipsis
+  content: counter(item)
+  display: inline-block
+  width: 1/3 * 100%
+  padding-right: 8px
+  text-align: right
+
+.pub-list.numbered .item.selected .signature:before
+  color: $white9
+
+
+.item .title
+  @include ellipsis
+  display: inline-block
+  width: 2/3 * 100%
+  padding-left: 8px
+  padding-right: 16px
+
+.item.partial .title
+  color: $black9
+
+.item.selected.partial .title
+  color: $white9
 
 
 .abstract
@@ -155,10 +227,14 @@ body
   text-align: justify
   hyphens: auto
 
-.abstract .heading
-  @include clickable
-  @include small-label
+.abstract .spacer
   margin-top: 19px
+
+.abstract .label
+  @include small-label
+
+.abstract .label.clickable
+  @include clickable
 
 .abstract .content
   @include selectable
@@ -173,79 +249,6 @@ body
 
 .abstract .content sub, .abstract .content sup
   font-size: 3/4 * 1em
-
-
-.pub-list
-  counter-reset: reference
-
-.pub-list .heading
-  @include small-label
-  padding-left: 8px
-
-.wrapper:not(.root) .pub-list .heading
-  margin-top: 19px
-
-.pub-list .heading:not(.empty)
-  @include clickable
-
-
-.pub-item
-  @include clickable
-  counter-increment: pub-item
-  padding-left: 8px
-  padding-right: 8px
-  position: relative
-  height: 19px
-
-.pub-item:after
-  content: "▸"
-  color: $black9
-  position: absolute
-  top: 0
-  right: 8px
-
-.pub-item .signature
-  @include ellipsis
-  display: inline-block
-  width: 1/3 * 100%
-
-.pub-list.numbered .pub-item .signature:before
-  @include small-label
-  @include ellipsis
-  content: counter(pub-item)
-  display: inline-block
-  width: 1/3 * 100%
-  padding-right: 8px
-  text-align: right
-
-.pub-list:not(.numbered) .pub-item .signature
-  padding-left: 1/9 * 100%
-
-.pub-item .title
-  @include ellipsis
-  display: inline-block
-  width: 2/3 * 100%
-  padding-left: 8px
-  padding-right: 16px
-
-
-.pub-item.missing .title
-  color: $black9
-
-
-.pub-item.selected
-  color: $white
-  background-color: $blue
-  border-radius: 512px
-
-.pub-list.numbered .pub-item.selected .signature:before
-  color: $white9
-
-.pub-item.selected.missing .title
-  color: $white9
-
-.pub-item.selected:after
-  color: $white9
 
 
 .pdf
