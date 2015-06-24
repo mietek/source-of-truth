@@ -161,7 +161,7 @@ function ensurePub(rawPub) {
     console.warning('Duplicate pub:', rawPub, pub);
   }
   utils.assign(pub, {
-      citations:   (rawPub.references || []).map(function (citation) { // TODO
+      citations:   (rawPub.references || []).map(function (citation) { // TODO: Tweak database naming
           return ensurePartialPub(citation, pub);
         }),
       basename:    rawPub.basename,

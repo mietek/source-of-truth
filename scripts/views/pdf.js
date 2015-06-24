@@ -67,13 +67,13 @@ var _ = {
       pdf.getPage(pageNumber).then(function (page) {
           var viewport = page.getViewport(1);
           var scale    = width / viewport.width;
-          var scaled   = page.getViewport(scale * 2);
+          var scaled   = page.getViewport(scale * 2); // TODO: Use screen scale factor
           for (var i = pageNumber - 1; i < pageCount; i += 1) {
             var child = node.childNodes[i];
             child.width  = scaled.width;
             child.height = scaled.height;
           }
-          var canvas  = node.childNodes[pageNumber - 1];
+          var canvas  = node.childNodes[pageNumber - 1]; // TODO: Check if node/child exists, and whether we should continue painting
           var context = canvas.getContext('2d');
           page.render({
               canvasContext: context,
