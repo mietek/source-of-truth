@@ -24,6 +24,19 @@ var _ = module.exports = {
       });
   },
 
+  debounce: function (func, duration) {
+    var timeout;
+    return function () {
+      var that = this;
+      var args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(function () {
+          func.apply(that, args);
+        },
+        duration);
+    };
+  },
+
   formatYear: function (dateTime) {
     return (
       !dateTime ? null :
