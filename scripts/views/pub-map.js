@@ -8,7 +8,9 @@ var _ = {
       title:       r.propTypes.string.isRequired,
       authors:     r.propTypes.array,
       year:        r.propTypes.object,
-      collections: r.propTypes.array
+      collections: r.propTypes.array,
+      selectedId:  r.propTypes.string,
+      onSelect:    r.propTypes.func.isRequired
     };
   },
 
@@ -56,4 +58,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('Map', _);
+module.exports = r.makeClassFactory('PubMap', _);

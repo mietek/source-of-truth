@@ -5,7 +5,9 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      name: r.propTypes.string.isRequired
+      name:       r.propTypes.string.isRequired,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func.isRequired
     };
   },
 
