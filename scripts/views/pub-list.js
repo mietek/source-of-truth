@@ -2,7 +2,7 @@
 
 var r = require('../common/react');
 
-var pubListItem = require('./pub-list-item');
+var pubItem = require('./pub-item');
 
 var _ = {
   propTypes: function () {
@@ -47,7 +47,7 @@ var _ = {
           this.state.isHidden ? null :
             this.props.pubs.map(function (pub, index) {
                 return (
-                  pubListItem({
+                  pubItem({
                       key:        index,
                       id:         pub.id,
                       signature:  pub.signature,

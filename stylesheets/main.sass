@@ -189,39 +189,39 @@ body
   @include clickable
 
 
-.pub-list-item
+.pub-item
   @include clickable
-  counter-increment: pub-list-item
+  counter-increment: pub-item
   padding-left: 8px
   padding-right: 8px
   position: relative
   height: 19px
 
-.pub-list-item:after
+.pub-item:after
   content: "▸"
   color: $black9
   position: absolute
   top: 0
   right: 8px
 
-.pub-list-item .signature
+.pub-item .signature
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
 
-.pub-list.numbered .pub-list-item .signature:before
+.pub-list.numbered .pub-item .signature:before
   @include small-label
   @include ellipsis
-  content: counter(pub-list-item)
+  content: counter(pub-item)
   display: inline-block
   width: 1/3 * 100%
   padding-right: 8px
   text-align: right
 
-.pub-list:not(.numbered) .pub-list-item .signature
+.pub-list:not(.numbered) .pub-item .signature
   padding-left: 1/9 * 100%
 
-.pub-list-item .title
+.pub-item .title
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
@@ -229,22 +229,22 @@ body
   padding-right: 16px
 
 
-.pub-list-item.missing .title
+.pub-item.missing .title
   color: $black9
 
 
-.pub-list-item.selected
+.pub-item.selected
   color: $white
   background-color: $blue
   border-radius: 512px
 
-.pub-list.numbered .pub-list-item.selected .signature:before
+.pub-list.numbered .pub-item.selected .signature:before
   color: $white9
 
-.pub-list-item.selected.missing .title
+.pub-item.selected.missing .title
   color: $white9
 
-.pub-list-item.selected:after
+.pub-item.selected:after
   color: $white9
 
 

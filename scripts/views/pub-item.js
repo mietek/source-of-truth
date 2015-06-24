@@ -20,7 +20,7 @@ var _ = {
       this.props.id === this.props.selectedId);
     return (
       r.div({
-          className: 'pub-list-item' + (
+          className: 'pub-item' + (
             (this.props.isNumbered ? ' numbered' : '') +
             (isSelected ? ' selected' : '') +
             (this.props.isMissing ? ' missing' : '')),
@@ -36,4 +36,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('PubListItem', _);
+module.exports = r.makeClassFactory('PubItem', _);
