@@ -37,7 +37,7 @@ var _ = {
               columnCount: columnCount
             },
             rootColumn({
-                pubs:       this.state.pubs,
+                pubs:       this.state.fullPubs,
                 selectedId: this.state.path.length > 0 && this.state.path[0],
                 onSelect:   function (pubId) {
                   this.setState({
