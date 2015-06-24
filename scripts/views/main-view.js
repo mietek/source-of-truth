@@ -5,7 +5,7 @@ var utils = require('../common/utils');
 var processor = require('../processor');
 
 var column = require('./column');
-var objectColumn = require('./object-column');
+var pdfColumn = require('./pdf-column');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
@@ -75,7 +75,7 @@ var _ = {
                 columnCount: columnCount,
                 isDouble:    false
               },
-              objectColumn({
+              pdfColumn({
                   basename: lastBasename
                 })))));
   }

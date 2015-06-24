@@ -140,6 +140,7 @@ $(foreach mode,dev pub,$(eval $(stylesheets-macro)))
 files      := $(patsubst files/%,%,$(call find-files,files,*))
 file-roots := files files-dev files-pub
 
+vpath %.bcmap $(file-roots)
 vpath %.css   $(file-roots)
 vpath %.eot   $(file-roots)
 vpath %.html  $(file-roots)
@@ -155,6 +156,7 @@ vpath %.woff  $(file-roots)
 vpath %.woff2 $(file-roots)
 
 define files-macro
+  out/$(mode)/%.bcmap : %.bcmap ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.css   : %.css   ; mkdir -p $$(@D) && $$($(mode)-copy-optimized-css)
   out/$(mode)/%.eot   : %.eot   ; mkdir -p $$(@D) && cp $$< $$@
   out/$(mode)/%.html  : %.html  ; mkdir -p $$(@D) && cp $$< $$@

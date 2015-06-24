@@ -2,6 +2,8 @@
 
 var r = require('../common/react');
 
+var pdf = require('./pdf');
+
 var _ = {
   propTypes: function () {
     return {
@@ -12,11 +14,10 @@ var _ = {
   render: function () {
     return (
       r.div('preview',
-        r.object({
-            data: 'http://sourceoftruth.net/_entries/' + this.props.basename + '.pdf',
-            type: 'application/pdf'
+        pdf({
+            url: document.location.origin + '/_entries/' + this.props.basename + '.pdf'
           })));
   }
 };
 
-module.exports = r.makeClassFactory('ObjectColumn', _);
+module.exports = r.makeClassFactory('PdfColumn', _);
