@@ -268,6 +268,20 @@ body
 // NOTE: $transition-duration must match TRANSITION_DURATION in JS
 $transition-duration: 250ms
 
+
+.fade-enter
+  opacity: 0
+  &.fade-enter-active
+    opacity: 1
+    transition: all $transition-duration ease
+
+.fade-leave
+  opacity: 1
+  &.fade-leave-active
+    opacity: 0
+    transition: all $transition-duration ease
+
+
 .height-enter
   // NOTE: JS code sets max-height: 0%
   opacity: 0
@@ -285,3 +299,22 @@ $transition-duration: 250ms
     opacity: 0
     transition: all $transition-duration ease
     overflow-y: hidden
+
+
+.width-enter
+  // NOTE: JS code sets max-width: 0%
+  opacity: 0
+  overflow-x: hidden
+  &.width-enter-active
+    // NOTE: JS code sets max-width: 100%
+    opacity: 1
+    transition: all $transition-duration ease
+
+.width-leave
+  // NOTE: JS code sets max-width: 100%
+  opacity: 1
+  &.width-leave-active
+    // NOTE: JS code sets max-width: 0%
+    opacity: 0
+    transition: all $transition-duration ease
+    overflow-x: hidden

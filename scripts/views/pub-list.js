@@ -55,7 +55,9 @@ var _ = {
                 }.bind(this)
               },
               label)),
-        genericTransitionGroup({},
+        genericTransitionGroup({
+            transitionName: 'height'
+          },
           this.state.isHidden ? null :
             r.div({
                 key: 'pub-list'

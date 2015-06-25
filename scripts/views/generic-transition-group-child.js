@@ -15,18 +15,15 @@ var _ = {
     };
   },
 
-  getDefaultProps: function () {
-    return {
-      transitionName:  'height',
-      transitionEnter: true,
-      transitionLeave: false
-    };
-  },
-
-  componentWillEnter: function (done) {
-    switch (this.props.transitionName) {
+  componentWillEnter: function (callback) {
+    if (!this.props.transitionEnter) {
+      callback();
+      return;
+    }
+    var name = this.props.transitionName;
+    var node = r.findDOMNode(this);
+    switch (name) {
       case 'height':
-        var node   = r.findDOMNode(this);
         var height = getComputedStyle(node).getPropertyValue('height');
         node.classList.add('height-enter');
         node.style.maxHeight = '0px';
@@ -37,17 +34,47 @@ var _ = {
                 node.classList.remove('height-enter');
                 node.classList.remove('height-enter-active');
                 node.style.maxHeight = null;
-                done();
+                callback();
               }, TRANSITION_DURATION);
           }, TICK);
         break;
+      case 'width':
+        var width = getComputedStyle(node).getPropertyValue('width');
+        node.classList.add('width-enter');
+        node.style.maxWidth = '0px';
+        setTimeout(function () {
+            node.classList.add('width-enter-active');
+            node.style.maxWidth = width;
+            setTimeout(function () {
+                node.classList.remove('width-enter');
+                node.classList.remove('width-enter-active');
+                node.style.maxWidth = null;
+                callback();
+              }, TRANSITION_DURATION);
+          }, TICK);
+        break;
+      default:
+        node.classList.add(name + '-enter');
+        setTimeout(function () {
+            node.classList.add(name + '-enter-active');
+            setTimeout(function () {
+                node.classList.remove(name + '-enter');
+                node.classList.remove(name + '-enter-active');
+                callback();
+              }, TRANSITION_DURATION);
+          }, TICK);
     }
   },
 
-  componentWillLeave: function (done) {
-    switch (this.props.transitionName) {
+  componentWillLeave: function (callback) {
+    if (!this.props.transitionLeave) {
+      callback();
+      return;
+    }
+    var name = this.props.transitionName;
+    var node = r.findDOMNode(this);
+    switch (name) {
       case 'height':
-        var node   = r.findDOMNode(this);
         var height = getComputedStyle(node).getPropertyValue('height');
         node.classList.add('height-leave');
         node.style.maxHeight = height;
@@ -58,10 +85,35 @@ var _ = {
                 node.classList.remove('height-leave');
                 node.classList.remove('height-leave-active');
                 node.style.maxHeight = null;
-                done();
+                callback();
               }, TRANSITION_DURATION);
           }, TICK);
         break;
+      case 'width':
+        var width = getComputedStyle(node).getPropertyValue('width');
+        node.classList.add('width-leave');
+        node.style.maxWidth = width;
+        setTimeout(function () {
+            node.classList.add('width-leave-active');
+            node.style.maxWidth = '0px';
+            setTimeout(function () {
+                node.classList.remove('width-leave');
+                node.classList.remove('width-leave-active');
+                node.style.maxWidth = null;
+                callback();
+              }, TRANSITION_DURATION);
+          }, TICK);
+        break;
+      default:
+        node.classList.add(name + '-leave');
+        setTimeout(function () {
+            node.classList.add(name + '-leave-active');
+            setTimeout(function () {
+                node.classList.remove(name + '-leave');
+                node.classList.remove(name + '-leave-active');
+                callback();
+              }, TRANSITION_DURATION);
+          }, TICK);
     }
   },
 

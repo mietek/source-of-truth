@@ -35,7 +35,9 @@ var _ = {
           },
           'Abstract' +
             (this.state.isHidden ? ' …' : ''))),
-        genericTransitionGroup({},
+        genericTransitionGroup({
+            transitionName: 'height'
+          },
           this.state.isHidden ? null :
             r.div({
                 key:       'abstract',
