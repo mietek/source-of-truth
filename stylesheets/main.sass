@@ -265,23 +265,23 @@ body
   display: block
 
 
-// NOTE: $slide-duration must match SLIDE_DURATION in JS
-$slide-duration: 250ms
+// NOTE: $transition-duration must match TRANSITION_DURATION in JS
+$transition-duration: 250ms
 
-.slide-enter
+.height-enter
   // NOTE: JS code sets max-height: 0%
   opacity: 0
   overflow-y: hidden
-  &.slide-enter-active
+  &.height-enter-active
     // NOTE: JS code sets max-height: 100%
     opacity: 1
-    transition: all $slide-duration ease
+    transition: all $transition-duration ease
 
-.slide-leave
+.height-leave
   // NOTE: JS code sets max-height: 100%
   opacity: 1
-  &.slide-leave-active
+  &.height-leave-active
     // NOTE: JS code sets max-height: 0%
     opacity: 0
-    transition: all $slide-duration ease
+    transition: all $transition-duration ease
     overflow-y: hidden

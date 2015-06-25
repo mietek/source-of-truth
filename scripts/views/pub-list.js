@@ -3,7 +3,7 @@
 var r = require('../common/react');
 
 var pubItem = require('./pub-item');
-var slideTransitionGroup = require('./slide-transition-group');
+var genericTransitionGroup = require('./generic-transition-group');
 
 var _ = {
   propTypes: function () {
@@ -55,7 +55,7 @@ var _ = {
                 }.bind(this)
               },
               label)),
-        slideTransitionGroup({},
+        genericTransitionGroup({},
           this.state.isHidden ? null :
             r.div({
                 key: 'pub-list'

@@ -3,12 +3,12 @@
 var r = require('../common/react');
 var utils = require('../common/utils');
 
-var slideTransitionGroupChild = require('./slide-transition-group-child');
+var genericTransitionGroupChild = require('./generic-transition-group-child');
 
 var _ = {
   renderChild: function (child) {
     return (
-      slideTransitionGroupChild({},
+      genericTransitionGroupChild({},
         child));
   },
 
@@ -21,4 +21,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('SlideTransitionGroup', _);
+module.exports = r.makeClassFactory('GenericTransitionGroup', _);

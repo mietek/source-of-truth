@@ -2,7 +2,7 @@
 
 var r = require('../common/react');
 
-var slideTransitionGroup = require('./slide-transition-group');
+var genericTransitionGroup = require('./generic-transition-group');
 
 var _ = {
   propTypes: function () {
@@ -35,7 +35,7 @@ var _ = {
           },
           'Abstract' +
             (this.state.isHidden ? ' …' : ''))),
-        slideTransitionGroup({},
+        genericTransitionGroup({},
           this.state.isHidden ? null :
             r.div({
                 key:       'abstract',
