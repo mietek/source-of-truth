@@ -138,6 +138,8 @@ var _svgElements = [
 ];
 
 var _ = module.exports = {
+  childrenOnly: window.React.Children.only,
+
   findDOMNode: window.React.findDOMNode,
 
   propTypes: window.React.PropTypes,
@@ -169,6 +171,9 @@ var _ = module.exports = {
     return _.makeFactory(element);
   }
 };
+
+module.exports.transitionGroup    = _.makeFactory(window.React.addons.TransitionGroup);
+module.exports.cssTransitionGroup = _.makeFactory(window.React.addons.CSSTransitionGroup);
 
 _htmlElements.concat(_svgElements).forEach(function (element) {
     module.exports[element] = _.makeFactory(element);

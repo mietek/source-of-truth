@@ -263,3 +263,25 @@ body
   border: 0px $blackC solid
   border-bottom-width: 1px
   display: block
+
+
+// NOTE: $slide-duration must match SLIDE_DURATION in JS
+$slide-duration: 250ms
+
+.slide-enter
+  // NOTE: JS code sets max-height: 0%
+  opacity: 0
+  overflow-y: hidden
+  &.slide-enter-active
+    // NOTE: JS code sets max-height: 100%
+    opacity: 1
+    transition: all $slide-duration ease
+
+.slide-leave
+  // NOTE: JS code sets max-height: 100%
+  opacity: 1
+  &.slide-leave-active
+    // NOTE: JS code sets max-height: 0%
+    opacity: 0
+    transition: all $slide-duration ease
+    overflow-y: hidden
