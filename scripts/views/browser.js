@@ -136,7 +136,6 @@ var _ = {
                 columnCount: columnCount
               },
               pdfColumn({
-                  key: lastId,
                   url: document.location.origin + '/_entries/' + lastItem.basename + '.pdf'
                 })))));
   }
