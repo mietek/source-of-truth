@@ -73,22 +73,33 @@ var _ = {
     }
   },
 
-  componentDidUpdate: function () {
-    var node   = r.findDOMNode(this);
-    var startX = node.scrollLeft;
-    var maxX   = node.scrollWidth - node.clientWidth;
-    easeScroll.tween(startX, maxX, maxX, 500, function (x) {
-        node.scrollLeft = x;
-      });
+  getColumnCount: function (state) {
+    var lastId   = state.path.length && state.path[state.path.length - 1];
+    var lastItem = lastId && state.itemsById[lastId];
+    var hasPdf   = lastItem && lastItem.type === 'pub' && lastItem.basename;
+    return (
+      1 + state.path.length + (
+        hasPdf ? 1 : 0));
+  },
+
+  componentDidUpdate: function (prevProps, prevState) {
+    var prevCount   = this.getColumnCount(prevState);
+    var columnCount = this.getColumnCount(this.state);
+    if (prevCount < columnCount) {
+      var node   = r.findDOMNode(this);
+      var startX = node.scrollLeft;
+      var maxX   = node.scrollWidth - node.clientWidth;
+      easeScroll.tween(startX, maxX, maxX, 500, function (x) {
+          node.scrollLeft = x;
+        });
+    }
   },
 
   render: function () {
     var lastId      = this.state.path.length && this.state.path[this.state.path.length - 1];
     var lastItem    = lastId && this.state.itemsById[lastId];
     var hasPdf      = lastItem && lastItem.type === 'pub' && lastItem.basename;
-    var columnCount = (
-      1 + this.state.path.length + (
-        hasPdf ? 1 : 0));
+    var columnCount = this.getColumnCount(this.state);
     return (
       r.div('browser',
         r.div({
