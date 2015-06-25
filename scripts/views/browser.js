@@ -131,4 +131,4 @@ var _ = {
   }
 };
 
-module.exports = r.makeClassFactory('MainView', _);
+module.exports = r.makeClassFactory('Browser', _);
