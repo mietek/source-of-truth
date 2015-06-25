@@ -3,6 +3,7 @@
 var r = require('../common/react');
 
 var pubItem = require('./pub-item');
+var slideTransitionGroup = require('./slide-transition-group');
 
 var _ = {
   propTypes: function () {
@@ -54,19 +55,23 @@ var _ = {
                 }.bind(this)
               },
               label)),
-        this.state.isHidden ? null :
-          this.props.pubs.map(function (pub, index) {
-              return (
-                pubItem({
-                    key:        index,
-                    pubId:      pub.id,
-                    signature:  pub.signature,
-                    title:      pub.title,
-                    isPartial:  pub.isPartial,
-                    selectedId: this.props.selectedId,
-                    onSelect:   this.props.onSelect
-                  }));
-            }.bind(this))));
+        slideTransitionGroup({},
+          this.state.isHidden ? null :
+            r.div({
+                key: 'pub-list'
+              },
+              this.props.pubs.map(function (pub, index) {
+                  return (
+                    pubItem({
+                        key:        index,
+                        pubId:      pub.id,
+                        signature:  pub.signature,
+                        title:      pub.title,
+                        isPartial:  pub.isPartial,
+                        selectedId: this.props.selectedId,
+                        onSelect:   this.props.onSelect
+                      }));
+                }.bind(this))))));
   }
 };
 

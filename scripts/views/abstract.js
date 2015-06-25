@@ -2,6 +2,8 @@
 
 var r = require('../common/react');
 
+var slideTransitionGroup = require('./slide-transition-group');
+
 var _ = {
   propTypes: function () {
     return {
@@ -33,13 +35,15 @@ var _ = {
           },
           'Abstract' +
             (this.state.isHidden ? ' …' : ''))),
-        this.state.isHidden ? null :
-          r.div({
-              className: 'content',
-              dangerouslySetInnerHTML: {
-                __html: this.props.content
-              }
-            })));
+        slideTransitionGroup({},
+          this.state.isHidden ? null :
+            r.div({
+                key:       'abstract',
+                className: 'content',
+                dangerouslySetInnerHTML: {
+                  __html: this.props.content
+                }
+              }))));
   }
 };
 
