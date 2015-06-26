@@ -107,7 +107,10 @@ var _ = {
 
   render: function () {
     return (
-      r.div('pdf'));
+      r.div('pdf',
+        this.state.pdf ? null :
+          r.span('label',
+            'Loading…')));
   }
 };
 
