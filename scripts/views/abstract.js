@@ -34,7 +34,7 @@ var _ = {
             }.bind(this)
           },
           'Abstract' +
-            (this.state.isHidden ? ' …' : ''))),
+            (this.state.isHidden ? '…' : ''))),
         genericTransitionGroup({
             transitionName: 'height'
           },

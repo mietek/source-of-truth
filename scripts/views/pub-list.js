@@ -38,7 +38,7 @@ var _ = {
       this.props.isSwapped ?
         (this.props.label + ' ' + this.props.pubs.length) :
         (this.props.pubs.length + ' ' + this.props.label)) + (
-          (this.state.isHidden ? ' …' : ''));
+          (this.state.isHidden ? '…' : ''));
     return (
       r.div('pub-list' + (
           (this.props.isNumbered ? ' numbered' : '')),
