@@ -1,0 +1,201 @@
+title: Self-representation in Girard’s System U
+authors:
+  - Matt Brown
+  - Jens Palsberg
+year: 2015
+basename: brown-2015
+collection: Direct reflection
+abstract: |
+  <p>In 1991, Pfenning and Lee studied whether System F could support a typed self-interpreter. They concluded that typed self-representation for System F “seems to be impossible”, but were able to represent System F in F<sub>ω</sub> . Further, they found that the representation of F<sub>ω</sub> requires kind polymorphism, which is outside F<sub>ω</sub>. In 2009, Rendel, Ostermann and Hofer conjectured that the representation of kind-polymorphic terms would require another, higher form of polymorphism. Is this a case of infinite regress? We show that it is not and present a typed self-representation for Girard’s System U, the first for a λ-calculus with decidable type checking. System U extends System F<sub>ω</sub> with kind polymorphic terms and types. We show that kind polymorphic types (i.e. types that depend on kinds) are sufficient to “tie the knot” — they enable representations of kind polymorphic terms without introducing another form of polymorphism. Our self-representation supports operations that iterate over a term, each of which can be applied to a representation of itself. We present three typed self-applicable operations: a self-interpreter that recovers a term from its representation, a predicate that tests the intensional structure of a term, and a typed continuation-passing-style (CPS) transformation — the first typed self-applicable CPS transformation. Our techniques could have applications from verifiably type-preserving metaprograms, to growable typed languages, to more efficient self-interpreters.</p>
+citations:
+
+  - authors:
+      - Matt Brown
+      - Jens Palsberg
+    title: Self-representation in Girard’s System U
+    year: 2015
+
+  - authors:
+      - Harold Abelson
+      - Gerald Jay Sussman
+      - Julie Sussman
+    title: Structure and interpretation of computer programs
+    year: 1985
+
+  - author: Emil Axelsson
+    title: A generic abstract syntax model for embedded languages
+    year: 2012
+
+  - author: Henk Barendregt
+    title: Self-interpretations in lambda calculus
+    year: 1991
+
+  - author: Henk Barendregt
+    title: Lambda calculi with types
+    year: 1993
+
+  - author: Gilles Barthe
+    title: Type-checking injective pure type systems
+    year: 1999
+
+  - author: Michel Bel
+    title: A recursion theoretic self interpreter for the lambda-calculus
+
+  - authors:
+      - Alessandro Berarducci
+      - Corrado Böhm
+    title: A self-interpreter of lambda calculus having a normal form
+    year: 1992
+
+  - authors:
+      - Jacques Carette
+      - Oleg Kiselyov
+      - Chung-chieh Shan
+    title: "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages"
+    year: 2009
+
+  - authors:
+      - Chiyan Chen
+      - Hongwei Xi
+    title: Meta-programming through typeful code representation
+    year: 2003
+
+  - authors:
+      - Chiyan Chen
+      - Hongwei Xi
+    title: Meta-programming through typeful code representation
+    year: 2005
+
+  - author: Adam Chlipala
+    title: Parametric higher-order abstract syntax for mechanized semantics
+    year: 2008
+
+  - author: Brendan Eich
+    title: Narcissus
+    year: 2010
+
+  - authors:
+      - Herman Geuvers
+      - Mark-Jan Nederhof
+    title: Modular proof of strong normalization for the calculus of constructions
+    year: 1991
+
+  - author: Jan Herman Geuvers
+    title: Logics and type systems
+    year: 1993
+
+  - author: Jean-Yves Girard
+    title: Interprétation fonctionelle et élimination des coupures de l’arithmétique d’ordre supérieur
+    year: 1972
+
+  - authors:
+      - Barry Jay
+      - Jens Palsberg
+    title: Typed self-interpretation by pattern matching
+    year: 2011
+
+  - author: Stephen C. Kleene
+    title: λ-definability and recursiveness
+    year: 1936
+
+  - authors:
+      - Oleg Mazonka
+      - Daniel B. Cristofani
+    title: A very short self-interpreter
+    year: 2003
+
+  - author: Conor McBride
+    title: "Outrageous but meaningful coincidences: Dependent type-safe syntax and evaluation"
+    year: 2010
+
+  - author: John McCarthy
+    title: Recursive functions of symbolic expressions and their computation by machine, part I
+    year: 1960
+
+  - author: Torben Æ. Mogensen
+    title: Efficient self-interpretations in lambda calculus
+    year: 1992
+
+  - author: Torben Æ. Mogensen
+    title: Linear-time self-interpretation of the pure lambda calculus
+    year: 2000
+
+  - authors:
+      - Greg Morrisett
+      - David Walker
+      - Karl Crary
+      - Neal Glew
+    title: From System F to typed assembly language
+    year: 1999
+
+  - author: Matthew Naylor
+    title: Evaluating Haskell in Haskell
+    year: 2008
+
+  - authors:
+      - Frank Pfenning
+      - Peter Lee
+    title: Metacircularity in the polymorphic λ-calculus
+    year: 1991
+
+  - authors:
+      - Tillmann Rendel
+      - Klaus Ostermann
+      - Christian Hofer
+    title: Typed self-representation
+    year: 2009
+
+  - author: John C. Reynolds
+    title: Definitional interpreters for higher-order programming languages
+    year: 1972
+
+  - author: Andreas Rossberg
+    title: HaMLet
+    year: 2010
+
+  - authors:
+      - Bratin Saha
+      - Valery Trifonov
+      - Zhong Shao
+    title: Intensional analysis of quantified types
+    year: 2003
+
+  - authors:
+      - Fangmin Song
+      - Yongsen Xu
+      - Yuechen Qian
+    title: The self-reduction in lambda calculus
+    year: 2000
+
+  - author: John Tromp
+    title: Binary lambda calculus and combinatory logic
+    year: 2006
+
+  - author: Philip Wadler
+    title: The expression problem
+
+  - authors:
+      - Alessandro Warth
+      - Ian Piumarta
+    title: "Ometa: An object-oriented language for pattern matching"
+    year: 2007
+
+  - authors:
+      - Geoffrey Washburn
+      - Stephanie Weirich
+    title: "Boxes go bananas: Encoding higher-order abstract syntax with parametric polymorphism"
+    year: 2003
+
+  - author: Wikipedia
+    title: PyPy
+    year: 2010
+
+  - author: Wikipedia
+    title: Rubinius
+    year: 2010
+
+  - authors:
+      - Tetsuo Yokoyama
+      - Robert Glück
+    title: A reversible programming language and its invertible self-interpreter
+    year: 2007

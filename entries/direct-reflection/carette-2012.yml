@@ -1,0 +1,92 @@
+title: Towards typing for small-step direct reflection
+authors:
+  - Jacques Carette
+  - Aaron Stump
+year: 2012
+basename: carette-2012
+collection: Direct reflection
+abstract: |
+  <p>Direct reflection is a form of meta-programming in which program terms can intensionally analyze other program terms. Previous work defined a big-step semantics for a directly reflective language called Archon, with a conservative approach to variable scoping based on operations for opening a lambda-abstraction and swapping the order of nested lambda-abstractions. In this short paper, we give a small-step semantics for a revised version of Archon, based on operations for opening and closing lambda abstractions. We then discuss challenges for designing a static type system for this language, which is our ultimate goal.</p>
+citations:
+
+  - authors:
+      - Robert Atkey
+      - Sam Lindley
+      - Jeremy Yallop
+    title: Unembedding domain-specific languages
+    year: 2009
+
+  - authors:
+      - Jacques Carette
+      - Oleg Kiselyov
+      - Chung chieh Shan
+    title: "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages"
+    year: 2009
+
+  - author: Paul C. Gilmore
+    title: "An intensional type theory: Motivation and cut-elimination"
+    year: 2001
+
+  - authors:
+      - M. Hills
+      - G. Rosu
+    title: A rewriting logic semantics approach to modular program analysis
+    year: 2010
+
+  - author: Barry Jay
+    title: "Pattern calculus: Computing with functions and structures"
+    year: 2009
+
+  - authors:
+      - Barry Jay
+      - Thomas Given-Wilson
+    title: A combinatory account of internal structure
+
+  - authors:
+      - Barry Jay
+      - Jens Palsberg
+    title: Typed self-interpretation by pattern matching
+    year: 2011
+
+  - authors:
+      - Ik-Soon Kim
+      - Kwangkeun Yi
+      - Cristiano Calcagno
+    title: A polymorphic modal type system for Lisp-like multi-staged languages
+    year: 2006
+
+  - authors:
+      - G. Kuan
+      - D. MacQueen
+      - R. Findler
+    title: A rewriting semantics for type inference
+    year: 2007
+
+  - authors:
+      - Tillmann Rendel
+      - Klaus Ostermann
+      - Christian Hofer
+    title: Typed self-representation
+    year: 2009
+
+  - author: Morten Rhiger
+    title: First-class open and closed code fragments
+    year: 2005
+
+  - author: Aaron Stump
+    title: Directly reflective meta-programming
+    year: 2009
+
+  - authors:
+      - Aaron Stump
+      - Garrin Kimmell
+      - Roba El Haj Omar
+    title: Type preservation as a confluence problem
+    year: 2011
+
+  - authors:
+      - Stephanie Weirich
+      - Brent A. Yorgey
+      - Tim Sheard
+    title: Binders unbound
+    year: 2011

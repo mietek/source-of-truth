@@ -2208,6 +2208,914 @@ module.exports = [
     ]
   },
   {
+    "title": "The intensional lambda calculus",
+    "authors": [
+      "Sergei Artemov",
+      "Eduardo Bonelli"
+    ],
+    "year": 2007,
+    "basename": "artemov-2007",
+    "collection": "Direct reflection",
+    "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on how a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
+    "numbered": "n",
+    "citations": [
+      {
+        "authors": [
+          "Jesse Alt",
+          "Sergei Artemov"
+        ],
+        "title": "Reflective λ-calculus",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Sergei Artemov",
+          "Eduardo Bonelli"
+        ],
+        "title": "The intensional lambda calculus",
+        "year": 2006
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Proof realization of intuitionistic and modal logics",
+        "year": 1996
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Unified semantics of modality and λ-terms via proof polynomials",
+        "year": 2001
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "author": "Vladimir Brezhnev",
+        "title": "On the logic of proofs",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Alonzo Church",
+          "John B. Rosser"
+        ],
+        "title": "Some properties of conversion",
+        "year": 1936
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A modal analysis of staged computation",
+        "year": 1996
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A judgmental reconstruction of modal logic",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A modal analysis of staged computation",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Jean-Yves Girard",
+          "Yves Lafont",
+          "Paul Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Gérard Huet",
+          "Jean-Jacques Lévy"
+        ],
+        "title": "Computations in orthogonal rewriting systems",
+        "year": 1991
+      },
+      {
+        "author": "Jan W. Klop",
+        "title": "Combinatory reduction systems",
+        "year": 1980
+      },
+      {
+        "authors": [
+          "Zurab Khasidashvili",
+          "Mizuhito Ogawa",
+          "Vincent van Oostrom"
+        ],
+        "title": "Perpetuality and uniform normalization in orthogonal rewrite systems",
+        "year": 2001
+      },
+      {
+        "author": "Jean-Jacques Lévy",
+        "title": "Réductions correctes et optimales dans le lambda-calcul",
+        "year": 1978
+      },
+      {
+        "author": "Per Martin-Löf",
+        "title": "On the meaning of the logical constants and the justifications of the logical laws",
+        "year": 1983
+      },
+      {
+        "author": "Tobias Nipkow",
+        "title": "Higher-order critical pairs",
+        "year": 1991
+      },
+      {
+        "author": "Terese",
+        "title": "Term rewriting systems",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Philip Wickline",
+          "Peter Lee",
+          "Frank Pfenning",
+          "Rowan Davies"
+        ],
+        "title": "Modal types as staging specifications for run-time code generation",
+        "year": 1998
+      }
+    ]
+  },
+  {
+    "title": "Self-representation in Girard’s System U",
+    "authors": [
+      "Matt Brown",
+      "Jens Palsberg"
+    ],
+    "year": 2015,
+    "basename": "brown-2015",
+    "collection": "Direct reflection",
+    "abstract": "<p>In 1991, Pfenning and Lee studied whether System F could support a typed self-interpreter. They concluded that typed self-representation for System F “seems to be impossible”, but were able to represent System F in F<sub>ω</sub> . Further, they found that the representation of F<sub>ω</sub> requires kind polymorphism, which is outside F<sub>ω</sub>. In 2009, Rendel, Ostermann and Hofer conjectured that the representation of kind-polymorphic terms would require another, higher form of polymorphism. Is this a case of infinite regress? We show that it is not and present a typed self-representation for Girard’s System U, the first for a λ-calculus with decidable type checking. System U extends System F<sub>ω</sub> with kind polymorphic terms and types. We show that kind polymorphic types (i.e. types that depend on kinds) are sufficient to “tie the knot” — they enable representations of kind polymorphic terms without introducing another form of polymorphism. Our self-representation supports operations that iterate over a term, each of which can be applied to a representation of itself. We present three typed self-applicable operations: a self-interpreter that recovers a term from its representation, a predicate that tests the intensional structure of a term, and a typed continuation-passing-style (CPS) transformation — the first typed self-applicable CPS transformation. Our techniques could have applications from verifiably type-preserving metaprograms, to growable typed languages, to more efficient self-interpreters.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Matt Brown",
+          "Jens Palsberg"
+        ],
+        "title": "Self-representation in Girard’s System U",
+        "year": 2015
+      },
+      {
+        "authors": [
+          "Harold Abelson",
+          "Gerald Jay Sussman",
+          "Julie Sussman"
+        ],
+        "title": "Structure and interpretation of computer programs",
+        "year": 1985
+      },
+      {
+        "author": "Emil Axelsson",
+        "title": "A generic abstract syntax model for embedded languages",
+        "year": 2012
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Self-interpretations in lambda calculus",
+        "year": 1991
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1993
+      },
+      {
+        "author": "Gilles Barthe",
+        "title": "Type-checking injective pure type systems",
+        "year": 1999
+      },
+      {
+        "author": "Michel Bel",
+        "title": "A recursion theoretic self interpreter for the lambda-calculus"
+      },
+      {
+        "authors": [
+          "Alessandro Berarducci",
+          "Corrado Böhm"
+        ],
+        "title": "A self-interpreter of lambda calculus having a normal form",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Jacques Carette",
+          "Oleg Kiselyov",
+          "Chung-chieh Shan"
+        ],
+        "title": "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages",
+        "year": 2009
+      },
+      {
+        "authors": [
+          "Chiyan Chen",
+          "Hongwei Xi"
+        ],
+        "title": "Meta-programming through typeful code representation",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Chiyan Chen",
+          "Hongwei Xi"
+        ],
+        "title": "Meta-programming through typeful code representation",
+        "year": 2005
+      },
+      {
+        "author": "Adam Chlipala",
+        "title": "Parametric higher-order abstract syntax for mechanized semantics",
+        "year": 2008
+      },
+      {
+        "author": "Brendan Eich",
+        "title": "Narcissus",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "Herman Geuvers",
+          "Mark-Jan Nederhof"
+        ],
+        "title": "Modular proof of strong normalization for the calculus of constructions",
+        "year": 1991
+      },
+      {
+        "author": "Jan Herman Geuvers",
+        "title": "Logics and type systems",
+        "year": 1993
+      },
+      {
+        "author": "Jean-Yves Girard",
+        "title": "Interprétation fonctionelle et élimination des coupures de l’arithmétique d’ordre supérieur",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "Barry Jay",
+          "Jens Palsberg"
+        ],
+        "title": "Typed self-interpretation by pattern matching",
+        "year": 2011
+      },
+      {
+        "author": "Stephen C. Kleene",
+        "title": "λ-definability and recursiveness",
+        "year": 1936
+      },
+      {
+        "authors": [
+          "Oleg Mazonka",
+          "Daniel B. Cristofani"
+        ],
+        "title": "A very short self-interpreter",
+        "year": 2003
+      },
+      {
+        "author": "Conor McBride",
+        "title": "Outrageous but meaningful coincidences: Dependent type-safe syntax and evaluation",
+        "year": 2010
+      },
+      {
+        "author": "John McCarthy",
+        "title": "Recursive functions of symbolic expressions and their computation by machine, part I",
+        "year": 1960
+      },
+      {
+        "author": "Torben Æ. Mogensen",
+        "title": "Efficient self-interpretations in lambda calculus",
+        "year": 1992
+      },
+      {
+        "author": "Torben Æ. Mogensen",
+        "title": "Linear-time self-interpretation of the pure lambda calculus",
+        "year": 2000
+      },
+      {
+        "authors": [
+          "Greg Morrisett",
+          "David Walker",
+          "Karl Crary",
+          "Neal Glew"
+        ],
+        "title": "From System F to typed assembly language",
+        "year": 1999
+      },
+      {
+        "author": "Matthew Naylor",
+        "title": "Evaluating Haskell in Haskell",
+        "year": 2008
+      },
+      {
+        "authors": [
+          "Frank Pfenning",
+          "Peter Lee"
+        ],
+        "title": "Metacircularity in the polymorphic λ-calculus",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "Tillmann Rendel",
+          "Klaus Ostermann",
+          "Christian Hofer"
+        ],
+        "title": "Typed self-representation",
+        "year": 2009
+      },
+      {
+        "author": "John C. Reynolds",
+        "title": "Definitional interpreters for higher-order programming languages",
+        "year": 1972
+      },
+      {
+        "author": "Andreas Rossberg",
+        "title": "HaMLet",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "Bratin Saha",
+          "Valery Trifonov",
+          "Zhong Shao"
+        ],
+        "title": "Intensional analysis of quantified types",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Fangmin Song",
+          "Yongsen Xu",
+          "Yuechen Qian"
+        ],
+        "title": "The self-reduction in lambda calculus",
+        "year": 2000
+      },
+      {
+        "author": "John Tromp",
+        "title": "Binary lambda calculus and combinatory logic",
+        "year": 2006
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "The expression problem"
+      },
+      {
+        "authors": [
+          "Alessandro Warth",
+          "Ian Piumarta"
+        ],
+        "title": "Ometa: An object-oriented language for pattern matching",
+        "year": 2007
+      },
+      {
+        "authors": [
+          "Geoffrey Washburn",
+          "Stephanie Weirich"
+        ],
+        "title": "Boxes go bananas: Encoding higher-order abstract syntax with parametric polymorphism",
+        "year": 2003
+      },
+      {
+        "author": "Wikipedia",
+        "title": "PyPy",
+        "year": 2010
+      },
+      {
+        "author": "Wikipedia",
+        "title": "Rubinius",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "Tetsuo Yokoyama",
+          "Robert Glück"
+        ],
+        "title": "A reversible programming language and its invertible self-interpreter",
+        "year": 2007
+      }
+    ]
+  },
+  {
+    "title": "Towards typing for small-step direct reflection",
+    "authors": [
+      "Jacques Carette",
+      "Aaron Stump"
+    ],
+    "year": 2012,
+    "basename": "carette-2012",
+    "collection": "Direct reflection",
+    "abstract": "<p>Direct reflection is a form of meta-programming in which program terms can intensionally analyze other program terms. Previous work defined a big-step semantics for a directly reflective language called Archon, with a conservative approach to variable scoping based on operations for opening a lambda-abstraction and swapping the order of nested lambda-abstractions. In this short paper, we give a small-step semantics for a revised version of Archon, based on operations for opening and closing lambda abstractions. We then discuss challenges for designing a static type system for this language, which is our ultimate goal.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Robert Atkey",
+          "Sam Lindley",
+          "Jeremy Yallop"
+        ],
+        "title": "Unembedding domain-specific languages",
+        "year": 2009
+      },
+      {
+        "authors": [
+          "Jacques Carette",
+          "Oleg Kiselyov",
+          "Chung chieh Shan"
+        ],
+        "title": "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages",
+        "year": 2009
+      },
+      {
+        "author": "Paul C. Gilmore",
+        "title": "An intensional type theory: Motivation and cut-elimination",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "M. Hills",
+          "G. Rosu"
+        ],
+        "title": "A rewriting logic semantics approach to modular program analysis",
+        "year": 2010
+      },
+      {
+        "author": "Barry Jay",
+        "title": "Pattern calculus: Computing with functions and structures",
+        "year": 2009
+      },
+      {
+        "authors": [
+          "Barry Jay",
+          "Thomas Given-Wilson"
+        ],
+        "title": "A combinatory account of internal structure"
+      },
+      {
+        "authors": [
+          "Barry Jay",
+          "Jens Palsberg"
+        ],
+        "title": "Typed self-interpretation by pattern matching",
+        "year": 2011
+      },
+      {
+        "authors": [
+          "Ik-Soon Kim",
+          "Kwangkeun Yi",
+          "Cristiano Calcagno"
+        ],
+        "title": "A polymorphic modal type system for Lisp-like multi-staged languages",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "G. Kuan",
+          "D. MacQueen",
+          "R. Findler"
+        ],
+        "title": "A rewriting semantics for type inference",
+        "year": 2007
+      },
+      {
+        "authors": [
+          "Tillmann Rendel",
+          "Klaus Ostermann",
+          "Christian Hofer"
+        ],
+        "title": "Typed self-representation",
+        "year": 2009
+      },
+      {
+        "author": "Morten Rhiger",
+        "title": "First-class open and closed code fragments",
+        "year": 2005
+      },
+      {
+        "author": "Aaron Stump",
+        "title": "Directly reflective meta-programming",
+        "year": 2009
+      },
+      {
+        "authors": [
+          "Aaron Stump",
+          "Garrin Kimmell",
+          "Roba El Haj Omar"
+        ],
+        "title": "Type preservation as a confluence problem",
+        "year": 2011
+      },
+      {
+        "authors": [
+          "Stephanie Weirich",
+          "Brent A. Yorgey",
+          "Tim Sheard"
+        ],
+        "title": "Binders unbound",
+        "year": 2011
+      }
+    ]
+  },
+  {
+    "title": "Directly reflective meta-programming",
+    "author": "Aaron Stump",
+    "year": 2009,
+    "basename": "stump-2009",
+    "collection": "Direct reflection",
+    "abstract": "<p>Existing meta-programming languages operate on encodings of programs as data. This paper presents a new meta-programming language, based on an untyped lambda calculus, in which structurally reflective programming is supported directly, without any encoding. The language features call-by-value and call-by-name lambda abstractions, as well as novel reflective features enabling the intensional manipulation of arbitrary program terms. The language is scope safe, in the sense that variables can neither be captured nor escape their scopes. The expressiveness of the language is demonstrated by showing how to implement quotation and evaluation operations, as proposed by Wand. The language's utility for meta-programming is further demonstrated through additional representative examples. A prototype implementation is described and evaluated.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "K. Arnold",
+          "J. Gosling",
+          "D. Holmes"
+        ],
+        "title": "The Java programming language",
+        "year": 2000
+      },
+      {
+        "authors": [
+          "B. Aydemir",
+          "A. Bohannon",
+          "M. Fairbairn",
+          "J. Foster",
+          "B. Pierce",
+          "P. Sewell",
+          "D. Vytiniotis",
+          "G. Washburn",
+          "S. Weirich",
+          "S. Zdancewic"
+        ],
+        "title": "Mechanized metatheory for the masses: The POPLmark Challenge",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "C. Chen",
+          "H. Xi"
+        ],
+        "title": "Meta-programming through typeful code representation",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "M. Clavel",
+          "F. Durán",
+          "S. Eker",
+          "P. Lincoln",
+          "N. Martí-Oliet",
+          "J. Meseguer"
+        ],
+        "title": "Metalevel computation",
+        "year": 1998
+      },
+      {
+        "author": "R. Constable",
+        "title": "Using reflection to explain and enhance type theory",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "K. Crary",
+          "S. Weirich",
+          "G. Morrisett"
+        ],
+        "title": "Intensional polymorphism in type-erasure semantics",
+        "year": 2002
+      },
+      {
+        "authors": [
+          "H. Curry",
+          "J. Hindley",
+          "J. Seldin"
+        ],
+        "title": "Combinatory logic, vol. 2",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "M. Davis",
+          "J. Schwartz"
+        ],
+        "title": "Metamathematical extensibility for theorem verifiers and proof-checkers",
+        "year": 1979
+      },
+      {
+        "author": "J. Ferber",
+        "title": "Computational reflection in class based object-oriented languages",
+        "year": 1989
+      },
+      {
+        "authors": [
+          "S. Ganz",
+          "A. Sabry",
+          "W. Taha"
+        ],
+        "title": "Macros as multi-stage computations: Type-safe, generative, binding macros in MacroML",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "J. Gao",
+          "M. Heimdahl",
+          "E. Van Wyk"
+        ],
+        "title": "Flexible and extensible notations for modeling languages.",
+        "year": 2007
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "A. Goldberg",
+          "D. Robson"
+        ],
+        "title": "Smalltalk-80: The language and its implementation",
+        "year": 1983
+      },
+      {
+        "author": "J. Harrison",
+        "title": "Metatheory and reflection in theorem proving: A survey and critique",
+        "year": 1995
+      },
+      {
+        "author": "J. Harrison",
+        "title": "The HOL Light system reference",
+        "year": 2006
+      },
+      {
+        "author": "J. Harrison",
+        "title": "Towards self-verification of HOL Light",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "W. Hunt",
+          "M. Kaufmann",
+          "R. Krug",
+          "J. Moore",
+          "E. Smith"
+        ],
+        "title": "Meta reasoning in ACL2",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "S. Jefferson",
+          "D. Friedman"
+        ],
+        "title": "A Simple Reflective Interpreter",
+        "year": 1992
+      },
+      {
+        "author": "S. Peyton Jones",
+        "title": "The implementation of functional programming languages",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "M. Kaufmann",
+          "P. Manolios",
+          "J. Moore"
+        ],
+        "title": "Computer-aided reasoning: An approach",
+        "year": 2000
+      },
+      {
+        "authors": [
+          "R. Kelsey",
+          "W. Clinger",
+          "J. Rees",
+          "et al."
+        ],
+        "title": "Revised⁵ report on the algorithmic language Scheme",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "I.-S. Kim",
+          "K. Yi",
+          "C. Calcagno"
+        ],
+        "title": "A polymorphic modal type system for Lisp-like multi-staged languages.",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "J. Klop",
+          "R. de Vrijer"
+        ],
+        "title": "Examples of TRSs and special rewriting formats",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "E. Kohlbecker",
+          "D. Friedman",
+          "M. Felleisen",
+          "B. Duba"
+        ],
+        "title": "Hygienic macro expansion",
+        "year": 1986
+      },
+      {
+        "author": "X. Leroy",
+        "title": "Formal certification of a compiler back-end, or: Programming a compiler with a proof assistant",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "X. Leroy",
+          "S. Blazy",
+          "Z. Dargaye"
+        ],
+        "title": "Formal verification of a C compiler front-end",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "B. Lewis",
+          "D. LaLiberte",
+          "R. Stallman",
+          "The GNU manual group"
+        ],
+        "title": "GNU Emacs Lisp reference manual",
+        "year": 2000
+      },
+      {
+        "author": "J. McCarthy",
+        "title": "Recursive functions of symbolic expressions and their computation by machine, part I",
+        "year": 1960
+      },
+      {
+        "author": "T. Mogensen",
+        "title": "Efficient self-interpretations in lambda calculus",
+        "year": 1992
+      },
+      {
+        "author": "L. Moreau",
+        "title": "A syntactic theory of dynamic binding",
+        "year": 1997
+      },
+      {
+        "author": "A. Nanevski",
+        "title": "Meta-programming with names and necessity",
+        "year": 2002
+      },
+      {
+        "authors": [
+          "A. Nanevski",
+          "F. Pfenning"
+        ],
+        "title": "Meta-programming with names and necessity",
+        "year": 2005
+      },
+      {
+        "author": "F. Pfenning",
+        "title": "Logical frameworks",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "F. Pfenning",
+          "C. Elliott"
+        ],
+        "title": "Higher-order abstract syntax",
+        "year": 1988
+      },
+      {
+        "author": "B. Pierce",
+        "title": "Types and programming languages",
+        "year": 2002
+      },
+      {
+        "authors": [
+          "A. Robinson",
+          "A. Voronkov"
+        ],
+        "title": "Handbook of automated reasoning",
+        "year": 2001
+      },
+      {
+        "author": "H. Rueß",
+        "title": "Computational reflection in the calculus of constructions and its application to theorem proving",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "C. Schürmann",
+          "A. Poswolsky",
+          "J. Sarnat"
+        ],
+        "title": "The ▽-calculus: Functional programming with higher-order encodings",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "J. Seldin",
+          "J. Hindley"
+        ],
+        "title": "To H.B. Curry: Essays on combinatory logic, lambda calculus, and formalism",
+        "year": 1980
+      },
+      {
+        "authors": [
+          "J. Siskind",
+          "B. Pearlmutter"
+        ],
+        "title": "First-class nonstandard interpretations by opening closures",
+        "year": 2007
+      },
+      {
+        "author": "B. Smith",
+        "title": "Reflection and semantics in Lisp",
+        "year": 1984
+      },
+      {
+        "author": "G. Steele",
+        "title": "Common Lisp: The language",
+        "year": 1990
+      },
+      {
+        "author": "B. Stroustrup",
+        "title": "The C++ programming language",
+        "year": 1997
+      },
+      {
+        "author": "W. Taha",
+        "title": "Multi-stage programming: Its theory and applications",
+        "year": 1999
+      },
+      {
+        "author": "The Coq development team",
+        "title": "The Coq Proof Assistant reference manual",
+        "year": 2004
+      },
+      {
+        "author": "The GHC team",
+        "title": "The Glorious Glasgow Haskell Compilation System user’s guide",
+        "year": 2007
+      },
+      {
+        "author": "The PLT group",
+        "title": "PLT DrScheme: Programming environment manual",
+        "year": 2007
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "Theorems for free!",
+        "year": 1989
+      },
+      {
+        "author": "C. Wadsworth",
+        "title": "Some unusual λ-calculus numeral systems",
+        "year": 1980
+      },
+      {
+        "author": "M. Wand",
+        "title": "The theory of fexprs is trivial",
+        "year": 1998
+      },
+      {
+        "author": "E. Westbrook",
+        "title": "Free variable types",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "A. Wright",
+          "R. Cartwright"
+        ],
+        "title": "A practical soft type system for Scheme.",
+        "year": 1997
+      }
+    ]
+  },
+  {
     "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
     "author": "Marek Łach",
     "year": 1998,

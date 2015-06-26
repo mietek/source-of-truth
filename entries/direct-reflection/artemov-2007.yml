@@ -1,0 +1,115 @@
+title: The intensional lambda calculus
+authors:
+  - Sergei Artemov
+  - Eduardo Bonelli
+year: 2007
+basename: artemov-2007
+collection: Direct reflection
+abstract: |
+  <p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on how a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>
+numbered: n
+citations:
+
+  - authors:
+      - Jesse Alt
+      - Sergei Artemov
+    title: Reflective λ-calculus
+    year: 2001
+
+  - authors:
+      - Sergei Artemov
+      - Eduardo Bonelli
+    title: The intensional lambda calculus
+    year: 2006
+
+  - author: Sergei Artemov
+    title: Operational modal logic
+    year: 1995
+
+  - author: Sergei Artemov
+    title: Proof realization of intuitionistic and modal logics
+    year: 1996
+
+  - author: Sergei Artemov
+    title: Unified semantics of modality and λ-terms via proof polynomials
+    year: 2001
+
+  - author: Henk Barendregt
+    title: Lambda calculi with types
+    year: 1992
+
+  - author: Vladimir Brezhnev
+    title: On the logic of proofs
+    year: 2001
+
+  - authors:
+      - Alonzo Church
+      - John B. Rosser
+    title: Some properties of conversion
+    year: 1936
+
+  - authors:
+      - Rowan Davies
+      - Frank Pfenning
+    title: A modal analysis of staged computation
+    year: 1996
+
+  - authors:
+      - Rowan Davies
+      - Frank Pfenning
+    title: A judgmental reconstruction of modal logic
+    year: 2001
+
+  - authors:
+      - Rowan Davies
+      - Frank Pfenning
+    title: A modal analysis of staged computation
+    year: 2001
+
+  - authors:
+      - Jean-Yves Girard
+      - Yves Lafont
+      - Paul Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - Gérard Huet
+      - Jean-Jacques Lévy
+    title: Computations in orthogonal rewriting systems
+    year: 1991
+
+  - author: Jan W. Klop
+    title: Combinatory reduction systems
+    year: 1980
+
+  - authors:
+      - Zurab Khasidashvili
+      - Mizuhito Ogawa
+      - Vincent van Oostrom
+    title: Perpetuality and uniform normalization in orthogonal rewrite systems
+    year: 2001
+
+  - author: Jean-Jacques Lévy
+    title: Réductions correctes et optimales dans le lambda-calcul
+    year: 1978
+
+  - author: Per Martin-Löf
+    title: On the meaning of the logical constants and the justifications of the logical laws
+    year: 1983
+
+  - author: Tobias Nipkow
+    title: Higher-order critical pairs
+    year: 1991
+
+  - author: Terese
+    title: Term rewriting systems
+    year: 2003
+
+  - authors:
+      - Philip Wickline
+      - Peter Lee
+      - Frank Pfenning
+      - Rowan Davies
+    title: Modal types as staging specifications for run-time code generation
+    year: 1998

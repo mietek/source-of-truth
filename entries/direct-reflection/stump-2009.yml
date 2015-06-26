@@ -1,0 +1,301 @@
+title: Directly reflective meta-programming
+author: Aaron Stump
+year: 2009
+basename: stump-2009
+collection: Direct reflection
+abstract: |
+  <p>Existing meta-programming languages operate on encodings of programs as data. This paper presents a new meta-programming language, based on an untyped lambda calculus, in which structurally reflective programming is supported directly, without any encoding. The language features call-by-value and call-by-name lambda abstractions, as well as novel reflective features enabling the intensional manipulation of arbitrary program terms. The language is scope safe, in the sense that variables can neither be captured nor escape their scopes. The expressiveness of the language is demonstrated by showing how to implement quotation and evaluation operations, as proposed by Wand. The language's utility for meta-programming is further demonstrated through additional representative examples. A prototype implementation is described and evaluated.</p>
+citations:
+
+  - authors:
+      - K. Arnold
+      - J. Gosling
+      - D. Holmes
+    title: The Java programming language
+    year: 2000
+
+  - authors:
+      - B. Aydemir
+      - A. Bohannon
+      - M. Fairbairn
+      - J. Foster
+      - B. Pierce
+      - P. Sewell
+      - D. Vytiniotis
+      - G. Washburn
+      - S. Weirich
+      - S. Zdancewic
+    title: "Mechanized metatheory for the masses: The POPLmark Challenge"
+    year: 2005
+
+  - authors:
+      - C. Chen
+      - H. Xi
+    title: Meta-programming through typeful code representation
+    year: 2005
+
+  - authors:
+      - M. Clavel
+      - F. Durán
+      - S. Eker
+      - P. Lincoln
+      - N. Martí-Oliet
+      - J. Meseguer
+    title: Metalevel computation
+    year: 1998
+
+  - author: R. Constable
+    title: Using reflection to explain and enhance type theory
+    year: 1994
+
+  - authors:
+      - K. Crary
+      - S. Weirich
+      - G. Morrisett
+    title: Intensional polymorphism in type-erasure semantics
+    year: 2002
+
+  - authors:
+      - H. Curry
+      - J. Hindley
+      - J. Seldin
+    title: Combinatory logic, vol. 2
+    year: 1972
+
+  - authors:
+      - M. Davis
+      - J. Schwartz
+    title: Metamathematical extensibility for theorem verifiers and proof-checkers
+    year: 1979
+
+  - author: J. Ferber
+    title: Computational reflection in class based object-oriented languages
+    year: 1989
+
+  - authors:
+      - S. Ganz
+      - A. Sabry
+      - W. Taha
+    title: "Macros as multi-stage computations: Type-safe, generative, binding macros in MacroML"
+    year: 2001
+
+  - authors:
+      - J. Gao
+      - M. Heimdahl
+      - E. Van Wyk
+    title: Flexible and extensible notations for modeling languages.
+    year: 2007
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - A. Goldberg
+      - D. Robson
+    title: "Smalltalk-80: The language and its implementation"
+    year: 1983
+
+  - author: J. Harrison
+    title: "Metatheory and reflection in theorem proving: A survey and critique"
+    year: 1995
+
+  - author: J. Harrison
+    title: The HOL Light system reference
+    year: 2006
+
+  - author: J. Harrison
+    title: Towards self-verification of HOL Light
+    year: 2006
+
+  - authors:
+      - W. Hunt
+      - M. Kaufmann
+      - R. Krug
+      - J. Moore
+      - E. Smith
+    title: Meta reasoning in ACL2
+    year: 2005
+
+  - authors:
+      - S. Jefferson
+      - D. Friedman
+    title: A Simple Reflective Interpreter
+    year: 1992
+
+  - author: S. Peyton Jones
+    title: The implementation of functional programming languages
+    year: 1987
+
+  - authors:
+      - M. Kaufmann
+      - P. Manolios
+      - J. Moore
+    title: "Computer-aided reasoning: An approach"
+    year: 2000
+
+  - authors:
+      - R. Kelsey
+      - W. Clinger
+      - J. Rees
+      - et al.
+    title: Revised⁵ report on the algorithmic language Scheme
+    year: 1998
+
+  - authors:
+      - I.-S. Kim
+      - K. Yi
+      - C. Calcagno
+    title: A polymorphic modal type system for Lisp-like multi-staged languages.
+    year: 2006
+
+  - authors:
+      - J. Klop
+      - R. de Vrijer
+    title: Examples of TRSs and special rewriting formats
+    year: 2003
+
+  - authors:
+      - E. Kohlbecker
+      - D. Friedman
+      - M. Felleisen
+      - B. Duba
+    title: Hygienic macro expansion
+    year: 1986
+
+  - author: X. Leroy
+    title: "Formal certification of a compiler back-end, or: Programming a compiler with a proof assistant"
+    year: 2006
+
+  - authors:
+      - X. Leroy
+      - S. Blazy
+      - Z. Dargaye
+    title: Formal verification of a C compiler front-end
+    year: 2006
+
+  - authors:
+      - B. Lewis
+      - D. LaLiberte
+      - R. Stallman
+      - The GNU manual group
+    title: GNU Emacs Lisp reference manual
+    year: 2000
+
+  - author: J. McCarthy
+    title: Recursive functions of symbolic expressions and their computation by machine, part I
+    year: 1960
+
+  - author: T. Mogensen
+    title: Efficient self-interpretations in lambda calculus
+    year: 1992
+
+  - author: L. Moreau
+    title: A syntactic theory of dynamic binding
+    year: 1997
+
+  - author: A. Nanevski
+    title: Meta-programming with names and necessity
+    year: 2002
+
+  - authors:
+      - A. Nanevski
+      - F. Pfenning
+    title: Meta-programming with names and necessity
+    year: 2005
+
+  - author: F. Pfenning
+    title: Logical frameworks
+    year: 2001
+
+  - authors:
+      - F. Pfenning
+      - C. Elliott
+    title: Higher-order abstract syntax
+    year: 1988
+
+  - author: B. Pierce
+    title: Types and programming languages
+    year: 2002
+
+  - authors:
+      - A. Robinson
+      - A. Voronkov
+    title: Handbook of automated reasoning
+    year: 2001
+
+  - author: H. Rueß
+    title: Computational reflection in the calculus of constructions and its application to theorem proving
+    year: 1997
+
+  - authors:
+      - C. Schürmann
+      - A. Poswolsky
+      - J. Sarnat
+    title: "The ▽-calculus: Functional programming with higher-order encodings"
+    year: 2005
+
+  - authors:
+      - J. Seldin
+      - J. Hindley
+    title: "To H.B. Curry: Essays on combinatory logic, lambda calculus, and formalism"
+    year: 1980
+
+  - authors:
+      - J. Siskind
+      - B. Pearlmutter
+    title: First-class nonstandard interpretations by opening closures
+    year: 2007
+
+  - author: B. Smith
+    title: Reflection and semantics in Lisp
+    year: 1984
+
+  - author: G. Steele
+    title: "Common Lisp: The language"
+    year: 1990
+
+  - author: B. Stroustrup
+    title: The C++ programming language
+    year: 1997
+
+  - author: W. Taha
+    title: "Multi-stage programming: Its theory and applications"
+    year: 1999
+
+  - author: The Coq development team
+    title: The Coq Proof Assistant reference manual
+    year: 2004
+
+  - author: The GHC team
+    title: The Glorious Glasgow Haskell Compilation System user’s guide
+    year: 2007
+
+  - author: The PLT group
+    title: "PLT DrScheme: Programming environment manual"
+    year: 2007
+
+  - author: Philip Wadler
+    title: Theorems for free!
+    year: 1989
+
+  - author: C. Wadsworth
+    title: Some unusual λ-calculus numeral systems
+    year: 1980
+
+  - author: M. Wand
+    title: The theory of fexprs is trivial
+    year: 1998
+
+  - author: E. Westbrook
+    title: Free variable types
+    year: 2006
+
+  - authors:
+      - A. Wright
+      - R. Cartwright
+    title: A practical soft type system for Scheme.
+    year: 1997
