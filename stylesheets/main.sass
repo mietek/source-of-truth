@@ -65,13 +65,15 @@ body
   width: 100%
 
 
-@mixin small-label
+@mixin label
   color: $black9
   font-family: "concourse-c3", sans-serif
   text-transform: lowercase
   vertical-align: top
   position: relative
   top: 1px
+  .selected &
+    color: $white9
 
 @mixin ellipsis
   white-space: nowrap
@@ -110,6 +112,17 @@ body
   width: 100%
   padding: 1px
 
+.section
+  padding-left: 8px
+  padding-right: 8px
+
+.spacer
+  margin-top: 19px
+
+
+.label
+  @include label
+
 
 .header
   width: 100%
@@ -120,14 +133,10 @@ body
   margin-bottom: 19px
 
 .header .label
-  @include small-label
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
   text-align: right
-
-.item.selected .label
-  color: $white9
 
 .header .value
   display: inline-block
@@ -150,11 +159,10 @@ body
   counter-reset: item
 
 .pub-list .label
-  @include small-label
   padding-left: 8px
 
-.wrapper:not(.root) .pub-list .spacer
-  margin-top: 19px
+.wrapper.root .pub-list .spacer
+  margin-top: 0
 
 .pub-list .label.clickable
   @include clickable
@@ -195,7 +203,7 @@ body
   padding-left: 1/9 * 100%
 
 .pub-list.numbered .item .signature:before
-  @include small-label
+  @include label
   @include ellipsis
   content: counter(item)
   display: inline-block
@@ -228,12 +236,6 @@ body
   text-align: justify
   hyphens: auto
 
-.abstract .spacer
-  margin-top: 19px
-
-.abstract .label
-  @include small-label
-
 .abstract .label.clickable
   @include clickable
 
@@ -257,11 +259,6 @@ body
   height: 100%
   position: relative
   z-index: 1
-
-.pdf .label
-  @include small-label
-  padding-left: 8px
-  padding-right: 8px
 
 .pdf canvas
   width: 100%
