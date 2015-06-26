@@ -231,14 +231,36 @@ module.exports = {
     years.sort(function (year1, year2) {
         return ('' + year1.name).localeCompare('' + year2.name);
       });
+    var fullAuthors    = [];
+    var partialAuthors = [];
+    var fullYears      = [];
+    var partialYears   = [];
+    authors.forEach(function (author) {
+        if (author.fullPubs.length) {
+          fullAuthors.push(author);
+        } else {
+          partialAuthors.push(author);
+        }
+      });
+    years.forEach(function (year) {
+        if (year.fullPubs.length) {
+          fullYears.push(year);
+        } else {
+          partialYears.push(year);
+        }
+      });
     return {
-      pubs:        pubs,
-      fullPubs:    fullPubs,
-      partialPubs: partialPubs,
-      authors:     authors,
-      collections: collections,
-      years:       years,
-      itemsById:   itemsById
+      pubs:           pubs,
+      fullPubs:       fullPubs,
+      partialPubs:    partialPubs,
+      collections:    collections,
+      authors:        authors,
+      fullAuthors:    fullAuthors,
+      partialAuthors: partialAuthors,
+      years:          years,
+      fullYears:      fullYears,
+      partialYears:   partialYears,
+      itemsById:      itemsById
     };
   }
 };
