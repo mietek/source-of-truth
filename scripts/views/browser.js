@@ -11,13 +11,14 @@ var pdfColumn = require('./pdf-column');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
-var prevToken;
+var tokens = {};
 
 var _ = {
   getInitialState: function () {
      var db = processor.processDb();
      return utils.assign({}, db, {
-         path: []
+         path:        [],
+         componentId: utils.getRandomUuid()
        });
   },
 
@@ -74,27 +75,48 @@ var _ = {
     }
   },
 
+  getLastId: function (state) {
+    return (
+      state.path.length &&
+      state.path[state.path.length - 1]);
+  },
+
+  getLastItem: function (state) {
+    var lastId = this.getLastId(state);
+    return (
+      lastId &&
+      state.itemsById[lastId]);
+  },
+
+  getPdfUrl: function (state) {
+    var lastItem = this.getLastItem(state);
+    return (
+      lastItem &&
+      lastItem.type === 'pub' &&
+      lastItem.basename &&
+      document.location.origin + '/_entries/' + lastItem.basename + '.pdf');
+  },
+
   getColumnCount: function (state) {
-    var lastId   = state.path.length && state.path[state.path.length - 1];
-    var lastItem = lastId && state.itemsById[lastId];
-    var hasPdf   = lastItem && lastItem.type === 'pub' && lastItem.basename;
+    var hasPdf = !!this.getPdfUrl(state);
     return (
       1 + state.path.length + (
         hasPdf ? 1 : 0));
   },
 
   componentDidUpdate: function (prevProps, prevState) {
-    var browser     = r.findDOMNode(this);
-    var columnList  = browser.firstChild;
-    var columns     = columnList.childNodes;
-    var prevCount   = this.getColumnCount(prevState);
-    var columnCount = this.getColumnCount(this.state);
-    var startX      = browser.scrollLeft;
-    var token = utils.getRandomUuid();
-    prevToken = token;
+    var browser         = r.findDOMNode(this);
+    var columnList      = browser.firstChild;
+    var columns         = columnList.childNodes;
+    var prevColumnCount = this.getColumnCount(prevState);
+    var columnCount     = this.getColumnCount(this.state);
+    var startX          = browser.scrollLeft;
+    var componentId     = this.state.componentId;
+    var token           = utils.getRandomUuid();
+    tokens[componentId] = token;
     var maxX;
     var i;
-    if (prevCount <= columnCount) {
+    if (prevColumnCount <= columnCount) {
       columnList.style.width = '' + columnCount/3 * 100 + '%';
       for (i = 0; i < columns.length; i += 1) {
         columns[i].style.width = '' + 1/columnCount * 100 + '%';
@@ -105,10 +127,10 @@ var _ = {
       var columnWidth  = browserWidth/3;
       var scrollWidth  = columnCount * columnWidth;
       for (i = 0; i < columns.length; i += 1) {
-        columns[i].style.width = '' + 1/prevCount * 100 + '%';
+        columns[i].style.width = '' + 1/prevColumnCount * 100 + '%';
       }
       setTimeout(function () {
-          if (prevToken !== token) {
+          if (tokens[componentId] !== token) {
             return;
           }
           columnList.style.width = '' + columnCount/3 * 100 + '%';
@@ -124,9 +146,8 @@ var _ = {
   },
 
   render: function () {
-    var lastId   = this.state.path.length && this.state.path[this.state.path.length - 1];
-    var lastItem = lastId && this.state.itemsById[lastId];
-    var hasPdf   = lastItem && lastItem.type === 'pub' && lastItem.basename;
+    var lastId = this.getLastId(this.state);
+    var pdfUrl = this.getPdfUrl(this.state);
     return (
       r.div('browser',
         r.div('column-list',
@@ -154,13 +175,13 @@ var _ = {
                   },
                   this.renderItemColumn(itemId, selectedId, onSelect)));
             }.bind(this)),
-          !hasPdf ? null :
+          !pdfUrl ? null :
             r.div({
                 key:       lastId + '-pdf',
                 className: 'column'
               },
               pdfColumn({
-                  url: document.location.origin + '/_entries/' + lastItem.basename + '.pdf'
+                  url: pdfUrl
                 })))));
   }
 };
