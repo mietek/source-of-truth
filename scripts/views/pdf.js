@@ -109,8 +109,9 @@ var _ = {
     return (
       r.div('pdf',
         this.state.pdf ? null :
-          r.span('label',
-            'Loading…')));
+          r.div('section',
+            r.span('label',
+              'Full text loading…'))));
   }
 };
 
