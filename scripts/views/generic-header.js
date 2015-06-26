@@ -5,17 +5,15 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      label: r.propTypes.string.isRequired,
-      value: r.propTypes.string.isRequired
+      heading: r.propTypes.string.isRequired
     };
   },
 
   render: function () {
     return (
       r.div('header',
-        r.div('heading',
-          r.span('value',
-            this.props.value))));
+        r.span('heading',
+          this.props.heading)));
   }
 };
 
