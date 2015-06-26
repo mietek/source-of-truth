@@ -6,11 +6,12 @@ var r = require('../common/react');
 var utils = require('../common/utils');
 var processor = require('../processor');
 
-var column = require('./column');
 var genericColumn = require('./generic-column');
 var pdfColumn = require('./pdf-column');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
+
+var prevToken;
 
 var _ = {
   getInitialState: function () {
@@ -83,33 +84,55 @@ var _ = {
   },
 
   componentDidUpdate: function (prevProps, prevState) {
+    var browser     = r.findDOMNode(this);
+    var columnList  = browser.firstChild;
+    var columns     = columnList.childNodes;
     var prevCount   = this.getColumnCount(prevState);
     var columnCount = this.getColumnCount(this.state);
-    if (prevCount < columnCount) {
-      var node   = r.findDOMNode(this);
-      var startX = node.scrollLeft;
-      var maxX   = node.scrollWidth - node.clientWidth;
-      easeScroll.tween(startX, maxX, maxX, 500, function (x) {
-          node.scrollLeft = x;
-        });
+    var startX      = browser.scrollLeft;
+    var token = utils.getRandomUuid();
+    prevToken = token;
+    var maxX;
+    var i;
+    if (prevCount <= columnCount) {
+      columnList.style.width = '' + columnCount/3 * 100 + '%';
+      for (i = 0; i < columns.length; i += 1) {
+        columns[i].style.width = '' + 1/columnCount * 100 + '%';
+      }
+      maxX = browser.scrollWidth - browser.clientWidth;
+    } else {
+      var browserWidth = parseFloat(getComputedStyle(browser).getPropertyValue('width'));
+      var columnWidth  = browserWidth/3;
+      var scrollWidth  = columnCount * columnWidth;
+      for (i = 0; i < columns.length; i += 1) {
+        columns[i].style.width = '' + 1/prevCount * 100 + '%';
+      }
+      setTimeout(function () {
+          if (prevToken !== token) {
+            return;
+          }
+          columnList.style.width = '' + columnCount/3 * 100 + '%';
+          for (var i = 0; i < columns.length; i += 1) {
+            columns[i].style.width = '' + 1/columnCount * 100 + '%';
+          }
+        }, 500);
+      maxX = scrollWidth - browser.clientWidth;
     }
+    easeScroll.tween(startX, maxX, maxX, 500, function (x) {
+        browser.scrollLeft = x;
+      });
   },
 
   render: function () {
-    var lastId      = this.state.path.length && this.state.path[this.state.path.length - 1];
-    var lastItem    = lastId && this.state.itemsById[lastId];
-    var hasPdf      = lastItem && lastItem.type === 'pub' && lastItem.basename;
-    var columnCount = this.getColumnCount(this.state);
+    var lastId   = this.state.path.length && this.state.path[this.state.path.length - 1];
+    var lastItem = lastId && this.state.itemsById[lastId];
+    var hasPdf   = lastItem && lastItem.type === 'pub' && lastItem.basename;
     return (
       r.div('browser',
-        r.div({
-            className: 'column-list',
-            style: {
-              width: '' + columnCount/3 * 100 + '%',
-            }
-          },
-          column({
-              columnCount: columnCount
+        r.div('column-list',
+          r.div({
+              key:       'root',
+              className: 'column'
             },
             rootColumn({
                 pubs:       this.state.fullPubs,
@@ -125,15 +148,16 @@ var _ = {
                   this.select(basePath, itemId);
                 }.bind(this);
               return (
-                column({
-                    key:         itemId + '-' + index,
-                    columnCount: columnCount
+                r.div({
+                    key:       itemId + '-' + index,
+                    className: 'column'
                   },
                   this.renderItemColumn(itemId, selectedId, onSelect)));
             }.bind(this)),
           !hasPdf ? null :
-            column({
-                columnCount: columnCount
+            r.div({
+                key:       lastId + '-pdf',
+                className: 'column'
               },
               pdfColumn({
                   url: document.location.origin + '/_entries/' + lastItem.basename + '.pdf'
