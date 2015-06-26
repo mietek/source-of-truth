@@ -24,21 +24,22 @@ function getAuthorBasename(name) {
 }
 
 function ensureAuthor(name) {
-  if (!(name in authorsByName)) {
-    var author = {
-      type:     'author',
-      id:       utils.getRandomUuid(),
-      name:     name,
-      basename: getAuthorBasename(name),
-      pubs:     [],
-      fullPubs: []
-    };
-    authors.push(author);
-    authorsByName[name]  = author;
-    itemsById[author.id] = author;
-    return author;
+  if (name in authorsByName) {
+    return authorsByName[name];
   }
-  return authorsByName[name];
+  var author = {
+    type:     'author',
+    id:       utils.getRandomUuid(),
+    name:     name,
+    basename: getAuthorBasename(name),
+    pubs:        [],
+    fullPubs:    [],
+    partialPubs: []
+  };
+  authors.push(author);
+  authorsByName[name]  = author;
+  itemsById[author.id] = author;
+  return author;
 }
 
 function ensureCollection(name) {
@@ -46,11 +47,12 @@ function ensureCollection(name) {
     return collectionsByName[name];
   }
   var collection = {
-    type:     'collection',
-    id:       utils.getRandomUuid(),
-    name:     name,
-    pubs:     [],
-    fullPubs: []
+    type:        'collection',
+    id:          utils.getRandomUuid(),
+    name:        name,
+    pubs:        [],
+    fullPubs:    [],
+    partialPubs: []
   };
   collections.push(collection);
   collectionsByName[name]  = collection;
@@ -63,11 +65,12 @@ function ensureYear(name) {
     return yearsByName[name];
   }
   var year = {
-    type:     'year',
-    id:       utils.getRandomUuid(),
-    name:     name,
-    pubs:     [],
-    fullPubs: []
+    type:        'year',
+    id:          utils.getRandomUuid(),
+    name:        name,
+    pubs:        [],
+    fullPubs:    [],
+    partialPubs: []
   };
   years.push(year);
   yearsByName[name]  = year;
@@ -189,7 +192,8 @@ module.exports = {
     pubs.sort(function (pub1, pub2) {
         return pub1.name.localeCompare(pub2.name);
       });
-    var fullPubs = [];
+    var fullPubs    = [];
+    var partialPubs = [];
     pubs.forEach(function (pub) {
         pub.reverseCitations.sort(function (citation1, citation2) {
             return citation1.name.localeCompare(citation2.name);
@@ -202,7 +206,20 @@ module.exports = {
           (pub.collections || []).forEach(function (collection) {
               collection.fullPubs.push(pub);
             });
-          pub.year.fullPubs.push(pub);
+          if (pub.year) {
+            pub.year.fullPubs.push(pub);
+          }
+        } else {
+          partialPubs.push(pub);
+          (pub.authors || []).forEach(function (author) {
+              author.partialPubs.push(pub);
+            });
+          (pub.collections || []).forEach(function (collection) {
+              collection.partialPubs.push(pub);
+            });
+          if (pub.year) {
+            pub.year.partialPubs.push(pub);
+          }
         }
       });
     authors.sort(function (author1, author2) {
@@ -215,12 +232,13 @@ module.exports = {
         return ('' + year1.name).localeCompare('' + year2.name);
       });
     return {
-      pubs:            pubs,
-      fullPubs:        fullPubs,
-      authors:         authors,
-      collections:     collections,
-      years:           years,
-      itemsById:       itemsById
+      pubs:        pubs,
+      fullPubs:    fullPubs,
+      partialPubs: partialPubs,
+      authors:     authors,
+      collections: collections,
+      years:       years,
+      itemsById:   itemsById
     };
   }
 };
