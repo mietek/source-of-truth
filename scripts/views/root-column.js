@@ -2,24 +2,45 @@
 
 var r = require('../common/react');
 
-var pubList = require('./pub-list');
+var genericHeader = require('./generic-header');
+var genericList = require('./generic-list');
 
 var _ = {
   propTypes: function () {
     return {
-      pubs:       r.propTypes.array,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func
+      collections: r.propTypes.array,
+      selectedId:  r.propTypes.string,
+      onSelect:    r.propTypes.func
     };
   },
 
   render: function () {
     return (
-      r.div('root wrapper',
-        pubList({
-            pubs:       this.props.pubs,
+      r.div('wrapper',
+        genericHeader({
+            heading:    'Source of Truth'
+          }),
+        genericList({
+            label:      'Collections',
+            items:      this.props.collections,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
+          }),
+        genericList({
+            label:           'Indices',
+            items:           [{
+              id:   'pubs',
+              name: 'All publications'
+            }, {
+              id:   'authors',
+              name: 'All authors'
+            }, {
+              id:   'years',
+              name: 'All years'
+            }],
+            isLabelNumbered: false,
+            selectedId:      this.props.selectedId,
+            onSelect:        this.props.onSelect
           })));
   }
 };

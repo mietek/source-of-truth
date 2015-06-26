@@ -28,7 +28,36 @@ var _ = {
       });
   },
 
-  renderItemColumn: function (itemId, selectedId, onSelect) {
+  renderColumn: function (itemId, selectedId, onSelect) {
+    switch (itemId) {
+      case 'pubs':
+        return (
+          genericColumn({
+              heading:      'All publications',
+              fullItems:    this.state.fullPubs,
+              partialItems: this.state.partialPubs,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+      case 'authors':
+        return (
+          genericColumn({
+              heading:      'All authors',
+              fullItems:    this.state.fullAuthors,
+              partialItems: this.state.partialAuthors,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+      case 'years':
+        return (
+          genericColumn({
+              heading:      'All years',
+              fullItems:    this.state.fullYears,
+              partialItems: this.state.partialYears,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+    }
     var item = this.state.itemsById[itemId];
     switch (item.type) {
       case 'pub':
@@ -47,34 +76,15 @@ var _ = {
               onSelect:         onSelect
             }));
       case 'author':
-        return (
-          genericColumn({
-              label:       'Author',
-              value:       item.name,
-              fullPubs:    item.fullPubs,
-              partialPubs: item.partialPubs,
-              selectedId:  selectedId,
-              onSelect:    onSelect
-            }));
       case 'collection':
-        return (
-          genericColumn({
-              label:       'Collection',
-              value:       item.name,
-              fullPubs:    item.fullPubs,
-              partialPubs: item.partialPubs,
-              selectedId:  selectedId,
-              onSelect:    onSelect
-            }));
       case 'year':
         return (
           genericColumn({
-              label:       'Year',
-              value:       item.name,
-              fullPubs:    item.fullPubs,
-              partialPubs: item.partialPubs,
-              selectedId:  selectedId,
-              onSelect:    onSelect
+              heading:      item.name,
+              fullItems:    item.fullPubs,
+              partialItems: item.partialPubs,
+              selectedId:   selectedId,
+              onSelect:     onSelect
             }));
     }
   },
@@ -160,9 +170,9 @@ var _ = {
               className: 'column'
             },
             rootColumn({
-                pubs:       this.state.fullPubs,
-                selectedId: this.state.path.length > 0 && this.state.path[0],
-                onSelect:   function (itemId) {
+                collections: this.state.collections,
+                selectedId:  this.state.path.length > 0 && this.state.path[0],
+                onSelect:    function (itemId) {
                   this.select([], itemId);
                 }.bind(this)
               })),
@@ -177,7 +187,7 @@ var _ = {
                     key:       itemId + '-' + index,
                     className: 'column'
                   },
-                  this.renderItemColumn(itemId, selectedId, onSelect)));
+                  this.renderColumn(itemId, selectedId, onSelect)));
             }.bind(this)),
           !pdfUrl ? null :
             r.div({
