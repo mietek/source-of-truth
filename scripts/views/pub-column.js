@@ -3,8 +3,8 @@
 var r = require('../common/react');
 
 var abstract = require('./abstract');
+var genericList = require('./generic-list');
 var pubHeader = require('./pub-header');
-var pubList = require('./pub-list');
 
 var _ = {
   propTypes: function () {
@@ -37,21 +37,21 @@ var _ = {
         abstract({
             content: this.props.abstract
           }),
-        pubList({
-            label:      'Cites',
-            pubs:       this.props.citations,
-            isSwapped:  true,
-            isNumbered: this.props.isNumbered,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
+        genericList({
+            label:          'Cites',
+            items:          this.props.citations,
+            isLabelSwapped: true,
+            isNumbered:     this.props.isNumbered,
+            selectedId:     this.props.selectedId,
+            onSelect:       this.props.onSelect
           }),
         (!this.props.reverseCitations || !this.props.reverseCitations.length) ? null :
-          pubList({
-              label:      'Cited by',
-              pubs:       this.props.reverseCitations,
-              isSwapped:  true,
-              selectedId: this.props.selectedId,
-              onSelect:   this.props.onSelect
+          genericList({
+              label:          'Cited by',
+              items:          this.props.reverseCitations,
+              isLabelSwapped: true,
+              selectedId:     this.props.selectedId,
+              onSelect:       this.props.onSelect
             }),
         !this.props.isPartial ? null :
           r.div('section',

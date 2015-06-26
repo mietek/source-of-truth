@@ -3,39 +3,38 @@
 var r = require('../common/react');
 
 var genericHeader = require('./generic-header');
-var pubList = require('./pub-list');
+var genericList = require('./generic-list');
 
 var _ = {
   propTypes: function () {
     return {
-      label:       r.propTypes.string.isRequired,
-      value:       r.propTypes.string.isRequired,
-      fullPubs:    r.propTypes.array,
-      partialPubs: r.propTypes.array,
-      selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      heading:      r.propTypes.string.isRequired,
+      fullItems:    r.propTypes.array,
+      partialItems: r.propTypes.array,
+      selectedId:   r.propTypes.string,
+      onSelect:     r.propTypes.func
     };
   },
 
   render: function () {
+    var hasPartials = (
+      this.props.partialItems &&
+      this.props.partialItems.length);
     return (
       r.div('wrapper',
         genericHeader({
-            label:      this.props.label,
-            value:      this.props.value,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
+            heading:    this.props.heading
           }),
-        pubList({
+        genericList({
             label:      'Available',
-            pubs:       this.props.fullPubs,
+            items:      this.props.fullItems,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
           }),
-        (!this.props.partialPubs || !this.props.partialPubs.length) ? null :
-            pubList({
+        !hasPartials ? null :
+            genericList({
               label:      'Not available',
-              pubs:       this.props.partialPubs,
+              items:      this.props.partialItems,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect
             })));

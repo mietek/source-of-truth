@@ -161,15 +161,12 @@ body
   margin-left: 1/3 * 100%
 
 
-.pub-list
+.list
   width: 100%
   counter-reset: item
 
-.pub-list .label
+.list .label
   padding-left: 8px
-
-.wrapper.root .pub-list .spacer
-  margin-top: 0
 
 
 .item
@@ -195,15 +192,23 @@ body
   color: $white9
 
 
+.item .content
+  @include ellipsis
+  display: inline-block
+  width: 2/3 * 100%
+  padding-left: 1/9 * 100%
+  padding-right: 16px
+
+
 .item .signature
   @include ellipsis
   display: inline-block
   width: 1/3 * 100%
 
-.pub-list:not(.numbered) .item .signature
+.list:not(.numbered) .item .signature
   padding-left: 1/9 * 100%
 
-.pub-list.numbered .item .signature:before
+.list.numbered .item .signature:before
   @include label
   @include ellipsis
   content: counter(item)
@@ -213,7 +218,7 @@ body
   padding-right: 8px
   text-align: right
 
-.pub-list.numbered .item.selected .signature:before
+.list.numbered .item.selected .signature:before
   color: $white9
 
 
