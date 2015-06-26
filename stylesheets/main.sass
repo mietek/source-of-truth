@@ -49,6 +49,9 @@ body
   cursor: pointer
   -webkit-tap-highlight-color: transparent
 
+.clickable
+  @include clickable
+
 @mixin unclickable
   cursor: auto
   pointer-events: none
@@ -168,9 +171,6 @@ body
 .wrapper.root .pub-list .spacer
   margin-top: 0
 
-.pub-list .label.clickable
-  @include clickable
-
 
 .item
   counter-increment: item
@@ -178,9 +178,6 @@ body
   padding-right: 8px
   height: 19px
   position: relative
-
-.item.clickable
-  @include clickable
 
 .item.clickable:after
   content: "▸"
@@ -239,9 +236,6 @@ body
   padding-right: 8px
   text-align: justify
   hyphens: auto
-
-.abstract .label.clickable
-  @include clickable
 
 .abstract .content
   @include selectable
