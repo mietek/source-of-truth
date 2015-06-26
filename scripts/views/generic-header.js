@@ -14,8 +14,6 @@ var _ = {
     return (
       r.div('header',
         r.div('heading',
-          r.span('label',
-            this.props.label),
           r.span('value',
             this.props.value))));
   }

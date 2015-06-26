@@ -20,8 +20,6 @@ var _ = {
     return (
       r.div('header',
         r.div('heading',
-          r.span('label',
-            'Title'),
           r.span('value',
             this.props.title)),
         !this.props.authors ? null :
