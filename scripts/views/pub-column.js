@@ -45,13 +45,14 @@ var _ = {
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
           }),
-        pubList({
-            label:      'Cited by',
-            pubs:       this.props.reverseCitations,
-            isSwapped:  true,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
-          }),
+        (!this.props.reverseCitations || !this.props.reverseCitations.length) ? null :
+          pubList({
+              label:      'Cited by',
+              pubs:       this.props.reverseCitations,
+              isSwapped:  true,
+              selectedId: this.props.selectedId,
+              onSelect:   this.props.onSelect
+            }),
         !this.props.isPartial ? null :
           r.div('section',
             r.div('spacer',
