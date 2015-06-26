@@ -24,15 +24,17 @@ var _ = {
   componentWillMount: function () {
     var token = utils.getRandomUuid();
     tokens[this.state.componentId] = token;
-    PDFJS.getDocument(this.props.url).then(function (pdf) {
-        // NOTE: Abort if the component is unmounted before getDocument is done.
-        if (tokens[this.state.componentId] !== token) {
-          return;
-        }
-        this.setState({
-            pdf: pdf
-          });
-      }.bind(this));
+    setTimeout(function () {
+        PDFJS.getDocument(this.props.url).then(function (pdf) {
+            // NOTE: Abort if the component is unmounted before getDocument is done.
+            if (tokens[this.state.componentId] !== token) {
+              return;
+            }
+            this.setState({
+                pdf: pdf
+              });
+          }.bind(this));
+      }.bind(this), 500);
   },
 
   componentDidMount: function () {
