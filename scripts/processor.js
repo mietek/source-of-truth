@@ -162,14 +162,14 @@ function ensurePub(rawPub) {
     console.warning('Duplicate pub:', rawPub, pub);
   }
   utils.assign(pub, {
-      citations:   (rawPub.references || []).map(function (citation) { // TODO: Tweak database naming
+      citations:   (rawPub.citations || []).map(function (citation) {
           return ensurePartialPub(citation, pub);
         }),
       basename:    rawPub.basename,
       collections: collections,
       abstract:    rawPub.abstract,
       isNumbered:  !rawPub.numbered || rawPub.numbered === 'y',
-      isPartial:   rawPub.missing === 'y' // TODO: Tweak database naming
+      isPartial:   rawPub.partial === 'y'
     });
   if (collections) {
     collections.forEach(function (collection) {

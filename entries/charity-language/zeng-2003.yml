@@ -8,7 +8,7 @@ abstract: |
   <p>The design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.</p>
   <p>The core-Charity compiler concentrates on providing an efficient implementation of core Charity code into the virtual machine. Previous implementations suffered from excessive heap usage which necessitated frequent garbage collection. In this implementation a variety of techniques are used to reduce heap usage and improve execution speed.</p>
   <p>The resulting Charity programs are substantially faster than those produced by previous Charity implementations.</p>
-references:
+citations:
 
   - author: A.W. Appel
     title: Garbage collection can be faster than stack allocation

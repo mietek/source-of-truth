@@ -5,7 +5,7 @@ basename: spencer-1993
 collection: Charity language
 abstract: |
   <p>We show that significant <i>categorical</i> programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the <i>structures of data</i> drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.</p>
-references:
+citations:
 
   - authors:
       - A. Asperti

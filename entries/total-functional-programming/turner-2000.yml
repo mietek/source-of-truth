@@ -3,7 +3,7 @@ author: David Turner
 year: 2000
 basename: turner-2000
 collection: Total functional programming
-references:
+citations:
 
   - author: Andreas Abel
     title: A semantic analysis of structural recursion

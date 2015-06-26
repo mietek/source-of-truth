@@ -2,9 +2,8 @@ title: Proof-theoretic approach to inductive definitions in ML-like programming 
 author: Zdzisław Spławski
 year: 1993
 collection: ET language
-missing: y
-numbered: n
-references:
+partial: y
+citations:
 
   - authors:
       - Roland Backhouse

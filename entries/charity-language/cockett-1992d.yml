@@ -8,7 +8,7 @@ collection: Charity language
 abstract: |
   <p>This paper lifts the category-theoretic results of [4] to the level of an abstract language suitable for basing categorical programming language implementations. The earlier work built a fibration-based strongly-normalizing categorical combinator reduction system based entirely on functorial strength that allows the distribution of context to the interior of a strong data structure. Strong type-forming functors accompanied by (1) a collection of constructor combinators (initial datatypes) or destructor combinators (final datatypes) and (2) a capability for building new state-transforming combinators that operate with structures of the datatypes formed by these functors can be abstractly declared in a Hagino-Wraith style to form a reasonably expressive computing environment.</p>
   <p>However, the high complexity of programming exclusively in combinators warrants the development of categorical programming languages that are isomorphic to the distributive category settings in which strong datatypes can be declared. Towards this goal, a distributive term logic is developed and proven consistent with and equivalent to the combinator theory. Due to its basis in strength higher-order operations, such as generalized map operators, are directly expressible in this first-order language. The term logic forms the underlying base of the Charity categorical programming system. The resulting categorical programming paradigm of structurally inductive state transforms is illustrated by several examples that accompany the term logic reduction rules.</p>
-references:
+citations:
 
   - author: Robin Cockett
     title: Distributive logic
