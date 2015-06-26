@@ -71,7 +71,6 @@ body
 @mixin label
   color: $black9
   font-family: "concourse-c3", sans-serif
-  text-transform: lowercase
   vertical-align: top
   position: relative
   top: 1px
@@ -131,6 +130,7 @@ body
   width: 100%
 
 .header .heading
+  @include ellipsis
   @include selectable
   display: block
   text-align: center
@@ -161,6 +161,7 @@ body
   counter-reset: item
 
 .list .label
+  @include ellipsis
   padding-left: 8px
 
 

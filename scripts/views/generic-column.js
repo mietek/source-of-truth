@@ -26,14 +26,14 @@ var _ = {
             heading:    this.props.heading
           }),
         genericList({
-            label:      'Available',
+            label:      'available',
             items:      this.props.fullItems,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
           }),
         !hasPartials ? null :
             genericList({
-              label:      'Not available',
+              label:      'not available',
               items:      this.props.partialItems,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect

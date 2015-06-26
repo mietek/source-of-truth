@@ -21,7 +21,7 @@ var _ = {
             heading:    'Source of Truth'
           }),
         genericList({
-            label:      'Collections',
+            label:      'collections',
             items:      this.props.collections,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
