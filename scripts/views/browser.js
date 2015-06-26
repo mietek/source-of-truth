@@ -49,29 +49,32 @@ var _ = {
       case 'author':
         return (
           genericColumn({
-              label:      'Author',
-              value:      item.name,
-              pubs:       item.fullPubs,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              label:       'Author',
+              value:       item.name,
+              fullPubs:    item.fullPubs,
+              partialPubs: item.partialPubs,
+              selectedId:  selectedId,
+              onSelect:    onSelect
             }));
       case 'collection':
         return (
           genericColumn({
-              label:      'Collection',
-              value:      item.name,
-              pubs:       item.fullPubs,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              label:       'Collection',
+              value:       item.name,
+              fullPubs:    item.fullPubs,
+              partialPubs: item.partialPubs,
+              selectedId:  selectedId,
+              onSelect:    onSelect
             }));
       case 'year':
         return (
           genericColumn({
-              label:      'Year',
-              value:      item.name,
-              pubs:       item.fullPubs,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              label:       'Year',
+              value:       item.name,
+              fullPubs:    item.fullPubs,
+              partialPubs: item.partialPubs,
+              selectedId:  selectedId,
+              onSelect:    onSelect
             }));
     }
   },

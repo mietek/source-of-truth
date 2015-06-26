@@ -8,11 +8,12 @@ var pubList = require('./pub-list');
 var _ = {
   propTypes: function () {
     return {
-      label:      r.propTypes.string.isRequired,
-      value:      r.propTypes.string.isRequired,
-      pubs:       r.propTypes.array,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func
+      label:       r.propTypes.string.isRequired,
+      value:       r.propTypes.string.isRequired,
+      fullPubs:    r.propTypes.array,
+      partialPubs: r.propTypes.array,
+      selectedId:  r.propTypes.string,
+      onSelect:    r.propTypes.func
     };
   },
 
@@ -26,10 +27,18 @@ var _ = {
             onSelect:   this.props.onSelect
           }),
         pubList({
-            pubs:       this.props.pubs,
+            label:      'Available',
+            pubs:       this.props.fullPubs,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
-          })));
+          }),
+        (!this.props.partialPubs || !this.props.partialPubs.length) ? null :
+            pubList({
+              label:      'Not available',
+              pubs:       this.props.partialPubs,
+              selectedId: this.props.selectedId,
+              onSelect:   this.props.onSelect
+            })));
   }
 };
 
