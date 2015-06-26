@@ -42,6 +42,7 @@ var _ = {
               citations:        item.citations,
               reverseCitations: item.reverseCitations,
               isNumbered:       item.isNumbered,
+              isPartial:        item.isPartial,
               selectedId:       selectedId,
               onSelect:         onSelect
             }));

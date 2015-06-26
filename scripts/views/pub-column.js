@@ -17,6 +17,7 @@ var _ = {
       citations:        r.propTypes.array,
       reverseCitations: r.propTypes.array,
       isNumbered:       r.propTypes.bool,
+      isPartial:        r.propTypes.bool,
       selectedId:       r.propTypes.string,
       onSelect:         r.propTypes.func
     };
@@ -50,7 +51,12 @@ var _ = {
             isSwapped:  true,
             selectedId: this.props.selectedId,
             onSelect:   this.props.onSelect
-          })));
+          }),
+        !this.props.isPartial ? null :
+          r.div('section',
+            r.div('spacer',
+              r.span('label',
+                'Full text not available')))));
   }
 };
 
