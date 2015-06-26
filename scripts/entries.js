@@ -2478,7 +2478,7 @@ module.exports = [
       },
       {
         "author": "J.-Y. Girard",
-        "title": "The system F of variable types, fifteen years later",
+        "title": "The System F of variable types, fifteen years later",
         "year": 1986
       },
       {
@@ -2900,7 +2900,7 @@ module.exports = [
       },
       {
         "author": "J.-Y. Girard",
-        "title": "Geometry of interaction I: Interpretation of system F",
+        "title": "Geometry of interaction I: Interpretation of System F",
         "year": 1989
       },
       {
@@ -2954,7 +2954,7 @@ module.exports = [
       },
       {
         "author": "R. Matthes",
-        "title": "Extensions of system F by iteration and primitive recursion on monotone inductive types",
+        "title": "Extensions of System F by iteration and primitive recursion on monotone inductive types",
         "year": 1998
       },
       {
