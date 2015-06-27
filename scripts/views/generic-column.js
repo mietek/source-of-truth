@@ -21,7 +21,13 @@ var _ = {
       this.props.partialItems &&
       this.props.partialItems.length);
     return (
-      r.div('wrapper',
+      r.div({
+          className: 'wrapper',
+          onClick:   function (event) {
+            event.stopPropagation();
+            this.props.onSelect(null);
+          }.bind(this)
+        },
         genericHeader({
             heading:    this.props.heading
           }),

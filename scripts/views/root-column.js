@@ -16,7 +16,13 @@ var _ = {
 
   render: function () {
     return (
-      r.div('wrapper',
+      r.div({
+          className: 'wrapper',
+          onClick:   function (event) {
+            event.stopPropagation();
+            this.props.onSelect(null);
+          }.bind(this)
+        },
         genericHeader({
             heading:    'Source of Truth'
           }),
