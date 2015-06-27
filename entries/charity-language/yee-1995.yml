@@ -2,7 +2,7 @@ title: Implementing the Charity abstract machine
 author: Barry Yee
 year: 1995
 basename: yee-1995
-collection: Charity language
+collection: Charity
 abstract: |
   <p>This thesis describes a series of three abstract machines, with associated compilation procedures, for the Charity programming language. Each machine is a refinement of the previous, getting closer to the level of the physical machine.</p>
   <p>The current C implementation of Charity is based on the last of these machines and is roughly twenty times faster than the original SML implementation, which was based on the first.</p>

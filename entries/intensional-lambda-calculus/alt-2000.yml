@@ -1,0 +1,45 @@
+title: Reflective λ-calculus
+authors:
+  - Jesse Alt
+  - Sergei Artemov
+year: 2000
+basename: alt-2000
+collection: Intensional λ-calculus
+abstract: |
+  <p>The Curry-Howard isomorphism converting intuitionistic proofs into typed λ-terms is a simple instance of an internalization property of a system λ<sup>∞</sup> which unifies intuitionistic logic with λ-calculus and which is capable of internalizing its own derivations as λ-terms. We establish confluence and strong normalization of λ<sup>∞</sup>. The system λ<sup>∞</sup> considerably extends the expressive power of each of its major components: typed λ-calculus, intuitionistic and modal logic. It may be regarded as the pure λ version of the Logic of Proofs LP from [1, 2, 3]. In particular, the standard model of <b>t : F</b> in λ<sup>∞</sup> is “<b>t</b> is a proof of <b>F</b>”.</p>
+citations:
+
+  - author: Sergei Artemov
+    title: Operational modal logic
+    year: 1995
+
+  - author: Sergei Artemov
+    title: Uniform provability realization of intuitionistic logic, modality, and lambda-terms
+    year: 1999
+
+  - author: Sergei Artemov
+    title: Explicit provability and constructive semantics
+    year: 2001
+
+  - author: Henk Barendregt
+    title: Lambda calculi with types
+    year: 1992
+
+  - authors:
+      - D. de Jongh
+      - G. Japaridze
+    title: Logic of provability
+    year: 1998
+
+  - authors:
+      - Jean-Yves Girard
+      - Yves Lafont
+      - Paul Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - A.S. Troelstra
+      - H. Schwichtenberg
+    title: Basic proof theory
+    year: 1996

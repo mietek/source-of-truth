@@ -1,0 +1,131 @@
+title: Reflection and propositions-as-types
+authors:
+  - Sergei Artemov
+  - Eli Barzilay
+  - Robert L. Constable
+  - Aleksey Nogin
+year: 2001
+basename: artemov-2001
+collection: Intensional λ-calculus
+abstract: |
+  <p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>
+citations:
+
+  - authors:
+      - Stuart F. Allen
+      - Robert L. Constable
+      - Douglas J. Howe
+      - William Aitken
+    title: The semantics of reflected proof
+    year: 1990
+
+  - authors:
+      - J. Alt
+      - S. Artemov
+    title: Reflective λ-calculus
+    year: 2000
+
+  - author: S. Artemov
+    title: On explicit reflection in theorem proving and formal verification
+    year: 1999
+
+  - author: S. Artemov
+    title: Uniform provability realization of intuitionistic logic, modality, and lambda-terms
+    year: 1999
+
+  - author: S. Artemov
+    title: Explicit provability and constructive semantics
+    year: 2001
+
+  - author: The Coq development team
+    title: The Coq Proof Assistant reference manual
+    year: 1996
+
+  - author: Eli Barzilay
+    title: Quotation and reflection in NuPRL and Scheme
+    year: 2001
+
+  - authors:
+      - R.S. Boyer
+      - J.S. Moore
+    title: "Metafunctions: Proving them correct and using them efficiently as new proof procedures"
+    year: 1981
+
+  - author: W. Clinger
+    title: Hygienic macros through explicit renaming
+    year: 1991
+
+  - author: Robert L. Constable
+    title: Using reflection to explain and enhance type theory
+    year: 1994
+
+  - authors:
+      - Robert L. Constable
+      - Stuart F. Allen
+      - H.M. Bromley
+      - W.R. Cleaveland
+      - J.F. Cremer
+      - R.W. Harper
+      - Douglas J. Howe
+      - T.B. Knoblock
+      - N.P. Mendler
+      - P. Panangaden
+      - James T. Sasaki
+      - Scott F. Smith
+    title: Implementing mathematics with the Nuprl development system
+    year: 1986
+
+  - authors:
+      - Robert L. Constable
+      - Stuart F. Allen
+      - Douglas J. Howe
+    title: Reflecting the open-ended computation system of constructive type theory
+    year: 1990
+
+  - authors:
+      - Robert L. Constable
+      - Karl Crary
+    title: Computational complexity and induction for partial computable functions in type theory
+    year: 1998
+
+  - authors:
+      - D. de Jongh
+      - G. Japaridze
+    title: Logic of provability
+    year: 1998
+
+  - author: Jason Hickey
+    title: The MetaPRL logical programming environment
+    year: 2001
+
+  - authors:
+      - Jason Hickey
+      - Aleksey Nogin
+    title: Fast tactic-based theorem proving
+    year: 2000
+
+  - authors:
+      - R. Kelsey
+      - W. Clinger
+      - J. Rees
+      - et al.
+    title: Revised⁵ report on the algorithmic language Scheme
+    year: 1998
+
+  - authors:
+      - L. Magnusson
+      - B. Nordström
+    title: The Alf proof editor and its proof engine
+    year: 1994
+
+  - title: MetaPRL home page
+
+  - author: B.C. Smith
+    title: Reflection and semantics in Lisp
+    year: 1984
+
+  - authors:
+      - A.S. Troelstra
+      - H. Schwichtenberg
+    title: Basic proof theory
+    year: 1996

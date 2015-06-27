@@ -1,0 +1,65 @@
+title: Reflective λ-calculus
+authors:
+  - Jesse Alt
+  - Sergei Artemov
+year: 2001
+basename: alt-2001
+collection: Intensional λ-calculus
+abstract: |
+  <p>We introduce a general purpose typed λ-calculus λ<sup>∞</sup> which contains intuitionistic logic, is capable of internalizing its own derivations as λ-terms and yet enjoys strong normalization with respect to a natural reduction system. In particular, λ<sup>∞</sup> subsumes the typed λ-calculus. The Curry-Howard isomorphism converting intuitionistic proofs into λ-terms is a simple instance of the internalization property of λ<sup>∞</sup>. The standard semantics of λ<sup>∞</sup> is given by a proof system with proof checking capacities. The system λ<sup>∞</sup> is a theoretical prototype of reflective extensions of a broad class of type-based systems in programming languages, provers, AI and knowledge representation, etc.</p>
+citations:
+
+  - author: Sergei Artemov
+    title: Operational modal logic
+    year: 1995
+
+  - author: Sergei Artemov
+    title: Uniform provability realization of intuitionistic logic, modality, and lambda-terms
+    year: 1999
+
+  - author: Sergei Artemov
+    title: Explicit provability and constructive semantics
+    year: 2001
+
+  - author: Henk Barendregt
+    title: Lambda calculi with types
+    year: 1992
+
+  - author: R. Constable
+    title: Types in logic, mathematics, and programming
+    year: 1998
+
+  - authors:
+      - D. de Jongh
+      - G. Japaridze
+    title: Logic of provability
+    year: 1998
+
+  - authors:
+      - Jean-Yves Girard
+      - Yves Lafont
+      - Paul Taylor
+    title: Proofs and types
+    year: 1990
+
+  - author: V.N. Krupski
+    title: Operational logic of proofs with functionality condition on proof predicate
+    year: 1997
+
+  - author: V.N. Krupski
+    title: The single-conclusion proof logic and inference rules specification
+    year: 2001
+
+  - author: A. Nerode
+    title: Applied logic
+    year: 1986
+
+  - author: A. Troelstra
+    title: Realizability
+    year: 1998
+
+  - authors:
+      - A.S. Troelstra
+      - H. Schwichtenberg
+    title: Basic proof theory
+    year: 1996

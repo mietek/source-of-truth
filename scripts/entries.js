@@ -4,7 +4,7 @@ module.exports = [
     "author": "Robin Cockett",
     "year": 1991,
     "basename": "cockett-1991",
-    "collection": "Charity language",
+    "collection": "Charity",
     "numbered": "n",
     "citations": [
       {
@@ -94,7 +94,7 @@ module.exports = [
     "author": "Robin Cockett",
     "year": 1992,
     "basename": "cockett-1992a",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.</p>\n<p>This paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.</p>\n"
   },
   {
@@ -105,7 +105,7 @@ module.exports = [
     ],
     "year": 1992,
     "basename": "cockett-1992b",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>Charity is a categorical programming language based on distributive categories (in the sense of Schanuel and Lawvere) with strong datatypes (in the sense of Hagino). Distributive categories come with a term logic which can express most standard programs; and they are fundamental to computer science because they permit proof by case analysis and, when strong datatypes are introduced, proof by structural induction.</p>\n<p>Charity is functional and polymorphic in style, and is strongly normalizing. As a categorical programming language it provides a unique marriage of computer science and mathematical thought. The above aspects are particularly important for the production of verified programs as the naturality of morphisms gives us “theorems for free”, termination proofs are not required, and mathemathical specifications can be used.</p>\n",
     "numbered": "n",
     "citations": [
@@ -234,7 +234,7 @@ module.exports = [
     ],
     "year": 1992,
     "basename": "cockett-1992c",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>An endofunctor of a cartesian closed category is often called strong if it is enriched over the exponential. Equivalently this strength can be provided as a natural transformation <b>θ<sub>A;X</sub> : F(A)×X ⟶ F(A×X)</b> satisfying some elementary coherence conditions. This latter formulation does not require exponentials, relies only on the presence of an X-action over an X-strong category, and thereby provides a first-order viewpoint of strength.</p>\n<p>The 2-category of X-strong categories is not finitely complete. It particularly lacks many standard constructions including the Eilenberg-Moore construction. Thankfully, the suggestion — attributed to Plotkin by Moggi — that strength can also be equivalently framed in terms of fibrations using projections to X-objects as display maps can be fully realized. The equivalence can be portrayed as an embedding of X-strong categories into the 2-category of X-indexed categories or split fibrations over X. This embedding can be used to give a coherent declarative implementation of parametrized datatypes-with-strength and their constructors/destructors in the style of Hagino.</p>\n<p>The initiality and finality conditions associated with the strong datatype construction in the split fibration setting generate a strongly normalizing weak-head categorical combinator reduction system. The reduction rules permit both “eager” usage of initial datatypes and “lazy” usage of final datatypes to achieve reasonable computing strength. An X-action over a strong datatype can be computed in terms of programmed state transformations over its component datatypes. These reduction rules form the abstract engine for computation within the Charity categorical programming system.</p>\n",
     "citations": [
       {
@@ -390,7 +390,7 @@ module.exports = [
     ],
     "year": 1992,
     "basename": "cockett-1992d",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>This paper lifts the category-theoretic results of [4] to the level of an abstract language suitable for basing categorical programming language implementations. The earlier work built a fibration-based strongly-normalizing categorical combinator reduction system based entirely on functorial strength that allows the distribution of context to the interior of a strong data structure. Strong type-forming functors accompanied by (1) a collection of constructor combinators (initial datatypes) or destructor combinators (final datatypes) and (2) a capability for building new state-transforming combinators that operate with structures of the datatypes formed by these functors can be abstractly declared in a Hagino-Wraith style to form a reasonably expressive computing environment.</p>\n<p>However, the high complexity of programming exclusively in combinators warrants the development of categorical programming languages that are isomorphic to the distributive category settings in which strong datatypes can be declared. Towards this goal, a distributive term logic is developed and proven consistent with and equivalent to the combinator theory. Due to its basis in strength higher-order operations, such as generalized map operators, are directly expressible in this first-order language. The term logic forms the underlying base of the Charity categorical programming system. The resulting categorical programming paradigm of structurally inductive state transforms is illustrated by several examples that accompany the term logic reduction rules.</p>\n",
     "citations": [
       {
@@ -469,7 +469,7 @@ module.exports = [
     "author": "Robin Cockett",
     "year": 1993,
     "basename": "cockett-1993",
-    "collection": "Charity language",
+    "collection": "Charity",
     "numbered": "n",
     "citations": [
       {
@@ -497,14 +497,14 @@ module.exports = [
     "author": "Robin Cockett",
     "year": 1996,
     "basename": "cockett-1996",
-    "collection": "Charity language"
+    "collection": "Charity"
   },
   {
     "title": "Charity user manual",
     "author": "Tom Fukushima",
     "year": 1991,
     "basename": "fukushima-1991",
-    "collection": "Charity language"
+    "collection": "Charity"
   },
   {
     "title": "Charity user manual",
@@ -514,13 +514,13 @@ module.exports = [
     ],
     "year": 1996,
     "basename": "fukushima-1996",
-    "collection": "Charity language"
+    "collection": "Charity"
   },
   {
     "title": "A lazy graph reduction machine for Charity: Charity abstract reduction machine (Charm)",
     "author": "Mike Hermann",
     "year": 1992,
-    "collection": "Charity language",
+    "collection": "Charity",
     "partial": "y"
   },
   {
@@ -528,14 +528,14 @@ module.exports = [
     "author": "Marc Schroeder",
     "year": 1993,
     "basename": "schroeder-1993a",
-    "collection": "Charity language"
+    "collection": "Charity"
   },
   {
     "title": "Chirp: A front end for Charity",
     "author": "Marc Schroeder",
     "year": 1993,
     "basename": "schroeder-1993b",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>Chirp is the front end of the interpreter for Charity, a categorical programming language currently under development. Chirp interfaces neatly with Barry Yee’s Charm abstract machine, the back end, to form a coherent system for the definition and execution of Charity programs. Chirp has been designed to be fast, portable, and extensible.</p>\n<p>Chapter 1 provides a brief introduction to Chirp and the Charity language. Chapter 2 presents Charity in slightly more detail, discussing categorical programming as well as issues in the language. Chapters 3–9 explore the workings of the Chirp system in detail, while chapter 10 explains the Chirp/Charm interface. Finally, chapter 11 comments on some possible directions in the continued development of Chirp and Charity. The appendices specify the grammar for Charity, and other technical or useful details of the system and language. An example Chirp session is also listed.</p>\n",
     "citations": [
       {
@@ -684,7 +684,7 @@ module.exports = [
     "author": "Marc Schroeder",
     "year": 1997,
     "basename": "schroeder-1997",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>This thesis describes the higher-order Charity programming language which is an extension of first-order Charity. This results from extending the coinductive datatype definition mechanism to allow a new class of higher-order datatypes with parameterized destructors. This adds significant expressive power to the language. In particular it allows one to create “objects”. The language is “higher-order” in the traditional sense that the exponential datatype can be defined, and so that functions can be treated as values.</p>\n<p>The higher-order extension is traced from the extension of the syntax and the expressive gains delivered to the Charity programmer, down through the innards of the language and the modifications required in the implementation.</p>\n",
     "citations": [
       {
@@ -876,7 +876,7 @@ module.exports = [
     ],
     "year": 1992,
     "basename": "simpson-1992",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.</p>\n<p>A program definition using patterns is a parallel specification and does not determine a sequential evaluation. A problem arises, therefore, in attempting to preserve as far as possible the intended parallel meaning during the translation to sequential form. In particular, a sequentialized program may be forced to evaluate patterns which need not be evaluated when parallelism is available. It is known that some definitions using patterns, called <i>sequentializable</i> definitions, can be translated without semantic loss, and algorithms to sequentialize these definitions have been documented. In this paper we present an algorithm which works uniformly over <i>all</i> definitions — it handles sequentializable definitions correctly, but also optimizes the sequential realization of other definitions.</p>\n",
     "citations": [
       {
@@ -958,7 +958,7 @@ module.exports = [
     "author": "Dwight Spencer",
     "year": 1993,
     "basename": "spencer-1993",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>We show that significant <i>categorical</i> programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the <i>structures of data</i> drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.</p>\n",
     "citations": [
       {
@@ -1305,7 +1305,7 @@ module.exports = [
     "author": "Charles Tuckey",
     "year": 1994,
     "basename": "tuckey-1994",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>Charity is a functional type language recently developed at the University of Calgary by Dr. J.R.B. Cockett. This paper is a report on a project to add pattern matching capability to Charity. The project involved defining an extended term logic for Charity, developing an appropriate syntax to express the new term logic, doing type checking in the term logic, and refining an algorithm to translate the extended term logic to the core term logic. The preceding work is discussed and a blueprint is given for future work.</p>\n",
     "numbered": "n",
     "citations": [
@@ -1406,7 +1406,7 @@ module.exports = [
     "author": "Charles Tuckey",
     "year": 1997,
     "basename": "tuckey-1997",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>Charity, a functional style programming language based in the mathematics of category theory, was developed at the University of Calgary by the Charity group under the direction of Dr. Cockett. Key to the usefulness of such languages is the ability to define functions using pattern matching. This thesis describes an extended type theory for a Charity term logic with sophisticated pattern matching capabilities. It gives a translation of this extended term logic to Charity’s core term logic, enabling programs written in the extended term logic to be evaluated. The translation closely mirrors the type theory.</p>\n<p>In addition, this work introduces a new pattern matching feature which is not found in other functional style languages. It shows how the facility of guarding patterns with boolean functions, available in many functional languages, can be extended so that functions of arbitrary types can be used as pattern guards.</p>\n",
     "numbered": "n",
     "citations": [
@@ -1529,7 +1529,7 @@ module.exports = [
     "author": "Peter Vesely",
     "year": 1996,
     "basename": "vesely-1996",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>A 2-categorical notion of <i>parametric combinator</i> is introduced. These combinators are operations for constructing arrows in a category and satisfy a 2-categorical abstraction of parametricity for strictly covariant functors. Inductive and co-inductive datatypes are compatible with these combinators and their universal properties are closely related to parametricity. The Charity programming language is based on <i>strong datatypes</i> which are a specialization of 2-categorical datatypes. <i>Strong combinators</i> (which are an appropriate specialization of 2-categorical combinators) provide a model of polymorphic functions in Charity.</p>\n",
     "numbered": "n",
     "citations": [
@@ -1684,7 +1684,7 @@ module.exports = [
     "author": "Peter Vesely",
     "year": 1997,
     "basename": "vesely-1997",
-    "collection": "Charity language",
+    "collection": "Charity",
     "citations": [
       {
         "authors": [
@@ -1706,7 +1706,7 @@ module.exports = [
     "author": "Barry Yee",
     "year": 1993,
     "basename": "yee-1993",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>The Charm project is an attempt to build an efficient and portable abstract machine for the Charity language. The abstract machine is implemented in C programming language to make the system more portable across different computer platforms. In this paper, the Charity system is composed of a set of rewrite rules that are converted to state transitions that defines an abstract machine. The implementation of the system is divided into two levels, the macro–level and micro–level. Macro–instructions are instructions that specify the state transitions while the micro–instructions perform the actions that change the state of the machine.</p>\n",
     "numbered": "n",
     "citations": [
@@ -1795,7 +1795,7 @@ module.exports = [
     "author": "Barry Yee",
     "year": 1995,
     "basename": "yee-1995",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>This thesis describes a series of three abstract machines, with associated compilation procedures, for the Charity programming language. Each machine is a refinement of the previous, getting closer to the level of the physical machine.</p>\n<p>The current C implementation of Charity is based on the last of these machines and is roughly twenty times faster than the original SML implementation, which was based on the first.</p>\n",
     "numbered": "n",
     "citations": [
@@ -1971,7 +1971,7 @@ module.exports = [
     "author": "Min Zeng",
     "year": 2003,
     "basename": "zeng-2003",
-    "collection": "Charity language",
+    "collection": "Charity",
     "abstract": "<p>This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.</p>\n<p>The design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.</p>\n<p>The core-Charity compiler concentrates on providing an efficient implementation of core Charity code into the virtual machine. Previous implementations suffered from excessive heap usage which necessitated frequent garbage collection. In this implementation a variety of techniques are used to reduce heap usage and improve execution speed.</p>\n<p>The resulting Charity programs are substantially faster than those produced by previous Charity implementations.</p>\n",
     "citations": [
       {
@@ -2204,154 +2204,6 @@ module.exports = [
         "author": "Barry Yee",
         "title": "Implementing the Charity abstract machine",
         "year": 1995
-      }
-    ]
-  },
-  {
-    "title": "The intensional lambda calculus",
-    "authors": [
-      "Sergei Artemov",
-      "Eduardo Bonelli"
-    ],
-    "year": 2007,
-    "basename": "artemov-2007",
-    "collection": "Direct reflection",
-    "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on how a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
-    "numbered": "n",
-    "citations": [
-      {
-        "authors": [
-          "Jesse Alt",
-          "Sergei Artemov"
-        ],
-        "title": "Reflective λ-calculus",
-        "year": 2001
-      },
-      {
-        "authors": [
-          "Sergei Artemov",
-          "Eduardo Bonelli"
-        ],
-        "title": "The intensional lambda calculus",
-        "year": 2006
-      },
-      {
-        "author": "Sergei Artemov",
-        "title": "Operational modal logic",
-        "year": 1995
-      },
-      {
-        "author": "Sergei Artemov",
-        "title": "Proof realization of intuitionistic and modal logics",
-        "year": 1996
-      },
-      {
-        "author": "Sergei Artemov",
-        "title": "Unified semantics of modality and λ-terms via proof polynomials",
-        "year": 2001
-      },
-      {
-        "author": "Henk Barendregt",
-        "title": "Lambda calculi with types",
-        "year": 1992
-      },
-      {
-        "author": "Vladimir Brezhnev",
-        "title": "On the logic of proofs",
-        "year": 2001
-      },
-      {
-        "authors": [
-          "Alonzo Church",
-          "John B. Rosser"
-        ],
-        "title": "Some properties of conversion",
-        "year": 1936
-      },
-      {
-        "authors": [
-          "Rowan Davies",
-          "Frank Pfenning"
-        ],
-        "title": "A modal analysis of staged computation",
-        "year": 1996
-      },
-      {
-        "authors": [
-          "Rowan Davies",
-          "Frank Pfenning"
-        ],
-        "title": "A judgmental reconstruction of modal logic",
-        "year": 2001
-      },
-      {
-        "authors": [
-          "Rowan Davies",
-          "Frank Pfenning"
-        ],
-        "title": "A modal analysis of staged computation",
-        "year": 2001
-      },
-      {
-        "authors": [
-          "Jean-Yves Girard",
-          "Yves Lafont",
-          "Paul Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "Gérard Huet",
-          "Jean-Jacques Lévy"
-        ],
-        "title": "Computations in orthogonal rewriting systems",
-        "year": 1991
-      },
-      {
-        "author": "Jan W. Klop",
-        "title": "Combinatory reduction systems",
-        "year": 1980
-      },
-      {
-        "authors": [
-          "Zurab Khasidashvili",
-          "Mizuhito Ogawa",
-          "Vincent van Oostrom"
-        ],
-        "title": "Perpetuality and uniform normalization in orthogonal rewrite systems",
-        "year": 2001
-      },
-      {
-        "author": "Jean-Jacques Lévy",
-        "title": "Réductions correctes et optimales dans le lambda-calcul",
-        "year": 1978
-      },
-      {
-        "author": "Per Martin-Löf",
-        "title": "On the meaning of the logical constants and the justifications of the logical laws",
-        "year": 1983
-      },
-      {
-        "author": "Tobias Nipkow",
-        "title": "Higher-order critical pairs",
-        "year": 1991
-      },
-      {
-        "author": "Terese",
-        "title": "Term rewriting systems",
-        "year": 2003
-      },
-      {
-        "authors": [
-          "Philip Wickline",
-          "Peter Lee",
-          "Frank Pfenning",
-          "Rowan Davies"
-        ],
-        "title": "Modal types as staging specifications for run-time code generation",
-        "year": 1998
       }
     ]
   },
@@ -3120,7 +2972,7 @@ module.exports = [
     "author": "Marek Łach",
     "year": 1998,
     "basename": "lach-1998",
-    "collection": "ET language",
+    "collection": "System ET",
     "citations": [
       {
         "author": "A.W. Appel",
@@ -3209,14 +3061,14 @@ module.exports = [
     "title": "Teoriodowodowe podejście do programów funkcyjnych i typów danych",
     "author": "Zdzisław Spławski",
     "year": 1998,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
     "title": "Proof-theoretic approach to automatic synthesis of polymorphic programs",
     "author": "Zdzisław Spławski",
     "year": 1991,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
@@ -3224,7 +3076,7 @@ module.exports = [
     "author": "Zdzisław Spławski",
     "year": 1993,
     "basename": "splawski-1993a",
-    "collection": "ET language",
+    "collection": "System ET",
     "citations": [
       {
         "author": "Martin Hofmann",
@@ -3247,7 +3099,7 @@ module.exports = [
     "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
     "author": "Zdzisław Spławski",
     "year": 1993,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y",
     "citations": [
       {
@@ -3689,35 +3541,35 @@ module.exports = [
     "title": "Proving equalities in λ→ with positive (co-)inductive data types",
     "author": "Zdzisław Spławski",
     "year": 1995,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
     "title": "Subtyping λ→ with positive (co-)inductive data types",
     "author": "Zdzisław Spławski",
     "year": 1996,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
     "title": "Proving equalities in second-order lambda calculus with inductive and recursive types",
     "author": "Zdzisław Spławski",
     "year": 1997,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
     "title": "Continuations in λ→ with positive (co-)inductive data types",
     "author": "Zdzisław Spławski",
     "year": 1998,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
     "title": "Interdefinability of positive coinductive types with corecursors",
     "author": "Zdzisław Spławski",
     "year": 1999,
-    "collection": "ET language",
+    "collection": "System ET",
     "partial": "y"
   },
   {
@@ -3728,7 +3580,7 @@ module.exports = [
     ],
     "year": 1999,
     "basename": "splawski-1999b",
-    "collection": "ET language",
+    "collection": "System ET",
     "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus λ2U of recursive types with the operators <b>Fold : σ[μα.σ/α] → μα.σ</b> and <b>Unfold : μα.σ → σ[μα.σ/α]</b>, where the composition <b>Unfold ◦ Fold</b> reduces to identity.</p>\n<p>It is known that systems with iterators can be defined within λ2, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system λ2U does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type <b>σ</b> is embedded into another type <b>τ</b> then <b>τ</b> must be of depth at least equal to the depth of <b>σ</b>.</p>\n",
     "citations": [
       {
@@ -3925,7 +3777,7 @@ module.exports = [
     "author": "Zdzisław Spławski",
     "year": 2002,
     "basename": "splawski-2002",
-    "collection": "ET language",
+    "collection": "System ET",
     "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. Known extensions of λ2 fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within λ2 by means of beta reductions, and it is conjectured that systems with recursors cannot.</p>\n<p>In this paper we define the general form of mutual iteration scheme in λ2 and we show that the explicit solution for particular functions defines recursors within λ2, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient <i>equational</i> inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.</p>\n",
     "citations": [
       {
@@ -4006,7 +3858,7 @@ module.exports = [
     "author": "Paweł Urzyczyn",
     "year": 1999,
     "basename": "urzyczyn-1999",
-    "collection": "ET language",
+    "collection": "System ET",
     "citations": [
       {
         "authors": [
@@ -4106,7 +3958,7 @@ module.exports = [
     "author": "Tomasz Wierzbicki",
     "year": 1993,
     "basename": "wierzbicki-1993",
-    "collection": "ET language",
+    "collection": "System ET",
     "citations": [
       {
         "author": "C. Reade",
@@ -4122,6 +3974,461 @@ module.exports = [
         "author": "M. Tofte",
         "title": "Four lectures on Standard ML",
         "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Reflective λ-calculus",
+    "authors": [
+      "Jesse Alt",
+      "Sergei Artemov"
+    ],
+    "year": 2000,
+    "basename": "alt-2000",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>The Curry-Howard isomorphism converting intuitionistic proofs into typed λ-terms is a simple instance of an internalization property of a system λ<sup>∞</sup> which unifies intuitionistic logic with λ-calculus and which is capable of internalizing its own derivations as λ-terms. We establish confluence and strong normalization of λ<sup>∞</sup>. The system λ<sup>∞</sup> considerably extends the expressive power of each of its major components: typed λ-calculus, intuitionistic and modal logic. It may be regarded as the pure λ version of the Logic of Proofs LP from [1, 2, 3]. In particular, the standard model of <b>t : F</b> in λ<sup>∞</sup> is “<b>t</b> is a proof of <b>F</b>”.</p>\n",
+    "citations": [
+      {
+        "author": "Sergei Artemov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
+        "year": 1999
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Explicit provability and constructive semantics",
+        "year": 2001
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "D. de Jongh",
+          "G. Japaridze"
+        ],
+        "title": "Logic of provability",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "Jean-Yves Girard",
+          "Yves Lafont",
+          "Paul Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "H. Schwichtenberg"
+        ],
+        "title": "Basic proof theory",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "title": "Reflective λ-calculus",
+    "authors": [
+      "Jesse Alt",
+      "Sergei Artemov"
+    ],
+    "year": 2001,
+    "basename": "alt-2001",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>We introduce a general purpose typed λ-calculus λ<sup>∞</sup> which contains intuitionistic logic, is capable of internalizing its own derivations as λ-terms and yet enjoys strong normalization with respect to a natural reduction system. In particular, λ<sup>∞</sup> subsumes the typed λ-calculus. The Curry-Howard isomorphism converting intuitionistic proofs into λ-terms is a simple instance of the internalization property of λ<sup>∞</sup>. The standard semantics of λ<sup>∞</sup> is given by a proof system with proof checking capacities. The system λ<sup>∞</sup> is a theoretical prototype of reflective extensions of a broad class of type-based systems in programming languages, provers, AI and knowledge representation, etc.</p>\n",
+    "citations": [
+      {
+        "author": "Sergei Artemov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
+        "year": 1999
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Explicit provability and constructive semantics",
+        "year": 2001
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "author": "R. Constable",
+        "title": "Types in logic, mathematics, and programming",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "D. de Jongh",
+          "G. Japaridze"
+        ],
+        "title": "Logic of provability",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "Jean-Yves Girard",
+          "Yves Lafont",
+          "Paul Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "author": "V.N. Krupski",
+        "title": "Operational logic of proofs with functionality condition on proof predicate",
+        "year": 1997
+      },
+      {
+        "author": "V.N. Krupski",
+        "title": "The single-conclusion proof logic and inference rules specification",
+        "year": 2001
+      },
+      {
+        "author": "A. Nerode",
+        "title": "Applied logic",
+        "year": 1986
+      },
+      {
+        "author": "A. Troelstra",
+        "title": "Realizability",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "H. Schwichtenberg"
+        ],
+        "title": "Basic proof theory",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "title": "Reflection and propositions-as-types",
+    "authors": [
+      "Sergei Artemov",
+      "Eli Barzilay",
+      "Robert L. Constable",
+      "Aleksey Nogin"
+    ],
+    "year": 2001,
+    "basename": "artemov-2001",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Stuart F. Allen",
+          "Robert L. Constable",
+          "Douglas J. Howe",
+          "William Aitken"
+        ],
+        "title": "The semantics of reflected proof",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "J. Alt",
+          "S. Artemov"
+        ],
+        "title": "Reflective λ-calculus",
+        "year": 2000
+      },
+      {
+        "author": "S. Artemov",
+        "title": "On explicit reflection in theorem proving and formal verification",
+        "year": 1999
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
+        "year": 1999
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Explicit provability and constructive semantics",
+        "year": 2001
+      },
+      {
+        "author": "The Coq development team",
+        "title": "The Coq Proof Assistant reference manual",
+        "year": 1996
+      },
+      {
+        "author": "Eli Barzilay",
+        "title": "Quotation and reflection in NuPRL and Scheme",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "R.S. Boyer",
+          "J.S. Moore"
+        ],
+        "title": "Metafunctions: Proving them correct and using them efficiently as new proof procedures",
+        "year": 1981
+      },
+      {
+        "author": "W. Clinger",
+        "title": "Hygienic macros through explicit renaming",
+        "year": 1991
+      },
+      {
+        "author": "Robert L. Constable",
+        "title": "Using reflection to explain and enhance type theory",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Stuart F. Allen",
+          "H.M. Bromley",
+          "W.R. Cleaveland",
+          "J.F. Cremer",
+          "R.W. Harper",
+          "Douglas J. Howe",
+          "T.B. Knoblock",
+          "N.P. Mendler",
+          "P. Panangaden",
+          "James T. Sasaki",
+          "Scott F. Smith"
+        ],
+        "title": "Implementing mathematics with the Nuprl development system",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Stuart F. Allen",
+          "Douglas J. Howe"
+        ],
+        "title": "Reflecting the open-ended computation system of constructive type theory",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Karl Crary"
+        ],
+        "title": "Computational complexity and induction for partial computable functions in type theory",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "D. de Jongh",
+          "G. Japaridze"
+        ],
+        "title": "Logic of provability",
+        "year": 1998
+      },
+      {
+        "author": "Jason Hickey",
+        "title": "The MetaPRL logical programming environment",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Jason Hickey",
+          "Aleksey Nogin"
+        ],
+        "title": "Fast tactic-based theorem proving",
+        "year": 2000
+      },
+      {
+        "authors": [
+          "R. Kelsey",
+          "W. Clinger",
+          "J. Rees",
+          "et al."
+        ],
+        "title": "Revised⁵ report on the algorithmic language Scheme",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "L. Magnusson",
+          "B. Nordström"
+        ],
+        "title": "The Alf proof editor and its proof engine",
+        "year": 1994
+      },
+      {
+        "title": "MetaPRL home page"
+      },
+      {
+        "author": "B.C. Smith",
+        "title": "Reflection and semantics in Lisp",
+        "year": 1984
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "H. Schwichtenberg"
+        ],
+        "title": "Basic proof theory",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "title": "The intensional lambda calculus",
+    "authors": [
+      "Sergei Artemov",
+      "Eduardo Bonelli"
+    ],
+    "year": 2007,
+    "basename": "artemov-2007",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on how a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
+    "numbered": "n",
+    "citations": [
+      {
+        "authors": [
+          "Jesse Alt",
+          "Sergei Artemov"
+        ],
+        "title": "Reflective λ-calculus",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Sergei Artemov",
+          "Eduardo Bonelli"
+        ],
+        "title": "The intensional lambda calculus",
+        "year": 2006
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Proof realization of intuitionistic and modal logics",
+        "year": 1996
+      },
+      {
+        "author": "Sergei Artemov",
+        "title": "Unified semantics of modality and λ-terms via proof polynomials",
+        "year": 2001
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "author": "Vladimir Brezhnev",
+        "title": "On the logic of proofs",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Alonzo Church",
+          "John B. Rosser"
+        ],
+        "title": "Some properties of conversion",
+        "year": 1936
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A modal analysis of staged computation",
+        "year": 1996
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A judgmental reconstruction of modal logic",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A modal analysis of staged computation",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "Jean-Yves Girard",
+          "Yves Lafont",
+          "Paul Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Gérard Huet",
+          "Jean-Jacques Lévy"
+        ],
+        "title": "Computations in orthogonal rewriting systems",
+        "year": 1991
+      },
+      {
+        "author": "Jan W. Klop",
+        "title": "Combinatory reduction systems",
+        "year": 1980
+      },
+      {
+        "authors": [
+          "Zurab Khasidashvili",
+          "Mizuhito Ogawa",
+          "Vincent van Oostrom"
+        ],
+        "title": "Perpetuality and uniform normalization in orthogonal rewrite systems",
+        "year": 2001
+      },
+      {
+        "author": "Jean-Jacques Lévy",
+        "title": "Réductions correctes et optimales dans le lambda-calcul",
+        "year": 1978
+      },
+      {
+        "author": "Per Martin-Löf",
+        "title": "On the meaning of the logical constants and the justifications of the logical laws",
+        "year": 1983
+      },
+      {
+        "author": "Tobias Nipkow",
+        "title": "Higher-order critical pairs",
+        "year": 1991
+      },
+      {
+        "author": "Terese",
+        "title": "Term rewriting systems",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Philip Wickline",
+          "Peter Lee",
+          "Frank Pfenning",
+          "Rowan Davies"
+        ],
+        "title": "Modal types as staging specifications for run-time code generation",
+        "year": 1998
       }
     ]
   },
