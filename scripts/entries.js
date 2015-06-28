@@ -4119,6 +4119,126 @@ module.exports = [
     ]
   },
   {
+    "title": "On explicit reflection in theorem proving and formal verification",
+    "author": "Sergei Artemov",
+    "year": 1999,
+    "basename": "artemov-1999",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>We show that the stability requirement for a verification system yields the necessity of some sort of a reflection mechanism. However, the traditional reflection rule based on the Gödel implicit provability predicate leads to a “reflection tower” of theories which cannot be formally verified. We found natural lower and upper bounds on a metatheory capable of establishing stability of a given verification system. The paper introduces an explicit reflection mechanism which can be verified internally. This circumvents the reflection tower and provides a strict justification for the verification process. On the practical side, the paper gives specific recommendations concerning the verification of inference rules and building a verifiable reflection mechanism for a theorem proving system.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Stuart F. Allen",
+          "Robert L. Constable",
+          "Douglas J. Howe",
+          "William Aitken"
+        ],
+        "title": "The semantics of reflected proof",
+        "year": 1990
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Extensions of theories by the reflection principles and the corresponding modal logics",
+        "year": 1979
+      },
+      {
+        "authors": [
+          "S. Artemov",
+          "T. Strassen"
+        ],
+        "title": "The basic logic of proofs",
+        "year": 1993
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Logic of proofs",
+        "year": 1994
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "S. Artemov",
+        "title": "Explicit provability: The intended semantics for intuitionistic and modal logic",
+        "year": 1998
+      },
+      {
+        "author": "G. Boolos",
+        "title": "The unprovability of consistency: An essay in modal logic",
+        "year": 1979
+      },
+      {
+        "authors": [
+          "M. Davis",
+          "J. Schwartz"
+        ],
+        "title": "Metamathematical extensibility for theorem verifiers and proof checkers",
+        "year": 1979
+      },
+      {
+        "author": "S. Feferman",
+        "title": "Arithmetization of metamathematics in a general setting",
+        "year": 1960
+      },
+      {
+        "author": "S. Feferman",
+        "title": "Transfinite recursive progression of axiomatic theories",
+        "year": 1962
+      },
+      {
+        "author": "J. Harrison",
+        "title": "Metatheory and reflection in theorem proving: A survey and critique",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "T. Knoblock",
+          "R. Constable"
+        ],
+        "title": "Formalized metareasoning in type theory",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "G. Kreisel",
+          "A. Levy"
+        ],
+        "title": "Reflection principles and their use for establishing the complexity of axiomatic systems",
+        "year": 1968
+      },
+      {
+        "author": "R. Pollack",
+        "title": "On extensibility of proof checkers",
+        "year": 1995
+      },
+      {
+        "author": "C. Smorynski",
+        "title": "The incompleteness theorems",
+        "year": 1977
+      },
+      {
+        "author": "C. Smorynski",
+        "title": "Self-reference and modal logic",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
+        "year": 1988
+      },
+      {
+        "author": "A. Turing",
+        "title": "Systems of logic based on ordinals",
+        "year": 1939
+      }
+    ]
+  },
+  {
     "title": "Reflection and propositions-as-types",
     "authors": [
       "Sergei Artemov",
@@ -4577,6 +4697,547 @@ module.exports = [
         ],
         "title": "Modal types as staging specifications for run-time code generation",
         "year": 1998
+      }
+    ]
+  },
+  {
+    "title": "Implementing direct reflection in Nuprl",
+    "author": "Eli Barzilay",
+    "year": 2006,
+    "basename": "barzilay-2006",
+    "collection": "Intensional λ-calculus",
+    "abstract": "<p>Reflection is the ability of some entity to describe itself. In a logical context, it is the ability of a logic to reason about itself. Reflection is, therefore, placed at the core of meta-mathematics, making it an important part of formal reasoning; where it revolves mainly around syntax and semantics — the main challenge is in making the syntax of the logic become part of its semantic domain.\nGiven its importance, it is surprising that logical computer systems tend to avoid the subject, or provide poor tools for reflective work. This is in sharp contrast to the area of programming languages, where reflection is well researched and used in a variety of ways where it plays an central role. One factor in making reflection inaccessible in logical systems is the relative difficulty that is immediately encountered when formalizing syntax: dealing with formal syntax means dealing with structures that involve bindings, and in a logical context it seems natural to use the same formal tools to describe syntax — often limiting the usability of such formalizations to specific theories and toy examples. Gödel numbers are an example for a reflective formalism that serves its purpose, yet is impractical as a basis for syntactical reasoning in applied systems.\nIn programming languages, there is a simple yet elegant strategy for implementing reflection: instead of making a system that describes itself, the system is made available to itself. We name this <i>direct reflection</i>, where the representation of language features via its semantics is actually part of the semantics itself — unlike the usual practice in formal systems of employing indirect reflection. The advantages of this approach is the fact that both the system and its reflected counterpart are inherently identical, making for a lightweight implementation.\nIn this work we develop the formal background and the practical capabilities of an applied system, namely Nuprl, that are needed to support direct reflection of its own syntax. Achieving this is a major milestone on the road for a fully reflected logical system. As we shall demonstrate, our results enable dealing with syntactical meta-mathematical content.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Eric Aaron",
+          "Stuart Allen"
+        ],
+        "title": "Justifying calculational logic by a conventional metalinguistic semantics",
+        "year": 1999
+      },
+      {
+        "author": "Klaus Aehlig",
+        "title": "Normalization by evaluation does not need types",
+        "year": 2001
+      },
+      {
+        "author": "William Aitken",
+        "title": "Metaprogramming in Nuprl using reflection",
+        "year": 1994
+      },
+      {
+        "author": "Stuart F. Allen",
+        "title": "A non-type-theoretic semantics for type-theoretic language",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "Stuart F. Allen",
+          "Mark Bickford",
+          "Robert Constable",
+          "Richard Eaton",
+          "Christoph Kreitz",
+          "Lori Lorigo",
+          "Evan Moran"
+        ],
+        "title": "Innovations in computational type theory using Nuprl",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "Stuart F. Allen",
+          "Robert L. Constable",
+          "Douglas J. Howe",
+          "William Aitken."
+        ],
+        "title": "The semantics of reflected proof",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Brian E. Aydemir",
+          "Aaron Bohannon",
+          "Matthew Fairbairn",
+          "J. Nathan Foster",
+          "Benjamin C. Pierce",
+          "Peter Sewell",
+          "Dimitrios Vytiniotis",
+          "Geoffrey Washburn",
+          "Stephanie Weirich",
+          "Steve Zdancewic"
+        ],
+        "title": "Mechanized metatheory for the masses: The POPLmark challenge",
+        "year": 2005
+      },
+      {
+        "author": "Henk P. Barendregt",
+        "title": "The lambda calculus: Its syntax and symantics",
+        "year": 1981
+      },
+      {
+        "author": "Alan Bawden",
+        "title": "Quasiquotation in Lisp",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "Ulrich Berger",
+          "Matthias Eberl",
+          "Helmut Schwichtenberg"
+        ],
+        "title": "Normalization by evaluation",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "R.S. Boyer",
+          "J.S. Moore"
+        ],
+        "title": "Metafunctions: Proving them correct and using them efficiently as new proof procedures",
+        "year": 1981
+      },
+      {
+        "author": "Alonzo Church",
+        "title": "A set of postulates for the foundation of logic",
+        "year": 1932
+      },
+      {
+        "author": "Alonzo Church",
+        "title": "A set of postulates for the foundation of logic",
+        "year": 1933
+      },
+      {
+        "author": "Alonzo Church",
+        "title": "A formulation of the simple theory of types",
+        "year": 1940
+      },
+      {
+        "author": "Alonzo Church",
+        "title": "The calculi of lambda-conversion",
+        "year": 1951
+      },
+      {
+        "authors": [
+          "R.L. Constable",
+          "S.F. Allen",
+          "H.M. Bromley",
+          "W.R. Cleaveland",
+          "J.F. Cremer",
+          "R.W. Harper",
+          "D.J. Howe",
+          "T.B. Knoblock",
+          "N.P. Mendler",
+          "P. Panangaden",
+          "J.T. Sasaki",
+          "S.F. Smith"
+        ],
+        "title": "Implementing mathematics with the Nuprl proof development system",
+        "year": 1986
+      },
+      {
+        "author": "Robert L. Constable",
+        "title": "Constructive mathematics as a programming logic I: Some principles of theory",
+        "year": 1985
+      },
+      {
+        "author": "Robert L. Constable",
+        "title": "Naïve computational type theory",
+        "year": 2002
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Karl Crary"
+        ],
+        "title": "Computational complexity and induction for partial computable functions in type theory",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Karl Crary"
+        ],
+        "title": "Computational complexity and induction for partial computable functions in type theory",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "R. Feys",
+          "W. Craig"
+        ],
+        "title": "Combinatory logic, vol. 1",
+        "year": 1958
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "J. Hindley",
+          "J. Seldin"
+        ],
+        "title": "Combinatory logic, vol. 2",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "Rowan Davies",
+          "Frank Pfenning"
+        ],
+        "title": "A modal analysis of staged computation",
+        "year": 1996
+      },
+      {
+        "author": "N.G. de Bruijn",
+        "title": "A survey of the project Automath",
+        "year": 1980
+      },
+      {
+        "author": "Daniel de Rauglaudre",
+        "title": "CamlP4",
+        "year": 2000
+      },
+      {
+        "authors": [
+          "François-Nicola Demers",
+          "Jacques Malenfant"
+        ],
+        "title": "Reflection in logic, functional, and object-oriented programming: a short comparative study",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "Joëlle Despeyroux",
+          "Amy Felty",
+          "André Hirschowitz"
+        ],
+        "title": "Higher-order abstract syntax in Coq",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "Joëlle Despeyroux",
+          "Frank Pfenning",
+          "Carsten Schürmann"
+        ],
+        "title": "Primitive recursion for higher-order abstract syntax",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "M. Felleisen",
+          "R.B. Findler",
+          "M. Flatt",
+          "S. Krishnamurthi"
+        ],
+        "title": "The DrScheme project: An overview",
+        "year": 1998
+      },
+      {
+        "author": "Matthias Felleisen",
+        "title": "On the expressive power of programming languages",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "M.J. Gabbay",
+          "A.M. Pitts"
+        ],
+        "title": "A new approach to abstract syntax with variable binding",
+        "year": 2001
+      },
+      {
+        "author": "Kurt Gödel",
+        "title": "On formally undecidable propositions of Principia Mathematica and related systems",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Michael Gordon",
+          "Robin Milner",
+          "Christopher Wadsworth"
+        ],
+        "title": "Edinburgh LCF: A mechanized logic of computation",
+        "year": 1979
+      },
+      {
+        "authors": [
+          "Andreas Paepcke",
+          "Gregor Kiczales"
+        ],
+        "title": "Open implementations and metaobject protocols",
+        "year": 1995
+      },
+      {
+        "author": "John Harrison",
+        "title": "Metatheory and reflection in theorem proving: A survey and critique",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "J. Hickey",
+          "A. Nogin",
+          "R.L. Constable",
+          "B.E. Aydemir",
+          "E. Barzilay",
+          "Y. Bryukhov",
+          "R. Eaton",
+          "A. Granicz",
+          "A. Kopylov",
+          "C. Kreitz",
+          "V.N. Krupski",
+          "L. Lorigo",
+          "S. Schmitt",
+          "C. Witty",
+          "X. Yu."
+        ],
+        "title": "MetaPRL: A modular logical environment",
+        "year": 2003
+      },
+      {
+        "author": "Jason Hickey",
+        "title": "The MetaPRL logical programming environment",
+        "year": 2001
+      },
+      {
+        "author": "Martin Hofmann",
+        "title": "Semantical analysis of higher-order abstract syntax",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "Furio Honsell",
+          "Marino Miculan"
+        ],
+        "title": "A natural deduction approach to dynamic logics",
+        "year": 1995
+      },
+      {
+        "author": "W. Howard",
+        "title": "The formulas-as-types notion of construction",
+        "year": 1980
+      },
+      {
+        "author": "Douglas J. Howe",
+        "title": "Automating reasoning in an implementation of constructive type theory",
+        "year": 1988
+      },
+      {
+        "author": "Paul B. Jackson",
+        "title": "The Nuprl proof development system reference manual and user’s guide",
+        "year": 1996
+      },
+      {
+        "authors": [
+          "Guy L. Steele",
+          "Richard P. Gabriel"
+        ],
+        "title": "The evolution of Lisp",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "Richard Kelsey",
+          "William D. Clinger",
+          "Jonathan Rees",
+          "et al."
+        ],
+        "title": "Revised⁵ report on the algorithmic language Scheme",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "Gregor Kiczales",
+          "Jim des Rivieres",
+          "Daniel G. Bobrow"
+        ],
+        "title": "The art of the metaobject protocol",
+        "year": 1991
+      },
+      {
+        "author": "Stephen C. Kleene",
+        "title": "Mathematical logic",
+        "year": 1967
+      },
+      {
+        "author": "T. Knoblock",
+        "title": "Mathematical extensibility in type theory",
+        "year": 1987
+      },
+      {
+        "author": "H. Lauchli",
+        "title": "An abstract notion of realizability for which intuitionistic predicate calculus is complete",
+        "year": 1970
+      },
+      {
+        "author": "Per Martin-Löf",
+        "title": "Constructive mathematics and computer programming",
+        "year": 1982
+      },
+      {
+        "authors": [
+          "J. McCarthy",
+          "et al."
+        ],
+        "title": "Lisp 1.5 user’s manual",
+        "year": 1962
+      },
+      {
+        "author": "John McCarthy",
+        "title": "History of Lisp",
+        "year": 1978
+      },
+      {
+        "authors": [
+          "R. Milner",
+          "M. Tofte",
+          "R. Harper",
+          "D. MacQueen"
+        ],
+        "title": "The definition of Standard ML",
+        "year": 1997
+      },
+      {
+        "author": "Torben Æ. Mogensen",
+        "title": "Efficient self-interpretations in lambda calculus",
+        "year": 1992
+      },
+      {
+        "author": "Richard Montague",
+        "title": "The proper treatment of quantification in ordinary English",
+        "year": 1973
+      },
+      {
+        "authors": [
+          "Aleksey Nogin",
+          "Alexei Kopylov",
+          "Xin Yu",
+          "Jason Hickey"
+        ],
+        "title": "A computational approach to reflective meta-reasoning about languages with bindings",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "Bengt Nordström",
+          "Kent Petersson",
+          "Jan M. Smith"
+        ],
+        "title": "Programming in Martin-Löf’s type theory",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "Frank Pfenning",
+          "Conal Elliott"
+        ],
+        "title": "Higher-order abstract syntax",
+        "year": 1988
+      },
+      {
+        "author": "Andrew M. Pitts",
+        "title": "Nominal logic, a first order theory of names and binding",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Andrew M. Pitts",
+          "Murdoch Gabbay"
+        ],
+        "title": "A metalanguage for programming with bound names modulo renaming",
+        "year": 2000
+      },
+      {
+        "author": "W. Van Orman Quine",
+        "title": "From a logical point of view: 9 logico-philosophical essays",
+        "year": 1961
+      },
+      {
+        "author": "D. Scott",
+        "title": "Constructive validity",
+        "year": 1970
+      },
+      {
+        "authors": [
+          "M.R. Shinwell",
+          "A.M. Pitts",
+          "M.J. Gabbay"
+        ],
+        "title": "FreshML: Programming with binders made simple",
+        "year": 2003
+      },
+      {
+        "author": "C. Simonyi",
+        "title": "Intentional programming: Innovation in the legacy age",
+        "year": 1996
+      },
+      {
+        "author": "B.C. Smith",
+        "title": "Reflection and semantics in a procedural language",
+        "year": 1982
+      },
+      {
+        "author": "B.C. Smith",
+        "title": "Reflection and semantics in Lisp",
+        "year": 1984
+      },
+      {
+        "author": "C. Smorynski",
+        "title": "Self-reference and modal logic",
+        "year": 1985
+      },
+      {
+        "author": "Raymond M. Smullyan",
+        "title": "Diagonalization and self-reference",
+        "year": 1994
+      },
+      {
+        "author": "Paul Vincent Spade",
+        "title": "Insolubles",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "W. Taha",
+          "T. Sheard"
+        ],
+        "title": "Multi-stage programming with explicit annotations",
+        "year": 1997
+      },
+      {
+        "author": "Walid Taha",
+        "title": "Multi-stage programming: Its theory and applications",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "C. Urban",
+          "A.M. Pitts",
+          "M.J. Gabbay"
+        ],
+        "title": "Nominal unification",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "Christian Urban",
+          "Michael Norrish"
+        ],
+        "title": "A formal treatment of the Barendregt variable convention in rule inductions",
+        "year": 2005
+      },
+      {
+        "authors": [
+          "Christian Urban",
+          "Christine Tasson"
+        ],
+        "title": "Nominal reasoning techniques in Isabelle/Hol",
+        "year": 2005
+      },
+      {
+        "author": "Stephanie Weirich",
+        "title": "Programming with types",
+        "year": 2002
       }
     ]
   },
