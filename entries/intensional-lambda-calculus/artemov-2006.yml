@@ -2,8 +2,8 @@ title: The intensional lambda calculus
 authors:
   - Sergei Artemov
   - Eduardo Bonelli
-year: 2007
-basename: artemov-2007
+year: 2006
+basename: artemov-2006
 collection: Intensional λ-calculus
 abstract: |
   <p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on <i>how</i> a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>
