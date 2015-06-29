@@ -117,5 +117,25 @@ var _ = module.exports = {
     return (
       value !== null ? JSON.parse(value) :
         defaultValue);
+  },
+
+  detectHairline: function () {
+    var hairline = false;
+    if (window.devicePixelRatio && window.devicePixelRatio >= 2) {
+      var div = document.createElement('div');
+      div.style.border = '.5px solid transparent';
+      document.body.appendChild(div);
+      if (div.offsetHeight === 1) {
+        hairline = true;
+      }
+      document.body.removeChild(div);
+    }
+    if (hairline) {
+      document.documentElement.classList.remove('no-hairline');
+      document.documentElement.classList.add('hairline');
+    } else {
+      document.documentElement.classList.remove('hairline');
+      document.documentElement.classList.add('no-hairline');
+    }
   }
 };
