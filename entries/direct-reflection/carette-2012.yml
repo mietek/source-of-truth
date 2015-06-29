@@ -19,7 +19,7 @@ citations:
   - authors:
       - Jacques Carette
       - Oleg Kiselyov
-      - Chung chieh Shan
+      - Chung-chieh Shan
     title: "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages"
     year: 2009
 

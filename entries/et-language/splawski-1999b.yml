@@ -28,7 +28,7 @@ citations:
       - S. van Bakel
       - L. Liquori
       - S. Ronchi Della Rocca
-      - P. Urzyczyn
+      - Paweł Urzyczyn
     title: Comparing cubes of typed and type assignment systems
     year: 1997
 
@@ -140,15 +140,15 @@ citations:
     title: On functors expressible in the polymorphic typed lambda calculus
     year: 1993
 
-  - author: Z. Spławski
+  - author: Zdzisław Spławski
     title: Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus
     year: 1993
 
-  - author: P. Urzyczyn
+  - author: Paweł Urzyczyn
     title: Positive recursive type assignment
     year: 1996
 
-  - author: P. Urzyczyn
+  - author: Paweł Urzyczyn
     title: Recursive types and type embeddings
     year: 1999
 

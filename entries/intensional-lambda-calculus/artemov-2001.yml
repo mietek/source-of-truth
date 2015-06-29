@@ -8,7 +8,7 @@ year: 2001
 basename: artemov-2001
 collection: Intensional lambda calculus
 abstract: |
-  <p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>
+  <p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the Nuprl and Metaprl systems.</p>
 citations:
 
   - authors:
@@ -42,7 +42,7 @@ citations:
     year: 1996
 
   - author: Eli Barzilay
-    title: Quotation and reflection in NuPRL and Scheme
+    title: Quotation and reflection in Nuprl and Scheme
     year: 2001
 
   - authors:
@@ -72,7 +72,7 @@ citations:
       - P. Panangaden
       - James T. Sasaki
       - Scott F. Smith
-    title: Implementing mathematics with the Nuprl development system
+    title: Implementing mathematics with the Nuprl proof development system
     year: 1986
 
   - authors:
@@ -95,7 +95,7 @@ citations:
     year: 1998
 
   - author: Jason Hickey
-    title: The MetaPRL logical programming environment
+    title: The Metaprl logical programming environment
     year: 2001
 
   - authors:
@@ -105,9 +105,9 @@ citations:
     year: 2000
 
   - authors:
-      - R. Kelsey
-      - W. Clinger
-      - J. Rees
+      - Richard Kelsey
+      - William D. Clinger
+      - Jonathan Rees
       - et al.
     title: Revised⁵ report on the algorithmic language Scheme
     year: 1998
@@ -118,7 +118,7 @@ citations:
     title: The Alf proof editor and its proof engine
     year: 1994
 
-  - title: MetaPRL home page
+  - title: Metaprl home page
 
   - author: B.C. Smith
     title: Reflection and semantics in Lisp

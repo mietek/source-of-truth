@@ -44,7 +44,7 @@ citations:
 
   - authors:
       - M.H Sørensen
-      - P. Urzyczyn
+      - Paweł Urzyczyn
     title: Lectures on the Curry-Howard isomorphism
     year: 1998
 
@@ -64,11 +64,11 @@ citations:
     title: Recursive programming with proofs
     year: 1992
 
-  - author: Z. Spławski
+  - author: Zdzisław Spławski
     title: Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus
     year: 1993
 
-  - author: P. Urzyczyn
+  - author: Paweł Urzyczyn
     title: Positive recursive type assignment
     year: 1996
 

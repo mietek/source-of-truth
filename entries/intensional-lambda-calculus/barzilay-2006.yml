@@ -61,9 +61,9 @@ citations:
     title: "Mechanized metatheory for the masses: The POPLmark challenge"
     year: 2005
 
-  - author: Henk P. Barendregt
-    title: "The lambda calculus: Its syntax and symantics"
-    year: 1981
+  - author: Henk Barendregt
+    title: "The lambda calculus: Its syntax and semantics"
+    year: 1984
 
   - author: Alan Bawden
     title: Quasiquotation in Lisp
@@ -96,21 +96,21 @@ citations:
 
   - author: Alonzo Church
     title: The calculi of lambda-conversion
-    year: 1951
+    year: 1941
 
   - authors:
-      - R.L. Constable
-      - S.F. Allen
+      - Robert L. Constable
+      - Stuart F. Allen
       - H.M. Bromley
       - W.R. Cleaveland
       - J.F. Cremer
       - R.W. Harper
-      - D.J. Howe
+      - Douglas J. Howe
       - T.B. Knoblock
       - N.P. Mendler
       - P. Panangaden
-      - J.T. Sasaki
-      - S.F. Smith
+      - James T. Sasaki
+      - Scott F. Smith
     title: Implementing mathematics with the Nuprl proof development system
     year: 1986
 
@@ -205,10 +205,10 @@ citations:
     year: 1992
 
   - authors:
-      - Michael Gordon
-      - Robin Milner
-      - Christopher Wadsworth
-    title: "Edinburgh LCF: A mechanized logic of computation"
+      - Michael J. Gordon
+      - Arthur J. Milner
+      - Christopher P. Wadsworth
+    title: "Edinburgh LCF: A mechanised logic of computation"
     year: 1979
 
   - authors:
@@ -236,12 +236,12 @@ citations:
       - L. Lorigo
       - S. Schmitt
       - C. Witty
-      - X. Yu.
-    title: "MetaPRL: A modular logical environment"
+      - Xin Yu
+    title: "Metaprl: A modular logical environment"
     year: 2003
 
   - author: Jason Hickey
-    title: The MetaPRL logical programming environment
+    title: The Metaprl logical programming environment
     year: 2001
 
   - author: Martin Hofmann
@@ -255,7 +255,7 @@ citations:
     year: 1995
 
   - author: W. Howard
-    title: The formulas-as-types notion of construction
+    title: The formulae-as-types notion of construction
     year: 1980
 
   - author: Douglas J. Howe
@@ -295,7 +295,7 @@ citations:
     title: Mathematical extensibility in type theory
     year: 1987
 
-  - author: H. Lauchli
+  - author: H. Läuchli
     title: An abstract notion of realizability for which intuitionistic predicate calculus is complete
     year: 1970
 
@@ -341,7 +341,7 @@ citations:
       - Bengt Nordström
       - Kent Petersson
       - Jan M. Smith
-    title: Programming in Martin-Löf’s type theory
+    title: "Programming in Martin-Löf’s type theory: An introduction"
     year: 1990
 
   - authors:

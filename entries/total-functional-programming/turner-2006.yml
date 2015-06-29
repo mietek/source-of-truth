@@ -12,7 +12,7 @@ citations:
     title: Domain theory
     year: 1994
 
-  - author: H.P. Barendregt
+  - author: Henk Barendregt
     title: "The lambda calculus: Its syntax and semantics"
     year: 1984
 
@@ -25,12 +25,22 @@ citations:
     year: 1937
 
   - author: A. Church
-    title: The calculi of lambda conversion
+    title: The calculi of lambda-conversion
     year: 1941
 
   - authors:
-      - R.L. Constable
-      - et al.
+      - Robert L. Constable
+      - Stuart F. Allen
+      - H.M. Bromley
+      - W.R. Cleaveland
+      - J.F. Cremer
+      - R.W. Harper
+      - Douglas J. Howe
+      - T.B. Knoblock
+      - N.P. Mendler
+      - P. Panangaden
+      - James T. Sasaki
+      - Scott F. Smith
     title: Implementing mathematics with the Nuprl proof development system
     year: 1986
 
@@ -46,7 +56,7 @@ citations:
     title: Combinatory logic, vol. 1
     year: 1958
 
-  - author: M.H. Escardo
+  - author: M.H. Escardó
     title: Real PCF extended with existential is universal
     year: 1996
 
@@ -95,8 +105,8 @@ citations:
     title: "Lambda lifting: Transforming programs to recursive equations"
     year: 1985
 
-  - author: S.C. Kleene
-    title: Lambda-definability and recursiveness
+  - author: Stephen C. Kleene
+    title: λ-definability and recursiveness
     year: 1936
 
   - author: P.J. Landin
@@ -104,7 +114,7 @@ citations:
     year: 1966
 
   - author: John McCarthy
-    title: Recursive functions of symbolic expressions and their computation by machine
+    title: Recursive functions of symbolic expressions and their computation by machine, part I
     year: 1960
 
   - authors:
@@ -198,6 +208,6 @@ citations:
     title: Total functional programming
     year: 2004
 
-  - author: C.P. Wadsworth
+  - author: Christopher P. Wadsworth
     title: The semantics and pragmatics of the lambda calculus
     year: 1971

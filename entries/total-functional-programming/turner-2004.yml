@@ -48,9 +48,9 @@ citations:
     year: 2003
 
   - authors:
-      - B. Nordström
-      - K. Petersson
-      - J.M. Smith
+      - Bengt Nordström
+      - Kent Petersson
+      - Jan M. Smith
     title: "Programming in Martin-Löf’s type theory: An introduction"
     year: 1990
 

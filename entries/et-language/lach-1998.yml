@@ -9,7 +9,7 @@ citations:
     title: Modern compiler implementation in ML
     year: 1997
 
-  - author: H.P. Barendregt
+  - author: Henk Barendregt
     title: Lambda calculi with types
     year: 1992
 
@@ -48,18 +48,18 @@ citations:
     title: Valuation systems and consequence relations
     year: 1992
 
-  - author: Z. Spławski
+  - author: Zdzisław Spławski
     title: Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus
     year: 1993
 
-  - author: Z. Spławski
+  - author: Zdzisław Spławski
     title: Proving equalities in λ→ with positive (co-)inductive data types
     year: 1995
 
   - authors:
       - A.S. Troelstra
       - D. van Dalen
-    title: "Constructivism in mathematics: An introduction"
+    title: "Constructivism in mathematics: An introduction, vol. 1"
     year: 1988
 
   - authors:

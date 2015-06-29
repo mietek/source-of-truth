@@ -9,8 +9,8 @@ module.exports = [
     "citations": [
       {
         "authors": [
-          "M. Barr",
-          "C. Wells"
+          "Michael Barr",
+          "Charles Wells"
         ],
         "title": "Toposes, triples and theories",
         "year": 1985
@@ -125,8 +125,8 @@ module.exports = [
       },
       {
         "authors": [
-          "M. Barr",
-          "C. Wells"
+          "Michael Barr",
+          "Charles Wells"
         ],
         "title": "Toposes, triples and theories",
         "year": 1985
@@ -445,14 +445,14 @@ module.exports = [
         "year": 1989
       },
       {
-        "author": "C. Wells",
+        "author": "Charles Wells",
         "title": "A generalization of the concept of sketch",
         "year": 1990
       },
       {
         "authors": [
-          "C. Wells",
-          "M. Barr"
+          "Charles Wells",
+          "Michael Barr"
         ],
         "title": "The formal description of data types using sketches",
         "year": 1987
@@ -549,8 +549,8 @@ module.exports = [
       },
       {
         "authors": [
-          "M. Barr",
-          "C. Wells"
+          "Michael Barr",
+          "Charles Wells"
         ],
         "title": "Category theory for computing science",
         "year": 1990
@@ -696,7 +696,7 @@ module.exports = [
         "year": 1996
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "The lambda calculus: Its syntax and semantics",
         "year": 1984
       },
@@ -971,8 +971,8 @@ module.exports = [
       },
       {
         "authors": [
-          "M. Barr",
-          "C. Wells"
+          "Michael Barr",
+          "Charles Wells"
         ],
         "title": "Category theory for computing science",
         "year": 1990
@@ -1281,14 +1281,14 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "C. Wells",
+        "author": "Charles Wells",
         "title": "A generalization of the concept of sketch",
         "year": 1990
       },
       {
         "authors": [
-          "C. Wells",
-          "M. Barr"
+          "Charles Wells",
+          "Michael Barr"
         ],
         "title": "The formal description of data types using sketches",
         "year": 1987
@@ -1390,7 +1390,7 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "R.F.C Walters",
+        "author": "R.F.C. Walters",
         "title": "Categories and computer science",
         "year": 1991
       },
@@ -1745,7 +1745,7 @@ module.exports = [
       {
         "authors": [
           "J. Fairbairn",
-          "S. Wray"
+          "Stuart C. Wray"
         ],
         "title": "Tim: A simple, lazy abstract machine to execute supercombinators",
         "year": 1987
@@ -1816,7 +1816,7 @@ module.exports = [
       {
         "authors": [
           "Richard Bird",
-          "Phillip Wadler"
+          "Philip Wadler"
         ],
         "title": "Introduction to functional programming",
         "year": 1988
@@ -2056,7 +2056,7 @@ module.exports = [
       {
         "authors": [
           "J. Fairbairn",
-          "S. Wray"
+          "Stuart C. Wray"
         ],
         "title": "Tim: A simple, lazy abstract machine to execute supercombinators",
         "year": 1987
@@ -2248,7 +2248,7 @@ module.exports = [
       {
         "author": "Henk Barendregt",
         "title": "Lambda calculi with types",
-        "year": 1993
+        "year": 1992
       },
       {
         "author": "Gilles Barthe",
@@ -2490,7 +2490,7 @@ module.exports = [
         "authors": [
           "Jacques Carette",
           "Oleg Kiselyov",
-          "Chung chieh Shan"
+          "Chung-chieh Shan"
         ],
         "title": "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages",
         "year": 2009
@@ -2604,24 +2604,24 @@ module.exports = [
       },
       {
         "authors": [
-          "B. Aydemir",
-          "A. Bohannon",
-          "M. Fairbairn",
-          "J. Foster",
-          "B. Pierce",
-          "P. Sewell",
-          "D. Vytiniotis",
-          "G. Washburn",
-          "S. Weirich",
-          "S. Zdancewic"
+          "Brian E. Aydemir",
+          "Aaron Bohannon",
+          "Matthew Fairbairn",
+          "J. Nathan Foster",
+          "Benjamin C. Pierce",
+          "Peter Sewell",
+          "Dimitrios Vytiniotis",
+          "Geoffrey Washburn",
+          "Stephanie Weirich",
+          "Steve Zdancewic"
         ],
-        "title": "Mechanized metatheory for the masses: The POPLmark Challenge",
+        "title": "Mechanized metatheory for the masses: The POPLmark challenge",
         "year": 2005
       },
       {
         "authors": [
-          "C. Chen",
-          "H. Xi"
+          "Chiyan Chen",
+          "Hongwei Xi"
         ],
         "title": "Meta-programming through typeful code representation",
         "year": 2005
@@ -2716,12 +2716,12 @@ module.exports = [
       },
       {
         "author": "J. Harrison",
-        "title": "The HOL Light system reference",
+        "title": "The Hol Light system reference",
         "year": 2006
       },
       {
         "author": "J. Harrison",
-        "title": "Towards self-verification of HOL Light",
+        "title": "Towards self-verification of Hol Light",
         "year": 2006
       },
       {
@@ -2740,7 +2740,7 @@ module.exports = [
           "S. Jefferson",
           "D. Friedman"
         ],
-        "title": "A Simple Reflective Interpreter",
+        "title": "A simple reflective interpreter",
         "year": 1992
       },
       {
@@ -2759,9 +2759,9 @@ module.exports = [
       },
       {
         "authors": [
-          "R. Kelsey",
-          "W. Clinger",
-          "J. Rees",
+          "Richard Kelsey",
+          "William D. Clinger",
+          "Jonathan Rees",
           "et al."
         ],
         "title": "Revised⁵ report on the algorithmic language Scheme",
@@ -2769,11 +2769,11 @@ module.exports = [
       },
       {
         "authors": [
-          "I.-S. Kim",
-          "K. Yi",
-          "C. Calcagno"
+          "Ik-Soon Kim",
+          "Kwangkeun Yi",
+          "Cristiano Calcagno"
         ],
-        "title": "A polymorphic modal type system for Lisp-like multi-staged languages.",
+        "title": "A polymorphic modal type system for Lisp-like multi-staged languages",
         "year": 2006
       },
       {
@@ -2943,7 +2943,7 @@ module.exports = [
         "year": 1989
       },
       {
-        "author": "C. Wadsworth",
+        "author": "Christopher P. Wadsworth",
         "title": "Some unusual λ-calculus numeral systems",
         "year": 1980
       },
@@ -2980,7 +2980,7 @@ module.exports = [
         "year": 1997
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "Lambda calculi with types",
         "year": 1992
       },
@@ -3030,12 +3030,12 @@ module.exports = [
         "year": 1992
       },
       {
-        "author": "Z. Spławski",
+        "author": "Zdzisław Spławski",
         "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
         "year": 1993
       },
       {
-        "author": "Z. Spławski",
+        "author": "Zdzisław Spławski",
         "title": "Proving equalities in λ→ with positive (co-)inductive data types",
         "year": 1995
       },
@@ -3044,7 +3044,7 @@ module.exports = [
           "A.S. Troelstra",
           "D. van Dalen"
         ],
-        "title": "Constructivism in mathematics: An introduction",
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
         "year": 1988
       },
       {
@@ -3084,7 +3084,7 @@ module.exports = [
         "year": 1993
       },
       {
-        "author": "J.Y-. Girard",
+        "author": "J.-Y. Girard",
         "title": "On the unity of logic",
         "year": 1993
       },
@@ -3113,17 +3113,17 @@ module.exports = [
         "year": 1989
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "The lambda calculus: Its syntax and semantics",
         "year": 1984
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "Functional programming and lambda calculus",
         "year": 1990
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "Lambda calculi with types",
         "year": 1992
       },
@@ -3160,8 +3160,18 @@ module.exports = [
       },
       {
         "authors": [
-          "R.L. Constable",
-          "et al."
+          "Robert L. Constable",
+          "Stuart F. Allen",
+          "H.M. Bromley",
+          "W.R. Cleaveland",
+          "J.F. Cremer",
+          "R.W. Harper",
+          "Douglas J. Howe",
+          "T.B. Knoblock",
+          "N.P. Mendler",
+          "P. Panangaden",
+          "James T. Sasaki",
+          "Scott F. Smith"
         ],
         "title": "Implementing mathematics with the Nuprl proof development system",
         "year": 1986
@@ -3262,11 +3272,11 @@ module.exports = [
       },
       {
         "authors": [
-          "M.J. Gordon",
-          "A.J. Milner",
-          "C.P. Wadsworth"
+          "Michael J. Gordon",
+          "Arthur J. Milner",
+          "Christopher P. Wadsworth"
         ],
-        "title": "Edinburgh LCF",
+        "title": "Edinburgh LCF: A mechanised logic of computation",
         "year": 1979
       },
       {
@@ -3319,7 +3329,7 @@ module.exports = [
       },
       {
         "author": "D. Leivant",
-        "title": "Contradicting proofs in programs",
+        "title": "Contracting proofs to programs",
         "year": 1990
       },
       {
@@ -3398,9 +3408,9 @@ module.exports = [
       },
       {
         "authors": [
-          "B. Nordström",
-          "K. Petersson",
-          "J.M. Smith"
+          "Bengt Nordström",
+          "Kent Petersson",
+          "Jan M. Smith"
         ],
         "title": "Programming in Martin-Löf’s type theory: An introduction",
         "year": 1990
@@ -3509,11 +3519,11 @@ module.exports = [
           "A.S. Troelstra",
           "D. van Dalen"
         ],
-        "title": "Constructivism in mathematics: An introduction",
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
         "year": 1988
       },
       {
-        "author": "P. Urzyczyn",
+        "author": "Paweł Urzyczyn",
         "title": "A remark on quantified vs. recursive types",
         "year": 1992
       },
@@ -3606,7 +3616,7 @@ module.exports = [
           "S. van Bakel",
           "L. Liquori",
           "S. Ronchi Della Rocca",
-          "P. Urzyczyn"
+          "Paweł Urzyczyn"
         ],
         "title": "Comparing cubes of typed and type assignment systems",
         "year": 1997
@@ -3751,17 +3761,17 @@ module.exports = [
         "year": 1993
       },
       {
-        "author": "Z. Spławski",
+        "author": "Zdzisław Spławski",
         "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
         "year": 1993
       },
       {
-        "author": "P. Urzyczyn",
+        "author": "Paweł Urzyczyn",
         "title": "Positive recursive type assignment",
         "year": 1996
       },
       {
-        "author": "P. Urzyczyn",
+        "author": "Paweł Urzyczyn",
         "title": "Recursive types and type embeddings",
         "year": 1999
       },
@@ -3845,8 +3855,8 @@ module.exports = [
       },
       {
         "authors": [
-          "Z. Spławski",
-          "P. Urzyczyn"
+          "Zdzisław Spławski",
+          "Paweł Urzyczyn"
         ],
         "title": "Type fixpoints: Iteration vs. recursion",
         "year": 1999
@@ -3911,7 +3921,7 @@ module.exports = [
       {
         "authors": [
           "M.H Sørensen",
-          "P. Urzyczyn"
+          "Paweł Urzyczyn"
         ],
         "title": "Lectures on the Curry-Howard isomorphism",
         "year": 1998
@@ -3937,12 +3947,12 @@ module.exports = [
         "year": 1992
       },
       {
-        "author": "Z. Spławski",
+        "author": "Zdzisław Spławski",
         "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
         "year": 1993
       },
       {
-        "author": "P. Urzyczyn",
+        "author": "Paweł Urzyczyn",
         "title": "Positive recursive type assignment",
         "year": 1996
       },
@@ -3966,7 +3976,7 @@ module.exports = [
         "year": 1989
       },
       {
-        "author": "Z. Spławski",
+        "author": "Zdzisław Spławski",
         "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
         "year": 1993
       },
@@ -4174,7 +4184,7 @@ module.exports = [
           "M. Davis",
           "J. Schwartz"
         ],
-        "title": "Metamathematical extensibility for theorem verifiers and proof checkers",
+        "title": "Metamathematical extensibility for theorem verifiers and proof-checkers",
         "year": 1979
       },
       {
@@ -4249,7 +4259,7 @@ module.exports = [
     "year": 2001,
     "basename": "artemov-2001",
     "collection": "Intensional lambda calculus",
-    "abstract": "<p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>\n",
+    "abstract": "<p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the Nuprl and Metaprl systems.</p>\n",
     "citations": [
       {
         "authors": [
@@ -4291,7 +4301,7 @@ module.exports = [
       },
       {
         "author": "Eli Barzilay",
-        "title": "Quotation and reflection in NuPRL and Scheme",
+        "title": "Quotation and reflection in Nuprl and Scheme",
         "year": 2001
       },
       {
@@ -4327,7 +4337,7 @@ module.exports = [
           "James T. Sasaki",
           "Scott F. Smith"
         ],
-        "title": "Implementing mathematics with the Nuprl development system",
+        "title": "Implementing mathematics with the Nuprl proof development system",
         "year": 1986
       },
       {
@@ -4357,7 +4367,7 @@ module.exports = [
       },
       {
         "author": "Jason Hickey",
-        "title": "The MetaPRL logical programming environment",
+        "title": "The Metaprl logical programming environment",
         "year": 2001
       },
       {
@@ -4370,9 +4380,9 @@ module.exports = [
       },
       {
         "authors": [
-          "R. Kelsey",
-          "W. Clinger",
-          "J. Rees",
+          "Richard Kelsey",
+          "William D. Clinger",
+          "Jonathan Rees",
           "et al."
         ],
         "title": "Revised⁵ report on the algorithmic language Scheme",
@@ -4387,7 +4397,7 @@ module.exports = [
         "year": 1994
       },
       {
-        "title": "MetaPRL home page"
+        "title": "Metaprl home page"
       },
       {
         "author": "B.C. Smith",
@@ -4771,9 +4781,9 @@ module.exports = [
         "year": 2005
       },
       {
-        "author": "Henk P. Barendregt",
-        "title": "The lambda calculus: Its syntax and symantics",
-        "year": 1981
+        "author": "Henk Barendregt",
+        "title": "The lambda calculus: Its syntax and semantics",
+        "year": 1984
       },
       {
         "author": "Alan Bawden",
@@ -4815,22 +4825,22 @@ module.exports = [
       {
         "author": "Alonzo Church",
         "title": "The calculi of lambda-conversion",
-        "year": 1951
+        "year": 1941
       },
       {
         "authors": [
-          "R.L. Constable",
-          "S.F. Allen",
+          "Robert L. Constable",
+          "Stuart F. Allen",
           "H.M. Bromley",
           "W.R. Cleaveland",
           "J.F. Cremer",
           "R.W. Harper",
-          "D.J. Howe",
+          "Douglas J. Howe",
           "T.B. Knoblock",
           "N.P. Mendler",
           "P. Panangaden",
-          "J.T. Sasaki",
-          "S.F. Smith"
+          "James T. Sasaki",
+          "Scott F. Smith"
         ],
         "title": "Implementing mathematics with the Nuprl proof development system",
         "year": 1986
@@ -4953,11 +4963,11 @@ module.exports = [
       },
       {
         "authors": [
-          "Michael Gordon",
-          "Robin Milner",
-          "Christopher Wadsworth"
+          "Michael J. Gordon",
+          "Arthur J. Milner",
+          "Christopher P. Wadsworth"
         ],
-        "title": "Edinburgh LCF: A mechanized logic of computation",
+        "title": "Edinburgh LCF: A mechanised logic of computation",
         "year": 1979
       },
       {
@@ -4989,14 +4999,14 @@ module.exports = [
           "L. Lorigo",
           "S. Schmitt",
           "C. Witty",
-          "X. Yu."
+          "Xin Yu"
         ],
-        "title": "MetaPRL: A modular logical environment",
+        "title": "Metaprl: A modular logical environment",
         "year": 2003
       },
       {
         "author": "Jason Hickey",
-        "title": "The MetaPRL logical programming environment",
+        "title": "The Metaprl logical programming environment",
         "year": 2001
       },
       {
@@ -5014,7 +5024,7 @@ module.exports = [
       },
       {
         "author": "W. Howard",
-        "title": "The formulas-as-types notion of construction",
+        "title": "The formulae-as-types notion of construction",
         "year": 1980
       },
       {
@@ -5065,7 +5075,7 @@ module.exports = [
         "year": 1987
       },
       {
-        "author": "H. Lauchli",
+        "author": "H. Läuchli",
         "title": "An abstract notion of realizability for which intuitionistic predicate calculus is complete",
         "year": 1970
       },
@@ -5123,7 +5133,7 @@ module.exports = [
           "Kent Petersson",
           "Jan M. Smith"
         ],
-        "title": "Programming in Martin-Löf’s type theory",
+        "title": "Programming in Martin-Löf’s type theory: An introduction",
         "year": 1990
       },
       {
@@ -5349,7 +5359,7 @@ module.exports = [
         "year": 1976
       },
       {
-        "author": "J.E. Vuillemin",
+        "author": "Jean E. Vuillemin",
         "title": "Exact real computer arithmetic with continued fractions",
         "year": 1990
       },
@@ -5421,7 +5431,7 @@ module.exports = [
         "year": 1980
       },
       {
-        "author": "J.E. Vuillemin",
+        "author": "Jean E. Vuillemin",
         "title": "Exact real computer arithmetic with continued fractions",
         "year": 1990
       },
@@ -7107,9 +7117,9 @@ module.exports = [
       },
       {
         "authors": [
-          "B. Nordström",
-          "K. Petersson",
-          "J.M. Smith"
+          "Bengt Nordström",
+          "Kent Petersson",
+          "Jan M. Smith"
         ],
         "title": "Programming in Martin-Löf’s type theory: An introduction",
         "year": 1990
@@ -7183,7 +7193,7 @@ module.exports = [
         "year": 1994
       },
       {
-        "author": "H.P. Barendregt",
+        "author": "Henk Barendregt",
         "title": "The lambda calculus: Its syntax and semantics",
         "year": 1984
       },
@@ -7199,13 +7209,23 @@ module.exports = [
       },
       {
         "author": "A. Church",
-        "title": "The calculi of lambda conversion",
+        "title": "The calculi of lambda-conversion",
         "year": 1941
       },
       {
         "authors": [
-          "R.L. Constable",
-          "et al."
+          "Robert L. Constable",
+          "Stuart F. Allen",
+          "H.M. Bromley",
+          "W.R. Cleaveland",
+          "J.F. Cremer",
+          "R.W. Harper",
+          "Douglas J. Howe",
+          "T.B. Knoblock",
+          "N.P. Mendler",
+          "P. Panangaden",
+          "James T. Sasaki",
+          "Scott F. Smith"
         ],
         "title": "Implementing mathematics with the Nuprl proof development system",
         "year": 1986
@@ -7227,7 +7247,7 @@ module.exports = [
         "year": 1958
       },
       {
-        "author": "M.H. Escardo",
+        "author": "M.H. Escardó",
         "title": "Real PCF extended with existential is universal",
         "year": 1996
       },
@@ -7289,8 +7309,8 @@ module.exports = [
         "year": 1985
       },
       {
-        "author": "S.C. Kleene",
-        "title": "Lambda-definability and recursiveness",
+        "author": "Stephen C. Kleene",
+        "title": "λ-definability and recursiveness",
         "year": 1936
       },
       {
@@ -7300,7 +7320,7 @@ module.exports = [
       },
       {
         "author": "John McCarthy",
-        "title": "Recursive functions of symbolic expressions and their computation by machine",
+        "title": "Recursive functions of symbolic expressions and their computation by machine, part I",
         "year": 1960
       },
       {
@@ -7419,7 +7439,7 @@ module.exports = [
         "year": 2004
       },
       {
-        "author": "C.P. Wadsworth",
+        "author": "Christopher P. Wadsworth",
         "title": "The semantics and pragmatics of the lambda calculus",
         "year": 1971
       }

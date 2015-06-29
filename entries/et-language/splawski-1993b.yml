@@ -13,15 +13,15 @@ citations:
     title: Do-it-yourself type theory
     year: 1989
 
-  - author: H.P. Barendregt
+  - author: Henk Barendregt
     title: "The lambda calculus: Its syntax and semantics"
     year: 1984
 
-  - author: H.P. Barendregt
+  - author: Henk Barendregt
     title: Functional programming and lambda calculus
     year: 1990
 
-  - author: H.P. Barendregt
+  - author: Henk Barendregt
     title: Lambda calculi with types
     year: 1992
 
@@ -46,12 +46,22 @@ citations:
     year: 1940
 
   - author: A. Church
-    title: "The calculi of lambda-conversion"
+    title: The calculi of lambda-conversion
     year: 1941
 
   - authors:
-      - R.L. Constable
-      - et al.
+      - Robert L. Constable
+      - Stuart F. Allen
+      - H.M. Bromley
+      - W.R. Cleaveland
+      - J.F. Cremer
+      - R.W. Harper
+      - Douglas J. Howe
+      - T.B. Knoblock
+      - N.P. Mendler
+      - P. Panangaden
+      - James T. Sasaki
+      - Scott F. Smith
     title: Implementing mathematics with the Nuprl proof development system
     year: 1986
 
@@ -130,10 +140,10 @@ citations:
     year: 1985
 
   - authors:
-      - M.J. Gordon
-      - A.J. Milner
-      - C.P. Wadsworth
-    title: Edinburgh LCF
+      - Michael J. Gordon
+      - Arthur J. Milner
+      - Christopher P. Wadsworth
+    title: "Edinburgh LCF: A mechanised logic of computation"
     year: 1979
 
   - author: I. Hacking
@@ -175,7 +185,7 @@ citations:
     year: 1970
 
   - author: D. Leivant
-    title: Contradicting proofs in programs
+    title: Contracting proofs to programs
     year: 1990
 
   - author: A.A. Markov
@@ -238,9 +248,9 @@ citations:
     year: 1942
 
   - authors:
-      - B. Nordström
-      - K. Petersson
-      - J.M. Smith
+      - Bengt Nordström
+      - Kent Petersson
+      - Jan M. Smith
     title: "Programming in Martin-Löf’s type theory: An introduction"
     year: 1990
 
@@ -325,10 +335,10 @@ citations:
   - authors:
       - A.S. Troelstra
       - D. van Dalen
-    title: "Constructivism in mathematics: An introduction"
+    title: "Constructivism in mathematics: An introduction, vol. 1"
     year: 1988
 
-  - author: P. Urzyczyn
+  - author: Paweł Urzyczyn
     title: A remark on quantified vs. recursive types
     year: 1992
 

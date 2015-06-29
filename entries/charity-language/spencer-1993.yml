@@ -14,8 +14,8 @@ citations:
     year: 1991
 
   - authors:
-      - M. Barr
-      - C. Wells
+      - Michael Barr
+      - Charles Wells
     title: Category theory for computing science
     year: 1990
 
@@ -255,13 +255,13 @@ citations:
     title: Categories and computer science
     year: 1991
 
-  - author: C. Wells
+  - author: Charles Wells
     title: A generalization of the concept of sketch
     year: 1990
 
   - authors:
-      - C. Wells
-      - M. Barr
+      - Charles Wells
+      - Michael Barr
     title: The formal description of data types using sketches
     year: 1987
 

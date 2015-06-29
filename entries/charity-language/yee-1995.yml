@@ -22,7 +22,7 @@ citations:
 
   - authors:
       - Richard Bird
-      - Phillip Wadler
+      - Philip Wadler
     title: Introduction to functional programming
     year: 1988
 

@@ -35,7 +35,7 @@ citations:
 
   - authors:
       - J. Fairbairn
-      - S. Wray
+      - Stuart C. Wray
     title: "Tim: A simple, lazy abstract machine to execute supercombinators"
     year: 1987
 
