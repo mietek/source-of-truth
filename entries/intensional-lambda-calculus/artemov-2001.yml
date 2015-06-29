@@ -6,7 +6,7 @@ authors:
   - Aleksey Nogin
 year: 2001
 basename: artemov-2001
-collection: Intensional λ-calculus
+collection: Intensional lambda calculus
 abstract: |
   <p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>
 citations:

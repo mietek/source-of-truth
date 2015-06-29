@@ -3985,7 +3985,7 @@ module.exports = [
     ],
     "year": 2000,
     "basename": "alt-2000",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>The Curry-Howard isomorphism converting intuitionistic proofs into typed λ-terms is a simple instance of an internalization property of a system λ<sup>∞</sup> which unifies intuitionistic logic with λ-calculus and which is capable of internalizing its own derivations as λ-terms. We establish confluence and strong normalization of λ<sup>∞</sup>. The system λ<sup>∞</sup> considerably extends the expressive power of each of its major components: typed λ-calculus, intuitionistic and modal logic. It may be regarded as the pure λ version of the Logic of Proofs LP from [1, 2, 3]. In particular, the standard model of <b>t : F</b> in λ<sup>∞</sup> is “<b>t</b> is a proof of <b>F</b>”.</p>\n",
     "citations": [
       {
@@ -4043,7 +4043,7 @@ module.exports = [
     ],
     "year": 2001,
     "basename": "alt-2001",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a general purpose typed λ-calculus λ<sup>∞</sup> which contains intuitionistic logic, is capable of internalizing its own derivations as λ-terms and yet enjoys strong normalization with respect to a natural reduction system. In particular, λ<sup>∞</sup> subsumes the typed λ-calculus. The Curry-Howard isomorphism converting intuitionistic proofs into λ-terms is a simple instance of the internalization property of λ<sup>∞</sup>. The standard semantics of λ<sup>∞</sup> is given by a proof system with proof checking capacities. The system λ<sup>∞</sup> is a theoretical prototype of reflective extensions of a broad class of type-based systems in programming languages, provers, AI and knowledge representation, etc.</p>\n",
     "citations": [
       {
@@ -4123,7 +4123,7 @@ module.exports = [
     "author": "Sergei Artemov",
     "year": 1999,
     "basename": "artemov-1999",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>We show that the stability requirement for a verification system yields the necessity of some sort of a reflection mechanism. However, the traditional reflection rule based on the Gödel implicit provability predicate leads to a “reflection tower” of theories which cannot be formally verified. We found natural lower and upper bounds on a metatheory capable of establishing stability of a given verification system. The paper introduces an explicit reflection mechanism which can be verified internally. This circumvents the reflection tower and provides a strict justification for the verification process. On the practical side, the paper gives specific recommendations concerning the verification of inference rules and building a verifiable reflection mechanism for a theorem proving system.</p>\n",
     "citations": [
       {
@@ -4248,7 +4248,7 @@ module.exports = [
     ],
     "year": 2001,
     "basename": "artemov-2001",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the NuPRL and MetaPRL systems.</p>\n",
     "citations": [
       {
@@ -4412,7 +4412,7 @@ module.exports = [
     ],
     "year": 2006,
     "basename": "artemov-2006",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on <i>how</i> a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
     "numbered": "n",
     "citations": [
@@ -4560,7 +4560,7 @@ module.exports = [
     ],
     "year": 2007,
     "basename": "artemov-2007",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on <i>how</i> a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
     "numbered": "n",
     "citations": [
@@ -4705,7 +4705,7 @@ module.exports = [
     "author": "Eli Barzilay",
     "year": 2006,
     "basename": "barzilay-2006",
-    "collection": "Intensional λ-calculus",
+    "collection": "Intensional lambda calculus",
     "abstract": "<p>Reflection is the ability of some entity to describe itself. In a logical context, it is the ability of a logic to reason about itself. Reflection is, therefore, placed at the core of meta-mathematics, making it an important part of formal reasoning; where it revolves mainly around syntax and semantics — the main challenge is in making the syntax of the logic become part of its semantic domain.\nGiven its importance, it is surprising that logical computer systems tend to avoid the subject, or provide poor tools for reflective work. This is in sharp contrast to the area of programming languages, where reflection is well researched and used in a variety of ways where it plays an central role. One factor in making reflection inaccessible in logical systems is the relative difficulty that is immediately encountered when formalizing syntax: dealing with formal syntax means dealing with structures that involve bindings, and in a logical context it seems natural to use the same formal tools to describe syntax — often limiting the usability of such formalizations to specific theories and toy examples. Gödel numbers are an example for a reflective formalism that serves its purpose, yet is impractical as a basis for syntactical reasoning in applied systems.\nIn programming languages, there is a simple yet elegant strategy for implementing reflection: instead of making a system that describes itself, the system is made available to itself. We name this <i>direct reflection</i>, where the representation of language features via its semantics is actually part of the semantics itself — unlike the usual practice in formal systems of employing indirect reflection. The advantages of this approach is the fact that both the system and its reflected counterpart are inherently identical, making for a lightweight implementation.\nIn this work we develop the formal background and the practical capabilities of an applied system, namely Nuprl, that are needed to support direct reflection of its own syntax. Achieving this is a major milestone on the road for a fully reflected logical system. As we shall demonstrate, our results enable dealing with syntactical meta-mathematical content.</p>\n",
     "citations": [
       {

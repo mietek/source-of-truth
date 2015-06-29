@@ -2,7 +2,7 @@ title: Implementing direct reflection in Nuprl
 author: Eli Barzilay
 year: 2006
 basename: barzilay-2006
-collection: Intensional λ-calculus
+collection: Intensional lambda calculus
 abstract: |
   <p>Reflection is the ability of some entity to describe itself. In a logical context, it is the ability of a logic to reason about itself. Reflection is, therefore, placed at the core of meta-mathematics, making it an important part of formal reasoning; where it revolves mainly around syntax and semantics — the main challenge is in making the syntax of the logic become part of its semantic domain.
   Given its importance, it is surprising that logical computer systems tend to avoid the subject, or provide poor tools for reflective work. This is in sharp contrast to the area of programming languages, where reflection is well researched and used in a variety of ways where it plays an central role. One factor in making reflection inaccessible in logical systems is the relative difficulty that is immediately encountered when formalizing syntax: dealing with formal syntax means dealing with structures that involve bindings, and in a logical context it seems natural to use the same formal tools to describe syntax — often limiting the usability of such formalizations to specific theories and toy examples. Gödel numbers are an example for a reflective formalism that serves its purpose, yet is impractical as a basis for syntactical reasoning in applied systems.
@@ -431,4 +431,3 @@ citations:
   - author: Stephanie Weirich
     title: Programming with types
     year: 2002
-
