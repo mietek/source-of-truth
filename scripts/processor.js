@@ -43,24 +43,6 @@ function ensureAuthor(name) {
   return author;
 }
 
-function ensureCollection(name) {
-  if (name in collectionsByName) {
-    return collectionsByName[name];
-  }
-  var collection = {
-    type:        'collection',
-    id:          utils.getRandomUuid(),
-    name:        name,
-    pubs:        [],
-    fullPubs:    [],
-    partialPubs: []
-  };
-  collections.push(collection);
-  collectionsByName[name]  = collection;
-  itemsById[collection.id] = collection;
-  return collection;
-}
-
 function ensureYear(name) {
   if (name in yearsByName) {
     return yearsByName[name];
@@ -79,6 +61,14 @@ function ensureYear(name) {
   return year;
 }
 
+function getCollectionByName(name) {
+  if (!(name in collectionsByName)) {
+    console.error('Missing collection:', name);
+    return undefined;
+  }
+  return collectionsByName[name];
+}
+
 function getPubAuthors(rawPub) {
   var names = (
     rawPub.author ?
@@ -94,7 +84,7 @@ function getPubCollections(rawPub) {
       [rawPub.collection] :
       rawPub.collections);
   return (
-    names && names.map(ensureCollection));
+    names && names.map(getCollectionByName));
 }
 
 function getPubYear(rawPub) {
@@ -185,8 +175,37 @@ function ensurePub(rawPub) {
   return pub;
 }
 
-module.exports = {
+var _ = module.exports = {
+  processCollection: function (rawCollection) {
+    if (rawCollection.name in collectionsByName) {
+      console.error('Duplicate collection name:', rawCollection);
+      return;
+    }
+    if (rawCollection.id in itemsById) {
+      console.error('Duplicate collection id:', rawCollection);
+      return;
+    }
+    var collection = {
+      type:        'collection',
+      id:          rawCollection.id,
+      name:        rawCollection.name,
+      pubs:        [],
+      fullPubs:    [],
+      partialPubs: []
+    };
+    collections.push(collection);
+    collectionsByName[collection.name] = collection;
+    itemsById[collection.id]           = collection;
+  },
+
+  processCollections: function () {
+    rawCollections.forEach(function (rawCollection) {
+        _.processCollection(rawCollection);
+      });
+  },
+
   processDb: function () {
+    _.processCollections();
     rawPubs.forEach(function (rawPub) {
         ensurePub(rawPub);
       });
