@@ -7,7 +7,7 @@ var utils = require('../common/utils');
 var processor = require('../processor');
 
 var genericColumn = require('./generic-column');
-var pdfColumn = require('./pdf-column');
+var pdf = require('./pdf');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
@@ -194,7 +194,7 @@ var _ = {
                 key:       lastId + '-pdf',
                 className: 'column'
               },
-              pdfColumn({
+              pdf({
                   url: pdfUrl
                 })))));
   }

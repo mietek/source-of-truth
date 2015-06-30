@@ -109,8 +109,9 @@ var _ = {
 
   render: function () {
     return (
-      r.div('pdf',
-        this.state.pdf ? null :
+      this.state.pdf ?
+        r.div('pdf') :
+        r.div('wrapper',
           r.div('section',
             r.span('label',
               'Full text loading…'))));
