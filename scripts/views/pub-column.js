@@ -24,10 +24,12 @@ var _ = {
   },
 
   render: function () {
+    var isClickable = !!this.props.selectedId;
     return (
       r.div({
-          className: 'wrapper',
-          onClick:   function (event) {
+          className: 'wrapper' + (
+            (isClickable ? ' clickable' : '')),
+          onClick:   isClickable && function (event) {
             event.stopPropagation();
             this.props.onSelect(null);
           }.bind(this)

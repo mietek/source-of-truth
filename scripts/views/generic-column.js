@@ -17,13 +17,15 @@ var _ = {
   },
 
   render: function () {
+    var isClickable = !!this.props.selectedId;
     var hasPartials = (
       this.props.partialItems &&
       this.props.partialItems.length);
     return (
       r.div({
-          className: 'wrapper',
-          onClick:   function (event) {
+          className: 'wrapper' + (
+            (isClickable ? ' clickable' : '')),
+          onClick:   isClickable && function (event) {
             event.stopPropagation();
             this.props.onSelect(null);
           }.bind(this)
