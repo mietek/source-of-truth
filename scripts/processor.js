@@ -5,13 +5,19 @@ var utils = require('./common/utils');
 var rawCollections = require('./database/collections');
 var rawPubs = require('./database/pubs');
 
-var pubs              = [];
-var pubsByName        = {};
-var authors           = [];
-var authorsByName     = {};
 var collections       = [];
 var collectionsByName = {};
+var pubs              = [];
+var fullPubs          = [];
+var partialPubs       = [];
+var pubsByName        = {};
+var authors           = [];
+var fullAuthors       = [];
+var partialAuthors    = [];
+var authorsByName     = {};
 var years             = [];
+var fullYears         = [];
+var partialYears      = [];
 var yearsByName       = {};
 var itemsById         = {};
 
@@ -61,14 +67,6 @@ function ensureYear(name) {
   return year;
 }
 
-function getCollectionByName(name) {
-  if (!(name in collectionsByName)) {
-    console.error('Missing collection:', name);
-    return undefined;
-  }
-  return collectionsByName[name];
-}
-
 function getPubAuthors(rawPub) {
   var names = (
     rawPub.author ?
@@ -76,15 +74,6 @@ function getPubAuthors(rawPub) {
       rawPub.authors);
   return (
     names && names.map(ensureAuthor));
-}
-
-function getPubCollections(rawPub) {
-  var names = (
-    rawPub.collection ?
-      [rawPub.collection] :
-      rawPub.collections);
-  return (
-    names && names.map(getCollectionByName));
 }
 
 function getPubYear(rawPub) {
@@ -149,32 +138,6 @@ function ensurePartialPub(rawPub, reverseCitation) {
   return pub;
 }
 
-function ensurePub(rawPub) {
-  var collections = getPubCollections(rawPub);
-  var pub         = ensurePartialPub(rawPub);
-  if (!pub.isPartial) {
-    console.warning('Duplicate pub:', rawPub, pub);
-  }
-  utils.assign(pub, {
-      citations:   (rawPub.citations || []).map(function (citation) {
-          return ensurePartialPub(citation, pub);
-        }),
-      basename:    rawPub.basename,
-      collections: collections,
-      abstract:    rawPub.abstract,
-      isNumbered:  !rawPub.numbered || rawPub.numbered === 'y',
-      isPartial:   rawPub.partial === 'y'
-    });
-  if (collections) {
-    collections.forEach(function (collection) {
-        if (collection.pubs.indexOf(pub) === -1) {
-          collection.pubs.push(pub);
-        }
-      });
-  }
-  return pub;
-}
-
 var _ = module.exports = {
   processCollection: function (rawCollection) {
     if (rawCollection.name in collectionsByName) {
@@ -202,18 +165,55 @@ var _ = module.exports = {
     rawCollections.forEach(function (rawCollection) {
         _.processCollection(rawCollection);
       });
+    collections.sort(function (collection1, collection2) {
+        return collection1.name.localeCompare(collection2.name);
+      });
   },
 
-  processDb: function () {
-    _.processCollections();
+  getCollectionByName: function (name) {
+    if (!(name in collectionsByName)) {
+      console.error('Missing collection:', name);
+      return undefined;
+    }
+    return collectionsByName[name];
+  },
+
+  getPubCollections: function (rawPub) {
+    var names = rawPub.collection ? [rawPub.collection] : rawPub.collections;
+    return names && names.map(_.getCollectionByName);
+  },
+
+  processPub: function (rawPub) {
+    var collections = _.getPubCollections(rawPub);
+    var pub         = ensurePartialPub(rawPub);
+    if (!pub.isPartial) {
+      console.warning('Duplicate pub:', rawPub, pub);
+    }
+    utils.assign(pub, {
+        citations:   (rawPub.citations || []).map(function (citation) {
+            return ensurePartialPub(citation, pub);
+          }),
+        basename:    rawPub.basename,
+        collections: collections,
+        abstract:    rawPub.abstract,
+        isNumbered:  !rawPub.numbered || rawPub.numbered === 'y',
+        isPartial:   rawPub.partial === 'y'
+      });
+    if (collections) {
+      collections.forEach(function (collection) {
+          if (collection.pubs.indexOf(pub) === -1) {
+            collection.pubs.push(pub);
+          }
+        });
+    }  },
+
+  processPubs: function () {
     rawPubs.forEach(function (rawPub) {
-        ensurePub(rawPub);
+        _.processPub(rawPub);
       });
     pubs.sort(function (pub1, pub2) {
         return pub1.name.localeCompare(pub2.name);
       });
-    var fullPubs    = [];
-    var partialPubs = [];
     pubs.forEach(function (pub) {
         pub.reverseCitations.sort(function (citation1, citation2) {
             return citation1.name.localeCompare(citation2.name);
@@ -242,25 +242,24 @@ var _ = module.exports = {
           }
         }
       });
+  },
+
+  processAuthors: function () {
     authors.sort(function (author1, author2) {
         return author1.basename.localeCompare(author2.basename) || author1.name.localeCompare(author2.name);
       });
-    collections.sort(function (collection1, collection2) {
-        return collection1.name.localeCompare(collection2.name);
-      });
-    years.sort(function (year1, year2) {
-        return ('' + year1.name).localeCompare('' + year2.name);
-      });
-    var fullAuthors    = [];
-    var partialAuthors = [];
-    var fullYears      = [];
-    var partialYears   = [];
     authors.forEach(function (author) {
         if (author.fullPubs.length) {
           fullAuthors.push(author);
         } else {
           partialAuthors.push(author);
         }
+      });
+  },
+
+  processYears: function () {
+    years.sort(function (year1, year2) {
+        return ('' + year1.name).localeCompare('' + year2.name);
       });
     years.forEach(function (year) {
         if (year.fullPubs.length) {
@@ -269,11 +268,18 @@ var _ = module.exports = {
           partialYears.push(year);
         }
       });
+  },
+
+  processDb: function () {
+    _.processCollections();
+    _.processPubs();
+    _.processAuthors();
+    _.processYears();
     return {
+      collections:    collections,
       pubs:           pubs,
       fullPubs:       fullPubs,
       partialPubs:    partialPubs,
-      collections:    collections,
       authors:        authors,
       fullAuthors:    fullAuthors,
       partialAuthors: partialAuthors,
