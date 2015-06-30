@@ -23,9 +23,35 @@ var _ = {
   },
 
   select: function (basePath, itemId) {
+    var path = itemId ? basePath.concat([itemId]) : basePath;
+    var hash = '#' + path.join(':');
     this.setState({
-        path: itemId ? basePath.concat([itemId]) : basePath
+        path: path
       });
+    history.pushState({
+        path: path
+      }, '', hash);
+  },
+
+  componentDidMount: function () {
+    var path = location.hash ? location.hash.slice(1).split(':') : [];
+    this.setState({
+        path: path
+      });
+    addEventListener('popstate', this.onPopState);
+  },
+
+  componentWillUnmount: function () {
+    removeEventListener('popstate', this.onPopState);
+  },
+
+  onPopState: function (event) {
+    if (event.state) {
+      var path = event.state.path || [];
+      this.setState({
+          path: path
+        });
+    }
   },
 
   renderColumn: function (itemId, selectedId, onSelect) {
@@ -58,8 +84,9 @@ var _ = {
               onSelect:     onSelect
             }));
     }
-    var item = this.state.itemsById[itemId];
-    switch (item.type) {
+    var item     = this.state.itemsById[itemId];
+    var itemType = item && item.type;
+    switch (itemType) {
       case 'pub':
         return (
           pubColumn({
@@ -86,6 +113,12 @@ var _ = {
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
+      default:
+        return (
+          r.div('wrapper',
+            r.div('section',
+              r.span('label',
+                'Missing item'))));
     }
   },
 
