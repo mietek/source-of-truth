@@ -11,5 +11,6 @@ PDFJS.cMapPacked = true;
 
 window.main = function () {
   utils.detectHairline();
+  utils.detectTouch();
   r.render(browser(), document.getElementById('main'));
 };
