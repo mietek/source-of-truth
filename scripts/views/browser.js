@@ -141,7 +141,7 @@ var _ = {
       lastItem &&
       lastItem.type === 'pub' &&
       lastItem.basename &&
-      document.location.origin + '/_entries/' + lastItem.basename + '.pdf');
+      document.location.origin + '/_pubs/' + lastItem.basename + '.pdf');
   },
 
   getColumnCount: function (state) {

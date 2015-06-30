@@ -2,7 +2,8 @@
 
 var utils = require('./common/utils');
 
-var rawPubs = require('./entries');
+var rawCollections = require('./database/collections');
+var rawPubs = require('./database/pubs');
 
 var pubs              = [];
 var pubsByName        = {};
