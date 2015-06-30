@@ -37,13 +37,13 @@ var _ = {
         genericList({
             label:           'Indices',
             items:           [{
-              id:   'pubs',
+              id:   'p',
               name: 'All publications'
             }, {
-              id:   'authors',
+              id:   'a',
               name: 'All authors'
             }, {
-              id:   'years',
+              id:   'y',
               name: 'All years'
             }],
             isLabelNumbered: false,

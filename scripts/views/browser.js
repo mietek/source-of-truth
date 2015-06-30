@@ -56,7 +56,7 @@ var _ = {
 
   renderColumn: function (itemId, selectedId, onSelect) {
     switch (itemId) {
-      case 'pubs':
+      case 'p':
         return (
           genericColumn({
               heading:      'All publications',
@@ -65,7 +65,7 @@ var _ = {
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'authors':
+      case 'a':
         return (
           genericColumn({
               heading:      'All authors',
@@ -74,7 +74,7 @@ var _ = {
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'years':
+      case 'y':
         return (
           genericColumn({
               heading:      'All years',
