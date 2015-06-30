@@ -67,77 +67,6 @@ function ensureYear(name) {
   return year;
 }
 
-function getPubAuthors(rawPub) {
-  var names = (
-    rawPub.author ?
-      [rawPub.author] :
-      rawPub.authors);
-  return (
-    names && names.map(ensureAuthor));
-}
-
-function getPubYear(rawPub) {
-  return (
-    rawPub.year && ensureYear(rawPub.year));
-}
-
-function getPubSignature(authors, rawPub) {
-  var firstBasename = (
-    (authors && authors.length) ?
-      authors[0].basename :
-      'unknown');
-  return (
-    firstBasename + (
-      (rawPub.year ? ' ' + rawPub.year : '')));
-}
-
-function getPubName(authors, rawPub) {
-  return (
-    getPubSignature(authors, rawPub) +
-      (' — ' + rawPub.title));
-}
-
-function ensurePartialPub(rawPub, reverseCitation) {
-  var authors = getPubAuthors(rawPub);
-  var name    = getPubName(authors, rawPub);
-  var year    = getPubYear(rawPub);
-  var pub;
-  if (!(name in pubsByName)) {
-    pub = {
-      type:             'pub',
-      id:               utils.getRandomUuid(),
-      title:            rawPub.title,
-      authors:          authors,
-      year:             year,
-      signature:        getPubSignature(authors, rawPub),
-      name:             name,
-      isPartial:        true,
-      reverseCitations: []
-    };
-    pubs.push(pub);
-    pubsByName[name]  = pub;
-    itemsById[pub.id] = pub;
-  } else {
-    pub = pubsByName[name];
-  }
-  if (reverseCitation) {
-    utils.assign(pub, {
-        reverseCitations: pub.reverseCitations.concat([reverseCitation])
-      });
-  }
-  if (authors) {
-    authors.forEach(function (author) {
-        if (author.pubs.indexOf(pub) === -1) {
-          author.pubs.push(pub);
-        }
-      });
-  }
-  if (year && year.pubs.indexOf(pub) === -1) {
-    year.pubs.push(pub);
-  }
-  return pub;
-}
-
 var _ = module.exports = {
   processCollection: function (rawCollection) {
     if (rawCollection.name in collectionsByName) {
@@ -170,7 +99,7 @@ var _ = module.exports = {
       });
   },
 
-  getCollectionByName: function (name) {
+  getCollection: function (name) {
     if (!(name in collectionsByName)) {
       console.error('Missing collection:', name);
       return undefined;
@@ -178,20 +107,74 @@ var _ = module.exports = {
     return collectionsByName[name];
   },
 
-  getPubCollections: function (rawPub) {
-    var names = rawPub.collection ? [rawPub.collection] : rawPub.collections;
-    return names && names.map(_.getCollectionByName);
+  getPubSignature: function (authors, rawPub) {
+    var firstBasename = (
+      (authors && authors.length) ?
+        authors[0].basename :
+        'unknown');
+    return (
+      firstBasename + (
+        (rawPub.year ? ' ' + rawPub.year : '')));
+  },
+
+  getPubName: function (authors, rawPub) {
+    return (
+      _.getPubSignature(authors, rawPub) +
+        (' — ' + rawPub.title));
+  },
+
+  ensurePartialPub: function (rawPub, reverseCitation) {
+    var authorNames = rawPub.author ? [rawPub.author] : rawPub.authors;
+    var authors     = authorNames && authorNames.map(ensureAuthor);
+    var name        = _.getPubName(authors, rawPub);
+    var year        = rawPub.year && ensureYear(rawPub.year);
+    var pub;
+    if (!(name in pubsByName)) {
+      pub = {
+        type:             'pub',
+        id:               utils.getRandomUuid(),
+        title:            rawPub.title,
+        authors:          authors,
+        year:             year,
+        signature:        _.getPubSignature(authors, rawPub),
+        name:             name,
+        isPartial:        true,
+        reverseCitations: []
+      };
+      pubs.push(pub);
+      pubsByName[name]  = pub;
+      itemsById[pub.id] = pub;
+    } else {
+      pub = pubsByName[name];
+    }
+    if (reverseCitation) {
+      utils.assign(pub, {
+          reverseCitations: pub.reverseCitations.concat([reverseCitation])
+        });
+    }
+    if (authors) {
+      authors.forEach(function (author) {
+          if (author.pubs.indexOf(pub) === -1) {
+            author.pubs.push(pub);
+          }
+        });
+    }
+    if (year && year.pubs.indexOf(pub) === -1) {
+      year.pubs.push(pub);
+    }
+    return pub;
   },
 
   processPub: function (rawPub) {
-    var collections = _.getPubCollections(rawPub);
-    var pub         = ensurePartialPub(rawPub);
+    var collectionNames = rawPub.collection ? [rawPub.collection] : rawPub.collections;
+    var collections     = collectionNames && collectionNames.map(_.getCollection);
+    var pub             = _.ensurePartialPub(rawPub);
     if (!pub.isPartial) {
       console.warning('Duplicate pub:', rawPub, pub);
     }
     utils.assign(pub, {
-        citations:   (rawPub.citations || []).map(function (citation) {
-            return ensurePartialPub(citation, pub);
+        citations:   (rawPub.citations || []).map(function (rawCitation) {
+            return _.ensurePartialPub(rawCitation, pub);
           }),
         basename:    rawPub.basename,
         collections: collections,
