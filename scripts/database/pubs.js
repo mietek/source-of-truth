@@ -792,7 +792,10 @@ module.exports = [
         "year": 1995
       },
       {
-        "author": "Erik Meijer and Johan Jeuring",
+        "authors": [
+          "Erik Meijer",
+          "Johan Jeuring"
+        ],
         "title": "Merging monads and folds for functional programming",
         "year": 1995
       },
@@ -2744,7 +2747,7 @@ module.exports = [
         "year": 1992
       },
       {
-        "author": "S. Peyton Jones",
+        "author": "Simon Peyton Jones",
         "title": "The implementation of functional programming languages",
         "year": 1987
       },
@@ -2779,7 +2782,7 @@ module.exports = [
       {
         "authors": [
           "J. Klop",
-          "R. de Vrijer"
+          "R. de Vrijer"
         ],
         "title": "Examples of TRSs and special rewriting formats",
         "year": 2003
@@ -2841,20 +2844,20 @@ module.exports = [
       {
         "authors": [
           "A. Nanevski",
-          "F. Pfenning"
+          "Frank Pfenning"
         ],
         "title": "Meta-programming with names and necessity",
         "year": 2005
       },
       {
-        "author": "F. Pfenning",
+        "author": "Frank Pfenning",
         "title": "Logical frameworks",
         "year": 2001
       },
       {
         "authors": [
-          "F. Pfenning",
-          "C. Elliott"
+          "Frank Pfenning",
+          "Conal Elliott"
         ],
         "title": "Higher-order abstract syntax",
         "year": 1988
@@ -3338,12 +3341,12 @@ module.exports = [
         "year": 1950
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "Constructive mathematics and computer programming",
         "year": 1982
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "Intuitionistic type theory",
         "year": 1984
       },
@@ -3437,7 +3440,7 @@ module.exports = [
       },
       {
         "authors": [
-          "F. Pfenning",
+          "Frank Pfenning",
           "Ch. Paulin-Mohring"
         ],
         "title": "Inductively defined types in the calculus of constructions",
@@ -3659,7 +3662,7 @@ module.exports = [
         "year": 1976
       },
       {
-        "author": "R. Di Cosmo",
+        "author": "R. Di Cosmo",
         "title": "Isomorphisms of types: From lambda-calculus to information retrieval and language design",
         "year": 1995
       },
@@ -4147,30 +4150,30 @@ module.exports = [
         "year": 1990
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Extensions of theories by the reflection principles and the corresponding modal logics",
         "year": 1979
       },
       {
         "authors": [
-          "S. Artemov",
+          "Sergei Artemov",
           "T. Strassen"
         ],
         "title": "The basic logic of proofs",
         "year": 1993
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Logic of proofs",
         "year": 1994
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Explicit provability: The intended semantics for intuitionistic and modal logic",
         "year": 1998
       },
@@ -4273,24 +4276,24 @@ module.exports = [
       },
       {
         "authors": [
-          "J. Alt",
-          "S. Artemov"
+          "Jesse Alt",
+          "Sergei Artemov"
         ],
         "title": "Reflective λ-calculus",
         "year": 2000
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "On explicit reflection in theorem proving and formal verification",
         "year": 1999
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
         "year": 1999
       },
       {
-        "author": "S. Artemov",
+        "author": "Sergei Artemov",
         "title": "Explicit provability and constructive semantics",
         "year": 2001
       },
@@ -5479,7 +5482,7 @@ module.exports = [
         "year": 1963
       },
       {
-        "author": "M.P. de Regt",
+        "author": "M.P. de Regt",
         "title": "Negative radix arithmetic",
         "year": 1967
       },
@@ -5672,17 +5675,17 @@ module.exports = [
         "year": 1978
       },
       {
-        "author": "M.P. de Regt",
+        "author": "M.P. de Regt",
         "title": "Negative radix arithmetic",
         "year": 1967
       },
       {
-        "author": "P. di Gianantonio",
+        "author": "P. di Gianantonio",
         "title": "A functional approach to real number computation",
         "year": 1993
       },
       {
-        "author": "P. di Gianantonio",
+        "author": "P. di Gianantonio",
         "title": "Real number computability and domain theory",
         "year": 1996
       },
@@ -6124,7 +6127,7 @@ module.exports = [
         "year": 1992
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
@@ -6321,7 +6324,7 @@ module.exports = [
         "year": 1990
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
@@ -6416,7 +6419,7 @@ module.exports = [
     "abstract": "<p>In previous papers we have proposed an elementary discipline of <i>strong</i> functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between <i>data</i> which is known to be finite, and <i>codata</i> which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.</p>\n",
     "citations": [
       {
-        "author": "A. Abel",
+        "author": "Andreas Abel",
         "title": "Foetus: Termination checker for simple functional programs",
         "year": 1998
       },
@@ -6533,7 +6536,7 @@ module.exports = [
         "year": 1992
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
@@ -6667,7 +6670,7 @@ module.exports = [
     "abstract": "<p>In previous papers we have proposed an elementary discipline of <i>strong</i> functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between <i>data</i> which is known to be finite, and <i>codata</i> which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.</p>\n",
     "citations": [
       {
-        "author": "A. Abel",
+        "author": "Andreas Abel",
         "title": "Foetus: Termination checker for simple functional programs",
         "year": 1998
       },
@@ -6746,7 +6749,7 @@ module.exports = [
         "year": 1993
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
@@ -7324,12 +7327,12 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "An intuitionistic theory of types: Predicative part",
         "year": 1973
       },
       {
-        "author": "P. Martin-Löf",
+        "author": "Per Martin-Löf",
         "title": "Constructive mathematics and computer programming",
         "year": 1982
       },

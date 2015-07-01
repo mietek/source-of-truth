@@ -88,7 +88,9 @@ citations:
     title: "Bananas in space: Extending fold and unfold to exponential types"
     year: 1995
 
-  - author: Erik Meijer and Johan Jeuring
+  - authors:
+      - Erik Meijer
+      - Johan Jeuring
     title: Merging monads and folds for functional programming
     year: 1995
 

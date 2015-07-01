@@ -192,11 +192,11 @@ citations:
     title: Konstruktivnaja logika
     year: 1950
 
-  - author: P. Martin-Löf
+  - author: Per Martin-Löf
     title: Constructive mathematics and computer programming
     year: 1982
 
-  - author: P. Martin-Löf
+  - author: Per Martin-Löf
     title: Intuitionistic type theory
     year: 1984
 
@@ -271,7 +271,7 @@ citations:
     year: 1993
 
   - authors:
-      - F. Pfenning
+      - Frank Pfenning
       - Ch. Paulin-Mohring
     title: Inductively defined types in the calculus of constructions
     year: 1990

@@ -20,20 +20,20 @@ citations:
     year: 1990
 
   - authors:
-      - J. Alt
-      - S. Artemov
+      - Jesse Alt
+      - Sergei Artemov
     title: Reflective λ-calculus
     year: 2000
 
-  - author: S. Artemov
+  - author: Sergei Artemov
     title: On explicit reflection in theorem proving and formal verification
     year: 1999
 
-  - author: S. Artemov
+  - author: Sergei Artemov
     title: Uniform provability realization of intuitionistic logic, modality, and lambda-terms
     year: 1999
 
-  - author: S. Artemov
+  - author: Sergei Artemov
     title: Explicit provability and constructive semantics
     year: 2001
 

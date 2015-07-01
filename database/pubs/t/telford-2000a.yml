@@ -9,7 +9,7 @@ abstract: |
   <p>In previous papers we have proposed an elementary discipline of <i>strong</i> functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between <i>data</i> which is known to be finite, and <i>codata</i> which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.</p>
 citations:
 
-  - author: A. Abel
+  - author: Andreas Abel
     title: "Foetus: Termination checker for simple functional programs"
     year: 1998
 
@@ -100,7 +100,7 @@ citations:
     title: Head-strictness is not a monotonic abstract property
     year: 1992
 
-  - author: P. Martin-Löf
+  - author: Per Martin-Löf
     title: "An intuitionistic theory of types: Predicative part"
     year: 1973
 

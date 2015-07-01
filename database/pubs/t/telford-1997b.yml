@@ -87,7 +87,7 @@ citations:
     title: Deciding ML typability is complete for deterministic exponential time
     year: 1990
 
-  - author: P. Martin-Löf
+  - author: Per Martin-Löf
     title: "An intuitionistic theory of types: Predicative part"
     year: 1973
 
