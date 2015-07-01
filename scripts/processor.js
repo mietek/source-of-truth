@@ -1,5 +1,6 @@
 'use strict';
 
+var latinize = require('latinize');
 var utils = require('./common/utils');
 
 var rawCollections = require('./database/collections');
@@ -15,39 +16,12 @@ var authors           = [];
 var fullAuthors       = [];
 var partialAuthors    = [];
 var authorsByName     = {};
+var authorsBySurname  = {};
 var years             = [];
 var fullYears         = [];
 var partialYears      = [];
 var yearsByName       = {};
 var itemsById         = {};
-
-function getAuthorBasename(name) {
-  if (name === 'et al.') {
-    return 'et al.';
-  }
-  var tokens = name.split(' ');
-  return (
-    tokens[tokens.length - 1]);
-}
-
-function ensureAuthor(name) {
-  if (name in authorsByName) {
-    return authorsByName[name];
-  }
-  var author = {
-    type:     'author',
-    id:       utils.getRandomUuid(),
-    name:     name,
-    basename: getAuthorBasename(name),
-    pubs:        [],
-    fullPubs:    [],
-    partialPubs: []
-  };
-  authors.push(author);
-  authorsByName[name]  = author;
-  itemsById[author.id] = author;
-  return author;
-}
 
 function ensureYear(name) {
   if (name in yearsByName) {
@@ -79,8 +53,8 @@ var _ = module.exports = {
     }
     var collection = {
       type:        'collection',
-      id:          rawCollection.id,
       name:        rawCollection.name,
+      id:          rawCollection.id,
       pubs:        [],
       fullPubs:    [],
       partialPubs: []
@@ -99,6 +73,67 @@ var _ = module.exports = {
       });
   },
 
+  getAuthorSurnameSuffix: function (count) {
+    if (count < 0 || count > 26) {
+      console.error('Invalid count:', count);
+      return undefined;
+    }
+    if (!count) {
+      return '';
+    }
+    return String.fromCharCode('A'.charCodeAt(0) + count - 1);
+  },
+
+  getUniqueAuthorSurnameAndId: function (name) {
+    if (name === 'et al.' || name === 'unknown') {
+      return {
+        surname: 'unknown',
+        id:      'unknown'
+      };
+    }
+    var tokens      = name.split(' ');
+    var baseSurname = tokens[tokens.length - 1];
+    var baseId      = latinize(baseSurname.toLowerCase()).replace(/[^a-z]/g, '-');
+    if (!(baseSurname in authorsBySurname) && !(baseId in itemsById)) {
+      return {
+        surname: baseSurname,
+        id:      baseId
+      };
+    }
+    console.warn('Possibly duplicate author name:', name);
+    var count = 0;
+    var surname;
+    var id;
+    do {
+      count += 1;
+      var suffix = _.getAuthorSurnameSuffix(count);
+      surname = baseSurname + ' ' + suffix;
+      id      = baseId + '-' + suffix.toLowerCase();
+    } while (surname in authorsBySurname || id in itemsById);
+    return {
+      surname: surname,
+      id:      id
+    };
+  },
+
+  processAuthor: function (name) {
+    if (name in authorsByName) {
+      return authorsByName[name];
+    }
+    var author  = utils.assign({
+        type:        'author',
+        name:        name,
+        pubs:        [],
+        fullPubs:    [],
+        partialPubs: []
+      }, _.getUniqueAuthorSurnameAndId(name));
+    authors.push(author);
+    authorsByName[name]              = author;
+    authorsBySurname[author.surname] = author;
+    itemsById[author.id]             = author;
+    return author;
+  },
+
   getCollection: function (name) {
     if (!(name in collectionsByName)) {
       console.error('Missing collection:', name);
@@ -108,25 +143,19 @@ var _ = module.exports = {
   },
 
   getPubSignature: function (authors, rawPub) {
-    var firstBasename = (
+    var firstId = (
       (authors && authors.length) ?
-        authors[0].basename :
+        authors[0].surname :
         'unknown');
     return (
-      firstBasename + (
+      firstId + (
         (rawPub.year ? ' ' + rawPub.year : '')));
-  },
-
-  getPubName: function (authors, rawPub) {
-    return (
-      _.getPubSignature(authors, rawPub) +
-        (' — ' + rawPub.title));
   },
 
   ensurePartialPub: function (rawPub, reverseCitation) {
     var authorNames = rawPub.author ? [rawPub.author] : rawPub.authors;
-    var authors     = authorNames && authorNames.map(ensureAuthor);
-    var name        = _.getPubName(authors, rawPub);
+    var authors     = authorNames && authorNames.map(_.processAuthor);
+    var name        = _.getPubSignature(authors, rawPub) + ' — ' + rawPub.title;
     var year        = rawPub.year && ensureYear(rawPub.year);
     var pub;
     if (!(name in pubsByName)) {
@@ -229,7 +258,7 @@ var _ = module.exports = {
 
   processAuthors: function () {
     authors.sort(function (author1, author2) {
-        return author1.basename.localeCompare(author2.basename) || author1.name.localeCompare(author2.name);
+        return author1.surname.localeCompare(author2.surname) || author1.name.localeCompare(author2.name);
       });
     authors.forEach(function (author) {
         if (author.fullPubs.length) {
@@ -254,6 +283,7 @@ var _ = module.exports = {
   },
 
   processDb: function () {
+    _.processAuthor('unknown');
     _.processCollections();
     _.processPubs();
     _.processAuthors();
