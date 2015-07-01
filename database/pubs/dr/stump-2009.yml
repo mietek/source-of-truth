@@ -266,15 +266,15 @@ citations:
     title: "Multi-stage programming: Its theory and applications"
     year: 1999
 
-  - author: The Coq development team
+  - author: The Coq team
     title: The Coq Proof Assistant reference manual
     year: 2004
 
-  - author: The GHC team
+  - author: The GHC team
     title: The Glorious Glasgow Haskell Compilation System user’s guide
     year: 2007
 
-  - author: The PLT group
+  - author: The PLT group
     title: "PLT DrScheme: Programming environment manual"
     year: 2007
 

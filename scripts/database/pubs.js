@@ -2923,17 +2923,17 @@ module.exports = [
         "year": 1999
       },
       {
-        "author": "The Coq development team",
+        "author": "The Coq team",
         "title": "The Coq Proof Assistant reference manual",
         "year": 2004
       },
       {
-        "author": "The GHC team",
+        "author": "The GHC team",
         "title": "The Glorious Glasgow Haskell Compilation System user’s guide",
         "year": 2007
       },
       {
-        "author": "The PLT group",
+        "author": "The PLT group",
         "title": "PLT DrScheme: Programming environment manual",
         "year": 2007
       },
@@ -4295,7 +4295,7 @@ module.exports = [
         "year": 2001
       },
       {
-        "author": "The Coq development team",
+        "author": "The Coq team",
         "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
@@ -4759,7 +4759,7 @@ module.exports = [
           "Stuart F. Allen",
           "Robert L. Constable",
           "Douglas J. Howe",
-          "William Aitken."
+          "William Aitken"
         ],
         "title": "The semantics of reflected proof",
         "year": 1990
@@ -6071,11 +6071,8 @@ module.exports = [
     "abstract": "<p>It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term <i>codata</i>, are productive. This analysis is an extension of the check for <i>guardedness</i> that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.</p>\n",
     "citations": [
       {
-        "authors": [
-          "INRIA",
-          "CNRS"
-        ],
-        "title": "The Coq project",
+        "author": "The Coq team",
+        "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
       {
@@ -6225,11 +6222,8 @@ module.exports = [
     "abstract": "<p>It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term <i>codata</i>, are productive. This analysis is an extension of the check for <i>guardedness</i> that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.</p>\n",
     "citations": [
       {
-        "authors": [
-          "INRIA",
-          "CNRS"
-        ],
-        "title": "The Coq project",
+        "author": "The Coq team",
+        "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
       {
@@ -6448,11 +6442,8 @@ module.exports = [
         "year": 1998
       },
       {
-        "authors": [
-          "INRIA",
-          "CNRS"
-        ],
-        "title": "The Coq project",
+        "author": "The Coq team",
+        "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
       {
