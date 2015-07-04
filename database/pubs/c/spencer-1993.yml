@@ -67,7 +67,7 @@ citations:
 
   - authors:
       - J.A. Goguen
-      - R.D. Burstall
+      - R.M. Burstall
     title: "Institutions: Abstract model theory for specification and programming"
     year: 1992
 
@@ -123,7 +123,7 @@ citations:
     title: Categorical type theory
     year: 1991
 
-  - author: C.B. Jay
+  - author: B. Jay
     title: Tail recursion from universal invariants
     year: 1991
 

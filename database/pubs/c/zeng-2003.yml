@@ -67,7 +67,7 @@ citations:
 
   - authors:
       - G. Cousineau
-      - P.L. Curien
+      - P.-L. Curien
       - M. Mauny
     title: The categorical abstract machine
     year: 1985
@@ -157,7 +157,7 @@ citations:
 
   - authors:
       - Sjaak Smesters
-      - Erick Nöcker
+      - Eric Nöcker
       - Jon van Gronigen
       - Rinus Plasmeijer
     title: Generating efficient code for lazy functional languages

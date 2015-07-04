@@ -181,7 +181,7 @@ citations:
       - B. Lewis
       - D. LaLiberte
       - R. Stallman
-      - The GNU manual group
+      - unknown
     title: GNU Emacs Lisp reference manual
     year: 2000
 
@@ -250,7 +250,7 @@ citations:
     title: First-class nonstandard interpretations by opening closures
     year: 2007
 
-  - author: B. Smith
+  - author: B.C. Smith
     title: Reflection and semantics in Lisp
     year: 1984
 
@@ -266,15 +266,15 @@ citations:
     title: "Multi-stage programming: Its theory and applications"
     year: 1999
 
-  - author: The Coq team
+  - author: unknown
     title: The Coq Proof Assistant reference manual
     year: 2004
 
-  - author: The GHC team
+  - author: unknown
     title: The Glorious Glasgow Haskell Compilation System user’s guide
     year: 2007
 
-  - author: The PLT group
+  - author: unknown
     title: "PLT DrScheme: Programming environment manual"
     year: 2007
 

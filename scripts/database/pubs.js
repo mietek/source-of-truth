@@ -3,7 +3,6 @@ module.exports = [
     "title": "Introduction to distributive categories",
     "author": "Robin Cockett",
     "year": 1991,
-    "basename": "cockett-1991",
     "collection": "Charity",
     "numbered": "n",
     "citations": [
@@ -93,7 +92,6 @@ module.exports = [
     "title": "Distributive logic",
     "author": "Robin Cockett",
     "year": 1992,
-    "basename": "cockett-1992a",
     "collection": "Charity",
     "abstract": "<p>Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.</p>\n<p>This paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.</p>\n"
   },
@@ -104,7 +102,6 @@ module.exports = [
       "Tom Fukushima"
     ],
     "year": 1992,
-    "basename": "cockett-1992b",
     "collection": "Charity",
     "abstract": "<p>Charity is a categorical programming language based on distributive categories (in the sense of Schanuel and Lawvere) with strong datatypes (in the sense of Hagino). Distributive categories come with a term logic which can express most standard programs; and they are fundamental to computer science because they permit proof by case analysis and, when strong datatypes are introduced, proof by structural induction.</p>\n<p>Charity is functional and polymorphic in style, and is strongly normalizing. As a categorical programming language it provides a unique marriage of computer science and mathematical thought. The above aspects are particularly important for the production of verified programs as the naturality of morphisms gives us “theorems for free”, termination proofs are not required, and mathemathical specifications can be used.</p>\n",
     "numbered": "n",
@@ -233,7 +230,6 @@ module.exports = [
       "Dwight Spencer"
     ],
     "year": 1992,
-    "basename": "cockett-1992c",
     "collection": "Charity",
     "abstract": "<p>An endofunctor of a cartesian closed category is often called strong if it is enriched over the exponential. Equivalently this strength can be provided as a natural transformation <b>θ<sub>A;X</sub> : F(A)×X ⟶ F(A×X)</b> satisfying some elementary coherence conditions. This latter formulation does not require exponentials, relies only on the presence of an X-action over an X-strong category, and thereby provides a first-order viewpoint of strength.</p>\n<p>The 2-category of X-strong categories is not finitely complete. It particularly lacks many standard constructions including the Eilenberg-Moore construction. Thankfully, the suggestion — attributed to Plotkin by Moggi — that strength can also be equivalently framed in terms of fibrations using projections to X-objects as display maps can be fully realized. The equivalence can be portrayed as an embedding of X-strong categories into the 2-category of X-indexed categories or split fibrations over X. This embedding can be used to give a coherent declarative implementation of parametrized datatypes-with-strength and their constructors/destructors in the style of Hagino.</p>\n<p>The initiality and finality conditions associated with the strong datatype construction in the split fibration setting generate a strongly normalizing weak-head categorical combinator reduction system. The reduction rules permit both “eager” usage of initial datatypes and “lazy” usage of final datatypes to achieve reasonable computing strength. An X-action over a strong datatype can be computed in terms of programmed state transformations over its component datatypes. These reduction rules form the abstract engine for computation within the Charity categorical programming system.</p>\n",
     "citations": [
@@ -274,7 +270,7 @@ module.exports = [
         "year": 1987
       },
       {
-        "author": "C.B. Jay",
+        "author": "B. Jay",
         "title": "Tail recursion from universal invariants",
         "year": 1991
       },
@@ -389,7 +385,6 @@ module.exports = [
       "Dwight Spencer"
     ],
     "year": 1992,
-    "basename": "cockett-1992d",
     "collection": "Charity",
     "abstract": "<p>This paper lifts the category-theoretic results of [4] to the level of an abstract language suitable for basing categorical programming language implementations. The earlier work built a fibration-based strongly-normalizing categorical combinator reduction system based entirely on functorial strength that allows the distribution of context to the interior of a strong data structure. Strong type-forming functors accompanied by (1) a collection of constructor combinators (initial datatypes) or destructor combinators (final datatypes) and (2) a capability for building new state-transforming combinators that operate with structures of the datatypes formed by these functors can be abstractly declared in a Hagino-Wraith style to form a reasonably expressive computing environment.</p>\n<p>However, the high complexity of programming exclusively in combinators warrants the development of categorical programming languages that are isomorphic to the distributive category settings in which strong datatypes can be declared. Towards this goal, a distributive term logic is developed and proven consistent with and equivalent to the combinator theory. Due to its basis in strength higher-order operations, such as generalized map operators, are directly expressible in this first-order language. The term logic forms the underlying base of the Charity categorical programming system. The resulting categorical programming paradigm of structurally inductive state transforms is illustrated by several examples that accompany the term logic reduction rules.</p>\n",
     "citations": [
@@ -468,7 +463,6 @@ module.exports = [
     "title": "Examples of Charity term logic proofs",
     "author": "Robin Cockett",
     "year": 1993,
-    "basename": "cockett-1993",
     "collection": "Charity",
     "numbered": "n",
     "citations": [
@@ -496,14 +490,12 @@ module.exports = [
     "title": "Charitable thoughts",
     "author": "Robin Cockett",
     "year": 1996,
-    "basename": "cockett-1996",
     "collection": "Charity"
   },
   {
     "title": "Charity user manual",
     "author": "Tom Fukushima",
     "year": 1991,
-    "basename": "fukushima-1991",
     "collection": "Charity"
   },
   {
@@ -513,7 +505,6 @@ module.exports = [
       "Charles Tuckey"
     ],
     "year": 1996,
-    "basename": "fukushima-1996",
     "collection": "Charity"
   },
   {
@@ -527,14 +518,12 @@ module.exports = [
     "title": "Charity grammar",
     "author": "Marc Schroeder",
     "year": 1993,
-    "basename": "schroeder-1993a",
     "collection": "Charity"
   },
   {
     "title": "Chirp: A front end for Charity",
     "author": "Marc Schroeder",
     "year": 1993,
-    "basename": "schroeder-1993b",
     "collection": "Charity",
     "abstract": "<p>Chirp is the front end of the interpreter for Charity, a categorical programming language currently under development. Chirp interfaces neatly with Barry Yee’s Charm abstract machine, the back end, to form a coherent system for the definition and execution of Charity programs. Chirp has been designed to be fast, portable, and extensible.</p>\n<p>Chapter 1 provides a brief introduction to Chirp and the Charity language. Chapter 2 presents Charity in slightly more detail, discussing categorical programming as well as issues in the language. Chapters 3–9 explore the workings of the Chirp system in detail, while chapter 10 explains the Chirp/Charm interface. Finally, chapter 11 comments on some possible directions in the continued development of Chirp and Charity. The appendices specify the grammar for Charity, and other technical or useful details of the system and language. An example Chirp session is also listed.</p>\n",
     "citations": [
@@ -610,7 +599,7 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "P.-L. Curien",
+        "author": "Pierre-Louis Curien",
         "title": "Categorical combinators, sequential algorithms, and functional programming",
         "year": 1986
       },
@@ -683,7 +672,6 @@ module.exports = [
     "title": "Higher-order Charity",
     "author": "Marc Schroeder",
     "year": 1997,
-    "basename": "schroeder-1997",
     "collection": "Charity",
     "abstract": "<p>This thesis describes the higher-order Charity programming language which is an extension of first-order Charity. This results from extending the coinductive datatype definition mechanism to allow a new class of higher-order datatypes with parameterized destructors. This adds significant expressive power to the language. In particular it allows one to create “objects”. The language is “higher-order” in the traditional sense that the exponential datatype can be defined, and so that functions can be treated as values.</p>\n<p>The higher-order extension is traced from the extension of the syntax and the expressive gains delivered to the Charity programmer, down through the innards of the language and the modifications required in the implementation.</p>\n",
     "citations": [
@@ -878,7 +866,6 @@ module.exports = [
       "Robin Cockett"
     ],
     "year": 1992,
-    "basename": "simpson-1992",
     "collection": "Charity",
     "abstract": "<p>A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.</p>\n<p>A program definition using patterns is a parallel specification and does not determine a sequential evaluation. A problem arises, therefore, in attempting to preserve as far as possible the intended parallel meaning during the translation to sequential form. In particular, a sequentialized program may be forced to evaluate patterns which need not be evaluated when parallelism is available. It is known that some definitions using patterns, called <i>sequentializable</i> definitions, can be translated without semantic loss, and algorithms to sequentialize these definitions have been documented. In this paper we present an algorithm which works uniformly over <i>all</i> definitions — it handles sequentializable definitions correctly, but also optimizes the sequential realization of other definitions.</p>\n",
     "citations": [
@@ -915,7 +902,7 @@ module.exports = [
       {
         "authors": [
           "G. Huet",
-          "J. Levy"
+          "J.-J. Lévy"
         ],
         "title": "Call by need computations in nonambiguous linear term rewriting systems",
         "year": 1979
@@ -960,7 +947,6 @@ module.exports = [
     "title": "Categorical programming with functorial strength",
     "author": "Dwight Spencer",
     "year": 1993,
-    "basename": "spencer-1993",
     "collection": "Charity",
     "abstract": "<p>We show that significant <i>categorical</i> programs can be computed applicatively using only a category’s commutative diagtams: objects as datatypes and well-behaved arrows as combinators between datatypes. No assumptions of a underlying lambda calculus lie in wait to snare us with non-termination, non-confluence, or datatype constraints. Only the <i>structures of data</i> drive the reductions. The categorical datatypes of our computing universe — both initial and final structures — can be specified incrementally and flexibly by the programmer’s declarations. These datatypes arrive bundled with structurally-natural constructive or destructive operators ready for programming purposes.</p>\n",
     "citations": [
@@ -1042,7 +1028,7 @@ module.exports = [
       {
         "authors": [
           "J.A. Goguen",
-          "R.D. Burstall"
+          "R.M. Burstall"
         ],
         "title": "Institutions: Abstract model theory for specification and programming",
         "year": 1992
@@ -1115,7 +1101,7 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "C.B. Jay",
+        "author": "B. Jay",
         "title": "Tail recursion from universal invariants",
         "year": 1991
       },
@@ -1307,7 +1293,6 @@ module.exports = [
     "title": "The implementation of pattern matching in Charity",
     "author": "Charles Tuckey",
     "year": 1994,
-    "basename": "tuckey-1994",
     "collection": "Charity",
     "abstract": "<p>Charity is a functional type language recently developed at the University of Calgary by Dr. J.R.B. Cockett. This paper is a report on a project to add pattern matching capability to Charity. The project involved defining an extended term logic for Charity, developing an appropriate syntax to express the new term logic, doing type checking in the term logic, and refining an algorithm to translate the extended term logic to the core term logic. The preceding work is discussed and a blueprint is given for future work.</p>\n",
     "numbered": "n",
@@ -1408,7 +1393,6 @@ module.exports = [
     "title": "Pattern matching in Charity",
     "author": "Charles Tuckey",
     "year": 1997,
-    "basename": "tuckey-1997",
     "collection": "Charity",
     "abstract": "<p>Charity, a functional style programming language based in the mathematics of category theory, was developed at the University of Calgary by the Charity group under the direction of Dr. Cockett. Key to the usefulness of such languages is the ability to define functions using pattern matching. This thesis describes an extended type theory for a Charity term logic with sophisticated pattern matching capabilities. It gives a translation of this extended term logic to Charity’s core term logic, enabling programs written in the extended term logic to be evaluated. The translation closely mirrors the type theory.</p>\n<p>In addition, this work introduces a new pattern matching feature which is not found in other functional style languages. It shows how the facility of guarding patterns with boolean functions, available in many functional languages, can be extended so that functions of arbitrary types can be used as pattern guards.</p>\n",
     "numbered": "n",
@@ -1531,7 +1515,6 @@ module.exports = [
     "title": "Categorical combinators for Charity",
     "author": "Peter Vesely",
     "year": 1996,
-    "basename": "vesely-1996",
     "collection": "Charity",
     "abstract": "<p>A 2-categorical notion of <i>parametric combinator</i> is introduced. These combinators are operations for constructing arrows in a category and satisfy a 2-categorical abstraction of parametricity for strictly covariant functors. Inductive and co-inductive datatypes are compatible with these combinators and their universal properties are closely related to parametricity. The Charity programming language is based on <i>strong datatypes</i> which are a specialization of 2-categorical datatypes. <i>Strong combinators</i> (which are an appropriate specialization of 2-categorical combinators) provide a model of polymorphic functions in Charity.</p>\n",
     "numbered": "n",
@@ -1540,7 +1523,7 @@ module.exports = [
         "authors": [
           "M. Abadi",
           "L. Cardelli",
-          "P.L. Curien"
+          "P.-L. Curien"
         ],
         "title": "Formal parametric polymorphism",
         "year": 1993
@@ -1686,7 +1669,6 @@ module.exports = [
     "title": "Typechecking the Charity term logic",
     "author": "Peter Vesely",
     "year": 1997,
-    "basename": "vesely-1997",
     "collection": "Charity",
     "citations": [
       {
@@ -1708,7 +1690,6 @@ module.exports = [
     "title": "The Charm project: A back end to the Charity interpreter",
     "author": "Barry Yee",
     "year": 1993,
-    "basename": "yee-1993",
     "collection": "Charity",
     "abstract": "<p>The Charm project is an attempt to build an efficient and portable abstract machine for the Charity language. The abstract machine is implemented in C programming language to make the system more portable across different computer platforms. In this paper, the Charity system is composed of a set of rewrite rules that are converted to state transitions that defines an abstract machine. The implementation of the system is divided into two levels, the macro–level and micro–level. Macro–instructions are instructions that specify the state transitions while the micro–instructions perform the actions that change the state of the machine.</p>\n",
     "numbered": "n",
@@ -1797,7 +1778,6 @@ module.exports = [
     "title": "Implementing the Charity abstract machine",
     "author": "Barry Yee",
     "year": 1995,
-    "basename": "yee-1995",
     "collection": "Charity",
     "abstract": "<p>This thesis describes a series of three abstract machines, with associated compilation procedures, for the Charity programming language. Each machine is a refinement of the previous, getting closer to the level of the physical machine.</p>\n<p>The current C implementation of Charity is based on the last of these machines and is roughly twenty times faster than the original SML implementation, which was based on the first.</p>\n",
     "numbered": "n",
@@ -1973,7 +1953,6 @@ module.exports = [
     "title": "An implementation of Charity",
     "author": "Min Zeng",
     "year": 2003,
-    "basename": "zeng-2003",
     "collection": "Charity",
     "abstract": "<p>This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.</p>\n<p>The design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.</p>\n<p>The core-Charity compiler concentrates on providing an efficient implementation of core Charity code into the virtual machine. Previous implementations suffered from excessive heap usage which necessitated frequent garbage collection. In this implementation a variety of techniques are used to reduce heap usage and improve execution speed.</p>\n<p>The resulting Charity programs are substantially faster than those produced by previous Charity implementations.</p>\n",
     "citations": [
@@ -2050,7 +2029,7 @@ module.exports = [
       {
         "authors": [
           "G. Cousineau",
-          "P.L. Curien",
+          "P.-L. Curien",
           "M. Mauny"
         ],
         "title": "The categorical abstract machine",
@@ -2166,7 +2145,7 @@ module.exports = [
       {
         "authors": [
           "Sjaak Smesters",
-          "Erick Nöcker",
+          "Eric Nöcker",
           "Jon van Gronigen",
           "Rinus Plasmeijer"
         ],
@@ -2211,13 +2190,37 @@ module.exports = [
     ]
   },
   {
+    "title": "Types for the Scott numerals",
+    "authors": [
+      "Martín Abadi",
+      "Luca Cardelli",
+      "Gordon Plotkin"
+    ],
+    "year": 1993,
+    "collection": "Direct reflection",
+    "citations": [
+      {
+        "authors": [
+          "Gordon Plotkin",
+          "Martín Abadi"
+        ],
+        "title": "A logic for parametric polymorphism",
+        "year": 1993
+      },
+      {
+        "author": "Christopher Wadsworth",
+        "title": "Some unusual λ-calculus numeral systems",
+        "year": 1980
+      }
+    ]
+  },
+  {
     "title": "Self-representation in Girard’s System U",
     "authors": [
       "Matt Brown",
       "Jens Palsberg"
     ],
     "year": 2015,
-    "basename": "brown-2015",
     "collection": "Direct reflection",
     "abstract": "<p>In 1991, Pfenning and Lee studied whether System F could support a typed self-interpreter. They concluded that typed self-representation for System F “seems to be impossible”, but were able to represent System F in F<sub>ω</sub> . Further, they found that the representation of F<sub>ω</sub> requires kind polymorphism, which is outside F<sub>ω</sub>. In 2009, Rendel, Ostermann and Hofer conjectured that the representation of kind-polymorphic terms would require another, higher form of polymorphism. Is this a case of infinite regress? We show that it is not and present a typed self-representation for Girard’s System U, the first for a λ-calculus with decidable type checking. System U extends System F<sub>ω</sub> with kind polymorphic terms and types. We show that kind polymorphic types (i.e. types that depend on kinds) are sufficient to “tie the knot” — they enable representations of kind polymorphic terms without introducing another form of polymorphism. Our self-representation supports operations that iterate over a term, each of which can be applied to a representation of itself. We present three typed self-applicable operations: a self-interpreter that recovers a term from its representation, a predicate that tests the intensional structure of a term, and a typed continuation-passing-style (CPS) transformation — the first typed self-applicable CPS transformation. Our techniques could have applications from verifiably type-preserving metaprograms, to growable typed languages, to more efficient self-interpreters.</p>\n",
     "citations": [
@@ -2314,7 +2317,7 @@ module.exports = [
         "year": 1991
       },
       {
-        "author": "Jan Herman Geuvers",
+        "author": "Herman Geuvers",
         "title": "Logics and type systems",
         "year": 1993
       },
@@ -2476,7 +2479,6 @@ module.exports = [
       "Aaron Stump"
     ],
     "year": 2012,
-    "basename": "carette-2012",
     "collection": "Direct reflection",
     "abstract": "<p>Direct reflection is a form of meta-programming in which program terms can intensionally analyze other program terms. Previous work defined a big-step semantics for a directly reflective language called Archon, with a conservative approach to variable scoping based on operations for opening a lambda-abstraction and swapping the order of nested lambda-abstractions. In this short paper, we give a small-step semantics for a revised version of Archon, based on operations for opening and closing lambda abstractions. We then discuss challenges for designing a static type system for this language, which is our ultimate goal.</p>\n",
     "citations": [
@@ -2592,7 +2594,6 @@ module.exports = [
     "title": "Directly reflective meta-programming",
     "author": "Aaron Stump",
     "year": 2009,
-    "basename": "stump-2009",
     "collection": "Direct reflection",
     "abstract": "<p>Existing meta-programming languages operate on encodings of programs as data. This paper presents a new meta-programming language, based on an untyped lambda calculus, in which structurally reflective programming is supported directly, without any encoding. The language features call-by-value and call-by-name lambda abstractions, as well as novel reflective features enabling the intensional manipulation of arbitrary program terms. The language is scope safe, in the sense that variables can neither be captured nor escape their scopes. The expressiveness of the language is demonstrated by showing how to implement quotation and evaluation operations, as proposed by Wand. The language’s utility for meta-programming is further demonstrated through additional representative examples. A prototype implementation is described and evaluated.</p>\n",
     "citations": [
@@ -2816,7 +2817,7 @@ module.exports = [
           "B. Lewis",
           "D. LaLiberte",
           "R. Stallman",
-          "The GNU manual group"
+          "unknown"
         ],
         "title": "GNU Emacs Lisp reference manual",
         "year": 2000
@@ -2906,7 +2907,7 @@ module.exports = [
         "year": 2007
       },
       {
-        "author": "B. Smith",
+        "author": "B.C. Smith",
         "title": "Reflection and semantics in Lisp",
         "year": 1984
       },
@@ -2926,17 +2927,17 @@ module.exports = [
         "year": 1999
       },
       {
-        "author": "The Coq team",
+        "author": "unknown",
         "title": "The Coq Proof Assistant reference manual",
         "year": 2004
       },
       {
-        "author": "The GHC team",
+        "author": "unknown",
         "title": "The Glorious Glasgow Haskell Compilation System user’s guide",
         "year": 2007
       },
       {
-        "author": "The PLT group",
+        "author": "unknown",
         "title": "PLT DrScheme: Programming environment manual",
         "year": 2007
       },
@@ -2974,7 +2975,6 @@ module.exports = [
     "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
     "author": "Marek Łach",
     "year": 1998,
-    "basename": "lach-1998",
     "collection": "System ET",
     "citations": [
       {
@@ -3078,7 +3078,6 @@ module.exports = [
     "title": "IPL by examples",
     "author": "Zdzisław Spławski",
     "year": 1993,
-    "basename": "splawski-1993a",
     "collection": "System ET",
     "citations": [
       {
@@ -3171,7 +3170,7 @@ module.exports = [
           "R.W. Harper",
           "Douglas J. Howe",
           "T.B. Knoblock",
-          "N.P. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "James T. Sasaki",
           "Scott F. Smith"
@@ -3351,12 +3350,12 @@ module.exports = [
         "year": 1984
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Inductive types and type constraints in the second-order lambda calculus",
         "year": 1991
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Recursive types and type constraints in the second-order lambda calculus",
         "year": 1987
       },
@@ -3592,7 +3591,6 @@ module.exports = [
       "Paweł Urzyczyn"
     ],
     "year": 1999,
-    "basename": "splawski-1999b",
     "collection": "System ET",
     "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus λ2U of recursive types with the operators <b>Fold : σ[μα.σ/α] → μα.σ</b> and <b>Unfold : μα.σ → σ[μα.σ/α]</b>, where the composition <b>Unfold ◦ Fold</b> reduces to identity.</p>\n<p>It is known that systems with iterators can be defined within λ2, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system λ2U does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type <b>σ</b> is embedded into another type <b>τ</b> then <b>τ</b> must be of depth at least equal to the depth of <b>σ</b>.</p>\n",
     "citations": [
@@ -3731,12 +3729,12 @@ module.exports = [
         "year": 1998
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Recursive types and type constraints in the second-order lambda calculus",
         "year": 1987
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Inductive types and type constraints in the second-order lambda calculus",
         "year": 1991
       },
@@ -3789,7 +3787,6 @@ module.exports = [
     "title": "Defining recursors by solving equations in second-order lambda calculus",
     "author": "Zdzisław Spławski",
     "year": 2002,
-    "basename": "splawski-2002",
     "collection": "System ET",
     "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. Known extensions of λ2 fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within λ2 by means of beta reductions, and it is conjectured that systems with recursors cannot.</p>\n<p>In this paper we define the general form of mutual iteration scheme in λ2 and we show that the explicit solution for particular functions defines recursors within λ2, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient <i>equational</i> inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.</p>\n",
     "citations": [
@@ -3829,12 +3826,12 @@ module.exports = [
         "year": 1990
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Recursive types and type constraints in the second-order lambda calculus",
         "year": 1987
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Inductive types and type constraints in the second-order lambda calculus",
         "year": 1991
       },
@@ -3870,7 +3867,6 @@ module.exports = [
     "title": "The Curry-Howard isomorphism: Remarks on recursive types",
     "author": "Paweł Urzyczyn",
     "year": 1999,
-    "basename": "urzyczyn-1999",
     "collection": "System ET",
     "citations": [
       {
@@ -3930,12 +3926,12 @@ module.exports = [
         "year": 1998
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Recursive types and type constraints in the second-order lambda calculus",
         "year": 1987
       },
       {
-        "author": "N.P. Mendler",
+        "author": "P. Mendler",
         "title": "Inductive types and type constraints in the second-order lambda calculus",
         "year": 1991
       },
@@ -3970,7 +3966,6 @@ module.exports = [
     "title": "On the implementation of IPL",
     "author": "Tomasz Wierzbicki",
     "year": 1993,
-    "basename": "wierzbicki-1993",
     "collection": "System ET",
     "citations": [
       {
@@ -3997,7 +3992,6 @@ module.exports = [
       "Sergei Artemov"
     ],
     "year": 2000,
-    "basename": "alt-2000",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>The Curry-Howard isomorphism converting intuitionistic proofs into typed λ-terms is a simple instance of an internalization property of a system λ<sup>∞</sup> which unifies intuitionistic logic with λ-calculus and which is capable of internalizing its own derivations as λ-terms. We establish confluence and strong normalization of λ<sup>∞</sup>. The system λ<sup>∞</sup> considerably extends the expressive power of each of its major components: typed λ-calculus, intuitionistic and modal logic. It may be regarded as the pure λ version of the Logic of Proofs LP from [1, 2, 3]. In particular, the standard model of <b>t : F</b> in λ<sup>∞</sup> is “<b>t</b> is a proof of <b>F</b>”.</p>\n",
     "citations": [
@@ -4055,7 +4049,6 @@ module.exports = [
       "Sergei Artemov"
     ],
     "year": 2001,
-    "basename": "alt-2001",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a general purpose typed λ-calculus λ<sup>∞</sup> which contains intuitionistic logic, is capable of internalizing its own derivations as λ-terms and yet enjoys strong normalization with respect to a natural reduction system. In particular, λ<sup>∞</sup> subsumes the typed λ-calculus. The Curry-Howard isomorphism converting intuitionistic proofs into λ-terms is a simple instance of the internalization property of λ<sup>∞</sup>. The standard semantics of λ<sup>∞</sup> is given by a proof system with proof checking capacities. The system λ<sup>∞</sup> is a theoretical prototype of reflective extensions of a broad class of type-based systems in programming languages, provers, AI and knowledge representation, etc.</p>\n",
     "citations": [
@@ -4135,7 +4128,6 @@ module.exports = [
     "title": "On explicit reflection in theorem proving and formal verification",
     "author": "Sergei Artemov",
     "year": 1999,
-    "basename": "artemov-1999",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>We show that the stability requirement for a verification system yields the necessity of some sort of a reflection mechanism. However, the traditional reflection rule based on the Gödel implicit provability predicate leads to a “reflection tower” of theories which cannot be formally verified. We found natural lower and upper bounds on a metatheory capable of establishing stability of a given verification system. The paper introduces an explicit reflection mechanism which can be verified internally. This circumvents the reflection tower and provides a strict justification for the verification process. On the practical side, the paper gives specific recommendations concerning the verification of inference rules and building a verifiable reflection mechanism for a theorem proving system.</p>\n",
     "citations": [
@@ -4260,7 +4252,6 @@ module.exports = [
       "Aleksey Nogin"
     ],
     "year": 2001,
-    "basename": "artemov-2001",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>Reflection is the ability of a deductive system to internalize aspects of its own structure and thereby reason to some extent about itself. In this paper we present a theoretical framework for exploring reflection in type theories that use the “Propositions-as-Types” principle, such as Martin-Löf style theories. One of the main results is that it is unnecessary to build a complete Gödel-style “reflection” layer on top of the logical theory. This makes it possible to use our framework for an efficient implementation of reflection in theorem provers for such type theories. We are doing this for the Nuprl and Metaprl systems.</p>\n",
     "citations": [
@@ -4298,7 +4289,7 @@ module.exports = [
         "year": 2001
       },
       {
-        "author": "The Coq team",
+        "author": "unknown",
         "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
@@ -4335,7 +4326,7 @@ module.exports = [
           "R.W. Harper",
           "Douglas J. Howe",
           "T.B. Knoblock",
-          "N.P. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "James T. Sasaki",
           "Scott F. Smith"
@@ -4424,7 +4415,6 @@ module.exports = [
       "Eduardo Bonelli"
     ],
     "year": 2006,
-    "basename": "artemov-2006",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on <i>how</i> a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
     "numbered": "n",
@@ -4572,7 +4562,6 @@ module.exports = [
       "Eduardo Bonelli"
     ],
     "year": 2007,
-    "basename": "artemov-2007",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>We introduce a natural deduction formulation for the Logic of Proofs, a refinement of modal logic S4 in which the assertion <b>□A</b> is replaced by <b>⟦s⟧A</b> whose intended reading is “<i>s is a proof of A</i>”. A term calculus for this formulation yields a typed lambda calculus λ<sup>I</sup> that internalises <i>intensional</i> information on <i>how</i> a term is computed. In the same way that the Logic of Proofs internalises its own <i>derivations,</i> λ<sup>I</sup> internalises its own <i>computations.</i> Confluence and strong normalisation of λ<sup>I</sup> is proved. This system serves as the basis for the study of type theories that internalise intensional aspects of computation.</p>\n",
     "numbered": "n",
@@ -4717,7 +4706,6 @@ module.exports = [
     "title": "Implementing direct reflection in Nuprl",
     "author": "Eli Barzilay",
     "year": 2006,
-    "basename": "barzilay-2006",
     "collection": "Intensional lambda calculus",
     "abstract": "<p>Reflection is the ability of some entity to describe itself. In a logical context, it is the ability of a logic to reason about itself. Reflection is, therefore, placed at the core of meta-mathematics, making it an important part of formal reasoning; where it revolves mainly around syntax and semantics — the main challenge is in making the syntax of the logic become part of its semantic domain.\nGiven its importance, it is surprising that logical computer systems tend to avoid the subject, or provide poor tools for reflective work. This is in sharp contrast to the area of programming languages, where reflection is well researched and used in a variety of ways where it plays an central role. One factor in making reflection inaccessible in logical systems is the relative difficulty that is immediately encountered when formalizing syntax: dealing with formal syntax means dealing with structures that involve bindings, and in a logical context it seems natural to use the same formal tools to describe syntax — often limiting the usability of such formalizations to specific theories and toy examples. Gödel numbers are an example for a reflective formalism that serves its purpose, yet is impractical as a basis for syntactical reasoning in applied systems.\nIn programming languages, there is a simple yet elegant strategy for implementing reflection: instead of making a system that describes itself, the system is made available to itself. We name this <i>direct reflection</i>, where the representation of language features via its semantics is actually part of the semantics itself — unlike the usual practice in formal systems of employing indirect reflection. The advantages of this approach is the fact that both the system and its reflected counterpart are inherently identical, making for a lightweight implementation.\nIn this work we develop the formal background and the practical capabilities of an applied system, namely Nuprl, that are needed to support direct reflection of its own syntax. Achieving this is a major milestone on the road for a fully reflected logical system. As we shall demonstrate, our results enable dealing with syntactical meta-mathematical content.</p>\n",
     "citations": [
@@ -4840,7 +4828,7 @@ module.exports = [
           "R.W. Harper",
           "Douglas J. Howe",
           "T.B. Knoblock",
-          "N.P. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "James T. Sasaki",
           "Scott F. Smith"
@@ -5258,7 +5246,6 @@ module.exports = [
     "title": "Computing with exact real numbers in a radix-r system",
     "author": "Alexander Kaganovsky",
     "year": 1999,
-    "basename": "kaganovsky-1999a",
     "collection": "Total functional programming",
     "abstract": "<p>This paper investigates an arithmetic based upon the representation of computable exact real numbers by lazy infinite sequences of signed digits in a positional radix-<b>r</b> system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic.</p>\n",
     "citations": [
@@ -5382,7 +5369,6 @@ module.exports = [
     "title": "Exact complex arithmetic in an imaginary radix system",
     "author": "Alexander Kaganovsky",
     "year": 1999,
-    "basename": "kaganovsky-1999b",
     "collection": "Total functional programming",
     "abstract": "<p>This paper investigates an exact arithmetic based on the single-component representation of complex numbers by sequences of signed digits written to imaginary base <b>ri</b>. Algorithms for the four basic arithmetic operations in this representation are described and analyzed. The algorithms are to an unexpected extent scarcely different from their exact real equivalents, which significantly speeds up exact complex number manipulations.</p>\n",
     "citations": [
@@ -5536,7 +5522,6 @@ module.exports = [
     "title": "Exact computing in positional weighted systems",
     "author": "Alexander Kaganovsky",
     "year": 2001,
-    "basename": "kaganovsky-2001",
     "collection": "Total functional programming",
     "abstract": "<p>This thesis presents a framework which allows one to perform infinite precision numerical computations using an arithmetic based upon the representation of computable numbers by lazy infinite sequences of digits in a redundant positional radix system. We discuss advantages and problems associated with this representation, and develop well-behaved algorithms for a comprehensive range of numeric operations, including the four basic operations of arithmetic, and a number of important elementary functions. We investigate the system of real numbers represented in an arbitrary radix <b>r</b>, and then show that the radix-<b>r</b> algorithms also lend themselves with little modification to the unified representation of complex numbers in an imaginary radix, which significantly speeds up exact complex number manipulations. A full complexity analysis is given, which suggests that notwithstanding an earlier claim, positional number system representations can lead to efficient implementations of constructive arithmetic, and in particular, our algorithms largely overcome what has been known as the granularity effect. The algorithms have been implemented both in the functional programming language Miranda and imperative language C, and guidelines have been provided for optimizing and improving the existing implementations.</p>\n",
     "citations": [
@@ -6069,12 +6054,11 @@ module.exports = [
       "David Turner"
     ],
     "year": 1997,
-    "basename": "telford-1997a",
     "collection": "Total functional programming",
     "abstract": "<p>It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term <i>codata</i>, are productive. This analysis is an extension of the check for <i>guardedness</i> that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.</p>\n",
     "citations": [
       {
-        "author": "The Coq team",
+        "author": "unknown",
         "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
@@ -6141,7 +6125,7 @@ module.exports = [
       },
       {
         "authors": [
-          "P.F. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "R.L. Constable"
         ],
@@ -6220,12 +6204,11 @@ module.exports = [
       "David Turner"
     ],
     "year": 1997,
-    "basename": "telford-1997b",
     "collection": "Total functional programming",
     "abstract": "<p>It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term <i>codata</i>, are productive. This analysis is an extension of the check for <i>guardedness</i> that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.</p>\n",
     "citations": [
       {
-        "author": "The Coq team",
+        "author": "unknown",
         "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
@@ -6338,7 +6321,7 @@ module.exports = [
       },
       {
         "authors": [
-          "P.F. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "R.L. Constable"
         ],
@@ -6414,7 +6397,6 @@ module.exports = [
       "David Turner"
     ],
     "year": 2000,
-    "basename": "telford-2000a",
     "collection": "Total functional programming",
     "abstract": "<p>In previous papers we have proposed an elementary discipline of <i>strong</i> functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between <i>data</i> which is known to be finite, and <i>codata</i> which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.</p>\n",
     "citations": [
@@ -6445,7 +6427,7 @@ module.exports = [
         "year": 1998
       },
       {
-        "author": "The Coq team",
+        "author": "unknown",
         "title": "The Coq Proof Assistant reference manual",
         "year": 1996
       },
@@ -6665,7 +6647,6 @@ module.exports = [
       "David Turner"
     ],
     "year": 2000,
-    "basename": "telford-2000b",
     "collection": "Total functional programming",
     "abstract": "<p>In previous papers we have proposed an elementary discipline of <i>strong</i> functional programming (ESFP), in which all computations terminate. A key feature of the discipline is that we introduce a type distinction between <i>data</i> which is known to be finite, and <i>codata</i> which is (potentially) infinite. To ensure termination, recursion over data must be well-founded, and corecursion (the definition schema for codata) must be productive, and both of these restrictions must be enforced automatically by the compiler. In our previous work we used abstract interpretation to establish the productivity of corecursive definitions in an elementary strong functional language. We show here that similar ideas can be applied in the dual case to check whether recursive function definitions are strongly normalising. We thus exhibit a powerful termination analysis technique which we demonstrate can be extended to partial functions.</p>\n",
     "citations": [
@@ -6853,7 +6834,6 @@ module.exports = [
     "title": "Elementary strong functional programming",
     "author": "David Turner",
     "year": 1995,
-    "basename": "turner-1995",
     "collection": "Total functional programming",
     "abstract": "<p>Functional programming is a good idea, but we haven’t got it quite right yet. What we have been doing up to now is weak (or partial) functional programming. What we should be doing is strong (or total) functional programming — in which all computations terminate. We propose an elementary discipline of strong functional programming. A key feature of the discipline is that we introduce a type distinction between <i>data</i>, which is known to be finite, and <i>codata</i>, which is (potentially) infinite.</p>\n",
     "citations": [
@@ -6920,7 +6900,6 @@ module.exports = [
     "title": "Final report: Elementary strong functional programming",
     "author": "David Turner",
     "year": 2000,
-    "basename": "turner-2000",
     "collection": "Total functional programming",
     "citations": [
       {
@@ -6938,7 +6917,7 @@ module.exports = [
       },
       {
         "authors": [
-          "J.W. de Bakker",
+          "J.W. de Bakker",
           "J.N. Kok"
         ],
         "title": "Towards a uniform topological treatment of streams and functions over streams",
@@ -7054,7 +7033,6 @@ module.exports = [
     "title": "Total functional programming",
     "author": "David Turner",
     "year": 2004,
-    "basename": "turner-2004",
     "collection": "Total functional programming",
     "abstract": "<p>The driving idea of functional programming is to make programming more closely related to mathematics. A program in a functional language such as Haskell or Miranda consists of equations which are both computation rules and a basis for simple algebraic reasoning about the functions and data structures they define. The existing model of functional programming, although elegant and powerful, is compromised to a greater extent than is commonly recognised by the presence of partial functions. We consider a simple discipline of <i>total functional programming</i> designed to exclude the possibility of non-termination. Among other things this requires a type distinction between data, which is finite, and codata, which is potentially infinite.</p>\n",
     "numbered": "n",
@@ -7174,7 +7152,6 @@ module.exports = [
     "title": "Church’s thesis and functional programming",
     "author": "David Turner",
     "year": 2006,
-    "basename": "turner-2006",
     "collection": "Total functional programming",
     "numbered": "n",
     "citations": [
@@ -7216,7 +7193,7 @@ module.exports = [
           "R.W. Harper",
           "Douglas J. Howe",
           "T.B. Knoblock",
-          "N.P. Mendler",
+          "P. Mendler",
           "P. Panangaden",
           "James T. Sasaki",
           "Scott F. Smith"

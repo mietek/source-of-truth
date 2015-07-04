@@ -58,7 +58,7 @@ citations:
       - R.W. Harper
       - Douglas J. Howe
       - T.B. Knoblock
-      - N.P. Mendler
+      - P. Mendler
       - P. Panangaden
       - James T. Sasaki
       - Scott F. Smith
@@ -200,11 +200,11 @@ citations:
     title: Intuitionistic type theory
     year: 1984
 
-  - author: N.P. Mendler
+  - author: P. Mendler
     title: Inductive types and type constraints in the second-order lambda calculus
     year: 1991
 
-  - author: N.P. Mendler
+  - author: P. Mendler
     title: Recursive types and type constraints in the second-order lambda calculus
     year: 1987
 

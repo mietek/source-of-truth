@@ -37,7 +37,7 @@ citations:
     title: Explicit provability and constructive semantics
     year: 2001
 
-  - author: The Coq team
+  - author: unknown
     title: The Coq Proof Assistant reference manual
     year: 1996
 
@@ -68,7 +68,7 @@ citations:
       - R.W. Harper
       - Douglas J. Howe
       - T.B. Knoblock
-      - N.P. Mendler
+      - P. Mendler
       - P. Panangaden
       - James T. Sasaki
       - Scott F. Smith

@@ -9,7 +9,7 @@ abstract: |
   <p>It is our aim to develop an elementary strong functional programming (ESFP) system. To be useful, ESFP should include structures such as streams which can be computationally unwound infinitely often. We describe a syntactic analysis to ensure that infinitely proceeding structures, which we shall term <i>codata</i>, are productive. This analysis is an extension of the check for <i>guardedness</i> that has been used with definitions over coinductive types in Martin-Löf’s type theory and in the calculus of constructions. Our analysis is presented as a form of abstract interpretation that allows a wider syntactic class of corecursive definitions to be recognised as productive than in previous work. Thus programmers will have fewer restrictions on their use of infinite streams within a strongly normalizing functional language.</p>
 citations:
 
-  - author: The Coq team
+  - author: unknown
     title: The Coq Proof Assistant reference manual
     year: 1996
 
@@ -98,7 +98,7 @@ citations:
     year: 1996
 
   - authors:
-      - P.F. Mendler
+      - P. Mendler
       - P. Panangaden
       - R.L. Constable
     title: Infinite objects in type theory
