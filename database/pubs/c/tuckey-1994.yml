@@ -1,7 +1,6 @@
 title: The implementation of pattern matching in Charity
 author: Charles Tuckey
 year: 1994
-basename: tuckey-1994
 collection: Charity
 abstract: |
   <p>Charity is a functional type language recently developed at the University of Calgary by Dr. J.R.B. Cockett. This paper is a report on a project to add pattern matching capability to Charity. The project involved defining an extended term logic for Charity, developing an appropriate syntax to express the new term logic, doing type checking in the term logic, and refining an algorithm to translate the extended term logic to the core term logic. The preceding work is discussed and a blueprint is given for future work.</p>

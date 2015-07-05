@@ -1,7 +1,6 @@
 title: On explicit reflection in theorem proving and formal verification
 author: Sergei Artemov
 year: 1999
-basename: artemov-1999
 collection: Intensional lambda calculus
 abstract: |
   <p>We show that the stability requirement for a verification system yields the necessity of some sort of a reflection mechanism. However, the traditional reflection rule based on the Gödel implicit provability predicate leads to a “reflection tower” of theories which cannot be formally verified. We found natural lower and upper bounds on a metatheory capable of establishing stability of a given verification system. The paper introduces an explicit reflection mechanism which can be verified internally. This circumvents the reflection tower and provides a strict justification for the verification process. On the practical side, the paper gives specific recommendations concerning the verification of inference rules and building a verifiable reflection mechanism for a theorem proving system.</p>

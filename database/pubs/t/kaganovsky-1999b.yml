@@ -1,7 +1,6 @@
 title: Exact complex arithmetic in an imaginary radix system
 author: Alexander Kaganovsky
 year: 1999
-basename: kaganovsky-1999b
 collection: Total functional programming
 abstract: |
   <p>This paper investigates an exact arithmetic based on the single-component representation of complex numbers by sequences of signed digits written to imaginary base <b>ri</b>. Algorithms for the four basic arithmetic operations in this representation are described and analyzed. The algorithms are to an unexpected extent scarcely different from their exact real equivalents, which significantly speeds up exact complex number manipulations.</p>

@@ -1,7 +1,6 @@
 title: Higher-order Charity
 author: Marc Schroeder
 year: 1997
-basename: schroeder-1997
 collection: Charity
 abstract: |
   <p>This thesis describes the higher-order Charity programming language which is an extension of first-order Charity. This results from extending the coinductive datatype definition mechanism to allow a new class of higher-order datatypes with parameterized destructors. This adds significant expressive power to the language. In particular it allows one to create “objects”. The language is “higher-order” in the traditional sense that the exponential datatype can be defined, and so that functions can be treated as values.</p>

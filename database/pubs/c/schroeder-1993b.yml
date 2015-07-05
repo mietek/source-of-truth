@@ -1,7 +1,6 @@
 title: "Chirp: A front end for Charity"
 author: Marc Schroeder
 year: 1993
-basename: schroeder-1993b
 collection: Charity
 abstract: |
   <p>Chirp is the front end of the interpreter for Charity, a categorical programming language currently under development. Chirp interfaces neatly with Barry Yee’s Charm abstract machine, the back end, to form a coherent system for the definition and execution of Charity programs. Chirp has been designed to be fast, portable, and extensible.</p>

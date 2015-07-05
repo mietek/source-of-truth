@@ -1,7 +1,6 @@
 title: An implementation of Charity
 author: Min Zeng
 year: 2003
-basename: zeng-2003
 collection: Charity
 abstract: |
   <p>This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.</p>

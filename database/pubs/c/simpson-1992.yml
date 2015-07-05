@@ -3,7 +3,6 @@ authors:
   - Todd Simpson
   - Robin Cockett
 year: 1992
-basename: simpson-1992
 collection: Charity
 abstract: |
   <p>A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.</p>

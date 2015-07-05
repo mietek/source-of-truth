@@ -1,0 +1,18 @@
+title: Types for the Scott numerals
+authors:
+  - Martín Abadi
+  - Luca Cardelli
+  - Gordon Plotkin
+year: 1993
+collection: Direct reflection
+citations:
+
+  - authors:
+      - Gordon Plotkin
+      - Martín Abadi
+    title: A logic for parametric polymorphism
+    year: 1993
+
+  - author: Christopher Wadsworth
+    title: Some unusual λ-calculus numeral systems
+    year: 1980

@@ -1,7 +1,6 @@
 title: Implementing direct reflection in Nuprl
 author: Eli Barzilay
 year: 2006
-basename: barzilay-2006
 collection: Intensional lambda calculus
 abstract: |
   <p>Reflection is the ability of some entity to describe itself. In a logical context, it is the ability of a logic to reason about itself. Reflection is, therefore, placed at the core of meta-mathematics, making it an important part of formal reasoning; where it revolves mainly around syntax and semantics — the main challenge is in making the syntax of the logic become part of its semantic domain.
