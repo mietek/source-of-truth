@@ -89,13 +89,6 @@ module.exports = [
     ]
   },
   {
-    "title": "Distributive logic",
-    "author": "Robin Cockett",
-    "year": 1992,
-    "collection": "Charity",
-    "abstract": "<p>Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.</p>\n<p>This paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.</p>\n"
-  },
-  {
     "title": "About Charity",
     "authors": [
       "Robin Cockett",
@@ -222,6 +215,13 @@ module.exports = [
         "year": 1989
       }
     ]
+  },
+  {
+    "title": "Distributive logic",
+    "author": "Robin Cockett",
+    "year": 1992,
+    "collection": "Charity",
+    "abstract": "<p>Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.</p>\n<p>This paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.</p>\n"
   },
   {
     "title": "Strong categorical datatypes I",
@@ -2972,1020 +2972,6 @@ module.exports = [
     ]
   },
   {
-    "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
-    "author": "Marek Łach",
-    "year": 1998,
-    "collection": "System ET",
-    "citations": [
-      {
-        "author": "A.W. Appel",
-        "title": "Modern compiler implementation in ML",
-        "year": 1997
-      },
-      {
-        "author": "Henk Barendregt",
-        "title": "Lambda calculi with types",
-        "year": 1992
-      },
-      {
-        "author": "A. Diller",
-        "title": "Compiling functional languages",
-        "year": 1988
-      },
-      {
-        "authors": [
-          "A.J. Field",
-          "P.G. Harrison"
-        ],
-        "title": "Functional programming",
-        "year": 1988
-      },
-      {
-        "authors": [
-          "J.-Y. Girard",
-          "Y. Lafont",
-          "P. Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "author": "J.R. Hindley",
-        "title": "Basic simple type theory",
-        "year": 1996
-      },
-      {
-        "author": "W. Narkiewicz",
-        "title": "Teoria liczb",
-        "year": 1990
-      },
-      {
-        "author": "L. Paulson",
-        "title": "ML for the working programmer",
-        "year": 1996
-      },
-      {
-        "authors": [
-          "M. Ryan",
-          "M. Sadler"
-        ],
-        "title": "Valuation systems and consequence relations",
-        "year": 1992
-      },
-      {
-        "author": "Zdzisław Spławski",
-        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
-        "year": 1993
-      },
-      {
-        "author": "Zdzisław Spławski",
-        "title": "Proving equalities in λ→ with positive (co-)inductive data types",
-        "year": 1995
-      },
-      {
-        "authors": [
-          "A.S. Troelstra",
-          "D. van Dalen"
-        ],
-        "title": "Constructivism in mathematics: An introduction, vol. 1",
-        "year": 1988
-      },
-      {
-        "authors": [
-          "A.S. Troelstra",
-          "H. Schwichtenberg"
-        ],
-        "title": "Basic proof theory",
-        "year": 1996
-      }
-    ]
-  },
-  {
-    "title": "Teoriodowodowe podejście do programów funkcyjnych i typów danych",
-    "author": "Zdzisław Spławski",
-    "year": 1998,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Proof-theoretic approach to automatic synthesis of polymorphic programs",
-    "author": "Zdzisław Spławski",
-    "year": 1991,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "IPL by examples",
-    "author": "Zdzisław Spławski",
-    "year": 1993,
-    "collection": "System ET",
-    "citations": [
-      {
-        "author": "Martin Hofmann",
-        "title": "Non strictly positive datatypes for breadth first search",
-        "year": 1993
-      },
-      {
-        "author": "J.-Y. Girard",
-        "title": "On the unity of logic",
-        "year": 1993
-      },
-      {
-        "author": "Philip Wadler",
-        "title": "A taste of linear logic",
-        "year": 1993
-      }
-    ]
-  },
-  {
-    "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
-    "author": "Zdzisław Spławski",
-    "year": 1993,
-    "collection": "System ET",
-    "partial": "y",
-    "citations": [
-      {
-        "authors": [
-          "Roland Backhouse",
-          "Paul Chisholm",
-          "Grant Malcom",
-          "Erik Saaman"
-        ],
-        "title": "Do-it-yourself type theory",
-        "year": 1989
-      },
-      {
-        "author": "Henk Barendregt",
-        "title": "The lambda calculus: Its syntax and semantics",
-        "year": 1984
-      },
-      {
-        "author": "Henk Barendregt",
-        "title": "Functional programming and lambda calculus",
-        "year": 1990
-      },
-      {
-        "author": "Henk Barendregt",
-        "title": "Lambda calculi with types",
-        "year": 1992
-      },
-      {
-        "authors": [
-          "G. Bellin",
-          "P.J. Scott"
-        ],
-        "title": "On the π-calculus and linear logic",
-        "year": 1992
-      },
-      {
-        "authors": [
-          "Corrado Böhm",
-          "A. Berarducci"
-        ],
-        "title": "Automatic synthesis of typed Λ-programs on term algebras",
-        "year": 1985
-      },
-      {
-        "author": "R.M. Burstall",
-        "title": "Inductively defined functions in functional programming languages",
-        "year": 1987
-      },
-      {
-        "author": "A. Church",
-        "title": "A formulation of the simple theory of types",
-        "year": 1940
-      },
-      {
-        "author": "A. Church",
-        "title": "The calculi of lambda-conversion",
-        "year": 1941
-      },
-      {
-        "authors": [
-          "Robert L. Constable",
-          "Stuart F. Allen",
-          "H.M. Bromley",
-          "W.R. Cleaveland",
-          "J.F. Cremer",
-          "R.W. Harper",
-          "Douglas J. Howe",
-          "T.B. Knoblock",
-          "P. Mendler",
-          "P. Panangaden",
-          "James T. Sasaki",
-          "Scott F. Smith"
-        ],
-        "title": "Implementing mathematics with the Nuprl proof development system",
-        "year": 1986
-      },
-      {
-        "author": "T. Coquand",
-        "title": "Metamathematical investigations of a calculus of constructions",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "T. Coquand",
-          "G. Huet"
-        ],
-        "title": "The calculus of constructions",
-        "year": 1988
-      },
-      {
-        "authors": [
-          "H.B. Curry",
-          "R. Feys"
-        ],
-        "title": "Combinatory logic, vol. 1",
-        "year": 1958
-      },
-      {
-        "authors": [
-          "H.B. Curry",
-          "J.R. Hindley",
-          "J.P. Seldin"
-        ],
-        "title": "Combinatory logic, vol. 2",
-        "year": 1972
-      },
-      {
-        "author": "N.G. de Bruijn",
-        "title": "The mathematical language Automath",
-        "year": 1970
-      },
-      {
-        "author": "N.G. de Bruijn",
-        "title": "Lambda calculus notation with nameless dummies: A tool for automatic formula manipulation, with application to the Church-Rosser theorem",
-        "year": 1972
-      },
-      {
-        "author": "D.M. Gabbay",
-        "title": "On 2nd order intuitionistic propositional calculus with full comprehension",
-        "year": 1974
-      },
-      {
-        "author": "J.H. Gallier",
-        "title": "On Girard’s “Candidats de réductibilité”",
-        "year": 1990
-      },
-      {
-        "author": "J.H. Gallier",
-        "title": "Constructive logics, part I: A tutorial on proof systems and typed λ-calculi",
-        "year": 1993
-      },
-      {
-        "author": "G. Gentzen",
-        "title": "Untersuchungen über das logische Schließen",
-        "year": 1969
-      },
-      {
-        "author": "H. Geuvers",
-        "title": "Inductive and coinductive types with iteration and recursion",
-        "year": 1992
-      },
-      {
-        "author": "J.-Y. Girard",
-        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
-        "year": 1971
-      },
-      {
-        "author": "J.-Y. Girard",
-        "title": "The System F of variable types, fifteen years later",
-        "year": 1986
-      },
-      {
-        "authors": [
-          "J.-Y. Girard",
-          "Y. Lafont",
-          "P. Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "author": "K. Gödel",
-        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
-        "year": 1958
-      },
-      {
-        "author": "M. Gordon",
-        "title": "Hol: A machine oriented formulation of higher-oreder logic",
-        "year": 1985
-      },
-      {
-        "authors": [
-          "Michael J. Gordon",
-          "Arthur J. Milner",
-          "Christopher P. Wadsworth"
-        ],
-        "title": "Edinburgh LCF: A mechanised logic of computation",
-        "year": 1979
-      },
-      {
-        "author": "I. Hacking",
-        "title": "What is logic?",
-        "year": 1979
-      },
-      {
-        "author": "T. Hagino",
-        "title": "A typed lambda calculus with categorical type constructors",
-        "year": 1987
-      },
-      {
-        "author": "A. Heyting",
-        "title": "Intuitionism: An introduction",
-        "year": 1956
-      },
-      {
-        "author": "W.A. Howard",
-        "title": "The formulae-as-types notion of construction",
-        "year": 1980
-      },
-      {
-        "author": "G. Huet",
-        "title": "Confluent reductions: Abstract properties and applications to term rewriting systems",
-        "year": 1980
-      },
-      {
-        "author": "I. Johansson",
-        "title": "Der Minimalkalkül: Ein reduzierter intuitionistischer Formalismus",
-        "year": 1937
-      },
-      {
-        "author": "J.-L. Krivine",
-        "title": "Lambda-calcul: Types et modèles",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "J.-L. Krivine",
-          "M. Parigot"
-        ],
-        "title": "Programming with proofs",
-        "year": 1990
-      },
-      {
-        "author": "H. Läuchli",
-        "title": "An abstract notion of realizability for which intuitionistic predicate calculus is complete",
-        "year": 1970
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Contracting proofs to programs",
-        "year": 1990
-      },
-      {
-        "author": "A.A. Markov",
-        "title": "Konstruktivnaja logika",
-        "year": 1950
-      },
-      {
-        "author": "Per Martin-Löf",
-        "title": "Constructive mathematics and computer programming",
-        "year": 1982
-      },
-      {
-        "author": "Per Martin-Löf",
-        "title": "Intuitionistic type theory",
-        "year": 1984
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Inductive types and type constraints in the second-order lambda calculus",
-        "year": 1991
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Recursive types and type constraints in the second-order lambda calculus",
-        "year": 1987
-      },
-      {
-        "author": "G. Michaelson",
-        "title": "An introduction to functional programming through λ calculus",
-        "year": 1989
-      },
-      {
-        "author": "D. Miller",
-        "title": "The π-calculus as a theory in linear logic: Preliminary results",
-        "year": 1992
-      },
-      {
-        "author": "R. Milner",
-        "title": "A theory of type polymorphism in programming",
-        "year": 1978
-      },
-      {
-        "author": "R. Milner",
-        "title": "The polyadic π-calculus: A tutorial",
-        "year": 1991
-      },
-      {
-        "author": "R. Milner",
-        "title": "Elements of interaction",
-        "year": 1993
-      },
-      {
-        "authors": [
-          "R. Milner",
-          "M. Tofte",
-          "R. Harper"
-        ],
-        "title": "The definition of Standard ML",
-        "year": 1990
-      },
-      {
-        "author": "J.C. Mitchell",
-        "title": "Type systems for programming languages",
-        "year": 1990
-      },
-      {
-        "author": "D. Nelson",
-        "title": "Constructible falsity",
-        "year": 1949
-      },
-      {
-        "author": "M.H.A. Newman",
-        "title": "On theories with a combinatorial definition of “equivalence”",
-        "year": 1942
-      },
-      {
-        "authors": [
-          "Bengt Nordström",
-          "Kent Petersson",
-          "Jan M. Smith"
-        ],
-        "title": "Programming in Martin-Löf’s type theory: An introduction",
-        "year": 1990
-      },
-      {
-        "author": "M. Parigot",
-        "title": "Programming with proofs: A second order type theory",
-        "year": 1988
-      },
-      {
-        "author": "M. Parigot",
-        "title": "Recursive programming with proofs",
-        "year": 1992
-      },
-      {
-        "author": "L.C. Paulson",
-        "title": "Co-induction and co-recursion in Hol",
-        "year": 1993
-      },
-      {
-        "author": "L.C. Paulson",
-        "title": "Intro to Isabelle",
-        "year": 1993
-      },
-      {
-        "authors": [
-          "Frank Pfenning",
-          "Ch. Paulin-Mohring"
-        ],
-        "title": "Inductively defined types in the calculus of constructions",
-        "year": 1990
-      },
-      {
-        "author": "D. Prawitz",
-        "title": "Natural deduction: A proof-theoretical study",
-        "year": 1965
-      },
-      {
-        "author": "D. Prawitz",
-        "title": "Ideas and results in proof theory",
-        "year": 1971
-      },
-      {
-        "author": "D. Prawitz",
-        "title": "Proofs and the meaning and completeness of the logical constants",
-        "year": 1978
-      },
-      {
-        "author": "J.C. Reynolds",
-        "title": "Towards a theory of type structure",
-        "year": 1974
-      },
-      {
-        "author": "P. Schroeder-Heister",
-        "title": "A natural extension of natural deduction",
-        "year": 1984
-      },
-      {
-        "author": "D.S. Scott",
-        "title": "Constructive validity",
-        "year": 1970
-      },
-      {
-        "author": "D.S. Scott",
-        "title": "Continuous lattices",
-        "year": 1972
-      },
-      {
-        "authors": [
-          "J.P. Seldin",
-          "J.R. Hindley"
-        ],
-        "title": "Introduction to combinators and λ-calculus",
-        "year": 1986
-      },
-      {
-        "authors": [
-          "D.J. Shoesmith",
-          "T.J. Smiley"
-        ],
-        "title": "Multiple-conclusion logic",
-        "year": 1978
-      },
-      {
-        "author": "T. Skolem",
-        "title": "Einige Bemerkungen zur axiomatischen Begründung der Mengenlehre",
-        "year": 1922
-      },
-      {
-        "author": "S. Stenlund",
-        "title": "Combinators, lambda-terms, and proof theory",
-        "year": 1972
-      },
-      {
-        "author": "G. Sundholm",
-        "title": "Proof theory and meaning",
-        "year": 1986
-      },
-      {
-        "author": "J. Tiuryn",
-        "title": "Type inference problems: A survey",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "A.S. Troelstra",
-          "D. van Dalen"
-        ],
-        "title": "Constructivism in mathematics: An introduction, vol. 1",
-        "year": 1988
-      },
-      {
-        "author": "Paweł Urzyczyn",
-        "title": "A remark on quantified vs. recursive types",
-        "year": 1992
-      },
-      {
-        "author": "S.G. Vorobyov",
-        "title": "Undecidability of F? It’s extremely simple!",
-        "year": 1993
-      },
-      {
-        "author": "J.B. Wells",
-        "title": "Typability and type checking in the second-order λ-calculus are equivalent and undecidable",
-        "year": 1998
-      },
-      {
-        "authors": [
-          "J.I. Zucker",
-          "R.S. Tragesser"
-        ],
-        "title": "The adequacy problem for inferential logic",
-        "year": 1978
-      }
-    ]
-  },
-  {
-    "title": "Proving equalities in λ→ with positive (co-)inductive data types",
-    "author": "Zdzisław Spławski",
-    "year": 1995,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Subtyping λ→ with positive (co-)inductive data types",
-    "author": "Zdzisław Spławski",
-    "year": 1996,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Proving equalities in second-order lambda calculus with inductive and recursive types",
-    "author": "Zdzisław Spławski",
-    "year": 1997,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Continuations in λ→ with positive (co-)inductive data types",
-    "author": "Zdzisław Spławski",
-    "year": 1998,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Interdefinability of positive coinductive types with corecursors",
-    "author": "Zdzisław Spławski",
-    "year": 1999,
-    "collection": "System ET",
-    "partial": "y"
-  },
-  {
-    "title": "Type fixpoints: Iteration vs. recursion",
-    "authors": [
-      "Zdzisław Spławski",
-      "Paweł Urzyczyn"
-    ],
-    "year": 1999,
-    "collection": "System ET",
-    "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus λ2U of recursive types with the operators <b>Fold : σ[μα.σ/α] → μα.σ</b> and <b>Unfold : μα.σ → σ[μα.σ/α]</b>, where the composition <b>Unfold ◦ Fold</b> reduces to identity.</p>\n<p>It is known that systems with iterators can be defined within λ2, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system λ2U does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type <b>σ</b> is embedded into another type <b>τ</b> then <b>τ</b> must be of depth at least equal to the depth of <b>σ</b>.</p>\n",
-    "citations": [
-      {
-        "authors": [
-          "A. Asperti",
-          "V. Danos",
-          "C. Laneve",
-          "L. Regnier"
-        ],
-        "title": "Paths in the lambda-calculus",
-        "year": 1994
-      },
-      {
-        "authors": [
-          "A. Asperti",
-          "S. Guerrini"
-        ],
-        "title": "The optimal implementation of functional programming languages",
-        "year": 1998
-      },
-      {
-        "authors": [
-          "S. van Bakel",
-          "L. Liquori",
-          "S. Ronchi Della Rocca",
-          "Paweł Urzyczyn"
-        ],
-        "title": "Comparing cubes of typed and type assignment systems",
-        "year": 1997
-      },
-      {
-        "authors": [
-          "Corrado Böhm",
-          "A. Berarducci"
-        ],
-        "title": "Automatic synthesis of typed Λ-programs on term algebras",
-        "year": 1985
-      },
-      {
-        "authors": [
-          "K. Bruce",
-          "G. Longo"
-        ],
-        "title": "Provable isomorphisms and domain equations in models of typed languages",
-        "year": 1985
-      },
-      {
-        "authors": [
-          "F. Cardone",
-          "M. Coppo"
-        ],
-        "title": "Two extensions of Curry’s type inference system",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "V. Danos",
-          "L. Regnier"
-        ],
-        "title": "Proof-nets and the Hilbert space",
-        "year": 1995
-      },
-      {
-        "author": "M. Dezani",
-        "title": "Characterization of normal forms posessing an inverse in the λβη-calculus",
-        "year": 1976
-      },
-      {
-        "author": "R. Di Cosmo",
-        "title": "Isomorphisms of types: From lambda-calculus to information retrieval and language design",
-        "year": 1995
-      },
-      {
-        "author": "H. Geuvers",
-        "title": "Inductive and coinductive types with iteration and recursion",
-        "year": 1992
-      },
-      {
-        "author": "J.-Y. Girard",
-        "title": "Geometry of interaction I: Interpretation of System F",
-        "year": 1989
-      },
-      {
-        "authors": [
-          "J.-Y. Girard",
-          "Y. Lafont",
-          "P. Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "R. Harper",
-          "F. Honsell",
-          "G. Plotkin"
-        ],
-        "title": "A framework for defining logics",
-        "year": 1993
-      },
-      {
-        "authors": [
-          "J.-L. Krivine",
-          "M. Parigot"
-        ],
-        "title": "Programming with proofs",
-        "year": 1990
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Reasoning about functional programs and complexity classes associated with type disciplines",
-        "year": 1983
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Contracting proofs to programs",
-        "year": 1990
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Functions over free algebras definable in the simply typed lambda calculus",
-        "year": 1993
-      },
-      {
-        "authors": [
-          "I. Margaria",
-          "M. Zacchi"
-        ],
-        "title": "Right and left invertibility in λ-β-calculus",
-        "year": 1983
-      },
-      {
-        "author": "R. Matthes",
-        "title": "Extensions of System F by iteration and primitive recursion on monotone inductive types",
-        "year": 1998
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Recursive types and type constraints in the second-order lambda calculus",
-        "year": 1987
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Inductive types and type constraints in the second-order lambda calculus",
-        "year": 1991
-      },
-      {
-        "author": "M. Parigot",
-        "title": "On the representation of data in lambda-calculus",
-        "year": 1990
-      },
-      {
-        "author": "M. Parigot",
-        "title": "Recursive programming with proofs",
-        "year": 1992
-      },
-      {
-        "author": "J.C. Reynolds",
-        "title": "Polymorphism is not set-theoretic",
-        "year": 1984
-      },
-      {
-        "authors": [
-          "J.C. Reynolds",
-          "G.D. Plotkin"
-        ],
-        "title": "On functors expressible in the polymorphic typed lambda calculus",
-        "year": 1993
-      },
-      {
-        "author": "Zdzisław Spławski",
-        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
-        "year": 1993
-      },
-      {
-        "author": "Paweł Urzyczyn",
-        "title": "Positive recursive type assignment",
-        "year": 1996
-      },
-      {
-        "author": "Paweł Urzyczyn",
-        "title": "Recursive types and type embeddings",
-        "year": 1999
-      },
-      {
-        "author": "G.C. Wraith",
-        "title": "A note on categorical datatypes",
-        "year": 1989
-      }
-    ]
-  },
-  {
-    "title": "Defining recursors by solving equations in second-order lambda calculus",
-    "author": "Zdzisław Spławski",
-    "year": 2002,
-    "collection": "System ET",
-    "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. Known extensions of λ2 fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within λ2 by means of beta reductions, and it is conjectured that systems with recursors cannot.</p>\n<p>In this paper we define the general form of mutual iteration scheme in λ2 and we show that the explicit solution for particular functions defines recursors within λ2, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient <i>equational</i> inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.</p>\n",
-    "citations": [
-      {
-        "authors": [
-          "Corrado Böhm",
-          "A. Berarducci"
-        ],
-        "title": "Automatic synthesis of typed Λ-programs on term algebras",
-        "year": 1985
-      },
-      {
-        "author": "Corrado Böhm",
-        "title": "Reducing recursion to iteration by means of pairs and n-tuples",
-        "year": 1988
-      },
-      {
-        "author": "J.-Y. Girard",
-        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
-        "year": 1971
-      },
-      {
-        "authors": [
-          "J.-Y. Girard",
-          "Y. Lafont",
-          "P. Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "J.-L. Krivine",
-          "M. Parigot"
-        ],
-        "title": "Programming with proofs",
-        "year": 1990
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Recursive types and type constraints in the second-order lambda calculus",
-        "year": 1987
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Inductive types and type constraints in the second-order lambda calculus",
-        "year": 1991
-      },
-      {
-        "authors": [
-          "G. Plotkin",
-          "M. Abadi"
-        ],
-        "title": "A logic for parametric polymorphism",
-        "year": 1993
-      },
-      {
-        "author": "J.C. Reynolds",
-        "title": "Towards a theory of type structure",
-        "year": 1974
-      },
-      {
-        "author": "J.C. Reynolds",
-        "title": "Types, abstraction, and parametric polymorphism",
-        "year": 1983
-      },
-      {
-        "authors": [
-          "Zdzisław Spławski",
-          "Paweł Urzyczyn"
-        ],
-        "title": "Type fixpoints: Iteration vs. recursion",
-        "year": 1999
-      }
-    ]
-  },
-  {
-    "title": "The Curry-Howard isomorphism: Remarks on recursive types",
-    "author": "Paweł Urzyczyn",
-    "year": 1999,
-    "collection": "System ET",
-    "citations": [
-      {
-        "authors": [
-          "Corrado Böhm",
-          "A. Berarducci"
-        ],
-        "title": "Automatic synthesis of typed Λ-programs on term algebras",
-        "year": 1985
-      },
-      {
-        "authors": [
-          "F. Cardone",
-          "M. Coppo"
-        ],
-        "title": "Two extensions of Curry’s type inference system",
-        "year": 1990
-      },
-      {
-        "author": "H. Geuvers",
-        "title": "Inductive and coinductive types with iteration and recursion",
-        "year": 1992
-      },
-      {
-        "authors": [
-          "J.-Y. Girard",
-          "Y. Lafont",
-          "P. Taylor"
-        ],
-        "title": "Proofs and types",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "J.-L. Krivine",
-          "M. Parigot"
-        ],
-        "title": "Programming with proofs",
-        "year": 1990
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Reasoning about functional programs and complexity classes associated with type disciplines",
-        "year": 1983
-      },
-      {
-        "author": "D. Leivant",
-        "title": "Contracting proofs to programs",
-        "year": 1990
-      },
-      {
-        "authors": [
-          "M.H Sørensen",
-          "Paweł Urzyczyn"
-        ],
-        "title": "Lectures on the Curry-Howard isomorphism",
-        "year": 1998
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Recursive types and type constraints in the second-order lambda calculus",
-        "year": 1987
-      },
-      {
-        "author": "P. Mendler",
-        "title": "Inductive types and type constraints in the second-order lambda calculus",
-        "year": 1991
-      },
-      {
-        "author": "M. Parigot",
-        "title": "On the representation of data in lambda-calculus",
-        "year": 1990
-      },
-      {
-        "author": "M. Parigot",
-        "title": "Recursive programming with proofs",
-        "year": 1992
-      },
-      {
-        "author": "Zdzisław Spławski",
-        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
-        "year": 1993
-      },
-      {
-        "author": "Paweł Urzyczyn",
-        "title": "Positive recursive type assignment",
-        "year": 1996
-      },
-      {
-        "author": "G.C. Wraith",
-        "title": "A note on categorical datatypes",
-        "year": 1989
-      }
-    ]
-  },
-  {
-    "title": "On the implementation of IPL",
-    "author": "Tomasz Wierzbicki",
-    "year": 1993,
-    "collection": "System ET",
-    "citations": [
-      {
-        "author": "C. Reade",
-        "title": "Elements of functional programming",
-        "year": 1989
-      },
-      {
-        "author": "Zdzisław Spławski",
-        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
-        "year": 1993
-      },
-      {
-        "author": "M. Tofte",
-        "title": "Four lectures on Standard ML",
-        "year": 1989
-      }
-    ]
-  },
-  {
     "title": "Reflective λ-calculus",
     "authors": [
       "Jesse Alt",
@@ -5239,6 +4225,1020 @@ module.exports = [
         "author": "Stephanie Weirich",
         "title": "Programming with types",
         "year": 2002
+      }
+    ]
+  },
+  {
+    "title": "Teoria typów z definicjami indukcyjnymi jako język programowania",
+    "author": "Marek Łach",
+    "year": 1998,
+    "collection": "System ET",
+    "citations": [
+      {
+        "author": "A.W. Appel",
+        "title": "Modern compiler implementation in ML",
+        "year": 1997
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "author": "A. Diller",
+        "title": "Compiling functional languages",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "A.J. Field",
+          "P.G. Harrison"
+        ],
+        "title": "Functional programming",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "author": "J.R. Hindley",
+        "title": "Basic simple type theory",
+        "year": 1996
+      },
+      {
+        "author": "W. Narkiewicz",
+        "title": "Teoria liczb",
+        "year": 1990
+      },
+      {
+        "author": "L. Paulson",
+        "title": "ML for the working programmer",
+        "year": 1996
+      },
+      {
+        "authors": [
+          "M. Ryan",
+          "M. Sadler"
+        ],
+        "title": "Valuation systems and consequence relations",
+        "year": 1992
+      },
+      {
+        "author": "Zdzisław Spławski",
+        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
+        "year": 1993
+      },
+      {
+        "author": "Zdzisław Spławski",
+        "title": "Proving equalities in λ→ with positive (co-)inductive data types",
+        "year": 1995
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "H. Schwichtenberg"
+        ],
+        "title": "Basic proof theory",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "title": "Teoriodowodowe podejście do programów funkcyjnych i typów danych",
+    "author": "Zdzisław Spławski",
+    "year": 1988,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Proof-theoretic approach to automatic synthesis of polymorphic programs",
+    "author": "Zdzisław Spławski",
+    "year": 1991,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "IPL by examples",
+    "author": "Zdzisław Spławski",
+    "year": 1993,
+    "collection": "System ET",
+    "citations": [
+      {
+        "author": "Martin Hofmann",
+        "title": "Non strictly positive datatypes for breadth first search",
+        "year": 1993
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "On the unity of logic",
+        "year": 1993
+      },
+      {
+        "author": "Philip Wadler",
+        "title": "A taste of linear logic",
+        "year": 1993
+      }
+    ]
+  },
+  {
+    "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
+    "author": "Zdzisław Spławski",
+    "year": 1993,
+    "collection": "System ET",
+    "partial": "y",
+    "citations": [
+      {
+        "authors": [
+          "Roland Backhouse",
+          "Paul Chisholm",
+          "Grant Malcom",
+          "Erik Saaman"
+        ],
+        "title": "Do-it-yourself type theory",
+        "year": 1989
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "The lambda calculus: Its syntax and semantics",
+        "year": 1984
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Functional programming and lambda calculus",
+        "year": 1990
+      },
+      {
+        "author": "Henk Barendregt",
+        "title": "Lambda calculi with types",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "G. Bellin",
+          "P.J. Scott"
+        ],
+        "title": "On the π-calculus and linear logic",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "Corrado Böhm",
+          "A. Berarducci"
+        ],
+        "title": "Automatic synthesis of typed Λ-programs on term algebras",
+        "year": 1985
+      },
+      {
+        "author": "R.M. Burstall",
+        "title": "Inductively defined functions in functional programming languages",
+        "year": 1987
+      },
+      {
+        "author": "A. Church",
+        "title": "A formulation of the simple theory of types",
+        "year": 1940
+      },
+      {
+        "author": "A. Church",
+        "title": "The calculi of lambda-conversion",
+        "year": 1941
+      },
+      {
+        "authors": [
+          "Robert L. Constable",
+          "Stuart F. Allen",
+          "H.M. Bromley",
+          "W.R. Cleaveland",
+          "J.F. Cremer",
+          "R.W. Harper",
+          "Douglas J. Howe",
+          "T.B. Knoblock",
+          "P. Mendler",
+          "P. Panangaden",
+          "James T. Sasaki",
+          "Scott F. Smith"
+        ],
+        "title": "Implementing mathematics with the Nuprl proof development system",
+        "year": 1986
+      },
+      {
+        "author": "T. Coquand",
+        "title": "Metamathematical investigations of a calculus of constructions",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "T. Coquand",
+          "G. Huet"
+        ],
+        "title": "The calculus of constructions",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "R. Feys"
+        ],
+        "title": "Combinatory logic, vol. 1",
+        "year": 1958
+      },
+      {
+        "authors": [
+          "H.B. Curry",
+          "J.R. Hindley",
+          "J.P. Seldin"
+        ],
+        "title": "Combinatory logic, vol. 2",
+        "year": 1972
+      },
+      {
+        "author": "N.G. de Bruijn",
+        "title": "The mathematical language Automath",
+        "year": 1970
+      },
+      {
+        "author": "N.G. de Bruijn",
+        "title": "Lambda calculus notation with nameless dummies: A tool for automatic formula manipulation, with application to the Church-Rosser theorem",
+        "year": 1972
+      },
+      {
+        "author": "D.M. Gabbay",
+        "title": "On 2nd order intuitionistic propositional calculus with full comprehension",
+        "year": 1974
+      },
+      {
+        "author": "J.H. Gallier",
+        "title": "On Girard’s “Candidats de réductibilité”",
+        "year": 1990
+      },
+      {
+        "author": "J.H. Gallier",
+        "title": "Constructive logics, part I: A tutorial on proof systems and typed λ-calculi",
+        "year": 1993
+      },
+      {
+        "author": "G. Gentzen",
+        "title": "Untersuchungen über das logische Schließen",
+        "year": 1969
+      },
+      {
+        "author": "H. Geuvers",
+        "title": "Inductive and coinductive types with iteration and recursion",
+        "year": 1992
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
+        "year": 1971
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "The System F of variable types, fifteen years later",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "author": "K. Gödel",
+        "title": "Über eine bisher noch nicht benützte Erweiterung des finiten Standpunktes",
+        "year": 1958
+      },
+      {
+        "author": "M. Gordon",
+        "title": "Hol: A machine oriented formulation of higher-oreder logic",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "Michael J. Gordon",
+          "Arthur J. Milner",
+          "Christopher P. Wadsworth"
+        ],
+        "title": "Edinburgh LCF: A mechanised logic of computation",
+        "year": 1979
+      },
+      {
+        "author": "I. Hacking",
+        "title": "What is logic?",
+        "year": 1979
+      },
+      {
+        "author": "T. Hagino",
+        "title": "A typed lambda calculus with categorical type constructors",
+        "year": 1987
+      },
+      {
+        "author": "A. Heyting",
+        "title": "Intuitionism: An introduction",
+        "year": 1956
+      },
+      {
+        "author": "W.A. Howard",
+        "title": "The formulae-as-types notion of construction",
+        "year": 1980
+      },
+      {
+        "author": "G. Huet",
+        "title": "Confluent reductions: Abstract properties and applications to term rewriting systems",
+        "year": 1980
+      },
+      {
+        "author": "I. Johansson",
+        "title": "Der Minimalkalkül: Ein reduzierter intuitionistischer Formalismus",
+        "year": 1937
+      },
+      {
+        "author": "J.-L. Krivine",
+        "title": "Lambda-calcul: Types et modèles",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "J.-L. Krivine",
+          "M. Parigot"
+        ],
+        "title": "Programming with proofs",
+        "year": 1990
+      },
+      {
+        "author": "H. Läuchli",
+        "title": "An abstract notion of realizability for which intuitionistic predicate calculus is complete",
+        "year": 1970
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Contracting proofs to programs",
+        "year": 1990
+      },
+      {
+        "author": "A.A. Markov",
+        "title": "Konstruktivnaja logika",
+        "year": 1950
+      },
+      {
+        "author": "Per Martin-Löf",
+        "title": "Constructive mathematics and computer programming",
+        "year": 1982
+      },
+      {
+        "author": "Per Martin-Löf",
+        "title": "Intuitionistic type theory",
+        "year": 1984
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Inductive types and type constraints in the second-order lambda calculus",
+        "year": 1991
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Recursive types and type constraints in the second-order lambda calculus",
+        "year": 1987
+      },
+      {
+        "author": "G. Michaelson",
+        "title": "An introduction to functional programming through λ calculus",
+        "year": 1989
+      },
+      {
+        "author": "D. Miller",
+        "title": "The π-calculus as a theory in linear logic: Preliminary results",
+        "year": 1992
+      },
+      {
+        "author": "R. Milner",
+        "title": "A theory of type polymorphism in programming",
+        "year": 1978
+      },
+      {
+        "author": "R. Milner",
+        "title": "The polyadic π-calculus: A tutorial",
+        "year": 1991
+      },
+      {
+        "author": "R. Milner",
+        "title": "Elements of interaction",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "R. Milner",
+          "M. Tofte",
+          "R. Harper"
+        ],
+        "title": "The definition of Standard ML",
+        "year": 1990
+      },
+      {
+        "author": "J.C. Mitchell",
+        "title": "Type systems for programming languages",
+        "year": 1990
+      },
+      {
+        "author": "D. Nelson",
+        "title": "Constructible falsity",
+        "year": 1949
+      },
+      {
+        "author": "M.H.A. Newman",
+        "title": "On theories with a combinatorial definition of “equivalence”",
+        "year": 1942
+      },
+      {
+        "authors": [
+          "Bengt Nordström",
+          "Kent Petersson",
+          "Jan M. Smith"
+        ],
+        "title": "Programming in Martin-Löf’s type theory: An introduction",
+        "year": 1990
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Programming with proofs: A second order type theory",
+        "year": 1988
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Recursive programming with proofs",
+        "year": 1992
+      },
+      {
+        "author": "L.C. Paulson",
+        "title": "Co-induction and co-recursion in Hol",
+        "year": 1993
+      },
+      {
+        "author": "L.C. Paulson",
+        "title": "Intro to Isabelle",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "Frank Pfenning",
+          "Ch. Paulin-Mohring"
+        ],
+        "title": "Inductively defined types in the calculus of constructions",
+        "year": 1990
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Natural deduction: A proof-theoretical study",
+        "year": 1965
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Ideas and results in proof theory",
+        "year": 1971
+      },
+      {
+        "author": "D. Prawitz",
+        "title": "Proofs and the meaning and completeness of the logical constants",
+        "year": 1978
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Towards a theory of type structure",
+        "year": 1974
+      },
+      {
+        "author": "P. Schroeder-Heister",
+        "title": "A natural extension of natural deduction",
+        "year": 1984
+      },
+      {
+        "author": "D.S. Scott",
+        "title": "Constructive validity",
+        "year": 1970
+      },
+      {
+        "author": "D.S. Scott",
+        "title": "Continuous lattices",
+        "year": 1972
+      },
+      {
+        "authors": [
+          "J.P. Seldin",
+          "J.R. Hindley"
+        ],
+        "title": "Introduction to combinators and λ-calculus",
+        "year": 1986
+      },
+      {
+        "authors": [
+          "D.J. Shoesmith",
+          "T.J. Smiley"
+        ],
+        "title": "Multiple-conclusion logic",
+        "year": 1978
+      },
+      {
+        "author": "T. Skolem",
+        "title": "Einige Bemerkungen zur axiomatischen Begründung der Mengenlehre",
+        "year": 1922
+      },
+      {
+        "author": "S. Stenlund",
+        "title": "Combinators, lambda-terms, and proof theory",
+        "year": 1972
+      },
+      {
+        "author": "G. Sundholm",
+        "title": "Proof theory and meaning",
+        "year": 1986
+      },
+      {
+        "author": "J. Tiuryn",
+        "title": "Type inference problems: A survey",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
+        "year": 1988
+      },
+      {
+        "author": "Paweł Urzyczyn",
+        "title": "A remark on quantified vs. recursive types",
+        "year": 1992
+      },
+      {
+        "author": "S.G. Vorobyov",
+        "title": "Undecidability of F? It’s extremely simple!",
+        "year": 1993
+      },
+      {
+        "author": "J.B. Wells",
+        "title": "Typability and type checking in the second-order λ-calculus are equivalent and undecidable",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "J.I. Zucker",
+          "R.S. Tragesser"
+        ],
+        "title": "The adequacy problem for inferential logic",
+        "year": 1978
+      }
+    ]
+  },
+  {
+    "title": "Proving equalities in λ→ with positive (co-)inductive data types",
+    "author": "Zdzisław Spławski",
+    "year": 1995,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Subtyping λ→ with positive (co-)inductive data types",
+    "author": "Zdzisław Spławski",
+    "year": 1996,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Proving equalities in second-order lambda calculus with inductive and recursive types",
+    "author": "Zdzisław Spławski",
+    "year": 1997,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Continuations in λ→ with positive (co-)inductive data types",
+    "author": "Zdzisław Spławski",
+    "year": 1998,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Interdefinability of positive coinductive types with corecursors",
+    "author": "Zdzisław Spławski",
+    "year": 1999,
+    "collection": "System ET",
+    "partial": "y"
+  },
+  {
+    "title": "Type fixpoints: Iteration vs. recursion",
+    "authors": [
+      "Zdzisław Spławski",
+      "Paweł Urzyczyn"
+    ],
+    "year": 1999,
+    "collection": "System ET",
+    "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. We compare several such definitions and we show that they fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions. Elimination operators for fixpoint types are thus classified as either “iterators” or “recursors”. This classification has an interpretation in terms of the Curry-Howard correspondence: types of iterators and recursors can be seen as images of induction axioms under different dependency-erasing maps. Systems with recursors are beta-eta equivalent to a calculus λ2U of recursive types with the operators <b>Fold : σ[μα.σ/α] → μα.σ</b> and <b>Unfold : μα.σ → σ[μα.σ/α]</b>, where the composition <b>Unfold ◦ Fold</b> reduces to identity.</p>\n<p>It is known that systems with iterators can be defined within λ2, by means of beta reductions. We conjecture that systems with recursors can not. In this paper we show that the system λ2U does not have such a property. For this we study the notion of polymorphic type embeddability (via (beta) left-invertible terms) and we show that if a type <b>σ</b> is embedded into another type <b>τ</b> then <b>τ</b> must be of depth at least equal to the depth of <b>σ</b>.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "A. Asperti",
+          "V. Danos",
+          "C. Laneve",
+          "L. Regnier"
+        ],
+        "title": "Paths in the lambda-calculus",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "A. Asperti",
+          "S. Guerrini"
+        ],
+        "title": "The optimal implementation of functional programming languages",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "S. van Bakel",
+          "L. Liquori",
+          "S. Ronchi Della Rocca",
+          "Paweł Urzyczyn"
+        ],
+        "title": "Comparing cubes of typed and type assignment systems",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "Corrado Böhm",
+          "A. Berarducci"
+        ],
+        "title": "Automatic synthesis of typed Λ-programs on term algebras",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "K. Bruce",
+          "G. Longo"
+        ],
+        "title": "Provable isomorphisms and domain equations in models of typed languages",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "F. Cardone",
+          "M. Coppo"
+        ],
+        "title": "Two extensions of Curry’s type inference system",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "V. Danos",
+          "L. Regnier"
+        ],
+        "title": "Proof-nets and the Hilbert space",
+        "year": 1995
+      },
+      {
+        "author": "M. Dezani",
+        "title": "Characterization of normal forms posessing an inverse in the λβη-calculus",
+        "year": 1976
+      },
+      {
+        "author": "R. Di Cosmo",
+        "title": "Isomorphisms of types: From lambda-calculus to information retrieval and language design",
+        "year": 1995
+      },
+      {
+        "author": "H. Geuvers",
+        "title": "Inductive and coinductive types with iteration and recursion",
+        "year": 1992
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "Geometry of interaction I: Interpretation of System F",
+        "year": 1989
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "R. Harper",
+          "F. Honsell",
+          "G. Plotkin"
+        ],
+        "title": "A framework for defining logics",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "J.-L. Krivine",
+          "M. Parigot"
+        ],
+        "title": "Programming with proofs",
+        "year": 1990
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Reasoning about functional programs and complexity classes associated with type disciplines",
+        "year": 1983
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Contracting proofs to programs",
+        "year": 1990
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Functions over free algebras definable in the simply typed lambda calculus",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "I. Margaria",
+          "M. Zacchi"
+        ],
+        "title": "Right and left invertibility in λ-β-calculus",
+        "year": 1983
+      },
+      {
+        "author": "R. Matthes",
+        "title": "Extensions of System F by iteration and primitive recursion on monotone inductive types",
+        "year": 1998
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Recursive types and type constraints in the second-order lambda calculus",
+        "year": 1987
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Inductive types and type constraints in the second-order lambda calculus",
+        "year": 1991
+      },
+      {
+        "author": "M. Parigot",
+        "title": "On the representation of data in lambda-calculus",
+        "year": 1990
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Recursive programming with proofs",
+        "year": 1992
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Polymorphism is not set-theoretic",
+        "year": 1984
+      },
+      {
+        "authors": [
+          "J.C. Reynolds",
+          "G.D. Plotkin"
+        ],
+        "title": "On functors expressible in the polymorphic typed lambda calculus",
+        "year": 1993
+      },
+      {
+        "author": "Zdzisław Spławski",
+        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
+        "year": 1993
+      },
+      {
+        "author": "Paweł Urzyczyn",
+        "title": "Positive recursive type assignment",
+        "year": 1996
+      },
+      {
+        "author": "Paweł Urzyczyn",
+        "title": "Recursive types and type embeddings",
+        "year": 1999
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "Defining recursors by solving equations in second-order lambda calculus",
+    "author": "Zdzisław Spławski",
+    "year": 2002,
+    "collection": "System ET",
+    "abstract": "<p>Positive recursive (fixpoint) types can be added to the polymorphic (Church-style) lambda calculus λ2 (System F) in several different ways, depending on the choice of the elimination operator. Known extensions of λ2 fall into two equivalence classes with respect to mutual interpretability by means of beta-eta reductions, and elimination operators for fixpoint types can be classified accordingly as either “iterators” or “recursors”. Systems with iterators can be defined within λ2 by means of beta reductions, and it is conjectured that systems with recursors cannot.</p>\n<p>In this paper we define the general form of mutual iteration scheme in λ2 and we show that the explicit solution for particular functions defines recursors within λ2, though proof of this fact requires much more than beta reductions, namely parametricity. We propose a convenient <i>equational</i> inference rule which can be used instead of parametricity for proving equational properties of polymorphic functions, defined by iterators.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Corrado Böhm",
+          "A. Berarducci"
+        ],
+        "title": "Automatic synthesis of typed Λ-programs on term algebras",
+        "year": 1985
+      },
+      {
+        "author": "Corrado Böhm",
+        "title": "Reducing recursion to iteration by means of pairs and n-tuples",
+        "year": 1988
+      },
+      {
+        "author": "J.-Y. Girard",
+        "title": "Une extension de l’interprétation de Gödel à l’analyse et son application à l’élimination des coupures dans l’analyse et la théorie des types",
+        "year": 1971
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "J.-L. Krivine",
+          "M. Parigot"
+        ],
+        "title": "Programming with proofs",
+        "year": 1990
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Recursive types and type constraints in the second-order lambda calculus",
+        "year": 1987
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Inductive types and type constraints in the second-order lambda calculus",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "G. Plotkin",
+          "M. Abadi"
+        ],
+        "title": "A logic for parametric polymorphism",
+        "year": 1993
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Towards a theory of type structure",
+        "year": 1974
+      },
+      {
+        "author": "J.C. Reynolds",
+        "title": "Types, abstraction, and parametric polymorphism",
+        "year": 1983
+      },
+      {
+        "authors": [
+          "Zdzisław Spławski",
+          "Paweł Urzyczyn"
+        ],
+        "title": "Type fixpoints: Iteration vs. recursion",
+        "year": 1999
+      }
+    ]
+  },
+  {
+    "title": "The Curry-Howard isomorphism: Remarks on recursive types",
+    "author": "Paweł Urzyczyn",
+    "year": 1999,
+    "collection": "System ET",
+    "citations": [
+      {
+        "authors": [
+          "Corrado Böhm",
+          "A. Berarducci"
+        ],
+        "title": "Automatic synthesis of typed Λ-programs on term algebras",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "F. Cardone",
+          "M. Coppo"
+        ],
+        "title": "Two extensions of Curry’s type inference system",
+        "year": 1990
+      },
+      {
+        "author": "H. Geuvers",
+        "title": "Inductive and coinductive types with iteration and recursion",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "J.-L. Krivine",
+          "M. Parigot"
+        ],
+        "title": "Programming with proofs",
+        "year": 1990
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Reasoning about functional programs and complexity classes associated with type disciplines",
+        "year": 1983
+      },
+      {
+        "author": "D. Leivant",
+        "title": "Contracting proofs to programs",
+        "year": 1990
+      },
+      {
+        "authors": [
+          "M.H Sørensen",
+          "Paweł Urzyczyn"
+        ],
+        "title": "Lectures on the Curry-Howard isomorphism",
+        "year": 1998
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Recursive types and type constraints in the second-order lambda calculus",
+        "year": 1987
+      },
+      {
+        "author": "P. Mendler",
+        "title": "Inductive types and type constraints in the second-order lambda calculus",
+        "year": 1991
+      },
+      {
+        "author": "M. Parigot",
+        "title": "On the representation of data in lambda-calculus",
+        "year": 1990
+      },
+      {
+        "author": "M. Parigot",
+        "title": "Recursive programming with proofs",
+        "year": 1992
+      },
+      {
+        "author": "Zdzisław Spławski",
+        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
+        "year": 1993
+      },
+      {
+        "author": "Paweł Urzyczyn",
+        "title": "Positive recursive type assignment",
+        "year": 1996
+      },
+      {
+        "author": "G.C. Wraith",
+        "title": "A note on categorical datatypes",
+        "year": 1989
+      }
+    ]
+  },
+  {
+    "title": "On the implementation of IPL",
+    "author": "Tomasz Wierzbicki",
+    "year": 1993,
+    "collection": "System ET",
+    "citations": [
+      {
+        "author": "C. Reade",
+        "title": "Elements of functional programming",
+        "year": 1989
+      },
+      {
+        "author": "Zdzisław Spławski",
+        "title": "Proof-theoretic approach to inductive definitions in ML-like programming language vs. second-order lambda calculus",
+        "year": 1993
+      },
+      {
+        "author": "M. Tofte",
+        "title": "Four lectures on Standard ML",
+        "year": 1989
       }
     ]
   },

@@ -35,6 +35,16 @@ var _ = module.exports = {
     };
   },
 
+  compareTitles: function (pub1, pub2) {
+    if (pub1.authors[0].id === authorUnit.unknownId) {
+      return 1;
+    }
+    if (pub2.authors[0].id === authorUnit.unknownId) {
+      return -1;
+    }
+    return pub1.title.localeCompare(pub2.title);
+  },
+
   compare: function (pub1, pub2) {
     if (pub1.authors[0].id === authorUnit.unknownId) {
       return 1;
@@ -148,6 +158,7 @@ var _ = module.exports = {
                 }
               });
           });
+        pubs.sort(_.compareTitles);
         var counter = 0;
         pubs.forEach(function (pub) {
             if (!pub) {

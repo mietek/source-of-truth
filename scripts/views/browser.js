@@ -137,8 +137,8 @@ var _ = {
     return (
       lastItem &&
       lastItem.type === 'pub' &&
-      lastItem.basename &&
-      document.location.origin + '/_pubs/' + lastItem.basename + '.pdf');
+      !lastItem.isPartial &&
+      document.location.origin + '/_pubs/' + lastItem.id + '.pdf');
   },
 
   getColumnCount: function (state) {
