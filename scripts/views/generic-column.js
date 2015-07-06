@@ -9,6 +9,7 @@ var _ = {
   propTypes: function () {
     return {
       heading:      r.propTypes.string.isRequired,
+      label:        r.propTypes.string,
       items:        r.propTypes.array,
       fullItems:    r.propTypes.array,
       partialItems: r.propTypes.array,
@@ -36,7 +37,7 @@ var _ = {
           }),
         !hasAll ? null :
             genericList({
-              label:      'known',
+              label:      this.props.label || 'known',
               items:      this.props.items,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect

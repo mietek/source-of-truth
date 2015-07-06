@@ -131,6 +131,7 @@ var _ = {
         return (
           genericColumn({
               heading:      'Collection — ' + item.name,
+              label:        'publications',
               items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect
