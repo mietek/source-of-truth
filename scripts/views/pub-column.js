@@ -45,14 +45,20 @@ var _ = {
         abstract({
             content: this.props.abstract
           }),
-        genericList({
-            label:          'Cites',
-            items:          this.props.citations,
-            isLabelSwapped: true,
-            isNumbered:     this.props.isNumbered,
-            selectedId:     this.props.selectedId,
-            onSelect:       this.props.onSelect
-          }),
+        !this.props.isPartial ? null :
+          r.div('section',
+            r.div('spacer',
+              r.span('label',
+                'Full text not available'))),
+        (this.props.isPartial && !this.props.citations.length) ? null :
+          genericList({
+              label:          'Cites',
+              items:          this.props.citations,
+              isLabelSwapped: true,
+              isNumbered:     this.props.isNumbered,
+              selectedId:     this.props.selectedId,
+              onSelect:       this.props.onSelect
+            }),
         (!this.props.reverseCitations || !this.props.reverseCitations.length) ? null :
           genericList({
               label:          'Cited by',
@@ -60,12 +66,7 @@ var _ = {
               isLabelSwapped: true,
               selectedId:     this.props.selectedId,
               onSelect:       this.props.onSelect
-            }),
-        !this.props.isPartial ? null :
-          r.div('section',
-            r.div('spacer',
-              r.span('label',
-                'Full text not available')))));
+            })));
   }
 };
 
