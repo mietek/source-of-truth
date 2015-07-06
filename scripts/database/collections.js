@@ -1,22 +1,17 @@
 module.exports = [
   {
-    "name": "Charity",
-    "id": "c"
+    "name": "Charity"
   },
   {
-    "name": "Direct reflection",
-    "id": "dr"
+    "name": "Direct reflection"
   },
   {
-    "name": "Intensional lambda calculus",
-    "id": "li"
+    "name": "Intensional lambda calculus"
   },
   {
-    "name": "System ET",
-    "id": "et"
+    "name": "System ET"
   },
   {
-    "name": "Total functional programming",
-    "id": "t"
+    "name": "Total functional programming"
   }
 ]
