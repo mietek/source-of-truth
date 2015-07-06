@@ -24,7 +24,7 @@ var _ = {
 
   select: function (basePath, itemId) {
     var path = itemId ? basePath.concat([itemId]) : basePath;
-    var hash = '#' + path.join(':');
+    var hash = '#' + path.join('/');
     this.setState({
         path: path
       });
@@ -34,7 +34,7 @@ var _ = {
   },
 
   componentDidMount: function () {
-    var path = location.hash ? location.hash.slice(1).split(':') : [];
+    var path = location.hash ? location.hash.slice(1).split('/') : [];
     this.setState({
         path: path
       });
