@@ -27,6 +27,7 @@ var _ = {
                 genericItem({
                     key:        author.id + '-' + index,
                     itemId:     author.id,
+                    isPartial:  author.isPartial,
                     selectedId: this.props.selectedId,
                     onSelect:   this.props.onSelect
                   },
@@ -34,11 +35,12 @@ var _ = {
                     r.span('label',
                       this.props.authors.length === 1 ? 'Author' : 'Authors'),
                   r.span('value',
-                    author.name)));
+                    author.fullName)));
             }.bind(this)),
         !this.props.year ? null :
           genericItem({
               itemId:     this.props.year.id,
+              isPartial:  this.props.year.isPartial,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect
             },
@@ -52,6 +54,7 @@ var _ = {
                 genericItem({
                     key:        collection.id + '-' + index,
                     itemId:     collection.id,
+                    isPartial:  collection.isPartial,
                     selectedId: this.props.selectedId,
                     onSelect:   this.props.onSelect
                   },

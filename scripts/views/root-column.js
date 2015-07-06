@@ -29,7 +29,7 @@ var _ = {
             heading: 'Source of Truth'
           }),
         genericList({
-            label:           'collections',
+            label:           'Collections',
             items:           this.props.collections,
             isLabelNumbered: false,
             selectedId:      this.props.selectedId,

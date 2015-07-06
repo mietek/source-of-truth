@@ -6,6 +6,7 @@ var _ = {
   propTypes: function () {
     return {
       itemId:     r.propTypes.string,
+      isPartial:  r.propTypes.bool,
       selectedId: r.propTypes.string,
       onSelect:   r.propTypes.func
     };
@@ -18,6 +19,7 @@ var _ = {
       r.div({
           className: 'item' + (
             (isClickable ? ' clickable' : '') +
+            (this.props.isPartial ? ' partial' : '') +
             (isSelected ? ' selected' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();

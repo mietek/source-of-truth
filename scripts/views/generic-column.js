@@ -9,6 +9,7 @@ var _ = {
   propTypes: function () {
     return {
       heading:      r.propTypes.string.isRequired,
+      items:        r.propTypes.array,
       fullItems:    r.propTypes.array,
       partialItems: r.propTypes.array,
       selectedId:   r.propTypes.string,
@@ -18,9 +19,9 @@ var _ = {
 
   render: function () {
     var isClickable = !!this.props.selectedId;
-    var hasPartials = (
-      this.props.partialItems &&
-      this.props.partialItems.length);
+    var hasAll      = this.props.items && this.props.items.length;
+    var hasFull     = this.props.fullItems && this.props.fullItems.length;
+    var hasPartial  = this.props.partialItems && this.props.partialItems.length;
     return (
       r.div({
           className: 'wrapper' + (
@@ -33,13 +34,21 @@ var _ = {
         genericHeader({
             heading:    this.props.heading
           }),
-        genericList({
-            label:      'available',
-            items:      this.props.fullItems,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
-          }),
-        !hasPartials ? null :
+        !hasAll ? null :
+            genericList({
+              label:      'publications',
+              items:      this.props.items,
+              selectedId: this.props.selectedId,
+              onSelect:   this.props.onSelect
+            }),
+        !hasFull ? null :
+            genericList({
+              label:      'available',
+              items:      this.props.fullItems,
+              selectedId: this.props.selectedId,
+              onSelect:   this.props.onSelect
+            }),
+        !hasPartial ? null :
             genericList({
               label:      'not available',
               items:      this.props.partialItems,

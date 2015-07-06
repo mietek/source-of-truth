@@ -63,7 +63,7 @@ var _ = {
         return (
           genericColumn({
               heading:      'By signature',
-              fullItems:    this.state.pubs.full,
+              items:        this.state.pubs.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
@@ -71,7 +71,7 @@ var _ = {
         return (
           genericColumn({
               heading:      'By author',
-              fullItems:    this.state.authors.full,
+              items:        this.state.authors.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
@@ -79,7 +79,7 @@ var _ = {
         return (
           genericColumn({
               heading:      'By year',
-              fullItems:    this.state.years.full,
+              items:        this.state.years.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
@@ -107,9 +107,8 @@ var _ = {
       case 'year':
         return (
           genericColumn({
-              heading:      item.name,
-              fullItems:    item.fullPubs,
-              partialItems: item.partialPubs,
+              heading:      itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
+              items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
@@ -203,7 +202,7 @@ var _ = {
               className: 'column'
             },
             rootColumn({
-                collections: this.state.collections.full,
+                collections: this.state.collections.all,
                 selectedId:  this.state.path.length > 0 && this.state.path[0],
                 onSelect:    function (itemId) {
                   this.select([], itemId);

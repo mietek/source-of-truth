@@ -83,11 +83,12 @@ var _ = {
                         genericItem({
                             key:        index,
                             itemId:     item.id,
+                            isPartial:  item.isPartial,
                             selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect
                           },
                           r.span('content',
-                            item.name)));
+                            item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Ugh
                   }
                 }.bind(this))))));
   }
