@@ -2591,6 +2591,309 @@ module.exports = [
     ]
   },
   {
+    "title": "Outrageous but meaningful coincidences: Dependent type-safe syntax and evaluation",
+    "author": "Conor McBride",
+    "year": 2010,
+    "collection": "Direct reflection",
+    "abstract": "",
+    "citations": [
+      {
+        "authors": [
+          "T. Altenkirch",
+          "B. Reus"
+        ],
+        "title": "Monadic presentations of lambda terms using generalized inductive types",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "T. Altenkirch",
+          "C. McBride",
+          "W. Swierstra"
+        ],
+        "title": "Observational equality, now!",
+        "year": 2007
+      },
+      {
+        "authors": [
+          "L. Augustsson",
+          "M. Carlsson"
+        ],
+        "title": "An exercise in dependent types: A well-typed interpreter",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "A. I. Baars",
+          "S. D. Swierstra"
+        ],
+        "title": "Type-safe, self inspecting code",
+        "year": 2004
+      },
+      {
+        "author": "B. Barras",
+        "title": "Coq en Coq",
+        "year": 1996
+      },
+      {
+        "author": "B. Barras",
+        "title": "Auto-validation d’un système de preuves avec familles inductives",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "B. Barras",
+          "B. Werner"
+        ],
+        "title": "Coq in Coq",
+        "year": 1997
+      },
+      {
+        "authors": [
+          "E. Brady",
+          "K. Hammond"
+        ],
+        "title": "A verified staged interpreter is a verified compiler",
+        "year": 2006
+      },
+      {
+        "authors": [
+          "E. Brady",
+          "K. Hammond"
+        ],
+        "title": "Scrapping your inefficient engine: Using partial evaluation to improve domain-specific language implementation",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "J. Carette",
+          "O. Kiselyov",
+          "Chung-chieh Shan"
+        ],
+        "title": "Finally tagless, partially evaluated: Tagless staged interpreters for simpler typed languages",
+        "year": 2009
+      },
+      {
+        "author": "J. Chapman",
+        "title": "Type theory should eat itself",
+        "year": 2009
+      },
+      {
+        "author": "J. Chapman",
+        "title": "Type checking and normalisation",
+        "year": 2008
+      },
+      {
+        "authors": [
+          "J. Chapman",
+          "P. Dagand",
+          "C. McBride",
+          "P. Morris"
+        ],
+        "title": "The gentle art of levitation",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "C. Chen",
+          "H. Xi"
+        ],
+        "title": "Meta-programming through typeful code representation",
+        "year": 2003
+      },
+      {
+        "authors": [
+          "K. Crary",
+          "S. Weirich",
+          "J. G. Morrisett"
+        ],
+        "title": "Intensional polymorphism in type-erasure semantics",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "H. B. Curry",
+          "R. Feys"
+        ],
+        "title": "Combinatory logic, vol. 1",
+        "year": 1958
+      },
+      {
+        "authors": [
+          "L. Damas",
+          "R. Milner"
+        ],
+        "title": "Principal type-schemes for functional programming languages",
+        "year": 1982
+      },
+      {
+        "author": "N. A. Danielsson",
+        "title": "A formalisation of a dependently typed language as an inductive-recursive family",
+        "year": 2006
+      },
+      {
+        "author": "N. G. de Bruijn",
+        "title": "Lambda calculus notation with nameless dummies: A tool for automatic formula manipulation, with application to the Church-Rosser theorem",
+        "year": 1972
+      },
+      {
+        "author": "N. G. de Bruijn",
+        "title": "Telescopic mappings in typed lambda-calculus",
+        "year": 1991
+      },
+      {
+        "author": "P. Dybjer",
+        "title": "Inductive sets and families in Martin-Löf’s type theory",
+        "year": 1991
+      },
+      {
+        "authors": [
+          "P. Dybjer",
+          "A. Setzer"
+        ],
+        "title": "Indexed induction-recursion",
+        "year": 2001
+      },
+      {
+        "authors": [
+          "P. Dybjer",
+          "A. Setzer"
+        ],
+        "title": "A finite axiomatization of inductive-recursive definitions",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "F. Forsberg",
+          "A. Setzer"
+        ],
+        "title": "Inductive-inductive definitions",
+        "year": 2010
+      },
+      {
+        "authors": [
+          "R. Harper",
+          "F. Honsell",
+          "G. D. Plotkin"
+        ],
+        "title": "A framework for defining logics",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "G. Huet",
+          "G. Plotkin"
+        ],
+        "title": "Electronic proceedings of the first annual BRA workshop on logical frameworks",
+        "year": 1990
+      },
+      {
+        "author": "G. P. Huet",
+        "title": "A unification algorithm for typed lambda-calculus",
+        "year": 1975
+      },
+      {
+        "author": "T. Johnsson",
+        "title": "Lambda lifting: Transforming programs to recursive equations",
+        "year": 1985
+      },
+      {
+        "author": "P. Martin-Löf",
+        "title": "Intuitionistic type theory",
+        "year": 1984
+      },
+      {
+        "author": "C. McBride",
+        "title": "Dependently typed functional programs and their proofs",
+        "year": 1999
+      },
+      {
+        "authors": [
+          "C. McBride",
+          "J. McKinna"
+        ],
+        "title": "The view from the left",
+        "year": 2004
+      },
+      {
+        "authors": [
+          "C. McBride",
+          "R. Paterson"
+        ],
+        "title": "Applicative programming with effects",
+        "year": 2008
+      },
+      {
+        "authors": [
+          "J.McKinna",
+          "R.Pollack"
+        ],
+        "title": "Pure type systems formalized",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "J. McKinna",
+          "R. Pollack"
+        ],
+        "title": "Some lambda calculus and type theory formalized",
+        "year": 1999
+      },
+      {
+        "author": "D. Miller",
+        "title": "A logic programming language with lambda-abstraction, function variables, and simple unification",
+        "year": 1991
+      },
+      {
+        "author": "U.Norell",
+        "title": "Dependently typed programming in Agda",
+        "year": 2008
+      },
+      {
+        "author": "U. Norell",
+        "title": "Towards a practical programming language based on dependent type theory",
+        "year": 2007
+      },
+      {
+        "author": "E. Palmgren",
+        "title": "On universes in type theory",
+        "year": 1998
+      },
+      {
+        "authors": [
+          "Emir Pašalić",
+          "W. Taha",
+          "T. Sheard"
+        ],
+        "title": "Tagless staged interpreters for typed languages",
+        "year": 2002
+      },
+      {
+        "authors": [
+          "B. C. Pierce",
+          "D. N. Turner"
+        ],
+        "title": "Local type inference",
+        "year": 1998
+      },
+      {
+        "author": "R.Pollack",
+        "title": "Dependently typed records in type theory",
+        "year": 2002
+      },
+      {
+        "author": "R. Pollack",
+        "title": "The theory of Lego: A proof checker for the extended calculus of constructions",
+        "year": 1994
+      },
+      {
+        "author": "R. Pollack",
+        "title": "Implicit syntax",
+        "year": 1992
+      }
+    ]
+  },
+  {
     "title": "Directly reflective meta-programming",
     "author": "Aaron Stump",
     "year": 2009,
