@@ -1452,7 +1452,7 @@ module.exports = [
       {
         "authors": [
           "Tom Fukushima",
-          "Charlie Tuckey"
+          "Charles Tuckey"
         ],
         "title": "Charity user manual",
         "year": 1996
