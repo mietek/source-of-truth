@@ -62,7 +62,7 @@ var _ = module.exports = {
       });
   },
 
-  groupAll: function (rawPubs, collectionInfo, authorInfo, yearInfo) {
+  partitionAll: function (rawPubs, collectionInfo, authorInfo, yearInfo) {
     var allBySignature = {};
     rawPubs.forEach(function (rawPub) {
         var pub = _.process(rawPub, false, collectionInfo, authorInfo, yearInfo);
@@ -128,7 +128,7 @@ var _ = module.exports = {
     var all     = [];
     var full    = [];
     var partial = [];
-    var pubInfo = _.groupAll(rawPubs, collectionInfo, authorInfo, yearInfo);
+    var pubInfo = _.partitionAll(rawPubs, collectionInfo, authorInfo, yearInfo);
     Object.keys(pubInfo.allBySignature).forEach(function (signature) {
         var pubs                 = pubInfo.allBySignature[signature];
         var isSignatureAmbiguous = false;

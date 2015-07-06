@@ -32,11 +32,11 @@ var _ = {
           }.bind(this)
         },
         genericHeader({
-            heading:    this.props.heading
+            heading: this.props.heading
           }),
         !hasAll ? null :
             genericList({
-              label:      'publications',
+              label:      'known',
               items:      this.props.items,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect

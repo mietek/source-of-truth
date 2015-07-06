@@ -173,7 +173,7 @@ var _ = module.exports = {
       });
   },
 
-  groupAll: function (rawPubs) {
+  partitionAll: function (rawPubs) {
     var byRawName     = {};
     var byFullName    = {};
     var allByLastName = {};
@@ -210,7 +210,7 @@ var _ = module.exports = {
   processAll: function (rawPubs) {
     var byId       = {};
     var all        = [];
-    var authorInfo = _.groupAll(rawPubs);
+    var authorInfo = _.partitionAll(rawPubs);
     Object.keys(authorInfo.allByLastName).forEach(function (lastName) {
         var authors              = authorInfo.allByLastName[lastName];
         var isLastNameAmbiguous  = false;
