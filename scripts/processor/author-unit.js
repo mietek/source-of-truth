@@ -5,13 +5,8 @@ var utils = require('../common/utils');
 var _ = module.exports = {
   unknownId: 'unknown-author',
 
-  removeDots: function (rawInitials) {
-    var dotlessInitials = [];
-    rawInitials.forEach(function (rawInitial) {
-        var parts = rawInitial.replace(/\.$/, '').replace(/\.-/g, '-').split('.');
-        dotlessInitials = dotlessInitials.concat(parts);
-      });
-    return dotlessInitials;
+  recoverLastName: function (tokens) {
+    return tokens[tokens.length - 1];
   },
 
   shorten: function (dotlessInitial) {
@@ -20,8 +15,8 @@ var _ = module.exports = {
       }).join('-');
   },
 
-  recoverInitials: function (rawInitials) {
-    var dotlessInitials = _.removeDots(rawInitials);
+  recoverInitials: function (tokens) {
+    var dotlessInitials = tokens.slice(0, tokens.length - 1);
     var shortInitials   = [];
     var initials        = [];
     dotlessInitials.forEach(function (dotlessInitial) {
@@ -92,10 +87,12 @@ var _ = module.exports = {
       name             = 'unknown author';
       id               = _.unknownId;
     } else {
-      var tokens      = rawName.split(' ');
-      var initialInfo = _.recoverInitials(tokens.slice(0, tokens.length - 1));
+      var tokens = rawName.replace(/\.-/g, '-').split(/[\. ]/).filter(function (token) {
+          return !!token.length;
+        });
+      var initialInfo = _.recoverInitials(tokens);
       rawNames      = [rawName];
-      lastName      = tokens[tokens.length - 1];
+      lastName      = _.recoverLastName(tokens);
       shortInitials = initialInfo.short;
       initials      = initialInfo.all;
       if (initialInfo.length) {
