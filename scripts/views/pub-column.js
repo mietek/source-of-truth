@@ -9,6 +9,7 @@ var pubHeader = require('./pub-header');
 var _ = {
   propTypes: function () {
     return {
+      signature:        r.propTypes.string.isRequired,
       title:            r.propTypes.string.isRequired,
       authors:          r.propTypes.array,
       year:             r.propTypes.object,
@@ -35,6 +36,7 @@ var _ = {
           }.bind(this)
         },
         pubHeader({
+            signature:   this.props.signature,
             title:       this.props.title,
             authors:     this.props.authors,
             year:        this.props.year,

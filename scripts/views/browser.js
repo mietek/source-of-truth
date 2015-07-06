@@ -59,26 +59,50 @@ var _ = {
 
   renderColumn: function (itemId, selectedId, onSelect) {
     switch (itemId) {
-      case 'by-signature':
+      case 'available-by-signature':
         return (
           genericColumn({
-              heading:      'By signature',
+              heading:      'Available publications — By signature',
+              fullItems:    this.state.pubs.full,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+      case 'available-by-author':
+        return (
+          genericColumn({
+              heading:      'Available publications — By author',
+              fullItems:    this.state.authors.full,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+      case 'available-by-year':
+        return (
+          genericColumn({
+              heading:      'Available publications — By year',
+              fullItems:    this.state.years.full,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
+      case 'known-by-signature':
+        return (
+          genericColumn({
+              heading:      'Known publications — By signature',
               items:        this.state.pubs.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'by-author':
+      case 'known-by-author':
         return (
           genericColumn({
-              heading:      'By author',
+              heading:      'Known publications — By author',
               items:        this.state.authors.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'by-year':
+      case 'known-by-year':
         return (
           genericColumn({
-              heading:      'By year',
+              heading:      'Known publications — By year',
               items:        this.state.years.all,
               selectedId:   selectedId,
               onSelect:     onSelect
@@ -90,6 +114,7 @@ var _ = {
       case 'pub':
         return (
           pubColumn({
+              signature:        item.name, // TODO: Ugh, naming
               title:            item.title,
               authors:          item.authors,
               year:             item.year,
@@ -103,11 +128,25 @@ var _ = {
               onSelect:         onSelect
             }));
       case 'collection':
+        return (
+          genericColumn({
+              heading:      'Collection — ' + item.name,
+              items:        item.pubs,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
       case 'author':
+        return (
+          genericColumn({
+              heading:      'Author — ' + item.fullName,
+              items:        item.pubs,
+              selectedId:   selectedId,
+              onSelect:     onSelect
+            }));
       case 'year':
         return (
           genericColumn({
-              heading:      itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
+              heading:      'Year — ' + item.name,
               items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect

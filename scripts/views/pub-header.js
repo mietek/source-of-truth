@@ -7,6 +7,7 @@ var genericItem = require('./generic-item');
 var _ = {
   propTypes: function () {
     return {
+      signature:   r.propTypes.string.isRequired,
       title:       r.propTypes.string.isRequired,
       authors:     r.propTypes.array,
       year:        r.propTypes.object,
@@ -20,7 +21,7 @@ var _ = {
     return (
       r.div('header',
         r.div('heading',
-          this.props.title),
+          this.props.signature + ' — ' + this.props.title),
         !this.props.authors ? null :
           this.props.authors.map(function (author, index) {
               return (
