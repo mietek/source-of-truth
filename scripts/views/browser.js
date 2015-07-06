@@ -15,8 +15,8 @@ var tokens = {};
 
 var _ = {
   getInitialState: function () {
-     var db = processor.processDb();
-     return utils.assign({}, db, {
+     var database = processor.processDatabase();
+     return utils.assign({}, database, {
          path:        [],
          componentId: utils.getRandomUuid()
        });
@@ -56,30 +56,27 @@ var _ = {
 
   renderColumn: function (itemId, selectedId, onSelect) {
     switch (itemId) {
-      case 'p':
+      case 'by-signature':
         return (
           genericColumn({
-              heading:      'All publications',
-              fullItems:    this.state.fullPubs,
-              partialItems: this.state.partialPubs,
+              heading:      'By signature',
+              fullItems:    this.state.pubs.full,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'a':
+      case 'by-author':
         return (
           genericColumn({
-              heading:      'All authors',
-              fullItems:    this.state.fullAuthors,
-              partialItems: this.state.partialAuthors,
+              heading:      'By author',
+              fullItems:    this.state.authors.full,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'y':
+      case 'by-year':
         return (
           genericColumn({
-              heading:      'All years',
-              fullItems:    this.state.fullYears,
-              partialItems: this.state.partialYears,
+              heading:      'By year',
+              fullItems:    this.state.years.full,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
@@ -102,8 +99,8 @@ var _ = {
               selectedId:       selectedId,
               onSelect:         onSelect
             }));
-      case 'author':
       case 'collection':
+      case 'author':
       case 'year':
         return (
           genericColumn({
@@ -203,7 +200,7 @@ var _ = {
               className: 'column'
             },
             rootColumn({
-                collections: this.state.collections,
+                collections: this.state.collections.full,
                 selectedId:  this.state.path.length > 0 && this.state.path[0],
                 onSelect:    function (itemId) {
                   this.select([], itemId);

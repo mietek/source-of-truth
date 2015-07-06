@@ -20,8 +20,7 @@ var _ = {
     return (
       r.div('header',
         r.div('heading',
-          r.span('value',
-            this.props.title)),
+          this.props.title),
         !this.props.authors ? null :
           this.props.authors.map(function (author, index) {
               return (

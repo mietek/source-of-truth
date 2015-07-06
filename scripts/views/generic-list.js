@@ -72,7 +72,7 @@ var _ = {
                         pubItem({
                             key:        index,
                             pubId:      item.id,
-                            signature:  item.signature,
+                            signature:  item.name, // TODO: Ugh, naming
                             title:      item.title,
                             isPartial:  item.isPartial,
                             selectedId: this.props.selectedId,

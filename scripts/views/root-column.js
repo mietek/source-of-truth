@@ -26,25 +26,26 @@ var _ = {
           }.bind(this)
         },
         genericHeader({
-            heading:    'Source of Truth'
+            heading: 'Source of Truth'
           }),
         genericList({
-            label:      'collections',
-            items:      this.props.collections,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
+            label:           'collections',
+            items:           this.props.collections,
+            isLabelNumbered: false,
+            selectedId:      this.props.selectedId,
+            onSelect:        this.props.onSelect
           }),
         genericList({
             label:           'Indices',
             items:           [{
-              id:   'p',
-              name: 'All publications'
+              name: 'By signature',
+              id:   'by-signature'
             }, {
-              id:   'a',
-              name: 'All authors'
+              name: 'By author',
+              id:   'by-author'
             }, {
-              id:   'y',
-              name: 'All years'
+              name: 'By year',
+              id:   'by-year'
             }],
             isLabelNumbered: false,
             selectedId:      this.props.selectedId,

@@ -1,5 +1,7 @@
 'use strict';
 
+var latinize = require('latinize');
+
 function pad(n) {
   return (
     n < 10 ? '0' + n :
@@ -16,7 +18,19 @@ var _ = module.exports = {
     return object[key];
   },
 
+  latinize: function (string) {
+    return latinize(string.toLowerCase()).replace(/[  -]/g, '-').replace(/[^a-z0-9-]/g, '');
+  },
+
   getRandomUuid: require('node-uuid').v4,
+
+  getUnion: function (array1, array2) {
+    var union = {};
+    array1.concat(array2).forEach(function (item) {
+        union[item] = true;
+      });
+    return Object.keys(union);
+  },
 
   getSortedKeys: function (object, compare) {
     return Object.keys(object || {}).sort(compare || function (key1, key2) {
