@@ -40,11 +40,11 @@ var _ = {
       !this.props.isLabelNumbered ? this.props.label : (
         this.props.isLabelSwapped ?
           (this.props.label + ' ' + this.props.items.length) :
-          (this.props.items.length + ' ' + this.props.label))) + (
-      (this.state.isHidden ? '…' : ''));
+          (this.props.items.length + ' ' + this.props.label)));
     return (
       r.div('list' + (
-          (this.props.isNumbered ? ' numbered' : '')),
+          (this.props.isNumbered ? ' numbered' : '') +
+          (this.state.isHidden ? ' hidden' : '')),
         r.div('spacer',
           !this.props.label ? null :
             r.span({

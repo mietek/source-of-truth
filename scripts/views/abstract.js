@@ -22,7 +22,8 @@ var _ = {
       return null;
     }
     return (
-      r.div('abstract',
+      r.div('abstract' + (
+          (this.state.isHidden ? ' hidden' : '')),
         r.div('spacer',
           r.span({
             className: 'label clickable',
@@ -33,8 +34,7 @@ var _ = {
                 });
             }.bind(this)
           },
-          'Abstract' +
-            (this.state.isHidden ? '…' : ''))),
+          'Abstract')),
         genericTransitionGroup({
             transitionName: 'height'
           },
