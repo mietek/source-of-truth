@@ -18,8 +18,8 @@ var _ = {
     return (
       r.div({
           className: 'item' + (
-            (isClickable ? ' clickable' : '') +
             (this.props.isPartial ? ' partial' : '') +
+            (isClickable ? ' clickable' : '') +
             (isSelected ? ' selected' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();

@@ -130,7 +130,7 @@ var _ = {
       case 'collection':
         return (
           genericColumn({
-              heading:      'Collection — ' + item.name,
+              heading:      (!item.isUnknown ? 'Collection — ' : '') + item.name,
               label:        'publications',
               items:        item.pubs,
               selectedId:   selectedId,
@@ -139,7 +139,7 @@ var _ = {
       case 'author':
         return (
           genericColumn({
-              heading:      'Author — ' + item.fullName,
+              heading:      (!item.isUnknown ? 'Author — ' : '') + item.fullName,
               items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect
@@ -147,7 +147,7 @@ var _ = {
       case 'year':
         return (
           genericColumn({
-              heading:      'Year — ' + item.name,
+              heading:      (!item.isUnknown ? 'Year — ' : '') + item.name,
               items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect

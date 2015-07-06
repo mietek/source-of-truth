@@ -11,7 +11,7 @@ var rawPubs = require('./database/pubs');
 
 module.exports = {
   processDatabase: function () {
-    var collectionInfo = collectionUnit.processAll(rawCollections);
+    var collectionInfo = collectionUnit.processAll(rawCollections.concat([undefined]));
     var authorInfo     = authorUnit.processAll(rawPubs);
     var yearInfo       = yearUnit.processAll(rawPubs);
     var pubInfo        = pubUnit.processAll(rawPubs, collectionInfo, authorInfo, yearInfo);

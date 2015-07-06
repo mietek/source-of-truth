@@ -31,15 +31,16 @@ var _ = module.exports = {
       pubs:        [],
       fullPubs:    [],
       partialPubs: [],
+      isUnknown:   isUnknown,
       isPartial:   undefined
     };
   },
 
   compare: function (year1, year2) {
-    if (year1.id === _.unknownId) {
+    if (year1.isUnknown) {
       return 1;
     }
-    if (year2.id === _.unknownId) {
+    if (year2.isUnknown) {
       return -1;
     }
     return year1.name.localeCompare(year2.name);

@@ -108,7 +108,8 @@ var _ = module.exports = {
         reverseShortName = lastName;
         reverseFullName  = lastName;
       }
-      name = id = undefined;
+      name = undefined;
+      id   = undefined;
     }
     return {
       type:             'author',
@@ -125,15 +126,16 @@ var _ = module.exports = {
       pubs:             [],
       fullPubs:         [],
       partialPubs:      [],
+      isUnknown:        isUnknown,
       isPartial:        undefined
     };
   },
 
   compare: function (author1, author2) {
-    if (author1.id === _.unknownId) {
+    if (author1.isUnknown) {
       return 1;
     }
-    if (author2.id === _.unknownId) {
+    if (author2.isUnknown) {
       return -1;
     }
     return author1.reverseFullName.localeCompare(author2.reverseFullName);
@@ -240,7 +242,7 @@ var _ = module.exports = {
                 })) {
               isShortNameAmbiguous = true;
             }
-            if (author.id !== _.unknownId) {
+            if (!author.isUnknown) {
               if (!isLastNameAmbiguous) {
                 author.name = author.lastName;
               } else if (!isShortNameAmbiguous) {

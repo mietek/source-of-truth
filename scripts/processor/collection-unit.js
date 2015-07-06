@@ -3,9 +3,19 @@
 var utils = require('../common/utils');
 
 var _ = module.exports = {
+  unknownId: 'unlabelled',
+
   process: function (rawCollection) {
-    var name = rawCollection.name;
-    var id   = utils.latinize(name);
+    var isUnknown = !rawCollection;
+    var name;
+    var id;
+    if (isUnknown) {
+      name = 'no collection';
+      id   = _.unknownId;
+    } else {
+      name = rawCollection.name;
+      id   = utils.latinize(name);
+    }
     return {
       type:        'collection',
       name:        name,
@@ -13,11 +23,18 @@ var _ = module.exports = {
       pubs:        [],
       fullPubs:    [],
       partialPubs: [],
+      isUnknown:   isUnknown,
       isPartial:   undefined
     };
   },
 
   compare: function (collection1, collection2) {
+    if (collection1.isUnknown) {
+      return 1;
+    }
+    if (collection2.isUnknown) {
+      return -1;
+    }
     return collection1.name.localeCompare(collection2.name);
   },
 
@@ -51,9 +68,6 @@ var _ = module.exports = {
 
   lookupAll: function (rawNames, collectionInfo) {
     return rawNames.map(function (rawName) {
-        if (!rawName) {
-          return undefined;
-        }
         if (!(rawName in collectionInfo.byName)) {
           console.error('Missing collection:', rawName);
           return undefined;

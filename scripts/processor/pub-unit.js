@@ -7,7 +7,7 @@ var yearUnit = require('./year-unit');
 
 var _ = module.exports = {
   process: function (rawPub, isCitation, collectionInfo, authorInfo, yearInfo) {
-    var rawCollections = rawPub.collections || [rawPub.collection];
+    var rawCollections = rawPub.collections || (rawPub.collection && [rawPub.collection]) || [];
     var rawAuthors     = rawPub.authors || [rawPub.author];
     var collections    = collectionUnit.lookupAll(rawCollections, collectionInfo);
     var authors        = authorUnit.lookupAll(rawAuthors, authorInfo);
@@ -15,8 +15,8 @@ var _ = module.exports = {
     var isNumbered     = !rawPub.numbered || rawPub.numbered === 'y';
     var isPartial      = isCitation || rawPub.partial === 'y';
     var signature      = (
-      (authors[0].id !== authorUnit.unknownId ? authors[0].name : 'unknown') +
-      (year.id !== yearUnit.unknownId ? ' ' + year.name : ' unknown'));
+      (!authors[0].isUnknown ? authors[0].name : 'unknown') +
+      (!year.isUnknown ? ' ' + year.name : ' unknown'));
     return {
       type:             'pub',
       uuid:             utils.getRandomUuid(),
@@ -36,20 +36,20 @@ var _ = module.exports = {
   },
 
   compareTitles: function (pub1, pub2) {
-    if (pub1.authors[0].id === authorUnit.unknownId) {
+    if (pub1.authors[0].isUnknown) {
       return 1;
     }
-    if (pub2.authors[0].id === authorUnit.unknownId) {
+    if (pub2.authors[0].isUnknown) {
       return -1;
     }
     return pub1.title.localeCompare(pub2.title);
   },
 
   compare: function (pub1, pub2) {
-    if (pub1.authors[0].id === authorUnit.unknownId) {
+    if (pub1.authors[0].isUnknown) {
       return 1;
     }
-    if (pub2.authors[0].id === authorUnit.unknownId) {
+    if (pub2.authors[0].isUnknown) {
       return -1;
     }
     return pub1.name.localeCompare(pub2.name);
@@ -169,7 +169,7 @@ var _ = module.exports = {
             } else {
               pub.name = (
                 pub.signature +
-                (pub.year.id === yearUnit.unknownId ? ' ' : '') +
+                (pub.year.isUnknown ? ' ' : '') +
                 _.getSuffix(counter));
               counter += 1;
             }
@@ -179,20 +179,19 @@ var _ = module.exports = {
           });
       });
     _.sort(all);
+    var unknownCollection = [collectionInfo.byId[collectionUnit.unknownId]];
     all.forEach(function (pub) {
         (!pub.isPartial ? full : partial).push(pub);
-        (pub.collections || []).forEach(function (collection) {
+        (pub.collections.length ? pub.collections : unknownCollection).forEach(function (collection) {
             collection.pubs.push(pub);
             (!pub.isPartial ? collection.fullPubs : collection.partialPubs).push(pub);
           });
-        (pub.authors || []).forEach(function (author) {
+        pub.authors.forEach(function (author) {
             author.pubs.push(pub);
             (!pub.isPartial ? author.fullPubs : author.partialPubs).push(pub);
           });
-        if (pub.year) {
-          pub.year.pubs.push(pub);
-          (!pub.isPartial ? pub.year.fullPubs : pub.year.partialPubs).push(pub);
-        }
+        pub.year.pubs.push(pub);
+        (!pub.isPartial ? pub.year.fullPubs : pub.year.partialPubs).push(pub);
       });
     return {
       byId:    byId,
