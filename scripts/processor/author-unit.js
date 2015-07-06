@@ -127,7 +127,8 @@ var _ = module.exports = {
       id:               id,
       pubs:             [],
       fullPubs:         [],
-      partialPubs:      []
+      partialPubs:      [],
+      isPartial:        undefined
     };
   },
 
@@ -282,6 +283,7 @@ var _ = module.exports = {
     var full    = [];
     var partial = [];
     authorInfo.all.forEach(function (author) {
+        author.isPartial = !author.fullPubs.length;
         (author.fullPubs.length ? full : partial).push(author);
       });
     return utils.assign(authorInfo, {

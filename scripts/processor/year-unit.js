@@ -30,7 +30,8 @@ var _ = module.exports = {
       id:          id,
       pubs:        [],
       fullPubs:    [],
-      partialPubs: []
+      partialPubs: [],
+      isPartial:   undefined
     };
   },
 
@@ -86,6 +87,7 @@ var _ = module.exports = {
     var full    = [];
     var partial = [];
     yearInfo.all.forEach(function (year) {
+        year.isPartial = !year.fullPubs.length;
         (year.fullPubs.length ? full : partial).push(year);
       });
     return utils.assign(yearInfo, {

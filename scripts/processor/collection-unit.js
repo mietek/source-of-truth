@@ -12,7 +12,8 @@ var _ = module.exports = {
       id:          id,
       pubs:        [],
       fullPubs:    [],
-      partialPubs: []
+      partialPubs: [],
+      isPartial:   undefined
     };
   },
 
@@ -67,6 +68,7 @@ var _ = module.exports = {
     var full    = [];
     var partial = [];
     collectionInfo.all.forEach(function (collection) {
+        collection.isPartial = !collection.fullPubs.length;
         (collection.fullPubs.length ? full : partial).push(collection);
       });
     return utils.assign(collectionInfo, {
