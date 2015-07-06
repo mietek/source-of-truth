@@ -46,12 +46,15 @@ var _ = {
   },
 
   onPopState: function (event) {
+    var path;
     if (event.state) {
-      var path = event.state.path || [];
-      this.setState({
-          path: path
-        });
+      path = event.state.path || [];
+    } else {
+      path = location.hash ? location.hash.slice(1).split('/') : [];
     }
+    this.setState({
+        path: path
+      });
   },
 
   renderColumn: function (itemId, selectedId, onSelect) {
