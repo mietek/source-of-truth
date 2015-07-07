@@ -143,7 +143,6 @@ body
   margin-left: 8px
   position: relative
   z-index: 1
-  color: $black9
   opacity: 0
   transition: all $transition-duration ease
   -webkit-font-smoothing: antialiased
@@ -212,7 +211,7 @@ body
   background-color: $blue
   border-radius: 512px
 
-.item.selected:after
+.item.clickable.selected:after
   color: $white9
 
 
@@ -240,9 +239,6 @@ body
   min-width: 24px
   padding-right: 8px
   text-align: right
-
-.list.numbered .item.selected .key:before
-  color: $white9
 
 
 .item .title
@@ -272,7 +268,6 @@ body
 .abstract .content
   @include selectable
   margin-left: 1/9 * 100%
-  // padding-right: 16px
 
 .abstract .content p:not(:first-of-type)
   text-indent: 1/27 * 100%
