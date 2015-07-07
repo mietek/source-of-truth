@@ -1,0 +1,24 @@
+title: A clear picture of lens laws
+authors:
+  - Sebastian Fischer
+  - Zhenjiang Hu
+  - Hugo Pacheco
+year: 2015
+citations:
+
+  - author: R.S. Bird
+    title: Introduction to functional programming using Haskell
+    year: 1998
+
+  - author: J. Foster
+    title: Bidirectional programming languages
+    year: 2009
+
+  - authors:
+      - J.N. Foster
+      - M.B. Greenwald
+      - J.T. Moore
+      - B.C. Pierce
+      - A. Schmitt
+    title: "Combinators for bidirectional tree transformations: A linguistic approach to the view-update problem"
+    year: 2007
