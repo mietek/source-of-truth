@@ -9,10 +9,7 @@ var _ = {
   propTypes: function () {
     return {
       heading:      r.propTypes.string.isRequired,
-      label:        r.propTypes.string,
       items:        r.propTypes.array,
-      fullItems:    r.propTypes.array,
-      partialItems: r.propTypes.array,
       selectedId:   r.propTypes.string,
       onSelect:     r.propTypes.func
     };
@@ -20,9 +17,7 @@ var _ = {
 
   render: function () {
     var isClickable = !!this.props.selectedId;
-    var hasAll      = this.props.items && this.props.items.length;
-    var hasFull     = this.props.fullItems && this.props.fullItems.length;
-    var hasPartial  = this.props.partialItems && this.props.partialItems.length;
+    var hasItems    = this.props.items && this.props.items.length;
     return (
       r.div({
           className: 'wrapper' + (
@@ -35,24 +30,10 @@ var _ = {
         genericHeader({
             heading: this.props.heading
           }),
-        !hasAll ? null :
+        !hasItems ? null :
             genericList({
-              label:      this.props.label || 'known',
+              label:      'items',
               items:      this.props.items,
-              selectedId: this.props.selectedId,
-              onSelect:   this.props.onSelect
-            }),
-        !hasFull ? null :
-            genericList({
-              label:      'available',
-              items:      this.props.fullItems,
-              selectedId: this.props.selectedId,
-              onSelect:   this.props.onSelect
-            }),
-        !hasPartial ? null :
-            genericList({
-              label:      'not available',
-              items:      this.props.partialItems,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect
             })));

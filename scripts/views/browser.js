@@ -59,50 +59,26 @@ var _ = {
 
   renderColumn: function (itemId, selectedId, onSelect) {
     switch (itemId) {
-      case 'available-by-key':
+      case 'by-key':
         return (
           genericColumn({
-              heading:      'Available publications — By key',
-              fullItems:    this.state.pubs.full,
-              selectedId:   selectedId,
-              onSelect:     onSelect
-            }));
-      case 'available-by-author':
-        return (
-          genericColumn({
-              heading:      'Available publications — By author',
-              fullItems:    this.state.authors.full,
-              selectedId:   selectedId,
-              onSelect:     onSelect
-            }));
-      case 'available-by-year':
-        return (
-          genericColumn({
-              heading:      'Available publications — By year',
-              fullItems:    this.state.years.full,
-              selectedId:   selectedId,
-              onSelect:     onSelect
-            }));
-      case 'known-by-key':
-        return (
-          genericColumn({
-              heading:      'Known publications — By key',
+              heading:      'Publications — By key',
               items:        this.state.pubs.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'known-by-author':
+      case 'by-author':
         return (
           genericColumn({
-              heading:      'Known publications — By author',
+              heading:      'Publications — By author',
               items:        this.state.authors.all,
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'known-by-year':
+      case 'by-year':
         return (
           genericColumn({
-              heading:      'Known publications — By year',
+              heading:      'Publications — By year',
               items:        this.state.years.all,
               selectedId:   selectedId,
               onSelect:     onSelect
@@ -131,7 +107,6 @@ var _ = {
         return (
           genericColumn({
               heading:      (!item.isUntagged ? 'Tag — ' : '') + item.name,
-              label:        'publications',
               items:        item.pubs,
               selectedId:   selectedId,
               onSelect:     onSelect

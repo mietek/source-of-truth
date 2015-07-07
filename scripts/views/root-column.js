@@ -36,32 +36,16 @@ var _ = {
             onSelect:        this.props.onSelect
           }),
         genericList({
-            label:           'Available publications',
+            label:           'Publications',
             items:           [{
               name: 'By key',
-              id:   'available-by-key'
+              id:   'by-key'
             }, {
               name: 'By author',
-              id:   'available-by-author'
+              id:   'by-author'
             }, {
               name: 'By year',
-              id:   'available-by-year'
-            }],
-            isLabelNumbered: false,
-            selectedId:      this.props.selectedId,
-            onSelect:        this.props.onSelect
-          }),
-        genericList({
-            label:           'Known publications',
-            items:           [{
-              name: 'By key',
-              id:   'known-by-key'
-            }, {
-              name: 'By author',
-              id:   'known-by-author'
-            }, {
-              name: 'By year',
-              id:   'known-by-year'
+              id:   'by-year'
             }],
             isLabelNumbered: false,
             selectedId:      this.props.selectedId,
