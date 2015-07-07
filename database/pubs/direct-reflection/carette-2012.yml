@@ -3,7 +3,7 @@ authors:
   - Jacques Carette
   - Aaron Stump
 year: 2012
-collection: Direct reflection
+tag: Direct reflection
 abstract: |
   <p>Direct reflection is a form of meta-programming in which program terms can intensionally analyze other program terms. Previous work defined a big-step semantics for a directly reflective language called Archon, with a conservative approach to variable scoping based on operations for opening a lambda-abstraction and swapping the order of nested lambda-abstractions. In this short paper, we give a small-step semantics for a revised version of Archon, based on operations for opening and closing lambda abstractions. We then discuss challenges for designing a static type system for this language, which is our ultimate goal.</p>
 citations:

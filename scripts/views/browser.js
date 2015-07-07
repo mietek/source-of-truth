@@ -118,7 +118,7 @@ var _ = {
               title:            item.title,
               authors:          item.authors,
               year:             item.year,
-              collections:      item.collections,
+              tags:             item.tags,
               abstract:         item.abstract,
               citations:        item.citations,
               reverseCitations: item.reverseCitations,
@@ -127,10 +127,10 @@ var _ = {
               selectedId:       selectedId,
               onSelect:         onSelect
             }));
-      case 'collection':
+      case 'tag':
         return (
           genericColumn({
-              heading:      (!item.isUnknown ? 'Collection — ' : '') + item.name,
+              heading:      (!item.isUntagged ? 'Tag — ' : '') + item.name,
               label:        'publications',
               items:        item.pubs,
               selectedId:   selectedId,
@@ -242,7 +242,7 @@ var _ = {
               className: 'column'
             },
             rootColumn({
-                collections: this.state.collections.all,
+                tags:        this.state.tags.all,
                 selectedId:  this.state.path.length > 0 && this.state.path[0],
                 onSelect:    function (itemId) {
                   this.select([], itemId);

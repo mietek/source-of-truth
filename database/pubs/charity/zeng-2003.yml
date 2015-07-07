@@ -1,7 +1,7 @@
 title: An implementation of Charity
 author: Min Zeng
 year: 2003
-collection: Charity
+tag: Charity
 abstract: |
   <p>This thesis describes an implementation of core-Charity which consists of a virtual machine (VMC) and a separate compiler to translate Charity code into code for that machine.</p>
   <p>The design of the virtual machine was inspired by the ABC machine of Clean. It is a general purpose byte code machine which incorporates garbage collection and the separation of data into basic types and heap pointers.</p>

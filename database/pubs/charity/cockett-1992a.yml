@@ -3,7 +3,7 @@ authors:
   - Robin Cockett
   - Tom Fukushima
 year: 1992
-collection: Charity
+tag: Charity
 abstract: |
   <p>Charity is a categorical programming language based on distributive categories (in the sense of Schanuel and Lawvere) with strong datatypes (in the sense of Hagino). Distributive categories come with a term logic which can express most standard programs; and they are fundamental to computer science because they permit proof by case analysis and, when strong datatypes are introduced, proof by structural induction.</p>
   <p>Charity is functional and polymorphic in style, and is strongly normalizing. As a categorical programming language it provides a unique marriage of computer science and mathematical thought. The above aspects are particularly important for the production of verified programs as the naturality of morphisms gives us “theorems for free”, termination proofs are not required, and mathemathical specifications can be used.</p>

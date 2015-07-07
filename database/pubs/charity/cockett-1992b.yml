@@ -1,7 +1,7 @@
 title: Distributive logic
 author: Robin Cockett
 year: 1992
-collection: Charity
+tag: Charity
 abstract: |
   <p>Equational logics are very good at handling algebraic theories. However, in programming languages which have branch instructions this sort of logic is ultimately inadequate. A branch instruction is a map to a coproduct and the problem with equational logics is that they cannot handle coproduct types.</p>
   <p>This paper introduces an equational style logic which incorporates the coproduct as a fundamental component. It is proven that the logic corresponds to distributive categories, that is categories with a final object, finite products, and coproducts, in which the product distributes over the coproduct.</p>

@@ -8,9 +8,9 @@ var genericList = require('./generic-list');
 var _ = {
   propTypes: function () {
     return {
-      collections: r.propTypes.array,
-      selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      tags:       r.propTypes.array,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func
     };
   },
 
@@ -29,8 +29,8 @@ var _ = {
             heading: 'Source of Truth'
           }),
         genericList({
-            label:           'Collections',
-            items:           this.props.collections,
+            label:           'Tags',
+            items:           this.props.tags,
             isLabelNumbered: false,
             selectedId:      this.props.selectedId,
             onSelect:        this.props.onSelect

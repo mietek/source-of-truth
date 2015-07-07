@@ -1,7 +1,7 @@
 title: Total functional programming
 author: David Turner
 year: 2004
-collection: Total functional programming
+tag: Total functional programming
 abstract: |
   <p>The driving idea of functional programming is to make programming more closely related to mathematics. A program in a functional language such as Haskell or Miranda consists of equations which are both computation rules and a basis for simple algebraic reasoning about the functions and data structures they define. The existing model of functional programming, although elegant and powerful, is compromised to a greater extent than is commonly recognised by the presence of partial functions. We consider a simple discipline of <i>total functional programming</i> designed to exclude the possibility of non-termination. Among other things this requires a type distinction between data, which is finite, and codata, which is potentially infinite.</p>
 numbered: n

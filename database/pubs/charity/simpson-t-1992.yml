@@ -3,7 +3,7 @@ authors:
   - Todd Simpson
   - Robin Cockett
 year: 1992
-collection: Charity
+tag: Charity
 abstract: |
   <p>A new approach to translating programs defined using pattern matching into sequential form is presented. The technique is based on the theory of decision tree reduction.</p>
   <p>A program definition using patterns is a parallel specification and does not determine a sequential evaluation. A problem arises, therefore, in attempting to preserve as far as possible the intended parallel meaning during the translation to sequential form. In particular, a sequentialized program may be forced to evaluate patterns which need not be evaluated when parallelism is available. It is known that some definitions using patterns, called <i>sequentializable</i> definitions, can be translated without semantic loss, and algorithms to sequentialize these definitions have been documented. In this paper we present an algorithm which works uniformly over <i>all</i> definitions — it handles sequentializable definitions correctly, but also optimizes the sequential realization of other definitions.</p>

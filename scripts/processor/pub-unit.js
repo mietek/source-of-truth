@@ -1,26 +1,26 @@
 'use strict';
 
 var utils = require('../common/utils');
-var collectionUnit = require('./collection-unit');
 var authorUnit = require('./author-unit');
+var tagUnit = require('./tag-unit');
 var yearUnit = require('./year-unit');
 
 var _ = module.exports = {
-  process: function (rawPub, isCitation, collectionInfo, authorInfo, yearInfo) {
-    var rawCollections = rawPub.collections || (rawPub.collection && [rawPub.collection]) || [];
-    var rawAuthors     = rawPub.authors || [rawPub.author];
-    var collections    = collectionUnit.lookupAll(rawCollections, collectionInfo);
-    var authors        = authorUnit.lookupAll(rawAuthors, authorInfo);
-    var year           = yearUnit.lookup(rawPub.year, yearInfo);
-    var isNumbered     = !rawPub.numbered || rawPub.numbered === 'y';
-    var isPartial      = isCitation || rawPub.partial === 'y';
-    var signature      = (
+  process: function (rawPub, isCitation, tagInfo, authorInfo, yearInfo) {
+    var rawTags    = rawPub.tags || (rawPub.tag && [rawPub.tag]) || [];
+    var rawAuthors = rawPub.authors || [rawPub.author];
+    var tags       = tagUnit.lookupAll(rawTags, tagInfo);
+    var authors    = authorUnit.lookupAll(rawAuthors, authorInfo);
+    var year       = yearUnit.lookup(rawPub.year, yearInfo);
+    var isNumbered = !rawPub.numbered || rawPub.numbered === 'y';
+    var isPartial  = isCitation || rawPub.partial === 'y';
+    var signature  = (
       (!authors[0].isUnknown ? authors[0].name : 'unknown') +
       (!year.isUnknown ? ' ' + year.name : ' unknown'));
     return {
       type:             'pub',
       uuid:             utils.getRandomUuid(),
-      collections:      collections,
+      tags:             tags,
       authors:          authors,
       year:             year,
       title:            rawPub.title,
@@ -62,17 +62,17 @@ var _ = module.exports = {
       });
   },
 
-  partitionAll: function (rawPubs, collectionInfo, authorInfo, yearInfo) {
+  partitionAll: function (rawPubs, tagInfo, authorInfo, yearInfo) {
     var allBySignature = {};
     rawPubs.forEach(function (rawPub) {
-        var pub = _.process(rawPub, false, collectionInfo, authorInfo, yearInfo);
+        var pub = _.process(rawPub, false, tagInfo, authorInfo, yearInfo);
         if (pub.signature in allBySignature) {
           allBySignature[pub.signature].push(pub);
         } else {
           allBySignature[pub.signature] = [pub];
         }
         (rawPub.citations || []).forEach(function (rawCitation) {
-            var citation = _.process(rawCitation, true, collectionInfo, authorInfo, yearInfo);
+            var citation = _.process(rawCitation, true, tagInfo, authorInfo, yearInfo);
             pub.citations.push(citation);
             citation.reverseCitations.push(pub);
             if (citation.signature in allBySignature) {
@@ -97,8 +97,8 @@ var _ = module.exports = {
     var reverseCitations = pub.reverseCitations.concat(otherPub.reverseCitations);
     var isPartial        = pub.isPartial && otherPub.isPartial;
     utils.assign(pub,
-      !otherPub.collections.length ? null : {
-        collections: otherPub.collections
+      !otherPub.tags.length ? null : {
+        tags: otherPub.tags
       },
       !otherPub.abstract ? null : {
         abstract: otherPub.abstract
@@ -123,12 +123,12 @@ var _ = module.exports = {
     return String.fromCharCode(baseCode + n) + suffix;
   },
 
-  processAll: function (rawPubs, collectionInfo, authorInfo, yearInfo) {
+  processAll: function (rawPubs, tagInfo, authorInfo, yearInfo) {
     var byId    = {};
     var all     = [];
     var full    = [];
     var partial = [];
-    var pubInfo = _.partitionAll(rawPubs, collectionInfo, authorInfo, yearInfo);
+    var pubInfo = _.partitionAll(rawPubs, tagInfo, authorInfo, yearInfo);
     Object.keys(pubInfo.allBySignature).forEach(function (signature) {
         var pubs                 = pubInfo.allBySignature[signature];
         var isSignatureAmbiguous = false;
@@ -179,12 +179,12 @@ var _ = module.exports = {
           });
       });
     _.sort(all);
-    var unknownCollection = [collectionInfo.byId[collectionUnit.unknownId]];
+    var untagged = [tagInfo.byId[tagUnit.untaggedId]];
     all.forEach(function (pub) {
         (!pub.isPartial ? full : partial).push(pub);
-        (pub.collections.length ? pub.collections : unknownCollection).forEach(function (collection) {
-            collection.pubs.push(pub);
-            (!pub.isPartial ? collection.fullPubs : collection.partialPubs).push(pub);
+        (pub.tags.length ? pub.tags : untagged).forEach(function (tag) {
+            tag.pubs.push(pub);
+            (!pub.isPartial ? tag.fullPubs : tag.partialPubs).push(pub);
           });
         pub.authors.forEach(function (author) {
             author.pubs.push(pub);

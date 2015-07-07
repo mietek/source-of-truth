@@ -13,7 +13,7 @@ var _ = {
       title:            r.propTypes.string.isRequired,
       authors:          r.propTypes.array,
       year:             r.propTypes.object,
-      collections:      r.propTypes.array,
+      tags:             r.propTypes.array,
       abstract:         r.propTypes.string,
       citations:        r.propTypes.array,
       reverseCitations: r.propTypes.array,
@@ -40,7 +40,7 @@ var _ = {
             title:       this.props.title,
             authors:     this.props.authors,
             year:        this.props.year,
-            collections: this.props.collections,
+            tags:        this.props.tags,
             selectedId:  this.props.selectedId,
             onSelect:    this.props.onSelect
           }),

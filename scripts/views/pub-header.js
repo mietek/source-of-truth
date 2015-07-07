@@ -11,7 +11,7 @@ var _ = {
       title:       r.propTypes.string.isRequired,
       authors:     r.propTypes.array,
       year:        r.propTypes.object,
-      collections: r.propTypes.array,
+      tags:        r.propTypes.array,
       selectedId:  r.propTypes.string,
       onSelect:    r.propTypes.func
     };
@@ -49,21 +49,21 @@ var _ = {
               'Year'),
             r.span('value',
               this.props.year.name)),
-        !this.props.collections ? null :
-          this.props.collections.map(function (collection, index) {
+        !this.props.tags ? null :
+          this.props.tags.map(function (tag, index) {
               return (
                 genericItem({
-                    key:        collection.id + '-' + index,
-                    itemId:     collection.id,
-                    isPartial:  collection.isPartial,
+                    key:        tag.id + '-' + index,
+                    itemId:     tag.id,
+                    isPartial:  tag.isPartial,
                     selectedId: this.props.selectedId,
                     onSelect:   this.props.onSelect
                   },
                   index ? null :
                     r.span('label',
-                      this.props.collections.length === 1 ? 'Collection' : 'Collections'),
+                      this.props.tags.length === 1 ? 'Tag' : 'Tags'),
                   r.span('value',
-                    collection.name)));
+                    tag.name)));
             }.bind(this))));
   }
 };
