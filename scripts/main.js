@@ -10,7 +10,6 @@ PDFJS.cMapUrl = document.location.origin + '/_scripts/pdf/cmaps/';
 PDFJS.cMapPacked = true;
 
 window.main = function () {
-  utils.detectHairline();
   utils.detectTouch();
   r.render(browser(), document.getElementById('main'));
 };
