@@ -222,9 +222,9 @@ var _ = {
               className: 'column'
             },
             rootColumn({
-                tags:        this.state.tags.all,
-                selectedId:  this.state.path && this.state.path.length > 0 && this.state.path[0],
-                onSelect:    function (itemId) {
+                tags:       this.state.tags.all,
+                selectedId: this.state.path && this.state.path.length > 0 && this.state.path[0],
+                onSelect:   function (itemId) {
                   this.select([], itemId);
                 }.bind(this)
               })),

@@ -5,14 +5,14 @@ var r = require('../common/react');
 var _ = {
   propTypes: function () {
     return {
-      pubId:       r.propTypes.string.isRequired,
-      authors:     r.propTypes.array.isRequired,
-      year:        r.propTypes.object.isRequired,
-      suffix:      r.propTypes.string,
-      title:       r.propTypes.string.isRequired,
-      isPartial:   r.propTypes.bool,
-      selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      pubId:      r.propTypes.string.isRequired,
+      authors:    r.propTypes.array.isRequired,
+      year:       r.propTypes.object.isRequired,
+      suffix:     r.propTypes.string,
+      title:      r.propTypes.string.isRequired,
+      isPartial:  r.propTypes.bool,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func
     };
   },
 

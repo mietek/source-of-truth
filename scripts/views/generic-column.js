@@ -8,10 +8,10 @@ var genericList = require('./generic-list');
 var _ = {
   propTypes: function () {
     return {
-      heading:      r.propTypes.string.isRequired,
-      items:        r.propTypes.array,
-      selectedId:   r.propTypes.string,
-      onSelect:     r.propTypes.func
+      heading:    r.propTypes.string.isRequired,
+      items:      r.propTypes.array,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func
     };
   },
 
