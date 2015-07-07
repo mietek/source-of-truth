@@ -195,14 +195,26 @@ var _ = module.exports = {
         (!pub.isPartial ? full : partial).push(pub);
         (pub.tags.length ? pub.tags : untagged).forEach(function (tag) {
             tag.pubs.push(pub);
-            (!pub.isPartial ? tag.fullPubs : tag.partialPubs).push(pub);
+            if (!pub.isPartial) {
+              tag.fullCount += 1;
+            } else {
+              tag.partialCount += 1;
+            }
           });
         pub.authors.forEach(function (author) {
             author.pubs.push(pub);
-            (!pub.isPartial ? author.fullPubs : author.partialPubs).push(pub);
+            if (!pub.isPartial) {
+              author.fullCount += 1;
+            } else {
+              author.partialCount += 1;
+            }
           });
         pub.year.pubs.push(pub);
-        (!pub.isPartial ? pub.year.fullPubs : pub.year.partialPubs).push(pub);
+        if (!pub.isPartial) {
+          pub.year.fullCount += 1;
+        } else {
+          pub.year.partialCount += 1;
+        }
       });
     return {
       byId:    byId,

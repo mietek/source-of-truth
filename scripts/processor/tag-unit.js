@@ -17,14 +17,13 @@ var _ = module.exports = {
       id   = utils.latinize(name);
     }
     return {
-      type:        'tag',
-      name:        name,
-      id:          id,
-      pubs:        [],
-      fullPubs:    [],
-      partialPubs: [],
-      isUntagged:  isUntagged,
-      isPartial:   undefined
+      type:         'tag',
+      name:         name,
+      id:           id,
+      pubs:         [],
+      fullCount:    0,
+      partialCount: 0,
+      isUntagged:   isUntagged
     };
   },
 
@@ -75,19 +74,6 @@ var _ = module.exports = {
         return tagInfo.byName[rawName];
       }).filter(function (tag) {
         return !!tag;
-      });
-  },
-
-  finish: function (tagInfo) {
-    var full    = [];
-    var partial = [];
-    tagInfo.all.forEach(function (tag) {
-        tag.isPartial = !tag.fullPubs.length;
-        (tag.fullPubs.length ? full : partial).push(tag);
-      });
-    return utils.assign(tagInfo, {
-        full:    full,
-        partial: partial
       });
   }
 };

@@ -124,10 +124,9 @@ var _ = module.exports = {
       name:             name,
       id:               id,
       pubs:             [],
-      fullPubs:         [],
-      partialPubs:      [],
-      isUnknown:        isUnknown,
-      isPartial:        undefined
+      fullCount:        0,
+      partialCount:     0,
+      isUnknown:        isUnknown
     };
   },
 
@@ -281,19 +280,6 @@ var _ = module.exports = {
           return undefined;
         }
         return authorInfo.byRawName[rawName];
-      });
-  },
-
-  finish: function (authorInfo) {
-    var full    = [];
-    var partial = [];
-    authorInfo.all.forEach(function (author) {
-        author.isPartial = !author.fullPubs.length;
-        (author.fullPubs.length ? full : partial).push(author);
-      });
-    return utils.assign(authorInfo, {
-        full:    full,
-        partial: partial
       });
   }
 };

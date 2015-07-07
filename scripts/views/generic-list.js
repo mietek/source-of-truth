@@ -86,7 +86,7 @@ var _ = {
                             key:        index,
                             itemId:     item.id,
                             isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
-                            isPartial:  item.isPartial,
+                            isPartial:  item.fullCount === 0,
                             selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect
                           },

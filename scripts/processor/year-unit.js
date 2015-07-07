@@ -25,14 +25,13 @@ var _ = module.exports = {
       id   = utils.latinize(name);
     }
     return {
-      type:        'year',
-      name:        name,
-      id:          id,
-      pubs:        [],
-      fullPubs:    [],
-      partialPubs: [],
-      isUnknown:   isUnknown,
-      isPartial:   undefined
+      type:         'year',
+      name:         name,
+      id:           id,
+      pubs:         [],
+      fullCount:    0,
+      partialCount: 0,
+      isUnknown:    isUnknown
     };
   },
 
@@ -82,18 +81,5 @@ var _ = module.exports = {
       return undefined;
     }
     return yearInfo.byId[id];
-  },
-
-  finish: function (yearInfo) {
-    var full    = [];
-    var partial = [];
-    yearInfo.all.forEach(function (year) {
-        year.isPartial = !year.fullPubs.length;
-        (year.fullPubs.length ? full : partial).push(year);
-      });
-    return utils.assign(yearInfo, {
-        full:    full,
-        partial: partial
-      });
   }
 };
