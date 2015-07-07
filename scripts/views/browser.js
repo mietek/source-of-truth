@@ -17,17 +17,21 @@ var _ = {
   getInitialState: function () {
      var database = processor.processDatabase();
      return utils.assign({}, database, {
-         path:        [],
+         path:        null,
          componentId: utils.getRandomUuid()
        });
+  },
+
+  setPath: function (path) {
+    this.setState({
+        path: path
+      });
   },
 
   select: function (basePath, itemId) {
     var path = itemId ? basePath.concat([itemId]) : basePath;
     var hash = '#' + path.join('/');
-    this.setState({
-        path: path
-      });
+    this.setPath(path);
     history.pushState({
         path: path
       }, '', hash);
@@ -35,9 +39,7 @@ var _ = {
 
   componentDidMount: function () {
     var path = location.hash ? location.hash.slice(1).split('/') : [];
-    this.setState({
-        path: path
-      });
+    this.setPath(path);
     addEventListener('popstate', this.onPopState);
   },
 
@@ -52,9 +54,7 @@ var _ = {
     } else {
       path = location.hash ? location.hash.slice(1).split('/') : [];
     }
-    this.setState({
-        path: path
-      });
+    this.setPath(path);
   },
 
   renderColumn: function (itemId, selectedId, onSelect) {
@@ -163,6 +163,7 @@ var _ = {
 
   getLastId: function (state) {
     return (
+      state.path &&
       state.path.length &&
       state.path[state.path.length - 1]);
   },
@@ -186,7 +187,7 @@ var _ = {
   getColumnCount: function (state) {
     var hasPdf = !!this.getPdfUrl(state);
     return (
-      1 + state.path.length + (
+      1 + (state.path ? state.path.length : 0) + (
         hasPdf ? 1 : 0));
   },
 
@@ -226,9 +227,13 @@ var _ = {
         }, 500);
       maxX = scrollWidth - browser.clientWidth;
     }
-    easeScroll.tween(startX, maxX, maxX, 500, function (x) {
-        browser.scrollLeft = x;
-      });
+    if (prevState.path) {
+      easeScroll.tween(startX, maxX, maxX, 500, function (x) {
+          browser.scrollLeft = x;
+        });
+    } else {
+      browser.scrollLeft = maxX;
+    }
   },
 
   render: function () {
@@ -243,12 +248,12 @@ var _ = {
             },
             rootColumn({
                 tags:        this.state.tags.all,
-                selectedId:  this.state.path.length > 0 && this.state.path[0],
+                selectedId:  this.state.path && this.state.path.length > 0 && this.state.path[0],
                 onSelect:    function (itemId) {
                   this.select([], itemId);
                 }.bind(this)
               })),
-          this.state.path.map(function (itemId, index) {
+          (this.state.path || []).map(function (itemId, index) {
               var basePath   = this.state.path.slice(0, index + 1);
               var selectedId = this.state.path.length > (index + 1) && this.state.path[index + 1];
               var onSelect   = function (itemId) {
