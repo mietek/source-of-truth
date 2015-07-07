@@ -59,10 +59,10 @@ var _ = {
 
   renderColumn: function (itemId, selectedId, onSelect) {
     switch (itemId) {
-      case 'available-by-signature':
+      case 'available-by-key':
         return (
           genericColumn({
-              heading:      'Available publications — By signature',
+              heading:      'Available publications — By key',
               fullItems:    this.state.pubs.full,
               selectedId:   selectedId,
               onSelect:     onSelect
@@ -83,10 +83,10 @@ var _ = {
               selectedId:   selectedId,
               onSelect:     onSelect
             }));
-      case 'known-by-signature':
+      case 'known-by-key':
         return (
           genericColumn({
-              heading:      'Known publications — By signature',
+              heading:      'Known publications — By key',
               items:        this.state.pubs.all,
               selectedId:   selectedId,
               onSelect:     onSelect

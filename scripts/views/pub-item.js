@@ -28,7 +28,7 @@ var _ = {
             this.props.onSelect(isSelected ? null : this.props.pubId);
           }.bind(this)
         },
-        r.span('signature',
+        r.span('key',
           !this.props.authors[0].isUnknown ?
             r.span('author',
               this.props.authors[0].name) :

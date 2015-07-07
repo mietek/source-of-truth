@@ -38,8 +38,8 @@ var _ = {
         genericList({
             label:           'Available publications',
             items:           [{
-              name: 'By signature',
-              id:   'available-by-signature'
+              name: 'By key',
+              id:   'available-by-key'
             }, {
               name: 'By author',
               id:   'available-by-author'
@@ -54,8 +54,8 @@ var _ = {
         genericList({
             label:           'Known publications',
             items:           [{
-              name: 'By signature',
-              id:   'known-by-signature'
+              name: 'By key',
+              id:   'known-by-key'
             }, {
               name: 'By author',
               id:   'known-by-author'

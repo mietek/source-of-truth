@@ -14,7 +14,7 @@ var _ = module.exports = {
     var year       = yearUnit.lookup(rawPub.year, yearInfo);
     var isNumbered = !rawPub.numbered || rawPub.numbered === 'y';
     var isPartial  = isCitation || rawPub.partial === 'y';
-    var signature  = (
+    var key = (
       (!authors[0].isUnknown ? authors[0].name : 'unknown') +
       (!year.isUnknown ? ' ' + year.name : ' unknown'));
     return {
@@ -25,7 +25,7 @@ var _ = module.exports = {
       year:             year,
       title:            rawPub.title,
       abstract:         rawPub.abstract,
-      signature:        signature,
+      key:              key,
       suffix:           undefined,
       name:             undefined,
       id:               undefined,
@@ -64,33 +64,33 @@ var _ = module.exports = {
   },
 
   partitionAll: function (rawPubs, tagInfo, authorInfo, yearInfo) {
-    var allBySignature = {};
+    var allByKey = {};
     rawPubs.forEach(function (rawPub) {
         var pub = _.process(rawPub, false, tagInfo, authorInfo, yearInfo);
-        if (pub.signature in allBySignature) {
-          allBySignature[pub.signature].push(pub);
+        if (pub.key in allByKey) {
+          allByKey[pub.key].push(pub);
         } else {
-          allBySignature[pub.signature] = [pub];
+          allByKey[pub.key] = [pub];
         }
         (rawPub.citations || []).forEach(function (rawCitation) {
             var citation = _.process(rawCitation, true, tagInfo, authorInfo, yearInfo);
             pub.citations.push(citation);
             citation.reverseCitations.push(pub);
-            if (citation.signature in allBySignature) {
-              allBySignature[citation.signature].push(citation);
+            if (citation.key in allByKey) {
+              allByKey[citation.key].push(citation);
             } else {
-              allBySignature[citation.signature] = [citation];
+              allByKey[citation.key] = [citation];
             }
           });
       });
     return {
-      allBySignature: allBySignature
+      allByKey: allByKey
     };
   },
 
   isPubSame: function (pub, otherPub) {
     return (
-      pub.signature === otherPub.signature &&
+      pub.key === otherPub.key &&
       pub.title === otherPub.title);
   },
 
@@ -130,9 +130,9 @@ var _ = module.exports = {
     var full    = [];
     var partial = [];
     var pubInfo = _.partitionAll(rawPubs, tagInfo, authorInfo, yearInfo);
-    Object.keys(pubInfo.allBySignature).forEach(function (signature) {
-        var pubs                 = pubInfo.allBySignature[signature];
-        var isSignatureAmbiguous = false;
+    Object.keys(pubInfo.allByKey).forEach(function (key) {
+        var pubs           = pubInfo.allByKey[key];
+        var isKeyAmbiguous = false;
         pubs.forEach(function (pub, index) {
             if (!pub) {
               return;
@@ -155,7 +155,7 @@ var _ = module.exports = {
                   delete pubs[pubs.indexOf(otherPub)];
                   delete otherPubs[otherIndex];
                 } else {
-                  isSignatureAmbiguous = true;
+                  isKeyAmbiguous = true;
                 }
               });
           });
@@ -168,13 +168,13 @@ var _ = module.exports = {
             var suffix;
             var name;
             var id;
-            if (!isSignatureAmbiguous) {
+            if (!isKeyAmbiguous) {
               suffix = null;
-              name   = pub.signature;
+              name   = pub.key;
             } else {
               suffix = _.getSuffix(counter);
               name   = (
-                pub.signature +
+                pub.key +
                 (pub.year.isUnknown ? ' ' : '') +
                 suffix);
               counter += 1;
