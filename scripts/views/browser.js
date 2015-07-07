@@ -64,6 +64,7 @@ var _ = {
           genericColumn({
               heading:    'by key',
               items:      this.state.pubs.all,
+              fullCount:  this.state.pubs.fullCount,
               selectedId: selectedId,
               onSelect:   onSelect
             }));
@@ -72,6 +73,7 @@ var _ = {
           genericColumn({
               heading:    'by author',
               items:      this.state.authors.all,
+              fullCount:  this.state.authors.fullCount,
               selectedId: selectedId,
               onSelect:   onSelect
             }));
@@ -80,6 +82,7 @@ var _ = {
           genericColumn({
               heading:    'by year',
               items:      this.state.years.all,
+              fullCount:  this.state.years.fullCount,
               selectedId: selectedId,
               onSelect:   onSelect
             }));
@@ -90,40 +93,29 @@ var _ = {
       case 'pub':
         return (
           pubColumn({
-              authors:          item.authors,
-              year:             item.year,
-              title:            item.title,
-              suffix:           item.suffix,
-              tags:             item.tags,
-              abstract:         item.abstract,
-              citations:        item.citations,
-              reverseCitations: item.reverseCitations,
-              isNumbered:       item.isNumbered,
-              isPartial:        item.isPartial,
-              selectedId:       selectedId,
-              onSelect:         onSelect
+              authors:                  item.authors,
+              year:                     item.year,
+              title:                    item.title,
+              suffix:                   item.suffix,
+              tags:                     item.tags,
+              abstract:                 item.abstract,
+              citations:                item.citations,
+              fullCitationCount:        item.fullCitationCount,
+              reverseCitations:         item.reverseCitations,
+              fullReverseCitationCount: item.fullReverseCitationCount,
+              isNumbered:               item.isNumbered,
+              isPartial:                item.isPartial,
+              selectedId:               selectedId,
+              onSelect:                 onSelect
             }));
       case 'tag':
-        return (
-          genericColumn({
-              heading:    item.name,
-              items:      item.pubs,
-              selectedId: selectedId,
-              onSelect:   onSelect
-            }));
       case 'author':
-        return (
-          genericColumn({
-              heading:    item.fullName,
-              items:      item.pubs,
-              selectedId: selectedId,
-              onSelect:   onSelect
-            }));
       case 'year':
         return (
           genericColumn({
-              heading:    item.name,
+              heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
               items:      item.pubs,
+              fullCount:  item.fullCount,
               selectedId: selectedId,
               onSelect:   onSelect
             }));

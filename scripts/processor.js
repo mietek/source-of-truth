@@ -16,6 +16,9 @@ module.exports = {
     var yearInfo   = yearUnit.processAll(rawPubs);
     var pubInfo    = pubUnit.processAll(rawPubs, tagInfo, authorInfo, yearInfo);
     var itemsById  = utils.assign({}, tagInfo.byId, authorInfo.byId, yearInfo.byId, pubInfo.byId);
+    tagUnit.count(tagInfo);
+    authorUnit.count(authorInfo);
+    yearUnit.count(yearInfo);
     return {
       tags:      tagInfo,
       authors:   authorInfo,

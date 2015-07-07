@@ -264,9 +264,11 @@ var _ = module.exports = {
       });
     _.sort(all);
     return {
-      byRawName: authorInfo.byRawName,
-      byId:      byId,
-      all:       all
+      byRawName:    authorInfo.byRawName,
+      byId:         byId,
+      all:          all,
+      fullCount:    undefined,
+      partialCount: undefined
     };
   },
 
@@ -280,6 +282,22 @@ var _ = module.exports = {
           return undefined;
         }
         return authorInfo.byRawName[rawName];
+      });
+  },
+
+  count: function (authorInfo) {
+    var fullCount    = 0;
+    var partialCount = 0;
+    authorInfo.all.forEach(function (author) {
+        if (!!author.fullCount) {
+          fullCount += 1;
+        } else {
+          partialCount += 1;
+        }
+      });
+    utils.assign(authorInfo, {
+        fullCount:    fullCount,
+        partialCount: partialCount
       });
   }
 };

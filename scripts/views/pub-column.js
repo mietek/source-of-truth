@@ -9,18 +9,20 @@ var pubHeader = require('./pub-header');
 var _ = {
   propTypes: function () {
     return {
-      authors:          r.propTypes.array.isRequired,
-      year:             r.propTypes.object.isRequired,
-      suffix:           r.propTypes.string,
-      title:            r.propTypes.string.isRequired,
-      tags:             r.propTypes.array,
-      abstract:         r.propTypes.string,
-      citations:        r.propTypes.array,
-      reverseCitations: r.propTypes.array,
-      isNumbered:       r.propTypes.bool,
-      isPartial:        r.propTypes.bool,
-      selectedId:       r.propTypes.string,
-      onSelect:         r.propTypes.func
+      authors:                  r.propTypes.array.isRequired,
+      year:                     r.propTypes.object.isRequired,
+      suffix:                   r.propTypes.string,
+      title:                    r.propTypes.string.isRequired,
+      tags:                     r.propTypes.array,
+      abstract:                 r.propTypes.string,
+      citations:                r.propTypes.array,
+      fullCitationCount:        r.propTypes.number,
+      reverseCitations:         r.propTypes.array,
+      fullReverseCitationCount: r.propTypes.number,
+      isNumbered:               r.propTypes.bool,
+      isPartial:                r.propTypes.bool,
+      selectedId:               r.propTypes.string,
+      onSelect:                 r.propTypes.func
     };
   },
 
@@ -56,7 +58,7 @@ var _ = {
           genericList({
               label:          'Cites',
               items:          this.props.citations,
-              isLabelSwapped: true,
+              fullCount:      this.props.fullCitationCount,
               isNumbered:     this.props.isNumbered,
               selectedId:     this.props.selectedId,
               onSelect:       this.props.onSelect
@@ -65,7 +67,7 @@ var _ = {
           genericList({
               label:          'Cited by',
               items:          this.props.reverseCitations,
-              isLabelSwapped: true,
+              fullCount:      this.props.fullReverseCitationCount,
               selectedId:     this.props.selectedId,
               onSelect:       this.props.onSelect
             })));

@@ -18,21 +18,25 @@ var _ = module.exports = {
       (!authors[0].isUnknown ? authors[0].name : 'unknown') +
       (!year.isUnknown ? ' ' + year.name : ' unknown'));
     return {
-      type:             'pub',
-      uuid:             utils.getRandomUuid(),
-      tags:             tags,
-      authors:          authors,
-      year:             year,
-      title:            rawPub.title,
-      abstract:         rawPub.abstract,
-      key:              key,
-      suffix:           undefined,
-      name:             undefined,
-      id:               undefined,
-      citations:        [],
-      reverseCitations: [],
-      isNumbered:       isNumbered,
-      isPartial:        isPartial
+      type:                        'pub',
+      uuid:                        utils.getRandomUuid(),
+      tags:                        tags,
+      authors:                     authors,
+      year:                        year,
+      title:                       rawPub.title,
+      abstract:                    rawPub.abstract,
+      key:                         key,
+      suffix:                      undefined,
+      name:                        undefined,
+      id:                          undefined,
+      citations:                   [],
+      fullCitationCount:           undefined,
+      partialCitationCount:        undefined,
+      reverseCitations:            [],
+      reverseCitationCount:        undefined,
+      partialReverseCitationCount: undefined,
+      isNumbered:                  isNumbered,
+      isPartial:                   isPartial
     };
   },
 
@@ -124,11 +128,72 @@ var _ = module.exports = {
     return String.fromCharCode(baseCode + n) + suffix;
   },
 
+  postProcessAll: function (all, tagInfo, authorInfo, yearInfo) {
+    var fullCount    = 0;
+    var partialCount = 0;
+    var untagged     = [tagInfo.byId[tagUnit.untaggedId]];
+    all.forEach(function (pub) {
+        var fullCitationCount           = 0;
+        var partialCitationCount        = 0;
+        var fullReverseCitationCount    = 0;
+        var partialReverseCitationCount = 0;
+        pub.citations.forEach(function (citation) {
+            if (!citation.isPartial) {
+              fullCitationCount += 1;
+            } else {
+              partialCitationCount += 1;
+            }
+          });
+        pub.reverseCitations.forEach(function (reverseCitation) {
+            if (!reverseCitation.isPartial) {
+              fullReverseCitationCount += 1;
+            } else {
+              partialReverseCitationCount += 1;
+            }
+          });
+        utils.assign(pub, {
+            fullCitationCount:           fullCitationCount,
+            partialCitationCount:        partialCitationCount,
+            fullReverseCitationCount:    fullReverseCitationCount,
+            partialReverseCitationCount: partialReverseCitationCount
+          });
+        if (!pub.isPartial) {
+          fullCount += 1;
+        } else {
+          partialCount += 1;
+        }
+        (pub.tags.length ? pub.tags : untagged).forEach(function (tag) {
+            tag.pubs.push(pub);
+            if (!pub.isPartial) {
+              tag.fullCount += 1;
+            } else {
+              tag.partialCount += 1;
+            }
+          });
+        pub.authors.forEach(function (author) {
+            author.pubs.push(pub);
+            if (!pub.isPartial) {
+              author.fullCount += 1;
+            } else {
+              author.partialCount += 1;
+            }
+          });
+        pub.year.pubs.push(pub);
+        if (!pub.isPartial) {
+          pub.year.fullCount += 1;
+        } else {
+          pub.year.partialCount += 1;
+        }
+      });
+    return {
+      fullCount:    fullCount,
+      partialCount: partialCount
+    };
+  },
+
   processAll: function (rawPubs, tagInfo, authorInfo, yearInfo) {
     var byId    = {};
     var all     = [];
-    var full    = [];
-    var partial = [];
     var pubInfo = _.partitionAll(rawPubs, tagInfo, authorInfo, yearInfo);
     Object.keys(pubInfo.allByKey).forEach(function (key) {
         var pubs           = pubInfo.allByKey[key];
@@ -190,37 +255,12 @@ var _ = module.exports = {
           });
       });
     _.sort(all);
-    var untagged = [tagInfo.byId[tagUnit.untaggedId]];
-    all.forEach(function (pub) {
-        (!pub.isPartial ? full : partial).push(pub);
-        (pub.tags.length ? pub.tags : untagged).forEach(function (tag) {
-            tag.pubs.push(pub);
-            if (!pub.isPartial) {
-              tag.fullCount += 1;
-            } else {
-              tag.partialCount += 1;
-            }
-          });
-        pub.authors.forEach(function (author) {
-            author.pubs.push(pub);
-            if (!pub.isPartial) {
-              author.fullCount += 1;
-            } else {
-              author.partialCount += 1;
-            }
-          });
-        pub.year.pubs.push(pub);
-        if (!pub.isPartial) {
-          pub.year.fullCount += 1;
-        } else {
-          pub.year.partialCount += 1;
-        }
-      });
+    var postPubInfo = _.postProcessAll(all, tagInfo, authorInfo, yearInfo);
     return {
-      byId:    byId,
-      all:     all,
-      full:    full,
-      partial: partial
+      byId:         byId,
+      all:          all,
+      fullCount:    postPubInfo.fullCount,
+      partialCount: postPubInfo.partialCount
     };
   }
 };

@@ -66,8 +66,10 @@ var _ = module.exports = {
       });
     _.sort(all);
     return {
-      byId: byId,
-      all:  all
+      byId:         byId,
+      all:          all,
+      fullCount:    0,
+      partialCount: 0
     };
   },
 
@@ -81,5 +83,21 @@ var _ = module.exports = {
       return undefined;
     }
     return yearInfo.byId[id];
+  },
+
+  count: function (yearInfo) {
+    var fullCount    = 0;
+    var partialCount = 0;
+    yearInfo.all.forEach(function (year) {
+        if (year.fullCount) {
+          fullCount += 1;
+        } else {
+          partialCount += 1;
+        }
+      });
+    utils.assign(yearInfo, {
+        fullCount:    fullCount,
+        partialCount: partialCount
+      });
   }
 };

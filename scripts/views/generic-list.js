@@ -11,9 +11,9 @@ var _ = {
     return {
       label:           r.propTypes.string,
       items:           r.propTypes.array,
+      fullCount:       r.propTypes.number,
       isNumbered:      r.propTypes.bool,
       isLabelNumbered: r.propTypes.bool,
-      isLabelSwapped:  r.propTypes.bool,
       selectedId:      r.propTypes.string,
       onSelect:        r.propTypes.func
     };
@@ -35,29 +35,36 @@ var _ = {
     if (!this.props.items) {
       return null;
     }
-    var isClickable = !!this.props.items.length;
-    var label       = (
-      !this.props.isLabelNumbered ? this.props.label : (
-        this.props.isLabelSwapped ?
-          (this.props.label + ' ' + this.props.items.length) :
-          (this.props.items.length + ' ' + this.props.label)));
+    var isClickable  = !!this.props.items.length;
+    var label;
+    if (!this.props.isLabelNumbered) {
+      label = this.props.label;
+    } else {
+      var isPartial = this.props.items.length !== this.props.fullCount;
+      label = (
+        (!this.props.label ? '' :
+          (this.props.label + ' ')) +
+        this.props.fullCount +
+        (!isPartial ? '' :
+          '/' + this.props.items.length) +
+        ' available');
+    }
     return (
       r.div('list' + (
           (this.props.isNumbered ? ' numbered' : '') +
           (this.state.isHidden ? ' hidden' : '')),
         r.div('spacer',
-          !this.props.label ? null :
-            r.span({
-                className: 'label' + (
-                  (isClickable ? ' clickable' : '')),
-                onClick:   isClickable && function (event) {
-                  event.stopPropagation();
-                  this.setState({
-                      isHidden: !this.state.isHidden
-                    });
-                }.bind(this)
-              },
-              label)),
+          r.span({
+              className: 'label' + (
+                (isClickable ? ' clickable' : '')),
+              onClick:   isClickable && function (event) {
+                event.stopPropagation();
+                this.setState({
+                    isHidden: !this.state.isHidden
+                  });
+              }.bind(this)
+            },
+            label)),
         genericTransitionGroup({
             transitionName: 'height'
           },

@@ -57,11 +57,11 @@ var _ = module.exports = {
       });
     _.sort(all);
     return {
-      byName:  byName,
-      byId:    byId,
-      all:     all,
-      full:    undefined,
-      partial: undefined
+      byName:       byName,
+      byId:         byId,
+      all:          all,
+      fullCount:    undefined,
+      partialCount: undefined
     };
   },
 
@@ -74,6 +74,22 @@ var _ = module.exports = {
         return tagInfo.byName[rawName];
       }).filter(function (tag) {
         return !!tag;
+      });
+  },
+
+  count: function (tagInfo) {
+    var fullCount    = 0;
+    var partialCount = 0;
+    tagInfo.all.forEach(function (tag) {
+        if (!!tag.fullCount) {
+          fullCount += 1;
+        } else {
+          partialCount += 1;
+        }
+      });
+    utils.assign(tagInfo, {
+        fullCount:    fullCount,
+        partialCount: partialCount
       });
   }
 };

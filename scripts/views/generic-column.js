@@ -10,6 +10,7 @@ var _ = {
     return {
       heading:    r.propTypes.string.isRequired,
       items:      r.propTypes.array,
+      fullCount:  r.propTypes.number,
       selectedId: r.propTypes.string,
       onSelect:   r.propTypes.func
     };
@@ -32,8 +33,8 @@ var _ = {
           }),
         !hasItems ? null :
             genericList({
-              label:      'items',
               items:      this.props.items,
+              fullCount:  this.props.fullCount,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect
             })));
