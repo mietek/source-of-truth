@@ -62,26 +62,26 @@ var _ = {
       case 'by-key':
         return (
           genericColumn({
-              heading:      'Publications — By key',
-              items:        this.state.pubs.all,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    'by key',
+              items:      this.state.pubs.all,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
       case 'by-author':
         return (
           genericColumn({
-              heading:      'Publications — By author',
-              items:        this.state.authors.all,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    'by author',
+              items:      this.state.authors.all,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
       case 'by-year':
         return (
           genericColumn({
-              heading:      'Publications — By year',
-              items:        this.state.years.all,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    'by year',
+              items:      this.state.years.all,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
     }
     var item     = this.state.itemsById[itemId];
@@ -90,10 +90,10 @@ var _ = {
       case 'pub':
         return (
           pubColumn({
-              signature:        item.name, // TODO: Ugh, naming
-              title:            item.title,
               authors:          item.authors,
               year:             item.year,
+              title:            item.title,
+              suffix:           item.suffix,
               tags:             item.tags,
               abstract:         item.abstract,
               citations:        item.citations,
@@ -106,26 +106,26 @@ var _ = {
       case 'tag':
         return (
           genericColumn({
-              heading:      (!item.isUntagged ? 'Tag — ' : '') + item.name,
-              items:        item.pubs,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    item.name,
+              items:      item.pubs,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
       case 'author':
         return (
           genericColumn({
-              heading:      (!item.isUnknown ? 'Author — ' : '') + item.fullName,
-              items:        item.pubs,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    item.fullName,
+              items:      item.pubs,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
       case 'year':
         return (
           genericColumn({
-              heading:      (!item.isUnknown ? 'Year — ' : '') + item.name,
-              items:        item.pubs,
-              selectedId:   selectedId,
-              onSelect:     onSelect
+              heading:    item.name,
+              items:      item.pubs,
+              selectedId: selectedId,
+              onSelect:   onSelect
             }));
       default:
         return (

@@ -9,10 +9,10 @@ var pubHeader = require('./pub-header');
 var _ = {
   propTypes: function () {
     return {
-      signature:        r.propTypes.string.isRequired,
+      authors:          r.propTypes.array.isRequired,
+      year:             r.propTypes.object.isRequired,
+      suffix:           r.propTypes.string,
       title:            r.propTypes.string.isRequired,
-      authors:          r.propTypes.array,
-      year:             r.propTypes.object,
       tags:             r.propTypes.array,
       abstract:         r.propTypes.string,
       citations:        r.propTypes.array,
@@ -36,13 +36,13 @@ var _ = {
           }.bind(this)
         },
         pubHeader({
-            signature:   this.props.signature,
-            title:       this.props.title,
-            authors:     this.props.authors,
-            year:        this.props.year,
-            tags:        this.props.tags,
-            selectedId:  this.props.selectedId,
-            onSelect:    this.props.onSelect
+            authors:    this.props.authors,
+            year:       this.props.year,
+            suffix:     this.props.suffix,
+            title:      this.props.title,
+            tags:       this.props.tags,
+            selectedId: this.props.selectedId,
+            onSelect:   this.props.onSelect
           }),
         abstract({
             content: this.props.abstract

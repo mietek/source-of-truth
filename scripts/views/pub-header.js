@@ -7,13 +7,13 @@ var genericItem = require('./generic-item');
 var _ = {
   propTypes: function () {
     return {
-      signature:   r.propTypes.string.isRequired,
-      title:       r.propTypes.string.isRequired,
-      authors:     r.propTypes.array,
-      year:        r.propTypes.object,
-      tags:        r.propTypes.array,
-      selectedId:  r.propTypes.string,
-      onSelect:    r.propTypes.func
+      authors:    r.propTypes.array.isRequired,
+      year:       r.propTypes.object.isRequired,
+      suffix:     r.propTypes.string,
+      title:      r.propTypes.string.isRequired,
+      tags:       r.propTypes.array,
+      selectedId: r.propTypes.string,
+      onSelect:   r.propTypes.func
     };
   },
 
@@ -21,7 +21,25 @@ var _ = {
     return (
       r.div('header',
         r.div('heading',
-          this.props.signature + ' — ' + this.props.title),
+          !this.props.authors[0].isUnknown ?
+            r.span('author',
+              this.props.authors[0].name) :
+            r.span('special author',
+              'u.'),
+          r.span({}, ' '),
+          !this.props.year.isUnknown ?
+            r.span('year',
+              this.props.year.name) :
+            r.span('special year',
+              'u.'),
+          !(this.props.year.isUnknown && this.props.suffix) ? null :
+            r.span({}, ' '),
+          !this.props.suffix ? null :
+            r.span('suffix',
+              this.props.suffix),
+          r.span({}, ' — '),
+          r.span('title',
+            this.props.title)),
         !this.props.authors ? null :
           this.props.authors.map(function (author, index) {
               return (

@@ -85,7 +85,7 @@ var _ = {
                         genericItem({
                             key:        index,
                             itemId:     item.id,
-                            isSpecial:  item.type === 'tag' ? item.isUntagged : item.isUnknown, // TODO: Ugh
+                            isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
                             isPartial:  item.isPartial,
                             selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect

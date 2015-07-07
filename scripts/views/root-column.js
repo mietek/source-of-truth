@@ -38,14 +38,17 @@ var _ = {
         genericList({
             label:           'Publications',
             items:           [{
-              name: 'By key',
-              id:   'by-key'
+              name:      'by key',
+              id:        'by-key',
+              isSpecial: true
             }, {
-              name: 'By author',
-              id:   'by-author'
+              name:      'by author',
+              id:        'by-author',
+              isSpecial: true
             }, {
-              name: 'By year',
-              id:   'by-year'
+              name:      'by year',
+              id:        'by-year',
+              isSpecial: true
             }],
             isLabelNumbered: false,
             selectedId:      this.props.selectedId,
