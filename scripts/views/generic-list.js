@@ -72,7 +72,9 @@ var _ = {
                         pubItem({
                             key:        index,
                             pubId:      item.id,
-                            signature:  item.name, // TODO: Ugh, naming
+                            authors:    item.authors,
+                            year:       item.year,
+                            suffix:     item.suffix,
                             title:      item.title,
                             isPartial:  item.isPartial,
                             selectedId: this.props.selectedId,
@@ -83,6 +85,7 @@ var _ = {
                         genericItem({
                             key:        index,
                             itemId:     item.id,
+                            isSpecial:  item.type === 'tag' ? item.isUntagged : item.isUnknown, // TODO: Ugh
                             isPartial:  item.isPartial,
                             selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect

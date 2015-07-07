@@ -77,14 +77,14 @@ var _ = module.exports = {
     var id;
     if (isUnknown) {
       rawNames         = ['unknown'];
-      lastName         = 'unknown';
+      lastName         = 'unknown author';
       shortInitials    = [];
       initials         = [];
-      shortName        = 'unknown author';
-      reverseShortName = 'unknown author';
-      fullName         = 'unknown author';
-      reverseFullName  = 'unknown author';
-      name             = 'unknown author';
+      shortName        = 'unknown author';
+      reverseShortName = 'unknown author';
+      fullName         = 'unknown author';
+      reverseFullName  = 'unknown author';
+      name             = 'unknown author';
       id               = _.unknownId;
     } else {
       var tokens = rawName.replace(/\.-/g, '-').split(/[\. ]/).filter(function (token) {
@@ -243,15 +243,21 @@ var _ = module.exports = {
               isShortNameAmbiguous = true;
             }
             if (!author.isUnknown) {
+              var name;
+              var id;
               if (!isLastNameAmbiguous) {
-                author.name = author.lastName;
+                name = author.lastName;
               } else if (!isShortNameAmbiguous) {
-                author.name = author.reverseShortName;
+                name = author.reverseShortName;
               } else {
-                author.name = author.reverseFullName;
+                name = author.reverseFullName;
                 console.warn('Ambiguous author:', author.reverseFullName);
               }
-              author.id = utils.latinize(author.name);
+              id = utils.latinize(name);
+              utils.assign(author, {
+                  name: name,
+                  id:   id
+                });
             }
             byId[author.id] = author;
             all.push(author);

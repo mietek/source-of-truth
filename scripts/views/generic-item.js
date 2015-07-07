@@ -6,6 +6,7 @@ var _ = {
   propTypes: function () {
     return {
       itemId:     r.propTypes.string,
+      isSpecial:  r.propTypes.bool,
       isPartial:  r.propTypes.bool,
       selectedId: r.propTypes.string,
       onSelect:   r.propTypes.func
@@ -18,6 +19,7 @@ var _ = {
     return (
       r.div({
           className: 'item' + (
+            (this.props.isSpecial ? ' special' : '') +
             (this.props.isPartial ? ' partial' : '') +
             (isClickable ? ' clickable' : '') +
             (isSelected ? ' selected' : '')),

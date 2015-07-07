@@ -26,6 +26,7 @@ var _ = module.exports = {
       title:            rawPub.title,
       abstract:         rawPub.abstract,
       signature:        signature,
+      suffix:           undefined,
       name:             undefined,
       id:               undefined,
       citations:        [],
@@ -164,16 +165,26 @@ var _ = module.exports = {
             if (!pub) {
               return;
             }
+            var suffix;
+            var name;
+            var id;
             if (!isSignatureAmbiguous) {
-              pub.name = pub.signature;
+              suffix = null;
+              name   = pub.signature;
             } else {
-              pub.name = (
+              suffix = _.getSuffix(counter);
+              name   = (
                 pub.signature +
                 (pub.year.isUnknown ? ' ' : '') +
-                _.getSuffix(counter));
+                suffix);
               counter += 1;
             }
-            pub.id = utils.latinize(pub.name);
+            id = utils.latinize(name);
+            utils.assign(pub, {
+                suffix: suffix,
+                name:   name,
+                id:     id
+              });
             byId[pub.id] = pub;
             all.push(pub);
           });

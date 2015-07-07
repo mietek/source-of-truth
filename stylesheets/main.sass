@@ -80,13 +80,16 @@ body
   overflow: hidden
   text-overflow: ellipsis
 
-@mixin label
-  @include ellipsis
-  width: 100%
+@mixin small-caps
   font-family: "concourse-c3", sans-serif
   vertical-align: top
   position: relative
   top: 1px
+
+@mixin label
+  @include ellipsis
+  @include small-caps
+  width: 100%
   color: $black9
   .selected &
     color: $white9
@@ -158,9 +161,9 @@ body
 
 .header .heading
   @include selectable
+  @include small-caps
   display: block
   text-align: center
-  font-family: "concourse-c3", sans-serif
   hyphens: auto
   padding-left: 24px
   padding-right: 24px
@@ -254,6 +257,10 @@ body
 
 .item.selected.partial
   color: $white9
+
+
+.special .content, .special .value, .special.author, .special.year, .suffix
+  @include small-caps
 
 
 .abstract

@@ -28,6 +28,7 @@ var _ = {
                 genericItem({
                     key:        author.id + '-' + index,
                     itemId:     author.id,
+                    isSpecial:  author.isUnknown,
                     isPartial:  author.isPartial,
                     selectedId: this.props.selectedId,
                     onSelect:   this.props.onSelect
@@ -41,6 +42,7 @@ var _ = {
         !this.props.year ? null :
           genericItem({
               itemId:     this.props.year.id,
+              isSpecial:  this.props.year.isUnknown,
               isPartial:  this.props.year.isPartial,
               selectedId: this.props.selectedId,
               onSelect:   this.props.onSelect
@@ -55,6 +57,7 @@ var _ = {
                 genericItem({
                     key:        tag.id + '-' + index,
                     itemId:     tag.id,
+                    isSpecial:  tag.isUntagged,
                     isPartial:  tag.isPartial,
                     selectedId: this.props.selectedId,
                     onSelect:   this.props.onSelect
