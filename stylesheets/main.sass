@@ -71,8 +71,8 @@ body
 
 
 #main
-  height: 100%
   width: 100%
+  height: 100%
 
 
 @mixin ellipsis
@@ -90,7 +90,6 @@ body
   @include ellipsis
   @include small-caps
   display: inline-block
-  width: 100%
   color: $black9
   .selected &
     color: $white9
@@ -136,7 +135,6 @@ body
   padding-right: 8px
 
 .spacer
-  max-width: 100%
   margin-top: 19px
 
 .spacer .label:after
@@ -146,8 +144,7 @@ body
   position: relative
   z-index: 1
   opacity: 0
-  transition: all $transition-duration ease
-  -webkit-font-smoothing: antialiased
+  transition: all $transition-duration
 
 .hidden .spacer .label:after
   opacity: 1
@@ -245,6 +242,9 @@ body
   padding-right: 8px
   text-align: right
 
+.list.numbered .item.selected .key:before
+  color: $white9
+
 
 .item .title
   @include ellipsis
@@ -316,13 +316,13 @@ body
   opacity: 0
   &.fade-enter-active
     opacity: 1
-    transition: all $transition-duration ease
+    transition: all $transition-duration
 
 .fade-leave
   opacity: 1
   &.fade-leave-active
     opacity: 0
-    transition: all $transition-duration ease
+    transition: all $transition-duration
 
 
 .height-enter
@@ -332,7 +332,7 @@ body
   &.height-enter-active
     // NOTE: JS code sets max-height: 100%
     opacity: 1
-    transition: all $transition-duration ease
+    transition: all $transition-duration
 
 .height-leave
   // NOTE: JS code sets max-height: 100%
@@ -340,8 +340,8 @@ body
   &.height-leave-active
     // NOTE: JS code sets max-height: 0%
     opacity: 0
-    transition: all $transition-duration ease
     overflow-y: hidden
+    transition: all $transition-duration
 
 
 .width-enter
@@ -351,7 +351,7 @@ body
   &.width-enter-active
     // NOTE: JS code sets max-width: 100%
     opacity: 1
-    transition: all $transition-duration ease
+    transition: all $transition-duration
 
 .width-leave
   // NOTE: JS code sets max-width: 100%
@@ -359,5 +359,5 @@ body
   &.width-leave-active
     // NOTE: JS code sets max-width: 0%
     opacity: 0
-    transition: all $transition-duration ease
     overflow-x: hidden
+    transition: all $transition-duration
