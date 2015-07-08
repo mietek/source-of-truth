@@ -10,7 +10,7 @@ var _ = {
   propTypes: function () {
     return {
       label:           r.propTypes.string,
-      items:           r.propTypes.array,
+      items:           r.propTypes.array.isRequired,
       fullCount:       r.propTypes.number,
       isNumbered:      r.propTypes.bool,
       isLabelNumbered: r.propTypes.bool,
@@ -27,7 +27,8 @@ var _ = {
 
   getInitialState: function () {
     return {
-      isHidden: false
+      isCollapsed: false,
+      isFiltered:  false
     };
   },
 
@@ -35,24 +36,33 @@ var _ = {
     if (!this.props.items) {
       return null;
     }
-    var isClickable  = !!this.props.items.length;
+    var isClickable = !!this.props.items.length;
+    var isPartial   = this.props.items.length && this.props.items.length !== this.props.fullCount;
+    var availableLabel;
+    if (this.props.isLabelNumbered && isPartial) {
+      availableLabel = this.props.fullCount + '/' + this.props.items.length + ' available';
+    }
     var label;
-    if (!this.props.isLabelNumbered) {
-      label = this.props.label;
+    if (!this.props.label) {
+      if (!this.props.isLabelNumbered) {
+        label = 'items';
+      } else if (this.props.items.length === 1) {
+        label = '1 item';
+      } else {
+        label = this.props.items.length + ' items';
+      }
     } else {
-      var isPartial = this.props.items.length !== this.props.fullCount;
-      label = (
-        (!this.props.label ? '' :
-          (this.props.label + ' ')) +
-        this.props.fullCount +
-        (!isPartial ? '' :
-          '/' + this.props.items.length) +
-        ' available');
+      if (!this.props.isLabelNumbered) {
+        label = this.props.label;
+      } else {
+        label = this.props.label + ' ' + this.props.items.length;
+      }
     }
     return (
       r.div('list' + (
           (this.props.isNumbered ? ' numbered' : '') +
-          (this.state.isHidden ? ' hidden' : '')),
+          (this.state.isCollapsed ? ' collapsed' : '') +
+          (this.state.isFiltered ? ' filtered' : '')),
         r.div('spacer',
           r.span({
               className: 'label' + (
@@ -60,15 +70,26 @@ var _ = {
               onClick:   isClickable && function (event) {
                 event.stopPropagation();
                 this.setState({
-                    isHidden: !this.state.isHidden
+                    isCollapsed: !this.state.isCollapsed
                   });
               }.bind(this)
             },
-            label)),
+            label),
+          !availableLabel ? null :
+            r.span({
+                className: 'available label clickable',
+                onClick:   function (event) {
+                  event.stopPropagation();
+                  this.setState({
+                      isFiltered: !this.state.isFiltered
+                    });
+                }.bind(this)
+              },
+              availableLabel)),
         genericTransitionGroup({
             transitionName: 'height'
           },
-          this.state.isHidden ? null :
+          this.state.isCollapsed ? null :
             r.div({
                 key: 'list'
               },

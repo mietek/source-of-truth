@@ -13,7 +13,7 @@ var _ = {
 
   getInitialState: function () {
     return {
-      isHidden: false
+      isCollapsed: false
     };
   },
 
@@ -23,14 +23,14 @@ var _ = {
     }
     return (
       r.div('abstract' + (
-          (this.state.isHidden ? ' hidden' : '')),
+          (this.state.isCollapsed ? ' collapsed' : '')),
         r.div('spacer',
           r.span({
             className: 'label clickable',
             onClick:   function (event) {
               event.stopPropagation();
               this.setState({
-                  isHidden: !this.state.isHidden
+                  isCollapsed: !this.state.isCollapsed
                 });
             }.bind(this)
           },
@@ -38,7 +38,7 @@ var _ = {
         genericTransitionGroup({
             transitionName: 'height'
           },
-          this.state.isHidden ? null :
+          this.state.isCollapsed ? null :
             r.div({
                 key:       'abstract',
                 className: 'content',

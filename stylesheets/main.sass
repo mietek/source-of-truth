@@ -137,7 +137,22 @@ body
 .spacer
   margin-top: 19px
 
-.spacer .label:after
+
+.label
+  @include label
+
+.spacer .label
+  margin-right: 100%
+  opacity: 1
+  transition: all $transition-duration
+
+.collapsed .spacer .label
+  opacity: 0
+
+.collapsed .spacer .label:first-child
+  opacity: 1
+
+.spacer .label.clickable:after
   content: "▾"
   display: inline-block
   margin-left: 8px
@@ -146,12 +161,21 @@ body
   opacity: 0
   transition: all $transition-duration
 
-.hidden .spacer .label:after
+.collapsed .spacer .label:first-child.clickable:after
   opacity: 1
 
+.filtered .spacer .label:nth-child(2).clickable:after
+  opacity: 1
 
-.label
-  @include label
+.item.partial
+  opacity: 1
+  transition: all $transition-duration
+
+.filtered .item.partial
+  opacity: 0
+  // height: 0 // TODO: Improve transitions
+  display: none
+  transition: all $transition-duration
 
 
 .header
