@@ -11,50 +11,35 @@ var pdf = require('./pdf');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
+var selectionActions = require('../actions/selection-actions');
+var selectionStore = require('../stores/selection-store');
+
 var tokens = {};
 
 var _ = {
   getInitialState: function () {
-     var database = processor.processDatabase();
-     return utils.assign({}, database, {
-         path:        null,
-         componentId: utils.getRandomUuid()
-       });
-  },
-
-  setPath: function (path) {
-    this.setState({
-        path: path
+    var database    = processor.processDatabase();
+    var path        = selectionStore.getPath();
+    var componentId = utils.getRandomUuid();
+    return utils.assign({}, database, {
+        path:        path,
+        componentId: componentId
       });
   },
 
   select: function (basePath, itemId) {
     var path = itemId ? basePath.concat([itemId]) : basePath;
     var hash = '#' + path.join('/');
-    this.setPath(path);
+    selectionActions.setPath(path);
     history.pushState({
         path: path
       }, '', hash);
   },
 
-  componentDidMount: function () {
-    var path = location.hash ? location.hash.slice(1).split('/') : [];
-    this.setPath(path);
-    addEventListener('popstate', this.onPopState);
-  },
-
-  componentWillUnmount: function () {
-    removeEventListener('popstate', this.onPopState);
-  },
-
-  onPopState: function (event) {
-    var path;
-    if (event.state) {
-      path = event.state.path || [];
-    } else {
-      path = location.hash ? location.hash.slice(1).split('/') : [];
-    }
-    this.setPath(path);
+  onPublish: function () {
+    this.setState({
+        path: selectionStore.getPath()
+      });
   },
 
   renderColumn: function (itemId, selectedId, onSelect) {
@@ -130,6 +115,7 @@ var _ = {
 
   getLastId: function (state) {
     return (
+      state &&
       state.path &&
       state.path.length &&
       state.path[state.path.length - 1]);
@@ -154,8 +140,17 @@ var _ = {
   getColumnCount: function (state) {
     var hasPdf = !!this.getPdfUrl(state);
     return (
-      1 + (state.path ? state.path.length : 0) + (
+      1 + ((state && state.path) ? state.path.length : 0) + (
         hasPdf ? 1 : 0));
+  },
+
+  componentDidMount: function () {
+    selectionStore.subscribe(this.onPublish);
+    this.componentDidUpdate(null, null);
+  },
+
+  componentWillUnmount: function () {
+    selectionStore.unsubscribe(this.onPublish);
   },
 
   componentDidUpdate: function (prevProps, prevState) {
@@ -194,7 +189,7 @@ var _ = {
         }, 500);
       maxX = scrollWidth - browser.clientWidth;
     }
-    if (prevState.path) {
+    if (prevState && prevState.path) {
       easeScroll.tween(startX, maxX, maxX, 500, function (x) {
           browser.scrollLeft = x;
         });
