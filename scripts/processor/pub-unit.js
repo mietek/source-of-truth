@@ -198,27 +198,27 @@ var _ = module.exports = {
     Object.keys(pubInfo.allByKey).forEach(function (key) {
         var pubs           = pubInfo.allByKey[key];
         var isKeyAmbiguous = false;
-        pubs.forEach(function (pub, index) {
+        pubs.forEach(function (pub, pubIx) {
             if (!pub) {
               return;
             }
-            var otherPubs = pubs.slice(index + 1);
-            otherPubs.forEach(function (otherPub, otherIndex) {
+            var otherPubs = pubs.slice(pubIx + 1);
+            otherPubs.forEach(function (otherPub, otherIx) {
                 if (!otherPub) {
                   return;
                 }
                 if (_.isPubSame(pub, otherPub)) {
                   _.extendPub(pub, otherPub);
                   otherPub.citations.forEach(function (citation) {
-                      var index = citation.reverseCitations.indexOf(otherPub);
-                      citation.reverseCitations[index] = pub;
+                      var thisIx = citation.reverseCitations.indexOf(otherPub);
+                      citation.reverseCitations[thisIx] = pub;
                     });
                   otherPub.reverseCitations.forEach(function (reverseCitation) {
-                      var index = reverseCitation.citations.indexOf(otherPub);
-                      reverseCitation.citations[index] = pub;
+                      var thatIx = reverseCitation.citations.indexOf(otherPub);
+                      reverseCitation.citations[thatIx] = pub;
                     });
                   delete pubs[pubs.indexOf(otherPub)];
-                  delete otherPubs[otherIndex];
+                  delete otherPubs[otherIx];
                 } else {
                   isKeyAmbiguous = true;
                 }

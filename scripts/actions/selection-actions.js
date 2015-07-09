@@ -10,11 +10,11 @@ module.exports = {
       });
   },
 
-  selectItemInColumn: function (columnIndex, itemId) {
+  selectItemInColumn: function (itemId, colIx) {
     dispatcher.dispatch({
-        type:        'selectItemInColumn',
-        columnIndex: columnIndex,
-        itemId:      itemId
+        type:   'selectItemInColumn',
+        itemId: itemId,
+        colIx:  colIx
       });
   }
 };

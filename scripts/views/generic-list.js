@@ -93,12 +93,12 @@ var _ = {
             r.div({
                 key: 'list'
               },
-              this.props.items.map(function (item, index) {
+              this.props.items.map(function (item, itemIx) {
                   switch (item.type) {
                     case 'pub':
                       return (
                         pubItem({
-                            key:        index,
+                            key:        itemIx,
                             pubId:      item.id,
                             authors:    item.authors,
                             year:       item.year,
@@ -111,7 +111,7 @@ var _ = {
                     default:
                       return (
                         genericItem({
-                            key:        index,
+                            key:        itemIx,
                             itemId:     item.id,
                             isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
                             isPartial:  item.fullCount === 0,

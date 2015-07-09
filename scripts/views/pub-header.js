@@ -43,17 +43,17 @@ var _ = {
         !(this.props.authors || this.props.year || this.props.tags) ? null :
           r.div('items',
             !this.props.authors ? null :
-              this.props.authors.map(function (author, index) {
+              this.props.authors.map(function (author, authorIx) {
                   return (
                     genericItem({
-                        key:        author.id + '-' + index,
+                        key:        author.id + '-' + authorIx,
                         itemId:     author.id,
                         isSpecial:  author.isUnknown,
                         isPartial:  author.fullCount === 0,
                         selectedId: this.props.selectedId,
                         onSelect:   this.props.onSelect
                       },
-                      index ? null :
+                      authorIx ? null :
                         r.span('label',
                           this.props.authors.length === 1 ? 'Author' : 'Authors'),
                       r.span('value',
@@ -72,17 +72,17 @@ var _ = {
                 r.span('value',
                   this.props.year.name)),
             !this.props.tags ? null :
-              this.props.tags.map(function (tag, index) {
+              this.props.tags.map(function (tag, tagIx) {
                   return (
                     genericItem({
-                        key:        tag.id + '-' + index,
+                        key:        tag.id + '-' + tagIx,
                         itemId:     tag.id,
                         isSpecial:  tag.isUntagged,
                         isPartial:  tag.fullCount === 0,
                         selectedId: this.props.selectedId,
                         onSelect:   this.props.onSelect
                       },
-                      index ? null :
+                      tagIx ? null :
                         r.span('label',
                           this.props.tags.length === 1 ? 'Tag' : 'Tags'),
                       r.span('value',

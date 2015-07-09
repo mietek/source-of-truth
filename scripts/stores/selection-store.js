@@ -24,7 +24,7 @@ function SelectionStore() {
           this.publish();
           break;
         case 'selectItemInColumn':
-          this.selectItemInColumn(action.columnIx, action.itemId);
+          this.selectItemInColumn(action.itemId, action.colIx);
           this.publish();
           break;
       }
@@ -40,8 +40,8 @@ function SelectionStore() {
 }
 
 SelectionStore.prototype = utils.assign(new Store(), {
-  selectItemInColumn: function (columnIx, itemId) {
-    var base = this.path.slice(0, columnIx + 1);
+  selectItemInColumn: function (itemId, colIx) {
+    var base = this.path.slice(0, colIx + 1);
     var path = itemId ? base.concat([itemId]) : base;
     var hash = encodePath(path);
     this.path = path;
@@ -54,8 +54,8 @@ SelectionStore.prototype = utils.assign(new Store(), {
     return this.path;
   },
 
-  getSelectedItemInColumn: function (columnIx) {
-    return this.path[columnIx];
+  getSelectedItemInColumn: function (colIx) {
+    return this.path[colIx];
   }
 });
 

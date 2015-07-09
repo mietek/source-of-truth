@@ -27,9 +27,9 @@ var _ = {
       });
   },
 
-  select: function (basePath, itemId) {
-    var path = itemId ? basePath.concat([itemId]) : basePath;
-    var hash = '#' + path.join('/');
+  select: function (base, itemId) {
+    var path = itemId ? base.concat([itemId]) : base;
+    var hash = utils.encodePath(path);
     selectionActions.setPath(path);
     history.pushState({
         path: path
@@ -215,15 +215,15 @@ var _ = {
                   this.select([], itemId);
                 }.bind(this)
               })),
-          (this.state.path || []).map(function (itemId, index) {
-              var basePath   = this.state.path.slice(0, index + 1);
-              var selectedId = this.state.path.length > (index + 1) && this.state.path[index + 1];
+          (this.state.path || []).map(function (itemId, colIx) {
+              var base       = this.state.path.slice(0, colIx + 1);
+              var selectedId = this.state.path.length > (colIx + 1) && this.state.path[colIx + 1];
               var onSelect   = function (itemId) {
-                  this.select(basePath, itemId);
+                  this.select(base, itemId);
                 }.bind(this);
               return (
                 r.div({
-                    key:       itemId + '-' + index,
+                    key:       itemId + '-' + (colIx + 1),
                     className: 'column'
                   },
                   this.renderColumn(itemId, selectedId, onSelect)));

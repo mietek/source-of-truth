@@ -42,10 +42,10 @@ var _ = module.exports = {
   },
 
   areInitialsSame: function (initials, otherInitials) {
-    return initials.every(function (initial, index) {
+    return initials.every(function (initial, initialIx) {
         var dotlessInitial           = initial.replace(/\./g, '');
         var dotlessShortInitial      = _.shorten(dotlessInitial);
-        var otherDotlessInitial      = otherInitials[index].replace(/\./g, '');
+        var otherDotlessInitial      = otherInitials[initialIx].replace(/\./g, '');
         var otherDotlessShortInitial = _.shorten(otherDotlessInitial);
         if (dotlessShortInitial !== otherDotlessShortInitial) {
           return false;
@@ -216,12 +216,12 @@ var _ = module.exports = {
         var authors              = authorInfo.allByLastName[lastName];
         var isLastNameAmbiguous  = false;
         var isShortNameAmbiguous = false;
-        authors.forEach(function (author, index) {
+        authors.forEach(function (author, authorIx) {
             if (!author) {
               return;
             }
-            var otherAuthors = authors.slice(index + 1);
-            otherAuthors.forEach(function (otherAuthor, otherIndex) {
+            var otherAuthors = authors.slice(authorIx + 1);
+            otherAuthors.forEach(function (otherAuthor, otherIx) {
                 if (!otherAuthor) {
                   return;
                 }
@@ -231,7 +231,7 @@ var _ = module.exports = {
                       authorInfo.byRawName[otherRawName] = author;
                     });
                   delete authors[authors.indexOf(otherAuthor)];
-                  delete otherAuthors[otherIndex];
+                  delete otherAuthors[otherIx];
                 } else {
                   isLastNameAmbiguous = true;
                 }
