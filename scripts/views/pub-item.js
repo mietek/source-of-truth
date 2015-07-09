@@ -10,6 +10,7 @@ var _ = {
       year:       r.propTypes.object.isRequired,
       suffix:     r.propTypes.string,
       title:      r.propTypes.string.isRequired,
+      isSelected: r.propTypes.bool,
       isPartial:  r.propTypes.bool,
       selectedId: r.propTypes.string,
       onSelect:   r.propTypes.func
@@ -17,15 +18,14 @@ var _ = {
   },
 
   render: function () {
-    var isSelected = this.props.pubId === this.props.selectedId;
     return (
       r.div({
           className: 'item clickable' + (
             (this.props.isPartial ? ' partial' : '') +
-            (isSelected ? ' selected' : '')),
+            (this.props.isSelected ? ' selected' : '')),
           onClick:   function (event) {
             event.stopPropagation();
-            this.props.onSelect(isSelected ? null : this.props.pubId);
+            this.props.onSelect(this.props.isSelected ? null : this.props.pubId);
           }.bind(this)
         },
         r.span('key',

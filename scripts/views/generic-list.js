@@ -104,8 +104,8 @@ var _ = {
                             year:       item.year,
                             suffix:     item.suffix,
                             title:      item.title,
+                            isSelected: item.id === this.props.selectedId,
                             isPartial:  item.isPartial,
-                            selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect
                           }));
                     default:
@@ -113,9 +113,9 @@ var _ = {
                         genericItem({
                             key:        itemIx,
                             itemId:     item.id,
+                            isSelected: item.id === this.props.selectedId,
                             isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
                             isPartial:  item.fullCount === 0,
-                            selectedId: this.props.selectedId,
                             onSelect:   this.props.onSelect
                           },
                           r.span('content',

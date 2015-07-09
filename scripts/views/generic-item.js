@@ -6,26 +6,25 @@ var _ = {
   propTypes: function () {
     return {
       itemId:     r.propTypes.string,
-      isSpecial:  r.propTypes.bool,
       isPartial:  r.propTypes.bool,
-      selectedId: r.propTypes.string,
+      isSelected: r.propTypes.bool,
+      isSpecial:  r.propTypes.bool,
       onSelect:   r.propTypes.func
     };
   },
 
   render: function () {
     var isClickable = !!this.props.itemId && this.props.onSelect;
-    var isSelected  = isClickable && this.props.itemId === this.props.selectedId;
     return (
       r.div({
           className: 'item' + (
-            (this.props.isSpecial ? ' special' : '') +
             (this.props.isPartial ? ' partial' : '') +
-            (isClickable ? ' clickable' : '') +
-            (isSelected ? ' selected' : '')),
+            (this.props.isSelected ? ' selected' : '') +
+            (this.props.isSpecial ? ' special' : '') +
+            (isClickable ? ' clickable' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();
-            this.props.onSelect(isSelected ? null : this.props.itemId);
+            this.props.onSelect(this.props.isSelected ? null : this.props.itemId);
           }.bind(this)
         },
         this.props.children));

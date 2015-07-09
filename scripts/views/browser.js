@@ -66,37 +66,40 @@ var _ = {
       });
   },
 
-  renderColumn: function (itemId, colIx, selectedId, onSelect) {
-    switch (itemId) {
+  renderColumnContent: function (itemId, colIx, selectedId, selectedItem, onSelect) {
+    switch (itemId) { // TODO: Refactor
       case 'by-key':
         return (
           genericColumn({
-              colIx:      colIx,
-              heading:    'by key',
-              items:      this.state.pubs.all,
-              fullCount:  this.state.pubs.fullCount,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              colIx:        colIx,
+              heading:      'by key',
+              items:        this.state.pubs.all,
+              fullCount:    this.state.pubs.fullCount,
+              selectedId:   selectedId,
+              selectedItem: selectedItem,
+              onSelect:     onSelect
             }));
       case 'by-author':
         return (
           genericColumn({
-              colIx:      colIx,
-              heading:    'by author',
-              items:      this.state.authors.all,
-              fullCount:  this.state.authors.fullCount,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              colIx:        colIx,
+              heading:      'by author',
+              items:        this.state.authors.all,
+              fullCount:    this.state.authors.fullCount,
+              selectedId:   selectedId,
+              selectedItem: selectedItem,
+              onSelect:     onSelect
             }));
       case 'by-year':
         return (
           genericColumn({
-              colIx:      colIx,
-              heading:    'by year',
-              items:      this.state.years.all,
-              fullCount:  this.state.years.fullCount,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              colIx:        colIx,
+              heading:      'by year',
+              items:        this.state.years.all,
+              fullCount:    this.state.years.fullCount,
+              selectedId:   selectedId,
+              selectedItem: selectedItem,
+              onSelect:     onSelect
             }));
     }
     var item     = this.state.itemsById[itemId];
@@ -119,6 +122,7 @@ var _ = {
               isNumbered:               item.isNumbered,
               isPartial:                item.isPartial,
               selectedId:               selectedId,
+              selectedItem:             selectedItem,
               onSelect:                 onSelect
             }));
       case 'tag':
@@ -126,12 +130,13 @@ var _ = {
       case 'year':
         return (
           genericColumn({
-              colIx:      colIx,
-              heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
-              items:      item.pubs,
-              fullCount:  item.fullCount,
-              selectedId: selectedId,
-              onSelect:   onSelect
+              colIx:        colIx,
+              heading:      itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
+              items:        item.pubs,
+              fullCount:    item.fullCount,
+              selectedId:   selectedId,
+              selectedItem: selectedItem,
+              onSelect:     onSelect
             }));
       default:
         return (
@@ -196,45 +201,64 @@ var _ = {
     }
   },
 
-  render: function () {
+  renderRootColumn: function () {
+    var selectedId   = this.state.path.length > 0 && this.state.path[0];
+    var selectedItem = selectedId && this.state.itemsById[selectedId];
+    var onSelect     = function (itemId) {
+        this.select([], itemId);
+      }.bind(this);
+    return (
+      r.div({
+          key:       'root',
+          className: 'column'
+        },
+        rootColumn({
+            colIx:        0,
+            tags:         this.state.tags.all,
+            selectedId:   selectedId,
+            selectedItem: selectedItem,
+            onSelect:     function (itemId) {
+              this.select([], itemId);
+            }.bind(this)
+          })));
+  },
+
+  renderItemColumn: function (itemId, colIx) {
+    var base         = this.state.path.slice(0, colIx + 1);
+    var selectedId   = this.state.path.length > (colIx + 1) && this.state.path[colIx + 1];
+    var selectedItem = selectedId && this.state.itemsById[selectedId];
+    var onSelect     = function (itemId) {
+        this.select(base, itemId);
+      }.bind(this);
+    return (
+      r.div({
+          key:       itemId + '-' + (colIx + 1),
+          className: 'column'
+        },
+        this.renderColumnContent(itemId, colIx + 1, selectedId, selectedItem, onSelect)));
+  },
+
+  renderPdfColumn: function () {
     var lastItemId = getLastSelectedItem(this.state.path);
     var pdfUrl     = getPdfUrl(this.state.path, this.state.itemsById);
     return (
+      !pdfUrl ? null :
+        r.div({
+            key:       lastItemId + '-pdf',
+            className: 'column'
+          },
+          pdf({
+              url: pdfUrl
+            })));
+  },
+
+  render: function () {
+    return (
       r.div('browser',
         r.div('column-list',
-          r.div({
-              key:       'root',
-              className: 'column'
-            },
-            rootColumn({
-                colIx:      0,
-                tags:       this.state.tags.all,
-                selectedId: this.state.path && this.state.path.length > 0 && this.state.path[0],
-                onSelect:   function (itemId) {
-                  this.select([], itemId);
-                }.bind(this)
-              })),
-          (this.state.path || []).map(function (itemId, colIx) {
-              var base       = this.state.path.slice(0, colIx + 1);
-              var selectedId = this.state.path.length > (colIx + 1) && this.state.path[colIx + 1];
-              var onSelect   = function (itemId) {
-                  this.select(base, itemId);
-                }.bind(this);
-              return (
-                r.div({
-                    key:       itemId + '-' + (colIx + 1),
-                    className: 'column'
-                  },
-                  this.renderColumn(itemId, colIx + 1, selectedId, onSelect)));
-            }.bind(this)),
-          !pdfUrl ? null :
-            r.div({
-                key:       lastItemId + '-pdf',
-                className: 'column'
-              },
-              pdf({
-                  url: pdfUrl
-                })))));
+          this.renderRootColumn(),
+          (this.state.path || []).map(this.renderItemColumn),
+          this.renderPdfColumn())));
   }
 };
 

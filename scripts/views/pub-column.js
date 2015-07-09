@@ -23,6 +23,7 @@ var _ = {
       isNumbered:               r.propTypes.bool,
       isPartial:                r.propTypes.bool,
       selectedId:               r.propTypes.string,
+      selectedItem:             r.propTypes.object,
       onSelect:                 r.propTypes.func
     };
   },

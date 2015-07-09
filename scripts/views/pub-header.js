@@ -48,9 +48,9 @@ var _ = {
                     genericItem({
                         key:        author.id + '-' + authorIx,
                         itemId:     author.id,
+                        isSelected: author.id === this.props.selectedId,
                         isSpecial:  author.isUnknown,
                         isPartial:  author.fullCount === 0,
-                        selectedId: this.props.selectedId,
                         onSelect:   this.props.onSelect
                       },
                       authorIx ? null :
@@ -62,9 +62,9 @@ var _ = {
             !this.props.year ? null :
               genericItem({
                   itemId:     this.props.year.id,
+                  isSelected: this.props.year.id === this.props.selectedId,
                   isSpecial:  this.props.year.isUnknown,
                   isPartial:  this.props.year.fullCount === 0,
-                  selectedId: this.props.selectedId,
                   onSelect:   this.props.onSelect
                 },
                 r.span('label',
@@ -77,9 +77,9 @@ var _ = {
                     genericItem({
                         key:        tag.id + '-' + tagIx,
                         itemId:     tag.id,
+                        isSelected: tag.id === this.props.selectedId,
                         isSpecial:  tag.isUntagged,
                         isPartial:  tag.fullCount === 0,
-                        selectedId: this.props.selectedId,
                         onSelect:   this.props.onSelect
                       },
                       tagIx ? null :
