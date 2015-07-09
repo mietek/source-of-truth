@@ -58,15 +58,6 @@ var _ = {
 
   renderColumnContent: function (itemId, colIx, selectedId) {
     switch (itemId) { // TODO: Refactor
-      case 'by-key':
-        return (
-          genericColumn({
-              colIx:      colIx,
-              heading:    'by key',
-              items:      this.state.pubs.all,
-              fullCount:  this.state.pubs.fullCount,
-              selectedId: selectedId
-            }));
       case 'by-author':
         return (
           genericColumn({
@@ -83,6 +74,15 @@ var _ = {
               heading:    'by year',
               items:      this.state.years.all,
               fullCount:  this.state.years.fullCount,
+              selectedId: selectedId
+            }));
+      case 'all':
+        return (
+          genericColumn({
+              colIx:      colIx,
+              heading:    'all',
+              items:      this.state.pubs.all,
+              fullCount:  this.state.pubs.fullCount,
               selectedId: selectedId
             }));
     }

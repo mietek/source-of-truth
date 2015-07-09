@@ -39,16 +39,16 @@ var _ = {
             colIx:           0,
             label:           'Publications',
             items:           [{
-              name:      'by key',
-              id:        'by-key',
-              isSpecial: true
-            }, {
               name:      'by author',
               id:        'by-author',
               isSpecial: true
             }, {
               name:      'by year',
               id:        'by-year',
+              isSpecial: true
+            }, {
+              name:      'all',
+              id:        'all',
               isSpecial: true
             }],
             isLabelNumbered: false,
