@@ -209,7 +209,7 @@ citations:
     year: 1998
 
   - authors:
-      - Emir Pašalić
+      - Emir Pašalić
       - W. Taha
       - T. Sheard
     title: Tagless staged interpreters for typed languages

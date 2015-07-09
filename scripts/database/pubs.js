@@ -7717,7 +7717,7 @@ module.exports = [
       },
       {
         "authors": [
-          "Emir Pašalić",
+          "Emir Pašalić",
           "W. Taha",
           "T. Sheard"
         ],
