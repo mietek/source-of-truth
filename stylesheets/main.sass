@@ -60,7 +60,7 @@ body
   @include clickable
 
 @mixin unclickable
-  cursor: auto
+  cursor: default
   pointer-events: none
 
 @mixin selectable
@@ -137,45 +137,35 @@ body
 .spacer
   margin-top: 19px
 
+.list .spacer
+  padding-left: 8px
+  padding-right: 8px
+
 
 .label
   @include label
 
-.spacer .label
-  margin-right: 100%
-  opacity: 1
-  transition: all $transition-duration
-
-.collapsed .spacer .label
-  opacity: 0
-
-.collapsed .spacer .label:first-child
-  opacity: 1
-
-.spacer .label.clickable:after
-  content: "▾"
+.collapsing.label.clickable:after
+  content: " ⊖"
+  color: $black9
   display: inline-block
-  margin-left: 8px
-  position: relative
-  z-index: 1
-  opacity: 0
-  transition: all $transition-duration
 
-.collapsed .spacer .label:first-child.clickable:after
-  opacity: 1
+.collapsed .collapsing.label.clickable:after
+  content: " ⊕"
 
-.filtered .spacer .label:nth-child(2).clickable:after
-  opacity: 1
+.neutral.label
+  cursor: default
 
-.item.partial
-  // opacity: 1
-  // transition: all $transition-duration
+.filtering.label.clickable:after
+  content: " ⊖"
+  color: $black9
+  display: inline-block
+
+.filtered .filtering.label.clickable:after
+  content: " ⊕"
 
 .filtered .item.partial
-  // opacity: 0
-  // height: 0 // TODO: Improve transitions
   display: none
-  // transition: all $transition-duration
 
 
 .header
@@ -214,9 +204,6 @@ body
 .list
   width: 100%
   counter-reset: item
-
-.list .label
-  padding-left: 8px
 
 
 .item

@@ -2,8 +2,6 @@
 
 var r = require('../common/react');
 
-var genericTransitionGroup = require('./generic-transition-group');
-
 var _ = {
   propTypes: function () {
     return {
@@ -26,7 +24,7 @@ var _ = {
           (this.state.isCollapsed ? ' collapsed' : '')),
         r.div('spacer',
           r.span({
-            className: 'label clickable',
+            className: 'collapsing label clickable',
             onClick:   function (event) {
               event.stopPropagation();
               this.setState({
@@ -35,17 +33,13 @@ var _ = {
             }.bind(this)
           },
           'Abstract')),
-        genericTransitionGroup({
-            transitionName: 'height'
-          },
-          this.state.isCollapsed ? null :
-            r.div({
-                key:       'abstract',
-                className: 'content',
-                dangerouslySetInnerHTML: {
-                  __html: this.props.content
-                }
-              }))));
+        this.state.isCollapsed ? null :
+          r.div({
+              className: 'content',
+              dangerouslySetInnerHTML: {
+                __html: this.props.content
+              }
+            })));
   }
 };
 

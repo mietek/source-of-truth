@@ -33,6 +33,7 @@ var _ = {
             label:           'Tags',
             items:           this.props.tags,
             isLabelNumbered: false,
+            isCollapsible:   false,
             selectedId:      this.props.selectedId
           }),
         genericList({
@@ -52,6 +53,7 @@ var _ = {
               isSpecial: true
             }],
             isLabelNumbered: false,
+            isCollapsible:   false,
             selectedId:      this.props.selectedId
           })));
   }

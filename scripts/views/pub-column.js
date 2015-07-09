@@ -61,15 +61,19 @@ var _ = {
               label:          'Cites',
               items:          this.props.citations,
               fullCount:      this.props.fullCitationCount,
+              isCollapsible:  !!this.props.reverseCitations.length,
+              isFiltered:     false,
               isNumbered:     this.props.isNumbered,
               selectedId:     this.props.selectedId
             }),
-        (!this.props.reverseCitations || !this.props.reverseCitations.length) ? null :
+        !this.props.reverseCitations.length ? null :
           genericList({
               colIx:          this.props.colIx,
               label:          'Cited by',
               items:          this.props.reverseCitations,
               fullCount:      this.props.fullReverseCitationCount,
+              isCollapsible:  false,
+              isFiltered:     false,
               selectedId:     this.props.selectedId
             })));
   }

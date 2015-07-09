@@ -3,7 +3,6 @@
 var r = require('../common/react');
 
 var genericItem = require('./generic-item');
-var genericTransitionGroup = require('./generic-transition-group');
 var pubItem = require('./pub-item');
 
 var _ = {
@@ -15,20 +14,24 @@ var _ = {
       fullCount:       r.propTypes.number,
       isNumbered:      r.propTypes.bool,
       isLabelNumbered: r.propTypes.bool,
+      isCollapsible:   r.propTypes.bool,
+      isFiltered:      r.propTypes.bool,
       selectedId:      r.propTypes.string
     };
   },
 
   getDefaultProps: function () {
     return {
-      isLabelNumbered: true
+      isLabelNumbered: true,
+      isCollapsible:   true,
+      isFiltered:      true
     };
   },
 
   getInitialState: function () {
     return {
       isCollapsed: false,
-      isFiltered:  false
+      isFiltered:  this.props.isFiltered
     };
   },
 
@@ -36,26 +39,26 @@ var _ = {
     if (!this.props.items) {
       return null;
     }
-    var isClickable = !!this.props.items.length;
+    var isClickable = this.props.isCollapsible && !!this.props.items.length;
     var isPartial   = this.props.items.length && this.props.items.length !== this.props.fullCount;
-    var availableLabel;
-    if (this.props.isLabelNumbered && isPartial) {
-      availableLabel = this.props.fullCount + '/' + this.props.items.length + ' available';
+    var filteringLabel;
+    if (!this.state.isCollapsed && this.props.isLabelNumbered && isPartial) {
+      filteringLabel = this.props.fullCount + ' available';
     }
-    var label;
+    var collapsingLabel;
     if (!this.props.label) {
       if (!this.props.isLabelNumbered) {
-        label = 'items';
+        collapsingLabel = 'items';
       } else if (this.props.items.length === 1) {
-        label = '1 item';
+        collapsingLabel = '1 item';
       } else {
-        label = this.props.items.length + ' items';
+        collapsingLabel = this.props.items.length + ' items';
       }
     } else {
       if (!this.props.isLabelNumbered) {
-        label = this.props.label;
+        collapsingLabel = this.props.label;
       } else {
-        label = this.props.label + ' ' + this.props.items.length;
+        collapsingLabel = this.props.label + ' ' + this.props.items.length;
       }
     }
     return (
@@ -65,7 +68,7 @@ var _ = {
           (this.state.isFiltered ? ' filtered' : '')),
         r.div('spacer',
           r.span({
-              className: 'label' + (
+              className: 'collapsing label' + (
                 (isClickable ? ' clickable' : '')),
               onClick:   isClickable && function (event) {
                 event.stopPropagation();
@@ -74,10 +77,18 @@ var _ = {
                   });
               }.bind(this)
             },
-            label),
-          !availableLabel ? null :
+            collapsingLabel),
+          !filteringLabel ? null :
             r.span({
-                className: 'available label clickable',
+                className: 'neutral label',
+                onClick:   function (event) {
+                  event.stopPropagation();
+                }.bind(this)
+              },
+              ' — '),
+          !filteringLabel ? null :
+            r.span({
+                className: 'filtering label clickable',
                 onClick:   function (event) {
                   event.stopPropagation();
                   this.setState({
@@ -85,43 +96,37 @@ var _ = {
                     });
                 }.bind(this)
               },
-              availableLabel)),
-        genericTransitionGroup({
-            transitionName: 'height'
-          },
-          this.state.isCollapsed ? null :
-            r.div({
-                key: 'list'
-              },
-              this.props.items.map(function (item, itemIx) {
-                  switch (item.type) {
-                    case 'pub':
-                      return (
-                        pubItem({
-                            colIx:      this.props.colIx,
-                            key:        itemIx,
-                            pubId:      item.id,
-                            authors:    item.authors,
-                            year:       item.year,
-                            suffix:     item.suffix,
-                            title:      item.title,
-                            isSelected: item.id === this.props.selectedId,
-                            isPartial:  item.isPartial
-                          }));
-                    default:
-                      return (
-                        genericItem({
-                            colIx:      this.props.colIx,
-                            key:        itemIx,
-                            itemId:     item.id,
-                            isSelected: item.id === this.props.selectedId,
-                            isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
-                            isPartial:  item.fullCount === 0
-                          },
-                          r.span('content',
-                            item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Ugh
-                  }
-                }.bind(this))))));
+              filteringLabel)),
+        this.state.isCollapsed ? null :
+          this.props.items.map(function (item, itemIx) {
+              switch (item.type) {
+                case 'pub':
+                  return (
+                    pubItem({
+                        colIx:      this.props.colIx,
+                        key:        itemIx,
+                        pubId:      item.id,
+                        authors:    item.authors,
+                        year:       item.year,
+                        suffix:     item.suffix,
+                        title:      item.title,
+                        isSelected: item.id === this.props.selectedId,
+                        isPartial:  item.isPartial
+                      }));
+                default:
+                  return (
+                    genericItem({
+                        colIx:      this.props.colIx,
+                        key:        itemIx,
+                        itemId:     item.id,
+                        isSelected: item.id === this.props.selectedId,
+                        isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
+                        isPartial:  item.fullCount === 0
+                      },
+                      r.span('content',
+                        item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Ugh
+              }
+            }.bind(this))));
   }
 };
 

@@ -34,10 +34,11 @@ var _ = {
           }),
         !hasItems ? null :
             genericList({
-              colIx:      this.props.colIx,
-              items:      this.props.items,
-              fullCount:  this.props.fullCount,
-              selectedId: this.props.selectedId
+              colIx:         this.props.colIx,
+              items:         this.props.items,
+              fullCount:     this.props.fullCount,
+              isCollapsible: false,
+              selectedId:    this.props.selectedId
             })));
   }
 };
