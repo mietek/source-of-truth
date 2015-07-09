@@ -8,23 +8,23 @@ var pubItem = require('./pub-item');
 var _ = {
   propTypes: function () {
     return {
-      colIx:           r.propTypes.number.isRequired,
-      label:           r.propTypes.string,
-      items:           r.propTypes.array.isRequired,
-      fullCount:       r.propTypes.number,
-      isNumbered:      r.propTypes.bool,
-      isLabelNumbered: r.propTypes.bool,
-      isCollapsible:   r.propTypes.bool,
-      isFiltered:      r.propTypes.bool,
-      selectedId:      r.propTypes.string
+      colIx:         r.propTypes.number.isRequired,
+      label:         r.propTypes.string,
+      items:         r.propTypes.array.isRequired,
+      fullCount:     r.propTypes.number,
+      isCollapsible: r.propTypes.bool,
+      isCounted:     r.propTypes.bool,
+      isFiltered:    r.propTypes.bool,
+      isNumbered:    r.propTypes.bool,
+      selectedId:    r.propTypes.string
     };
   },
 
   getDefaultProps: function () {
     return {
-      isLabelNumbered: true,
-      isCollapsible:   true,
-      isFiltered:      true
+      isCollapsible: true,
+      isCounted:     true,
+      isFiltered:    true
     };
   },
 
@@ -42,12 +42,12 @@ var _ = {
     var isClickable = this.props.isCollapsible && !!this.props.items.length;
     var isPartial   = this.props.items.length && this.props.items.length !== this.props.fullCount;
     var filteringLabel;
-    if (!this.state.isCollapsed && this.props.isLabelNumbered && isPartial) {
+    if (!this.state.isCollapsed && this.props.isCounted && isPartial) {
       filteringLabel = this.props.fullCount + ' available';
     }
     var collapsingLabel;
     if (!this.props.label) {
-      if (!this.props.isLabelNumbered) {
+      if (!this.props.isCounted) {
         collapsingLabel = 'items';
       } else if (this.props.items.length === 1) {
         collapsingLabel = '1 item';
@@ -55,7 +55,7 @@ var _ = {
         collapsingLabel = this.props.items.length + ' items';
       }
     } else {
-      if (!this.props.isLabelNumbered) {
+      if (!this.props.isCounted) {
         collapsingLabel = this.props.label;
       } else {
         collapsingLabel = this.props.label + ' ' + this.props.items.length;
@@ -63,9 +63,9 @@ var _ = {
     }
     return (
       r.div('list' + (
-          (this.props.isNumbered ? ' numbered' : '') +
           (this.state.isCollapsed ? ' collapsed' : '') +
-          (this.state.isFiltered ? ' filtered' : '')),
+          (this.state.isFiltered ? ' filtered' : '') +
+          (this.props.isNumbered ? ' numbered' : '')),
         r.div('spacer',
           r.span({
               className: 'collapsing label' + (
@@ -99,6 +99,9 @@ var _ = {
               filteringLabel)),
         this.state.isCollapsed ? null :
           this.props.items.map(function (item, itemIx) {
+              var pubRef = (
+                !this.props.isNumbered ? null :
+                  '' + (itemIx + 1));
               switch (item.type) {
                 case 'pub':
                   return (
@@ -106,6 +109,7 @@ var _ = {
                         colIx:      this.props.colIx,
                         key:        itemIx,
                         pubId:      item.id,
+                        pubRef:     pubRef,
                         authors:    item.authors,
                         year:       item.year,
                         suffix:     item.suffix,

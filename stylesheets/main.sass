@@ -25,6 +25,16 @@ $whiteC: rgba($white, 1-(9/15))
 // NOTE: $transition-duration must match TRANSITION_DURATION in JS
 $transition-duration: 250ms
 
+$font-size: 14px
+$line-height: 19px
+
+$small-font-size: 12px
+$small-line-height: 16px
+$small-offset: -2px
+
+@function u($n)
+  @return $n * 8px
+
 
 *, *:before, *:after
   box-sizing: border-box
@@ -42,8 +52,8 @@ body
   width: 100%
   height: 100%
   font-family: "concourse-t3", sans-serif
-  font-size: 14px
-  line-height: 19px
+  font-size: $font-size
+  line-height: $line-height
 
 ::selection
   background-color: $blueC
@@ -117,7 +127,7 @@ body
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
   background-color: $white
-  border: 0px $blackC solid
+  border: 0 $blackC solid
   border-right-width: 1px
   .hairline &
     border-right-width: 0.5px
@@ -127,19 +137,10 @@ body
   width: 100%
   min-height: 100%
   padding: 1px
-  .hairline &
-    padding: 0.5px
-
-.section
-  padding-left: 8px
-  padding-right: 8px
 
 .spacer
-  margin-top: 19px
-
-.list .spacer
-  padding-left: 8px
-  padding-right: 8px
+  margin-top: $line-height
+  margin-left: u(1)
 
 
 .label
@@ -177,25 +178,26 @@ body
   display: block
   text-align: center
   hyphens: auto
-  padding-left: 8px
-  padding-right: 8px
+  margin-left: u(1)
+  margin-right: u(1)
 
 .header .heading .suffix
   top: 0
 
 .header .items
-  margin-top: 19px
+  margin-top: $line-height
 
 .header .label
   width: 1/3 * 100%
+  padding-left: u(1)
+  padding-right: u(1)
   text-align: right
 
 .header .item .value
   @include ellipsis
   display: inline-block
   width: 2/3 * 100%
-  padding-left: 8px
-  padding-right: 12px
+  padding-right: u(2)
 
 .header .item .value:first-child
   margin-left: 1/3 * 100%
@@ -203,21 +205,17 @@ body
 
 .list
   width: 100%
-  counter-reset: item
 
 
 .item
-  counter-increment: item
-  padding-left: 8px
-  padding-right: 12px
-  height: 19px
+  height: $line-height
   position: relative
 
 .item.clickable:after
   content: "▸"
   position: absolute
   top: 0
-  right: 6px
+  right: u(2/3)
   color: $black9
 
 .item.selected
@@ -234,35 +232,40 @@ body
   display: inline-block
   width: 100%
   padding-left: 1/9 * 100%
-  padding-right: 8px
+  padding-right: u(2)
+
+
+.item .ref
+  @include label
+  @include ellipsis
+  display: inline-block
+  width: 1/9 * 100%
+  padding-right: u(1)
+  text-align: right
+
+.item.selected .ref
+  color: $white9
 
 
 .item .key
   @include ellipsis
   display: inline-block
-  width: 1/3 * 100%
+  padding-right: u(1)
+
+.list.numbered .item .key
+  width: 2/9 * 100%
 
 .list:not(.numbered) .item .key
+  width: 3/9 * 100%
   padding-left: 1/9 * 100%
-
-.list.numbered .item .key:before
-  @include label
-  content: counter(item)
-  width: 1/3 * 100%
-  min-width: 24px
-  padding-right: 8px
-  text-align: right
-
-.list.numbered .item.selected .key:before
-  color: $white9
 
 
 .item .title
   @include ellipsis
   display: inline-block
-  width: 2/3 * 100%
-  padding-left: 8px
-  padding-right: 8px
+  width: 6/9 * 100%
+  padding-right: u(2)
+
 
 .item.partial
   color: $black9
@@ -276,13 +279,18 @@ body
 
 
 .abstract
-  padding-left: 8px
-  padding-right: 8px
   text-align: justify
   hyphens: auto
 
 .abstract .content
   @include selectable
+
+.abstract .content p
+  margin-left: 1/9 * 100%
+  margin-right: u(2)
+
+.abstract .content p:first-of-type
+  text-indent: 0
   margin-left: 1/9 * 100%
 
 .abstract .content p:not(:first-of-type)
@@ -292,17 +300,17 @@ body
   font-style: italic
 
 .abstract .content sup
-  font-size: 12px
-  line-height: 16px
+  font-size: $small-font-size
+  line-height: $small-line-height
   position: relative
-  top: -2px
+  top: $small-offset
   vertical-align: top
 
 .abstract .content sub
-  font-size: 12px
-  line-height: 16px
+  font-size: $small-font-size
+  line-height: $small-line-height
   position: relative
-  bottom: -2px
+  bottom: $small-offset
   vertical-align: bottom
 
 
@@ -315,7 +323,7 @@ body
 .pdf canvas
   display: block
   width: 100%
-  border: 0px $blackC solid
+  border: 0 $blackC solid
 
 .pdf canvas:not(:last-of-type)
   border-bottom-width: 1px
@@ -372,3 +380,14 @@ body
     opacity: 0
     overflow-x: hidden
     transition: all $transition-duration
+
+
+@media (max-width: 720px)
+  .list.numbered .item .key
+    width: 8/9 * 100%
+    padding-right: u(2)
+  .list:not(.numbered) .item .key
+    width: 100%
+    padding-right: u(2)
+  .item .title
+    display: none

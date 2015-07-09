@@ -16,6 +16,19 @@ var _ = {
 
   render: function () {
     var isClickable = !!this.props.selectedId;
+    var pubItems    = [{
+        name:      'by author',
+        id:        'by-author',
+        isSpecial: true
+      }, {
+        name:      'by year',
+        id:        'by-year',
+        isSpecial: true
+      }, {
+        name:      'all',
+        id:        'all',
+        isSpecial: true
+      }];
     return (
       r.div({
           className: 'wrapper' + (
@@ -29,32 +42,20 @@ var _ = {
             heading: 'Source of Truth'
           }),
         genericList({
-            colIx:           0,
-            label:           'Tags',
-            items:           this.props.tags,
-            isLabelNumbered: false,
-            isCollapsible:   false,
-            selectedId:      this.props.selectedId
+            colIx:         0,
+            label:         'Tags',
+            items:         this.props.tags,
+            isCollapsible: false,
+            isCounted:     false,
+            selectedId:    this.props.selectedId
           }),
         genericList({
-            colIx:           0,
-            label:           'Publications',
-            items:           [{
-              name:      'by author',
-              id:        'by-author',
-              isSpecial: true
-            }, {
-              name:      'by year',
-              id:        'by-year',
-              isSpecial: true
-            }, {
-              name:      'all',
-              id:        'all',
-              isSpecial: true
-            }],
-            isLabelNumbered: false,
-            isCollapsible:   false,
-            selectedId:      this.props.selectedId
+            colIx:         0,
+            label:         'Publications',
+            items:         pubItems,
+            isCounted:     false,
+            isCollapsible: false,
+            selectedId:    this.props.selectedId
           })));
   }
 };

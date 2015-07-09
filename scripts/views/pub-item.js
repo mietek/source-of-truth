@@ -8,6 +8,7 @@ var _ = {
     return {
       colIx:      r.propTypes.number.isRequired,
       pubId:      r.propTypes.string.isRequired,
+      pubRef:     r.propTypes.number,
       authors:    r.propTypes.array.isRequired,
       year:       r.propTypes.object.isRequired,
       suffix:     r.propTypes.string,
@@ -28,6 +29,9 @@ var _ = {
             a.selectItemInColumn(this.props.isSelected ? null : this.props.pubId, this.props.colIx);
           }.bind(this)
         },
+        !this.props.pubRef ? null :
+          r.span('ref',
+            this.props.pubRef),
         r.span('key',
           !this.props.authors[0].isUnknown ?
             r.span('author',
