@@ -113,7 +113,7 @@ var _ = {
         return (
           genericColumn({
               colIx:      colIx,
-              heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
+              heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Refactor
               items:      item.pubs,
               fullCount:  item.fullCount,
               selectedId: selectedId

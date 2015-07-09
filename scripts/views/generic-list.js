@@ -124,11 +124,11 @@ var _ = {
                         key:        itemIx,
                         itemId:     item.id,
                         isSelected: item.id === this.props.selectedId,
-                        isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
+                        isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Refactor
                         isPartial:  item.fullCount === 0
                       },
                       r.span('content',
-                        item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Ugh
+                        item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Refactor
               }
             }.bind(this))));
   }

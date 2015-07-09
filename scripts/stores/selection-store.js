@@ -40,12 +40,8 @@ SelectionStore.prototype = utils.assign(new Store(), {
       }, '', hash);
   },
 
-  getPath: function () { // TODO: Remove this
+  getPath: function () {
     return this.path;
-  },
-
-  getSelectedItemInColumn: function (colIx) {
-    return this.path[colIx];
   }
 });
 
