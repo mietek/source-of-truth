@@ -1,20 +1,21 @@
 'use strict';
 
+var a = require('../actions');
 var r = require('../common/react');
 
 var _ = {
   propTypes: function () {
     return {
-      itemId:     r.propTypes.string,
+      colIx:      r.propTypes.number.isRequired,
+      itemId:     r.propTypes.string.isRequired,
       isPartial:  r.propTypes.bool,
       isSelected: r.propTypes.bool,
-      isSpecial:  r.propTypes.bool,
-      onSelect:   r.propTypes.func
+      isSpecial:  r.propTypes.bool
     };
   },
 
   render: function () {
-    var isClickable = !!this.props.itemId && this.props.onSelect;
+    var isClickable = !!this.props.itemId;
     return (
       r.div({
           className: 'item' + (
@@ -24,7 +25,7 @@ var _ = {
             (isClickable ? ' clickable' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();
-            this.props.onSelect(this.props.isSelected ? null : this.props.itemId);
+            a.selectItemInColumn(this.props.isSelected ? null : this.props.itemId, this.props.colIx);
           }.bind(this)
         },
         this.props.children));

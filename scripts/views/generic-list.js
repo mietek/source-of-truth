@@ -9,13 +9,13 @@ var pubItem = require('./pub-item');
 var _ = {
   propTypes: function () {
     return {
+      colIx:           r.propTypes.number.isRequired,
       label:           r.propTypes.string,
       items:           r.propTypes.array.isRequired,
       fullCount:       r.propTypes.number,
       isNumbered:      r.propTypes.bool,
       isLabelNumbered: r.propTypes.bool,
-      selectedId:      r.propTypes.string,
-      onSelect:        r.propTypes.func
+      selectedId:      r.propTypes.string
     };
   },
 
@@ -98,6 +98,7 @@ var _ = {
                     case 'pub':
                       return (
                         pubItem({
+                            colIx:      this.props.colIx,
                             key:        itemIx,
                             pubId:      item.id,
                             authors:    item.authors,
@@ -105,18 +106,17 @@ var _ = {
                             suffix:     item.suffix,
                             title:      item.title,
                             isSelected: item.id === this.props.selectedId,
-                            isPartial:  item.isPartial,
-                            onSelect:   this.props.onSelect
+                            isPartial:  item.isPartial
                           }));
                     default:
                       return (
                         genericItem({
+                            colIx:      this.props.colIx,
                             key:        itemIx,
                             itemId:     item.id,
                             isSelected: item.id === this.props.selectedId,
                             isSpecial:  item.isSpecial || item.isUntagged || item.isUnknown, // TODO: Ugh
-                            isPartial:  item.fullCount === 0,
-                            onSelect:   this.props.onSelect
+                            isPartial:  item.fullCount === 0
                           },
                           r.span('content',
                             item.type === 'author' ? item.reverseFullName : item.name))); // TODO: Ugh

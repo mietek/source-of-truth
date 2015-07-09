@@ -7,13 +7,13 @@ var genericItem = require('./generic-item');
 var _ = {
   propTypes: function () {
     return {
+      colIx:      r.propTypes.number.isRequired,
       authors:    r.propTypes.array.isRequired,
       year:       r.propTypes.object.isRequired,
       suffix:     r.propTypes.string,
       title:      r.propTypes.string.isRequired,
       tags:       r.propTypes.array,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func
+      selectedId: r.propTypes.string
     };
   },
 
@@ -46,12 +46,12 @@ var _ = {
               this.props.authors.map(function (author, authorIx) {
                   return (
                     genericItem({
+                        colIx:      this.props.colIx,
                         key:        author.id + '-' + authorIx,
                         itemId:     author.id,
                         isSelected: author.id === this.props.selectedId,
                         isSpecial:  author.isUnknown,
-                        isPartial:  author.fullCount === 0,
-                        onSelect:   this.props.onSelect
+                        isPartial:  author.fullCount === 0
                       },
                       authorIx ? null :
                         r.span('label',
@@ -61,11 +61,11 @@ var _ = {
                 }.bind(this)),
             !this.props.year ? null :
               genericItem({
+                  colIx:      this.props.colIx,
                   itemId:     this.props.year.id,
                   isSelected: this.props.year.id === this.props.selectedId,
                   isSpecial:  this.props.year.isUnknown,
-                  isPartial:  this.props.year.fullCount === 0,
-                  onSelect:   this.props.onSelect
+                  isPartial:  this.props.year.fullCount === 0
                 },
                 r.span('label',
                   'Year'),
@@ -75,12 +75,12 @@ var _ = {
               this.props.tags.map(function (tag, tagIx) {
                   return (
                     genericItem({
+                        colIx:      this.props.colIx,
                         key:        tag.id + '-' + tagIx,
                         itemId:     tag.id,
                         isSelected: tag.id === this.props.selectedId,
                         isSpecial:  tag.isUntagged,
-                        isPartial:  tag.fullCount === 0,
-                        onSelect:   this.props.onSelect
+                        isPartial:  tag.fullCount === 0
                       },
                       tagIx ? null :
                         r.span('label',

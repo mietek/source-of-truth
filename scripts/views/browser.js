@@ -11,7 +11,6 @@ var pdf = require('./pdf');
 var pubColumn = require('./pub-column');
 var rootColumn = require('./root-column');
 
-var selectionActions = require('../actions/selection-actions');
 var selectionStore = require('../stores/selection-store');
 
 var tokens = {};
@@ -51,55 +50,40 @@ var _ = {
       });
   },
 
-  select: function (base, itemId) {
-    var path = itemId ? base.concat([itemId]) : base;
-    var hash = utils.encodePath(path);
-    selectionActions.setPath(path);
-    history.pushState({
-        path: path
-      }, '', hash);
-  },
-
   onPublish: function () {
     this.setState({
         path: selectionStore.getPath()
       });
   },
 
-  renderColumnContent: function (itemId, colIx, selectedId, selectedItem, onSelect) {
+  renderColumnContent: function (itemId, colIx, selectedId) {
     switch (itemId) { // TODO: Refactor
       case 'by-key':
         return (
           genericColumn({
-              colIx:        colIx,
-              heading:      'by key',
-              items:        this.state.pubs.all,
-              fullCount:    this.state.pubs.fullCount,
-              selectedId:   selectedId,
-              selectedItem: selectedItem,
-              onSelect:     onSelect
+              colIx:      colIx,
+              heading:    'by key',
+              items:      this.state.pubs.all,
+              fullCount:  this.state.pubs.fullCount,
+              selectedId: selectedId
             }));
       case 'by-author':
         return (
           genericColumn({
-              colIx:        colIx,
-              heading:      'by author',
-              items:        this.state.authors.all,
-              fullCount:    this.state.authors.fullCount,
-              selectedId:   selectedId,
-              selectedItem: selectedItem,
-              onSelect:     onSelect
+              colIx:      colIx,
+              heading:    'by author',
+              items:      this.state.authors.all,
+              fullCount:  this.state.authors.fullCount,
+              selectedId: selectedId
             }));
       case 'by-year':
         return (
           genericColumn({
-              colIx:        colIx,
-              heading:      'by year',
-              items:        this.state.years.all,
-              fullCount:    this.state.years.fullCount,
-              selectedId:   selectedId,
-              selectedItem: selectedItem,
-              onSelect:     onSelect
+              colIx:      colIx,
+              heading:    'by year',
+              items:      this.state.years.all,
+              fullCount:  this.state.years.fullCount,
+              selectedId: selectedId
             }));
     }
     var item     = this.state.itemsById[itemId];
@@ -121,22 +105,18 @@ var _ = {
               fullReverseCitationCount: item.fullReverseCitationCount,
               isNumbered:               item.isNumbered,
               isPartial:                item.isPartial,
-              selectedId:               selectedId,
-              selectedItem:             selectedItem,
-              onSelect:                 onSelect
+              selectedId:               selectedId
             }));
       case 'tag':
       case 'author':
       case 'year':
         return (
           genericColumn({
-              colIx:        colIx,
-              heading:      itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
-              items:        item.pubs,
-              fullCount:    item.fullCount,
-              selectedId:   selectedId,
-              selectedItem: selectedItem,
-              onSelect:     onSelect
+              colIx:      colIx,
+              heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
+              items:      item.pubs,
+              fullCount:  item.fullCount,
+              selectedId: selectedId
             }));
       default:
         return (
@@ -202,40 +182,26 @@ var _ = {
   },
 
   renderRootColumn: function () {
-    var selectedId   = this.state.path.length > 0 && this.state.path[0];
-    var selectedItem = selectedId && this.state.itemsById[selectedId];
-    var onSelect     = function (itemId) {
-        this.select([], itemId);
-      }.bind(this);
+    var selectedId = this.state.path.length > 0 && this.state.path[0];
     return (
       r.div({
           key:       'root',
           className: 'column'
         },
         rootColumn({
-            colIx:        0,
-            tags:         this.state.tags.all,
-            selectedId:   selectedId,
-            selectedItem: selectedItem,
-            onSelect:     function (itemId) {
-              this.select([], itemId);
-            }.bind(this)
+            tags:       this.state.tags.all,
+            selectedId: selectedId
           })));
   },
 
   renderItemColumn: function (itemId, colIx) {
-    var base         = this.state.path.slice(0, colIx + 1);
-    var selectedId   = this.state.path.length > (colIx + 1) && this.state.path[colIx + 1];
-    var selectedItem = selectedId && this.state.itemsById[selectedId];
-    var onSelect     = function (itemId) {
-        this.select(base, itemId);
-      }.bind(this);
+    var selectedId = this.state.path.length > (colIx + 1) && this.state.path[colIx + 1];
     return (
       r.div({
           key:       itemId + '-' + (colIx + 1),
           className: 'column'
         },
-        this.renderColumnContent(itemId, colIx + 1, selectedId, selectedItem, onSelect)));
+        this.renderColumnContent(itemId, colIx + 1, selectedId)));
   },
 
   renderPdfColumn: function () {

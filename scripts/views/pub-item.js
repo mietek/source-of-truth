@@ -1,19 +1,19 @@
 'use strict';
 
+var a = require('../actions');
 var r = require('../common/react');
 
 var _ = {
   propTypes: function () {
     return {
+      colIx:      r.propTypes.number.isRequired,
       pubId:      r.propTypes.string.isRequired,
       authors:    r.propTypes.array.isRequired,
       year:       r.propTypes.object.isRequired,
       suffix:     r.propTypes.string,
       title:      r.propTypes.string.isRequired,
       isSelected: r.propTypes.bool,
-      isPartial:  r.propTypes.bool,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func
+      isPartial:  r.propTypes.bool
     };
   },
 
@@ -25,7 +25,7 @@ var _ = {
             (this.props.isSelected ? ' selected' : '')),
           onClick:   function (event) {
             event.stopPropagation();
-            this.props.onSelect(this.props.isSelected ? null : this.props.pubId);
+            a.selectItemInColumn(this.props.isSelected ? null : this.props.pubId, this.props.colIx);
           }.bind(this)
         },
         r.span('key',

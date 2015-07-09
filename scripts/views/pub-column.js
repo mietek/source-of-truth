@@ -1,5 +1,6 @@
 'use strict';
 
+var a = require('../actions');
 var r = require('../common/react');
 
 var abstract = require('./abstract');
@@ -22,9 +23,7 @@ var _ = {
       fullReverseCitationCount: r.propTypes.number,
       isNumbered:               r.propTypes.bool,
       isPartial:                r.propTypes.bool,
-      selectedId:               r.propTypes.string,
-      selectedItem:             r.propTypes.object,
-      onSelect:                 r.propTypes.func
+      selectedId:               r.propTypes.string
     };
   },
 
@@ -36,17 +35,17 @@ var _ = {
             (isClickable ? ' clickable' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();
-            this.props.onSelect(null);
+            a.selectItemInColumn(null, this.props.colIx);
           }.bind(this)
         },
         pubHeader({
+            colIx:      this.props.colIx,
             authors:    this.props.authors,
             year:       this.props.year,
             suffix:     this.props.suffix,
             title:      this.props.title,
             tags:       this.props.tags,
-            selectedId: this.props.selectedId,
-            onSelect:   this.props.onSelect
+            selectedId: this.props.selectedId
           }),
         abstract({
             content: this.props.abstract
@@ -58,20 +57,20 @@ var _ = {
                 'Full text not available'))),
         (this.props.isPartial && !this.props.citations.length) ? null :
           genericList({
+              colIx:          this.props.colIx,
               label:          'Cites',
               items:          this.props.citations,
               fullCount:      this.props.fullCitationCount,
               isNumbered:     this.props.isNumbered,
-              selectedId:     this.props.selectedId,
-              onSelect:       this.props.onSelect
+              selectedId:     this.props.selectedId
             }),
         (!this.props.reverseCitations || !this.props.reverseCitations.length) ? null :
           genericList({
+              colIx:          this.props.colIx,
               label:          'Cited by',
               items:          this.props.reverseCitations,
               fullCount:      this.props.fullReverseCitationCount,
-              selectedId:     this.props.selectedId,
-              onSelect:       this.props.onSelect
+              selectedId:     this.props.selectedId
             })));
   }
 };

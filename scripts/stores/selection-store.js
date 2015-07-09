@@ -31,7 +31,7 @@ function SelectionStore() {
 
 SelectionStore.prototype = utils.assign(new Store(), {
   selectItemInColumn: function (itemId, colIx) {
-    var base = this.path.slice(0, colIx + 1);
+    var base = this.path.slice(0, colIx);
     var path = itemId ? base.concat([itemId]) : base;
     var hash = utils.encodePath(path);
     this.path = path;

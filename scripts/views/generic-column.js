@@ -1,5 +1,6 @@
 'use strict';
 
+var a = require('../actions');
 var r = require('../common/react');
 
 var genericHeader = require('./generic-header');
@@ -12,8 +13,7 @@ var _ = {
       heading:    r.propTypes.string.isRequired,
       items:      r.propTypes.array,
       fullCount:  r.propTypes.number,
-      selectedId: r.propTypes.string,
-      onSelect:   r.propTypes.func
+      selectedId: r.propTypes.string
     };
   },
 
@@ -26,7 +26,7 @@ var _ = {
             (isClickable ? ' clickable' : '')),
           onClick:   isClickable && function (event) {
             event.stopPropagation();
-            this.props.onSelect(null);
+            a.selectItemInColumn(null, this.props.colIx);
           }.bind(this)
         },
         genericHeader({
@@ -34,10 +34,10 @@ var _ = {
           }),
         !hasItems ? null :
             genericList({
+              colIx:      this.props.colIx,
               items:      this.props.items,
               fullCount:  this.props.fullCount,
-              selectedId: this.props.selectedId,
-              onSelect:   this.props.onSelect
+              selectedId: this.props.selectedId
             })));
   }
 };
