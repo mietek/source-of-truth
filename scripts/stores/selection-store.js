@@ -4,18 +4,8 @@ var Store = require('../common/store');
 var dispatcher = require('../common/dispatcher');
 var utils = require('../common/utils');
 
-function encodePath(path) {
-  return '#' + path.join('/');
-}
-
-function decodePath(hash) {
-  return (
-    !hash ? [] :
-      hash.slice(1).split('/'));
-}
-
 function SelectionStore() {
-  var path = decodePath(location.hash);
+  var path = utils.decodePath(location.hash);
   this.path = path;
   this.dispatchToken = dispatcher.register(function (action) {
       switch (action.type) {
@@ -32,7 +22,7 @@ function SelectionStore() {
   addEventListener('popstate', function (event) {
       var path = (
         !event.state ?
-          decodePath(location.hash) :
+          utils.decodePath(location.hash) :
           (event.state.path || []));
       this.path = path;
       this.publish();
@@ -43,7 +33,7 @@ SelectionStore.prototype = utils.assign(new Store(), {
   selectItemInColumn: function (itemId, colIx) {
     var base = this.path.slice(0, colIx + 1);
     var path = itemId ? base.concat([itemId]) : base;
-    var hash = encodePath(path);
+    var hash = utils.encodePath(path);
     this.path = path;
     history.pushState({
         path: path

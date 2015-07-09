@@ -16,6 +16,30 @@ var selectionStore = require('../stores/selection-store');
 
 var tokens = {};
 
+function getLastSelectedItem(path) {
+  return (
+    path &&
+    path.length &&
+    path[path.length - 1]);
+}
+
+function getPdfUrl(path, itemsById) {
+  var lastItemId = getLastSelectedItem(path);
+  var lastItem   = itemsById && itemsById[lastItemId];
+  return (
+    lastItem &&
+    lastItem.type === 'pub' &&
+    !lastItem.isPartial &&
+    document.location.origin + '/_pubs/' + lastItem.id + '.pdf');
+}
+
+function getColumnCount(path, itemsById) {
+  var hasPdf = !!getPdfUrl(path, itemsById);
+  return (1 +
+    (path ? path.length : 0) +
+    (hasPdf ? 1 : 0));
+}
+
 var _ = {
   getInitialState: function () {
     var database    = processor.processDatabase();
@@ -42,11 +66,12 @@ var _ = {
       });
   },
 
-  renderColumn: function (itemId, selectedId, onSelect) {
+  renderColumn: function (itemId, colIx, selectedId, onSelect) {
     switch (itemId) {
       case 'by-key':
         return (
           genericColumn({
+              colIx:      colIx,
               heading:    'by key',
               items:      this.state.pubs.all,
               fullCount:  this.state.pubs.fullCount,
@@ -56,6 +81,7 @@ var _ = {
       case 'by-author':
         return (
           genericColumn({
+              colIx:      colIx,
               heading:    'by author',
               items:      this.state.authors.all,
               fullCount:  this.state.authors.fullCount,
@@ -65,6 +91,7 @@ var _ = {
       case 'by-year':
         return (
           genericColumn({
+              colIx:      colIx,
               heading:    'by year',
               items:      this.state.years.all,
               fullCount:  this.state.years.fullCount,
@@ -78,6 +105,7 @@ var _ = {
       case 'pub':
         return (
           pubColumn({
+              colIx:                    colIx,
               authors:                  item.authors,
               year:                     item.year,
               title:                    item.title,
@@ -98,6 +126,7 @@ var _ = {
       case 'year':
         return (
           genericColumn({
+              colIx:      colIx,
               heading:    itemType === 'author' ? item.fullName : item.name, // TODO: Ugh
               items:      item.pubs,
               fullCount:  item.fullCount,
@@ -109,44 +138,13 @@ var _ = {
           r.div('wrapper',
             r.div('section',
               r.span('label',
-                'Missing item'))));
+                'Item not found'))));
     }
-  },
-
-  getLastId: function (state) {
-    return (
-      state &&
-      state.path &&
-      state.path.length &&
-      state.path[state.path.length - 1]);
-  },
-
-  getLastItem: function (state) {
-    var lastId = this.getLastId(state);
-    return (
-      lastId &&
-      state.itemsById[lastId]);
-  },
-
-  getPdfUrl: function (state) {
-    var lastItem = this.getLastItem(state);
-    return (
-      lastItem &&
-      lastItem.type === 'pub' &&
-      !lastItem.isPartial &&
-      document.location.origin + '/_pubs/' + lastItem.id + '.pdf');
-  },
-
-  getColumnCount: function (state) {
-    var hasPdf = !!this.getPdfUrl(state);
-    return (
-      1 + ((state && state.path) ? state.path.length : 0) + (
-        hasPdf ? 1 : 0));
   },
 
   componentDidMount: function () {
     selectionStore.subscribe(this.onPublish);
-    this.componentDidUpdate(null, null);
+    this.componentDidUpdate();
   },
 
   componentWillUnmount: function () {
@@ -157,8 +155,8 @@ var _ = {
     var browser         = r.findDOMNode(this);
     var columnList      = browser.firstChild;
     var columns         = columnList.childNodes;
-    var prevColumnCount = this.getColumnCount(prevState);
-    var columnCount     = this.getColumnCount(this.state);
+    var prevColumnCount = getColumnCount(prevState && prevState.path, prevState && prevState.itemsById);
+    var columnCount     = getColumnCount(this.state.path, this.state.itemsById);
     var startX          = browser.scrollLeft;
     var componentId     = this.state.componentId;
     var token           = utils.getRandomUuid();
@@ -199,8 +197,8 @@ var _ = {
   },
 
   render: function () {
-    var lastId = this.getLastId(this.state);
-    var pdfUrl = this.getPdfUrl(this.state);
+    var lastItemId = getLastSelectedItem(this.state.path);
+    var pdfUrl     = getPdfUrl(this.state.path, this.state.itemsById);
     return (
       r.div('browser',
         r.div('column-list',
@@ -209,6 +207,7 @@ var _ = {
               className: 'column'
             },
             rootColumn({
+                colIx:      0,
                 tags:       this.state.tags.all,
                 selectedId: this.state.path && this.state.path.length > 0 && this.state.path[0],
                 onSelect:   function (itemId) {
@@ -226,11 +225,11 @@ var _ = {
                     key:       itemId + '-' + (colIx + 1),
                     className: 'column'
                   },
-                  this.renderColumn(itemId, selectedId, onSelect)));
+                  this.renderColumn(itemId, colIx + 1, selectedId, onSelect)));
             }.bind(this)),
           !pdfUrl ? null :
             r.div({
-                key:       lastId + '-pdf',
+                key:       lastItemId + '-pdf',
                 className: 'column'
               },
               pdf({

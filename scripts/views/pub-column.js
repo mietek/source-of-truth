@@ -9,6 +9,7 @@ var pubHeader = require('./pub-header');
 var _ = {
   propTypes: function () {
     return {
+      colIx:                    r.propTypes.number.isRequired,
       authors:                  r.propTypes.array.isRequired,
       year:                     r.propTypes.object.isRequired,
       suffix:                   r.propTypes.string,

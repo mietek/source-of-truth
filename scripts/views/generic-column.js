@@ -8,6 +8,7 @@ var genericList = require('./generic-list');
 var _ = {
   propTypes: function () {
     return {
+      colIx:      r.propTypes.number.isRequired,
       heading:    r.propTypes.string.isRequired,
       items:      r.propTypes.array,
       fullCount:  r.propTypes.number,

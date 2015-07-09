@@ -133,6 +133,16 @@ var _ = module.exports = {
         defaultValue);
   },
 
+  encodePath: function (path) {
+    return '#' + path.join('/');
+  },
+
+  decodePath: function (hash) {
+    return (
+      !hash ? [] :
+        hash.slice(1).split('/'));
+  },
+
   detectHairline: function () {
     var hairline = false;
     if (window.devicePixelRatio && window.devicePixelRatio >= 2) {
