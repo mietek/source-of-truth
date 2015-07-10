@@ -66,7 +66,7 @@ var _ = {
           (this.state.isCollapsed ? ' collapsed' : '') +
           (this.state.isFiltered ? ' filtered' : '') +
           (this.props.isNumbered ? ' numbered' : '')),
-        r.div('spacer',
+        r.div('section spacer',
           r.span({
               className: 'collapsing label' + (
                 (isClickable ? ' clickable' : '')),

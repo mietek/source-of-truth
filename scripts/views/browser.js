@@ -29,7 +29,7 @@ function getPdfUrl(path, itemsById) {
     lastItem &&
     lastItem.type === 'pub' &&
     !lastItem.isPartial &&
-    document.location.origin + '/_pubs/' + lastItem.id + '.pdf');
+    document.location.origin + '/_pubs/' + lastItem.id + '.pdf'); // TODO: Refactor
 }
 
 function getColumnCount(path, itemsById) {
@@ -93,6 +93,7 @@ var _ = {
         return (
           pubColumn({
               colIx:                    colIx,
+              pubId:                    itemId,
               authors:                  item.authors,
               year:                     item.year,
               title:                    item.title,

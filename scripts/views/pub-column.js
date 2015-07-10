@@ -11,6 +11,7 @@ var _ = {
   propTypes: function () {
     return {
       colIx:                    r.propTypes.number.isRequired,
+      pubId:                    r.propTypes.string.isRequired,
       authors:                  r.propTypes.array.isRequired,
       year:                     r.propTypes.object.isRequired,
       suffix:                   r.propTypes.string,
@@ -50,11 +51,6 @@ var _ = {
         abstract({
             content: this.props.abstract
           }),
-        !this.props.isPartial ? null :
-          r.div('section',
-            r.div('spacer',
-              r.span('label',
-                'Full text not available'))),
         (this.props.isPartial && !this.props.citations.length) ? null :
           genericList({
               colIx:         this.props.colIx,
@@ -75,7 +71,11 @@ var _ = {
               isCollapsible: false,
               isFiltered:    false,
               selectedId:    this.props.selectedId
-            })));
+            }),
+        !this.props.isPartial ? null :
+          r.div('section spacer',
+            r.span('label',
+              'Full text not available'))));
   }
 };
 

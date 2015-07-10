@@ -22,7 +22,7 @@ var _ = {
     return (
       r.div('abstract' + (
           (this.state.isCollapsed ? ' collapsed' : '')),
-        r.div('spacer',
+        r.div('section spacer',
           r.span({
             className: 'collapsing label clickable',
             onClick:   function (event) {
