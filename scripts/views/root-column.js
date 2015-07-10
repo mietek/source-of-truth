@@ -47,6 +47,7 @@ var _ = {
             items:         this.props.tags,
             isCollapsible: false,
             isCounted:     false,
+            isFiltered:    false,
             selectedId:    this.props.selectedId
           }),
         genericList({
@@ -55,6 +56,7 @@ var _ = {
             items:         pubItems,
             isCounted:     false,
             isCollapsible: false,
+            isFiltered:    false,
             selectedId:    this.props.selectedId
           })));
   }

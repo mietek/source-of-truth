@@ -99,6 +99,17 @@ var _ = {
               filteringLabel)),
         this.state.isCollapsed ? null :
           this.props.items.map(function (item, itemIx) {
+              if (this.state.isFiltered) {
+                var isPartial;
+                if (item.type === 'pub') { // TODO: Refactor
+                  isPartial = item.isPartial;
+                } else {
+                  isPartial = !item.fullCount;
+                }
+                if (isPartial) {
+                  return null;
+                }
+              }
               var pubRef = (
                 !this.props.isNumbered ? null :
                   '' + (itemIx + 1));
