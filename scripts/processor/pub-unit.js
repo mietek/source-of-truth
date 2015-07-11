@@ -110,7 +110,7 @@ var _ = module.exports = {
       },
       !otherPub.citations.length ? null : {
         citations:  otherPub.citations,
-        isNumbered: otherPub.numbered
+        isNumbered: otherPub.isNumbered
       }, {
         reverseCitations: reverseCitations,
         isPartial:        isPartial
