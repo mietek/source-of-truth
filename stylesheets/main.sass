@@ -187,7 +187,7 @@ body
   margin-top: $line-height
 
 .header .label
-  width: 1/3 * 100%
+  width: 3/8 * 100%
   padding-left: u(1)
   padding-right: u(1)
   text-align: right
@@ -195,11 +195,11 @@ body
 .header .item .value
   @include ellipsis
   display: inline-block
-  width: 2/3 * 100%
+  width: 5/8 * 100%
   padding-right: u(2)
 
 .header .item .value:first-child
-  margin-left: 1/3 * 100%
+  margin-left: 3/8 * 100%
 
 
 .list
@@ -230,7 +230,7 @@ body
   @include ellipsis
   display: inline-block
   width: 100%
-  padding-left: 1/9 * 100%
+  padding-left: 1/8 * 100%
   padding-right: u(2)
 
 
@@ -238,7 +238,7 @@ body
   @include label
   @include ellipsis
   display: inline-block
-  width: 1/9 * 100%
+  width: 1/8 * 100%
   padding-right: u(1)
   text-align: right
 
@@ -252,17 +252,17 @@ body
   padding-right: u(1)
 
 .list.numbered .item .key
-  width: 2/9 * 100%
+  width: 2/8 * 100%
 
 .list:not(.numbered) .item .key
-  width: 1/3 * 100%
-  padding-left: 1/9 * 100%
+  width: 3/8 * 100%
+  padding-left: 1/8 * 100%
 
 
 .item .title
   @include ellipsis
   display: inline-block
-  width: 2/3 * 100%
+  width: 5/8 * 100%
   padding-right: u(2)
 
 
@@ -285,7 +285,7 @@ body
   @include selectable
 
 .abstract .content p
-  margin-left: 1/9 * 100%
+  margin-left: 1/8 * 100%
   margin-right: u(2)
 
 .abstract .content p:first-of-type
@@ -382,19 +382,16 @@ body
 
 @media (max-width: 1080px)
   .item .content
-    padding-left: u(2)
     padding-right: u(2)
   .item .ref
-    width: 1/3 * 100%
+    width: 3/8 * 100%
   .list.numbered .item .key
-    width: 2/3 * 100%
+    width: 5/8 * 100%
     padding-right: u(2)
   .list:not(.numbered) .item .key
     width: 100%
-    padding-left: u(2)
     padding-right: u(2)
   .item .title
     display: none
   .abstract .content p
-    margin-left: u(2)
     margin-right: u(2)
