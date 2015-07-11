@@ -9,36 +9,48 @@ var _ = module.exports = {
     return tokens[tokens.length - 1];
   },
 
+  getSortingLastName: function (lastName) {
+    var parts = lastName.split(' ');
+    if (parts.length > 1) {
+      var firstPart   = parts[0].toLowerCase();
+      var isSkippable = (
+        firstPart === 'de' ||
+        firstPart === 'des' ||
+        firstPart === 'di' ||
+        firstPart === 'van');
+      if (isSkippable) {
+        return parts.slice(1).join(' ');
+      }
+    }
+    return lastName;
+  },
+
   shorten: function (dotlessInitial) {
     return dotlessInitial.split('-').map(function (part) {
         return part[0];
       }).join('-');
   },
 
-  recoverInitials: function (tokens) {
-    var dotlessInitials = tokens.slice(0, tokens.length - 1);
-    var shortInitials   = [];
-    var initials        = [];
-    dotlessInitials.forEach(function (dotlessInitial) {
-        var dotlessShortInitial = _.shorten(dotlessInitial);
-        var shortInitial        = dotlessShortInitial.split('-').join('.-') + '.';
-        var initial             = dotlessShortInitial === dotlessInitial ? shortInitial : dotlessInitial;
-        shortInitials.push(shortInitial);
-        initials.push(initial);
-      });
-    return {
-      short:  shortInitials,
-      all:    initials,
-      length: initials.length
-    };
+  addDots: function (dotlessShortInitial) {
+    return dotlessShortInitial.split('-').join('.-') + '.';
   },
 
-  extractAuthors: function (rawPub) {
-    var rawNames = rawPub.authors || [rawPub.author];
-    (rawPub.citations || []).forEach(function (rawCitation) {
-        rawNames = rawNames.concat(rawCitation.authors || [rawCitation.author]);
+  recoverInitials: function (tokens) {
+    var dotlessInitials = tokens.slice(0, tokens.length - 1);
+    return dotlessInitials.map(function (dotlessInitial) {
+        var dotlessShortInitial = _.shorten(dotlessInitial);
+        var shortInitial        = _.addDots(dotlessShortInitial);
+        return dotlessShortInitial === dotlessInitial ? shortInitial : dotlessInitial;
       });
-    return rawNames;
+  },
+
+  shortenInitials: function (initials) {
+    return initials.map(function (initial) {
+        var dotlessInitial      = initial.replace(/\./g, '');
+        var dotlessShortInitial = _.shorten(dotlessInitial);
+        var shortInitial        = _.addDots(dotlessShortInitial);
+        return shortInitial;
+      });
   },
 
   areInitialsSame: function (initials, otherInitials) {
@@ -59,6 +71,39 @@ var _ = module.exports = {
       });
   },
 
+  processName: function (lastName, initials) {
+    if (!initials.length) {
+      return {
+        shortInitials:    [],
+        shortName:        lastName,
+        fullName:         lastName,
+        reverseShortName: lastName,
+        reverseFullName:  lastName,
+        sortingName:      lastName
+      };
+    }
+    var shortInitials    = _.shortenInitials(initials);
+    var shortInitialPart = shortInitials.join(' ');
+    var initialPart      = initials.join(' ');
+    var sortingLastName  = _.getSortingLastName(lastName);
+    return {
+      shortInitials:    shortInitials,
+      shortName:        shortInitialPart + ' ' + lastName,
+      fullName:         initialPart + ' ' + lastName,
+      reverseShortName: lastName + ', ' + shortInitialPart,
+      reverseFullName:  lastName + ', ' + initialPart,
+      sortingName:      sortingLastName + ', ' + initialPart
+    };
+  },
+
+  extractAuthors: function (rawPub) {
+    var rawNames = rawPub.authors || [rawPub.author];
+    (rawPub.citations || []).forEach(function (rawCitation) {
+        rawNames = rawNames.concat(rawCitation.authors || [rawCitation.author]);
+      });
+    return rawNames;
+  },
+
   process: function (rawName) {
     var isUnknown = (
       !rawName ||
@@ -67,67 +112,38 @@ var _ = module.exports = {
       rawName === 'unknown');
     var rawNames;
     var lastName;
-    var shortInitials;
     var initials;
-    var shortName;
-    var fullName;
-    var reverseShortName;
-    var reverseFullName;
     var name;
     var id;
     if (isUnknown) {
-      rawNames         = ['unknown'];
-      lastName         = 'unknown author';
-      shortInitials    = [];
-      initials         = [];
-      shortName        = 'unknown author';
-      reverseShortName = 'unknown author';
-      fullName         = 'unknown author';
-      reverseFullName  = 'unknown author';
-      name             = 'unknown author';
-      id               = _.unknownId;
+      rawNames = ['unknown'];
+      lastName = 'unknown author';
+      initials = [];
+      name     = 'unknown author';
+      id       = _.unknownId;
     } else {
       var tokens = rawName.replace(/\.-/g, '-').split(/[\. ]/).filter(function (token) {
           return !!token.length;
         });
-      var initialInfo = _.recoverInitials(tokens);
-      rawNames      = [rawName];
-      lastName      = _.recoverLastName(tokens);
-      shortInitials = initialInfo.short;
-      initials      = initialInfo.all;
-      if (initialInfo.length) {
-        var shortInitialPart = initialInfo.short.join(' ');
-        var initialPart      = initialInfo.all.join(' ');
-        shortName        = shortInitialPart + ' ' + lastName;
-        fullName         = initialPart + ' ' + lastName;
-        reverseShortName = lastName + ', ' + shortInitialPart;
-        reverseFullName  = lastName + ', ' + initialPart;
-      } else {
-        fullName         = lastName;
-        shortName        = lastName;
-        reverseShortName = lastName;
-        reverseFullName  = lastName;
-      }
-      name = undefined;
-      id   = undefined;
+      rawNames = [rawName];
+      lastName = _.recoverLastName(tokens);
+      initials = _.recoverInitials(tokens);
+      name     = undefined;
+      id       = undefined;
     }
-    return {
-      type:             'author',
-      rawNames:         rawNames,
-      lastName:         lastName,
-      shortInitials:    shortInitials,
-      initials:         initials,
-      shortName:        shortName,
-      fullName:         fullName,
-      reverseShortName: reverseShortName,
-      reverseFullName:  reverseFullName,
-      name:             name,
-      id:               id,
-      pubs:             [],
-      fullCount:        0,
-      partialCount:     0,
-      isUnknown:        isUnknown
-    };
+    return utils.assign({
+        type:         'author',
+        rawNames:     rawNames,
+        lastName:     lastName,
+        initials:     initials,
+        name:         name,
+        id:           id,
+        pubs:         [],
+        fullCount:    0,
+        partialCount: 0,
+        isUnknown:    isUnknown
+      },
+      _.processName(lastName, initials));
   },
 
   compare: function (author1, author2) {
@@ -137,7 +153,7 @@ var _ = module.exports = {
     if (author2.isUnknown) {
       return -1;
     }
-    return author1.reverseFullName.localeCompare(author2.reverseFullName);
+    return author1.sortingName.localeCompare(author2.sortingName);
   },
 
   sort: function (all) {
@@ -158,20 +174,32 @@ var _ = module.exports = {
   },
 
   extendAuthor: function (author, otherAuthor) {
-    if (author.fullName.length < otherAuthor.fullName.length) {
-      utils.assign(author, {
-          shortInitials:    otherAuthor.shortInitials,
-          initials:         otherAuthor.initials,
-          shortName:        otherAuthor.shortName,
-          reverseShortName: otherAuthor.reverseShortName,
-          fullName:         otherAuthor.fullName,
-          reverseFullName:  otherAuthor.reverseFullName
-        });
+    var rawNames     = utils.getUnion(author.rawNames, otherAuthor.rawNames);
+    var commonLength = Math.min(author.initials.length, otherAuthor.initials.length);
+    var initials     = [];
+    var lessInitials;
+    var moreInitials;
+    if (author.initials.length < otherAuthor.initials.length) {
+      lessInitials = author.initials;
+      moreInitials = otherAuthor.initials;
+    } else {
+      lessInitials = otherAuthor.initials;
+      moreInitials = author.initials;
     }
-    var rawNames = utils.getUnion(author.rawNames, otherAuthor.rawNames);
+    lessInitials.forEach(function (initial, initialIx) {
+        var otherInitial = moreInitials[initialIx];
+        if (initial.length < otherInitial.length) {
+          initials.push(otherInitial);
+        } else {
+          initials.push(initial);
+        }
+      });
+    initials = initials.concat(moreInitials.slice(commonLength));
     utils.assign(author, {
         rawNames: rawNames,
-      });
+        initials: initials
+      },
+      _.processName(author.lastName, initials));
   },
 
   partitionAll: function (rawPubs) {
