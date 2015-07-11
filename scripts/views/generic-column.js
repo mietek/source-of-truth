@@ -38,6 +38,7 @@ var _ = {
               items:         this.props.items,
               fullCount:     this.props.fullCount,
               isCollapsible: false,
+              isFiltered:    !!this.props.fullCount,
               selectedId:    this.props.selectedId
             })));
   }
