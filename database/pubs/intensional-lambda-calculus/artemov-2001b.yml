@@ -1,6 +1,6 @@
 title: Reflection and propositions-as-types
 authors:
-  - Sergei N. Artëmov
+  - Sergei N. Artemov
   - Eli Barzilay
   - Robert L. Constable
   - Aleksey Nogin
@@ -20,19 +20,19 @@ citations:
 
   - authors:
       - Jesse Alt
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
     title: Reflective λ-calculus
     year: 2000
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: On explicit reflection in theorem proving and formal verification
     year: 1999
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Uniform provability realization of intuitionistic logic, modality, and lambda-terms
     year: 1999
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Explicit provability and constructive semantics
     year: 2001
 

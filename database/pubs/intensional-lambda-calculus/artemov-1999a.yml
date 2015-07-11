@@ -1,5 +1,5 @@
 title: On explicit reflection in theorem proving and formal verification
-author: Sergei N. Artëmov
+author: Sergei N. Artemov
 year: 1999
 tag: Intensional lambda calculus
 abstract: |
@@ -14,25 +14,25 @@ citations:
     title: The semantics of reflected proof
     year: 1990
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Extensions of theories by the reflection principles and the corresponding modal logics
     year: 1979
 
   - authors:
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
       - T. Strassen
     title: The basic logic of proofs
     year: 1993
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of proofs
     year: 1994
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Operational modal logic
     year: 1995
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: "Explicit provability: The intended semantics for intuitionistic and modal logic"
     year: 1998
 

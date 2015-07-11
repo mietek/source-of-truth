@@ -1,5 +1,5 @@
 title: Operational modal logic
-author: Sergei N. Artëmov
+author: Sergei N. Artemov
 year: 1995
 tag: Intensional lambda calculus
 abstract: |
@@ -10,12 +10,12 @@ abstract: |
 citations:
 
   - authors:
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
       - T. Strassen
     title: The basic logic of proofs
     year: 1993
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of proofs
     year: 1994
 

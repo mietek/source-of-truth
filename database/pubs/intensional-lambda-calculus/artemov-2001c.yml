@@ -1,5 +1,5 @@
 title: Unified semantics for modality and λ-terms via proof polynomials
-author: Sergei N. Artëmov
+author: Sergei N. Artemov
 year: 2001
 tag: Intensional lambda calculus
 abstract: |
@@ -7,20 +7,20 @@ abstract: |
 citations:
 
   - authors:
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
       - T. Strassen
     title: Functionality in the basic logic of proofs
     year: 1993
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of proofs
     year: 1994
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Operational modal logic
     year: 1995
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Proof realizations of typed λ-calculi
     year: 1997
 

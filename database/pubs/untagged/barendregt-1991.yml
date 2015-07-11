@@ -1,0 +1,13 @@
+title: Self-interpretation in lambda calculus
+author: Henk Barendregt
+year: 1991
+numbered: n
+citations:
+
+  - author: D.R. Hofstadter
+    title: "Gödel, Escher, Bach: An eternal golden braid"
+    year: 1979
+
+  - author: Stephen C. Kleene
+    title: λ-definability and recursiveness
+    year: 1936

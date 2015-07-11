@@ -1,5 +1,5 @@
 title: Logic of proofs
-author: Sergei N. Artëmov
+author: Sergei N. Artemov
 year: 1994
 tag: Intensional lambda calculus
 abstract: |
@@ -7,13 +7,13 @@ abstract: |
 citations:
 
   - authors:
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
       - T. Strassen
     title: The basic logic of proofs
     year: 1993
 
   - authors:
-      - Sergei N. Artëmov
+      - Sergei N. Artemov
       - T. Strassen
     title: Functionality in the basic logic of proofs
     year: 1993
@@ -22,11 +22,11 @@ citations:
     title: Provability interpretations of modal logic
     year: 1976
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of proofs
     year: 1992
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of functional proofs
     year: 1993
 

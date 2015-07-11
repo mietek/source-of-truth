@@ -1,16 +1,16 @@
 title: Proof realization of intuitionistic and modal logics
-author: Sergei N. Artëmov
+author: Sergei N. Artemov
 year: 1996
 tag: Intensional lambda calculus
 abstract: |
   <p>Logic of Proofs (LP) has been introduced in [2] as a collection of all valid formulas in the propositional language with labeled logical connectives <b>⟦t⟧(·)</b> where <b>t</b> is a <i>proof term</i> with the intended reading of <b>⟦t⟧F</b> as “<b>t</b> is a proof of <b>F</b>”. LP is supplied with a natural axiom system, completeness and decidability theorems. LP may express some constructions of logic which have been formulated or/and interpreted in an informal metalanguage involving the notion of proof, e.g. the intuitionistic logic and its Brouwer-Heyting-Kolmogorov semantics, classical modal logic S4, etc (cf. [2]). In the current paper we demonstrate how the intuitionistic propositional logic Int can be directily realized into the Logic of Proofs. It is shown, that the proof realizability gives a fair semantics for Int.</p>
 citations:
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Logic of proofs
     year: 1994
 
-  - author: Sergei N. Artëmov
+  - author: Sergei N. Artemov
     title: Operational modal logic
     year: 1995
 
