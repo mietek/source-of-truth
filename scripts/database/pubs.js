@@ -2950,24 +2950,24 @@ module.exports = [
     "title": "Reflective λ-calculus",
     "authors": [
       "Jesse Alt",
-      "Sergei Artemov"
+      "Sergei N. Artëmov"
     ],
     "year": 2000,
     "tag": "Intensional lambda calculus",
     "abstract": "<p>The Curry-Howard isomorphism converting intuitionistic proofs into typed λ-terms is a simple instance of an internalization property of a system λ<sup>∞</sup> which unifies intuitionistic logic with λ-calculus and which is capable of internalizing its own derivations as λ-terms. We establish confluence and strong normalization of λ<sup>∞</sup>. The system λ<sup>∞</sup> considerably extends the expressive power of each of its major components: typed λ-calculus, intuitionistic and modal logic. It may be regarded as the pure λ version of the Logic of Proofs LP from [1, 2, 3]. In particular, the standard model of <b>t : F</b> in λ<sup>∞</sup> is “<b>t</b> is a proof of <b>F</b>”.</p>\n",
     "citations": [
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
         "year": 1999
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Explicit provability and constructive semantics",
         "year": 2001
       },
@@ -3007,24 +3007,24 @@ module.exports = [
     "title": "Reflective λ-calculus",
     "authors": [
       "Jesse Alt",
-      "Sergei Artemov"
+      "Sergei N. Artëmov"
     ],
     "year": 2001,
     "tag": "Intensional lambda calculus",
     "abstract": "<p>We introduce a general purpose typed λ-calculus λ<sup>∞</sup> which contains intuitionistic logic, is capable of internalizing its own derivations as λ-terms and yet enjoys strong normalization with respect to a natural reduction system. In particular, λ<sup>∞</sup> subsumes the typed λ-calculus. The Curry-Howard isomorphism converting intuitionistic proofs into λ-terms is a simple instance of the internalization property of λ<sup>∞</sup>. The standard semantics of λ<sup>∞</sup> is given by a proof system with proof checking capacities. The system λ<sup>∞</sup> is a theoretical prototype of reflective extensions of a broad class of type-based systems in programming languages, provers, AI and knowledge representation, etc.</p>\n",
     "citations": [
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
         "year": 1999
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Explicit provability and constructive semantics",
         "year": 2001
       },
@@ -3086,8 +3086,244 @@ module.exports = [
     ]
   },
   {
+    "title": "Logic of proofs",
+    "author": "Sergei N. Artëmov",
+    "year": 1994,
+    "tag": "Intensional lambda calculus",
+    "abstract": "<p>In this paper individual proofs are integrated into provability logic. Systems of axioms for a logic with operators “<b>A</b> is provable” and “<b>p is a proof of <b>A</b>” are introduced, provided with Kripke semantics and decision procedure. Completeness theorems with respect to the arithmetical interpretation are proved.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Sergei N. Artëmov",
+          "T. Strassen"
+        ],
+        "title": "The basic logic of proofs",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "Sergei N. Artëmov",
+          "T. Strassen"
+        ],
+        "title": "Functionality in the basic logic of proofs",
+        "year": 1993
+      },
+      {
+        "author": "R. M. Solovay",
+        "title": "Provability interpretations of modal logic",
+        "year": 1976
+      },
+      {
+        "author": "Sergei N. Artëmov",
+        "title": "Logic of proofs",
+        "year": 1992
+      },
+      {
+        "author": "Sergei N. Artëmov",
+        "title": "Logic of functional proofs",
+        "year": 1993
+      },
+      {
+        "authors": [
+          "J. Lassez",
+          "M. Maher",
+          "K. Marriott"
+        ],
+        "title": "Unification revisited",
+        "year": 1987
+      },
+      {
+        "authors": [
+          "D. Guaspary",
+          "R. M. Solovay"
+        ],
+        "title": "Rosser sentences",
+        "year": 1979
+      },
+      {
+        "author": "G. Boolos",
+        "title": "The unprovability of consistency: An essay in modal logic",
+        "year": 1979
+      },
+      {
+        "author": "C. Smoryński",
+        "title": "Self-reference and modal logic",
+        "year": 1985
+      },
+      {
+        "authors": [
+          "G. E. Hughes",
+          "M. J. Cresswell"
+        ],
+        "title": "A companion to modal logic",
+        "year": 1984
+      }
+    ]
+  },
+  {
+    "title": "Operational modal logic",
+    "author": "Sergei N. Artëmov",
+    "year": 1995,
+    "tag": "Intensional lambda calculus",
+    "abstract": "<p>Answers to two old questions are given in this paper.</p>\n<p>1. Modal logic S4, which was informally specified by Gödel in 1933 as a logic for provability, meets its exact provability interpretation.</p>\n<p>2. Brouwer-Heyting-Kolmogorov realizing operations (1931-32) for intuitionistic logic Int also get exact interpretation as corresponding propositional operations on proofs; both S4 and Int turn out to be complete with respect to this proof realization</p>\n<p>These results are based on operational reading of S4, where a modality is split into three operations. The <i>logic of proofs</i> with these operations is shown to be arithmetically complete with respect to the intended provability semantics and sufficient to realize every operation on proofs admitting propositional specification in arithmetic.</p>\n",
+    "citations": [
+      {
+        "authors": [
+          "Sergei N. Artëmov",
+          "T. Strassen"
+        ],
+        "title": "The basic logic of proofs",
+        "year": 1993
+      },
+      {
+        "author": "Sergei N. Artëmov",
+        "title": "Logic of proofs",
+        "year": 1994
+      },
+      {
+        "author": "D. van Dalen",
+        "title": "Logic and structure",
+        "year": 1994
+      },
+      {
+        "author": "K. Gödel",
+        "title": "Eine Interpretation des intuitionistichen Aussagenkalkuls",
+        "year": 1933
+      },
+      {
+        "authors": [
+          "D. Guaspary",
+          "R. M. Solovay"
+        ],
+        "title": "Rosser sentences",
+        "year": 1979
+      },
+      {
+        "author": "A. Heyting",
+        "title": "Die intuitionistiche Grundlegung der Mathematik",
+        "year": 1931
+      },
+      {
+        "authors": [
+          "D. Hilbert",
+          "P. Bernays"
+        ],
+        "title": "Grundlagen der Mathematik",
+        "year": 1934
+      },
+      {
+        "author": "A. Kolmogorov",
+        "title": "Zur Deutung der intuitionistichen Logik",
+        "year": 1932
+      },
+      {
+        "authors": [
+          "J. C. C. McKinsey",
+          "A. Tarski"
+        ],
+        "title": "Some theorems about the sentential calculi of Lewis and Heyting",
+        "year": 1948
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
+        "year": 1988
+      },
+      {
+        "author": "C. Smoryński",
+        "title": "The incompleteness theorems",
+        "year": 1977
+      }
+    ]
+  },
+  {
+    "title": "Proof realization of intuitionistic and modal logics",
+    "author": "Sergei N. Artëmov",
+    "year": 1996,
+    "tag": "Intensional lambda calculus",
+    "abstract": "<p>Logic of Proofs (LP) has been introduced in [2] as a collection of all valid formulas in the propositional language with labeled logical connectives <b>⟦t⟧(·)</b> where <b>t</b> is a <i>proof term</i> with the intended reading of <b>⟦t⟧F</b> as “<b>t</b> is a proof of <b>F</b>”. LP is supplied with a natural axiom system, completeness and decidability theorems. LP may express some constructions of logic which have been formulated or/and interpreted in an informal metalanguage involving the notion of proof, e.g. the intuitionistic logic and its Brouwer-Heyting-Kolmogorov semantics, classical modal logic S4, etc (cf. [2]). In the current paper we demonstrate how the intuitionistic propositional logic Int can be directily realized into the Logic of Proofs. It is shown, that the proof realizability gives a fair semantics for Int.</p>\n",
+    "citations": [
+      {
+        "author": "Sergei N. Artëmov",
+        "title": "Logic of proofs",
+        "year": 1994
+      },
+      {
+        "author": "Sergei N. Artëmov",
+        "title": "Operational modal logic",
+        "year": 1995
+      },
+      {
+        "author": "G. Boolos",
+        "title": "Logic of provability",
+        "year": 1993
+      },
+      {
+        "author": "D. van Dalen",
+        "title": "Logic and structure",
+        "year": 1994
+      },
+      {
+        "authors": [
+          "J.-Y. Girard",
+          "Y. Lafont",
+          "P. Taylor"
+        ],
+        "title": "Proofs and types",
+        "year": 1990
+      },
+      {
+        "author": "K. Gödel",
+        "title": "Eine Interpretation des intuitionistichen Aussagenkalkuls",
+        "year": 1933
+      },
+      {
+        "author": "A. Heyting",
+        "title": "Die intuitionistiche Grundlegung der Mathematik",
+        "year": 1931
+      },
+      {
+        "author": "A. Kolmogorov",
+        "title": "Zur Deutung der intuitionistichen Logik",
+        "year": 1932
+      },
+      {
+        "authors": [
+          "J. C. C. McKinsey",
+          "A. Tarski"
+        ],
+        "title": "Some theorems about the sentential calculi of Lewis and Heyting",
+        "year": 1948
+      },
+      {
+        "author": "V. E. Plisko",
+        "title": "On arithmetic complexity of certain constructive logics",
+        "year": 1992
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "D. van Dalen"
+        ],
+        "title": "Constructivism in mathematics: An introduction, vol. 1",
+        "year": 1988
+      },
+      {
+        "authors": [
+          "A.S. Troelstra",
+          "H. Schwichtenberg"
+        ],
+        "title": "Basic proof theory",
+        "year": 1996
+      }
+    ]
+  },
+  {
     "title": "On explicit reflection in theorem proving and formal verification",
-    "author": "Sergei Artemov",
+    "author": "Sergei N. Artëmov",
     "year": 1999,
     "tag": "Intensional lambda calculus",
     "abstract": "<p>We show that the stability requirement for a verification system yields the necessity of some sort of a reflection mechanism. However, the traditional reflection rule based on the Gödel implicit provability predicate leads to a “reflection tower” of theories which cannot be formally verified. We found natural lower and upper bounds on a metatheory capable of establishing stability of a given verification system. The paper introduces an explicit reflection mechanism which can be verified internally. This circumvents the reflection tower and provides a strict justification for the verification process. On the practical side, the paper gives specific recommendations concerning the verification of inference rules and building a verifiable reflection mechanism for a theorem proving system.</p>\n",
@@ -3103,30 +3339,30 @@ module.exports = [
         "year": 1990
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Extensions of theories by the reflection principles and the corresponding modal logics",
         "year": 1979
       },
       {
         "authors": [
-          "Sergei Artemov",
+          "Sergei N. Artëmov",
           "T. Strassen"
         ],
         "title": "The basic logic of proofs",
         "year": 1993
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Logic of proofs",
         "year": 1994
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Explicit provability: The intended semantics for intuitionistic and modal logic",
         "year": 1998
       },
@@ -3180,12 +3416,12 @@ module.exports = [
         "year": 1995
       },
       {
-        "author": "C. Smorynski",
+        "author": "C. Smoryński",
         "title": "The incompleteness theorems",
         "year": 1977
       },
       {
-        "author": "C. Smorynski",
+        "author": "C. Smoryński",
         "title": "Self-reference and modal logic",
         "year": 1985
       },
@@ -3207,7 +3443,7 @@ module.exports = [
   {
     "title": "Reflection and propositions-as-types",
     "authors": [
-      "Sergei Artemov",
+      "Sergei N. Artëmov",
       "Eli Barzilay",
       "Robert L. Constable",
       "Aleksey Nogin"
@@ -3229,23 +3465,23 @@ module.exports = [
       {
         "authors": [
           "Jesse Alt",
-          "Sergei Artemov"
+          "Sergei N. Artëmov"
         ],
         "title": "Reflective λ-calculus",
         "year": 2000
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "On explicit reflection in theorem proving and formal verification",
         "year": 1999
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Uniform provability realization of intuitionistic logic, modality, and lambda-terms",
         "year": 1999
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Explicit provability and constructive semantics",
         "year": 2001
       },
@@ -3372,7 +3608,7 @@ module.exports = [
   {
     "title": "The intensional lambda calculus",
     "authors": [
-      "Sergei Artemov",
+      "Sergei N. Artëmov",
       "Eduardo Bonelli"
     ],
     "year": 2006,
@@ -3383,31 +3619,31 @@ module.exports = [
       {
         "authors": [
           "Jesse Alt",
-          "Sergei Artemov"
+          "Sergei N. Artëmov"
         ],
         "title": "Reflective λ-calculus",
         "year": 2001
       },
       {
         "authors": [
-          "Sergei Artemov",
+          "Sergei N. Artëmov",
           "Eduardo Bonelli"
         ],
         "title": "The intensional lambda calculus",
         "year": 2006
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Proof realization of intuitionistic and modal logics",
         "year": 1996
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Unified semantics of modality and λ-terms via proof polynomials",
         "year": 2001
       },
@@ -3519,7 +3755,7 @@ module.exports = [
   {
     "title": "The intensional lambda calculus",
     "authors": [
-      "Sergei Artemov",
+      "Sergei N. Artëmov",
       "Eduardo Bonelli"
     ],
     "year": 2007,
@@ -3530,31 +3766,31 @@ module.exports = [
       {
         "authors": [
           "Jesse Alt",
-          "Sergei Artemov"
+          "Sergei N. Artëmov"
         ],
         "title": "Reflective λ-calculus",
         "year": 2001
       },
       {
         "authors": [
-          "Sergei Artemov",
+          "Sergei N. Artëmov",
           "Eduardo Bonelli"
         ],
         "title": "The intensional lambda calculus",
         "year": 2006
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Operational modal logic",
         "year": 1995
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Proof realization of intuitionistic and modal logics",
         "year": 1996
       },
       {
-        "author": "Sergei Artemov",
+        "author": "Sergei N. Artëmov",
         "title": "Unified semantics of modality and λ-terms via proof polynomials",
         "year": 2001
       },
@@ -4144,7 +4380,7 @@ module.exports = [
         "year": 1984
       },
       {
-        "author": "C. Smorynski",
+        "author": "C. Smoryński",
         "title": "Self-reference and modal logic",
         "year": 1985
       },

@@ -1,0 +1,64 @@
+title: Operational modal logic
+author: Sergei N. Artëmov
+year: 1995
+tag: Intensional lambda calculus
+abstract: |
+  <p>Answers to two old questions are given in this paper.</p>
+  <p>1. Modal logic S4, which was informally specified by Gödel in 1933 as a logic for provability, meets its exact provability interpretation.</p>
+  <p>2. Brouwer-Heyting-Kolmogorov realizing operations (1931-32) for intuitionistic logic Int also get exact interpretation as corresponding propositional operations on proofs; both S4 and Int turn out to be complete with respect to this proof realization</p>
+  <p>These results are based on operational reading of S4, where a modality is split into three operations. The <i>logic of proofs</i> with these operations is shown to be arithmetically complete with respect to the intended provability semantics and sufficient to realize every operation on proofs admitting propositional specification in arithmetic.</p>
+citations:
+
+  - authors:
+      - Sergei N. Artëmov
+      - T. Strassen
+    title: The basic logic of proofs
+    year: 1993
+
+  - author: Sergei N. Artëmov
+    title: Logic of proofs
+    year: 1994
+
+  - author: D. van Dalen
+    title: Logic and structure
+    year: 1994
+
+  - author: K. Gödel
+    title: Eine Interpretation des intuitionistichen Aussagenkalkuls
+    year: 1933
+
+  - authors:
+      - D. Guaspary
+      - R. M. Solovay
+    title: Rosser sentences
+    year: 1979
+
+  - author: A. Heyting
+    title: Die intuitionistiche Grundlegung der Mathematik
+    year: 1931
+
+  - authors:
+      - D. Hilbert
+      - P. Bernays
+    title: Grundlagen der Mathematik
+    year: 1934
+
+  - author: A. Kolmogorov
+    title: Zur Deutung der intuitionistichen Logik
+    year: 1932
+
+  - authors:
+      - J. C. C. McKinsey
+      - A. Tarski
+    title: Some theorems about the sentential calculi of Lewis and Heyting
+    year: 1948
+
+  - authors:
+      - A.S. Troelstra
+      - D. van Dalen
+    title: "Constructivism in mathematics: An introduction, vol. 1"
+    year: 1988
+
+  - author: C. Smoryński
+    title: The incompleteness theorems
+    year: 1977

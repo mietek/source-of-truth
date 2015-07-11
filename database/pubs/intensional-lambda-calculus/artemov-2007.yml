@@ -1,6 +1,6 @@
 title: The intensional lambda calculus
 authors:
-  - Sergei Artemov
+  - Sergei N. Artëmov
   - Eduardo Bonelli
 year: 2007
 tag: Intensional lambda calculus
@@ -11,25 +11,25 @@ citations:
 
   - authors:
       - Jesse Alt
-      - Sergei Artemov
+      - Sergei N. Artëmov
     title: Reflective λ-calculus
     year: 2001
 
   - authors:
-      - Sergei Artemov
+      - Sergei N. Artëmov
       - Eduardo Bonelli
     title: The intensional lambda calculus
     year: 2006
 
-  - author: Sergei Artemov
+  - author: Sergei N. Artëmov
     title: Operational modal logic
     year: 1995
 
-  - author: Sergei Artemov
+  - author: Sergei N. Artëmov
     title: Proof realization of intuitionistic and modal logics
     year: 1996
 
-  - author: Sergei Artemov
+  - author: Sergei N. Artëmov
     title: Unified semantics of modality and λ-terms via proof polynomials
     year: 2001
 
