@@ -76,7 +76,7 @@ citations:
   - authors:
       - Herman Geuvers
       - Mark-Jan Nederhof
-    title: Modular proof of strong normalization for the calculus of constructions
+    title: A modular proof of strong normalization for the calculus of constructions
     year: 1991
 
   - author: Herman Geuvers
@@ -84,7 +84,7 @@ citations:
     year: 1993
 
   - author: Jean-Yves Girard
-    title: Interprétation fonctionelle et élimination des coupures de l’arithmétique d’ordre supérieur
+    title: Interprétation fonctionnelle et élimination des coupures de l’arithmétique d’ordre supérieur
     year: 1972
 
   - authors:

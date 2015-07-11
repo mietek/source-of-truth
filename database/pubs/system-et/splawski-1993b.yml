@@ -67,7 +67,7 @@ citations:
 
   - author: T. Coquand
     title: Metamathematical investigations of a calculus of constructions
-    year: 1990
+    year: 1989
 
   - authors:
       - T. Coquand
@@ -89,7 +89,7 @@ citations:
     year: 1972
 
   - author: N.G. de Bruijn
-    title: The mathematical language Automath
+    title: "The mathematical language Automath: Its usage, and some of its extensions"
     year: 1970
 
   - author: N.G. de Bruijn
@@ -305,8 +305,8 @@ citations:
     year: 1972
 
   - authors:
-      - J.P. Seldin
       - J.R. Hindley
+      - J.P. Seldin
     title: Introduction to combinators and λ-calculus
     year: 1986
 
@@ -321,7 +321,7 @@ citations:
     year: 1922
 
   - author: S. Stenlund
-    title: Combinators, lambda-terms, and proof theory
+    title: Combinators, λ-terms, and proof theory
     year: 1972
 
   - author: G. Sundholm

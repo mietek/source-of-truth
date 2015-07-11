@@ -1,0 +1,575 @@
+title: Lambda calculi with types
+author: Henk P. Barendregt
+year: 1992
+numbered: n
+citations:
+
+  - author: S.J. van Bakel
+    year: 1991
+    title: Complete restrictions of the intersection type discipline
+
+  - author: H.P. Barendregt
+    year: 1984
+    title: "The lambda calculus: Its syntax and semantics"
+
+  - author: H.P. Barendregt
+    year: 1990
+    title: Functional programming and lambda calculus
+
+  - author: H.P. Barendregt
+    year: 1991
+    title: Introduction to generalised type systems
+
+  - authors:
+      - H.P. Barendregt
+      - M. Coppo
+      - M. Dezani-Ciancaglini
+    title: A filter lambda model and the completeness of type assignment
+    year: 1983
+
+  - authors:
+      - H.P. Barendregt
+      - K. Hemerik
+    title: Types in lambda calculi and programming languages
+    year: 1990
+
+  - authors:
+      - H.P. Barendregt
+      - W.J.M. Dekkers
+    title: Typed lambda calculi
+
+  - authors:
+      - H.P. Barendregt
+      - A. Rezus
+    title: Semantics of classical Automath and related systems
+    year: 1983
+
+  - author: E. Barendsen
+    title: Representation of logic, data types, and recursive functions in typed lambda calculi
+    year: 1989
+
+  - authors:
+      - E. Barendsen
+      - H. Geuvers
+    title: Conservativity of λP over PRED
+    year: 1989
+
+  - author: L.S. van Benthem Jutting
+    title: Personal communication
+    year: 1989
+
+  - author: L.S. van Benthem Jutting
+    title: Typing in pure type systems
+
+  - author: S. Berardi
+    title: Towards a mathematical analysis of the Coquand-Huet calculus of constructions and the other systems in Barendregt’s cube
+    year: 1988
+
+  - author: S. Berardi
+    title: Personal communication
+    year: 1988
+
+  - author: S. Berardi
+    title: Personal communication
+    year: 1989
+
+  - author: S. Berardi
+    title: Type dependence and constructive mathematics
+    year: 1990
+
+  - authors:
+      - C. Böhm
+      - A. Berarducci
+    title: Automatic synthesis of typed Λ-programs on term algebras
+    year: 1985
+
+  - author: N.G. de Bruijn
+    title: "The mathematical language Automath: Its usage, and some of its extensions"
+    year: 1970
+
+  - author: N.G. de Bruijn
+    title: A survey of the Automath project
+    year: 1980
+
+  - authors:
+      - L. Cardelli
+      - P. Wegner
+    title: On understanding types, data abstraction, and polymorphism
+    year: 1985
+
+  - author: A. Church
+    title: A set of postulates for the foundation of logic
+    year: 1932
+
+  - author: A. Church
+    title: A set of postulates for the foundation of logic
+    year: 1933
+
+  - author: A. Church
+    title: A formulation of the simple theory of types
+    year: 1940
+
+  - author: A. Church
+    title: The calculi of lambda-conversion
+    year: 1941
+
+  - author: M. Coppo
+    title: A completeness theorem for recursively defined types
+    year: 1985
+
+  - authors:
+      - M. Coppo
+      - F. Cardone
+    title: "Type inference with recursive types: Syntax and semantics"
+    year: 1991
+
+  - authors:
+      - M. Coppo
+      - M. Dezani-Ciancaglini
+      - G. Longo
+      - F. Honsell
+    title: Extended type structures and filter lambda models
+    year: 1984
+
+  - authors:
+      - M. Coppo
+      - M. Dezani-Ciancaglini
+      - B. Venneri
+    title: Functional characters of solvable terms
+    year: 1981
+
+  - authors:
+      - M. Coppo
+      - M. Dezani-Ciancaglini
+      - M. Zacchi
+    title: Type theories, normal forms, and D1 lambda models
+    year: 1987
+
+  - author: T. Coquand
+    title: Une théorie des constructions
+    year: 1985
+
+  - author: T. Coquand
+    title: An analysis of Girard’s paradox
+    year: 1986
+
+  - author: T. Coquand
+    title: Metamathematical investigations of a calculus of constructions
+    year: 1989
+
+  - author: T. Coquand
+    title: "Reynold’s paradox with the Type : Type axiom"
+    year: 1989
+
+  - authors:
+      - T. Coquand
+      - G. Huet
+    title: The calculus of constructions
+    year: 1988
+
+  - author: H.B. Curry
+    title: Functionality in combinatory logic
+    year: 1934
+
+  - author: H.B. Curry
+    title: Modified basic functionality in combinatory logic
+    year: 1969
+
+  - authors:
+      - H.B. Curry
+      - R. Feys
+    title: Combinatory logic, vol. 1
+    year: 1958
+
+  - authors:
+      - H.B. Curry
+      - J.R. Hindley
+      - J.P. Seldin
+    title: Combinatory logic, vol. 2
+    year: 1972
+
+  - author: Diederik Ton van Daalen
+    title: The language theory of Automath
+    year: 1980
+
+  - author: Dirk van Dalen
+    title: Logic and structure
+    year: 1983
+
+  - author: M. Davis
+    title: Computability and unsolvability
+    year: 1958
+
+  - authors:
+      - M. Dezani-Ciancaglini
+      - I. Margaria
+    title: Polymorphic types, fixed-point combinators, and continuous lambda models
+    year: 1987
+
+  - author: F.B. Fitch
+    title: "Symbolic logic: An introduction"
+    year: 1952
+
+  - author: F.B. Fitch
+    title: Elements of combinatory logic
+    year: 1974
+
+  - author: M.M. Fokkinga
+    title: "Programming languages concepts: The lambda calculus approach"
+    year: 1987
+
+  - authors:
+      - K. Fujita
+      - H. Tonino
+    title: Logical systems are generalised type systems
+    year: 1991
+
+  - author: R.O. Gandy
+    title: Proofs of strong normalisation
+    year: 1980
+
+  - author: H. Geuvers
+    title: The interpretation of logics in type systems
+    year: 1988
+
+  - author: H. Geuvers
+    title: Theory of constructions is not conservative over higher order logic
+    year: 1989
+
+  - author: H. Geuvers
+    title: Type systems for higher order logic
+    year: 1990
+
+  - authors:
+      - H. Geuvers
+      - M.-J. Nederhof
+    title: A modular proof of strong normalization for the calculus of constructions
+    year: 1991
+
+  - authors:
+      - P. Giannini
+      - S. Ronchi Della Rocca
+    title: Characterisation of typings in polymorphic type discipline
+    year: 1988
+
+  - author: J.-Y. Girard
+    title: Interprétation fonctionnelle et élimination des coupures de l’arithmétique d’ordre supérieur
+    year: 1972
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - authors:
+      - R. Harper
+      - F. Honsell
+      - G. Plotkin
+    title: A framework for defining logics
+    year: 1987
+
+  - author: L. Helmink
+    title: Girard’s paradox in λU
+    year: 1991
+
+  - author: F. Henglein
+    title: "A lower bound for full polymorphic type inference: Girard-Reynolds typability is DEXPTIME-hard"
+    year: 1990
+
+  - author: J.R. Hindley
+    title: The principal type scheme of an object in combinatory logic
+    year: 1969
+
+  - author: J.R. Hindley
+    title: The simple semantics for Coppo-Dezani-Sallé types
+    year: 1983
+
+  - authors:
+      - J.P. Seldin
+      - J.R. Hindley
+    title: "To H. B. Curry: Essays on combinatory logic, lambda calculus, and formalism"
+    year: 1980
+
+  - authors:
+      - J.R. Hindley
+      - J.P. Seldin
+    title: Introduction to combinators and λ-calculus
+    year: 1986
+
+  - author: D. Hofstadter
+    title: "Gödel, Escher, Bach: An eternal golden braid"
+    year: 1979
+
+  - author: W.A. Howard
+    title: The formulae-as-types notion of construction
+    year: 1980
+
+  - authors:
+      - W.A. Howard
+      - G. Kreisel
+      - R.J. Parikh
+      - W.W. Tait
+    title: Stanford report
+    year: 1963
+
+  - author: D. Howe
+    title: The computational behaviour of Girard’s paradox
+    year: 1987
+
+  - author: B.P.F. Jacobs
+    title: The inconsistency of higher order extensions of Martin-Löf’s type theory
+    year: 1989
+
+  - author: B.P.F. Jacobs
+    title: Categorical type theory
+    year: 1991
+
+  - authors:
+      - B.P.F. Jacobs
+      - I. Margeria
+      - M. Zacchi
+    title: Filter models with polymorphic types
+
+  - authors:
+      - A.J. Kfoury
+      - J. Tiuryn
+      - P. Urzyczyn
+    title: ML typability is DEXPTIME-complete
+    year: 1990
+
+  - author: S.C. Kleene
+    title: λ-definability and recursiveness
+    year: 1936
+
+  - authors:
+      - S.C. Kleene
+      - J.B. Rosser
+    title: The inconsistency of certain formal logics
+    year: 1935
+
+  - author: Jan Willem Klop
+    title: Combinatory reduction systems
+    year: 1980
+
+  - author: Jean-Louis Krivine
+    title: "Lambda-calcul: Types et modèles"
+    year: 1990
+
+  - authors:
+      - J. Lambek
+      - P.J. Scott
+    title: Introduction to higher order categorical logic
+    year: 1986
+
+  - author: H. Läuchli
+    title: An abstract notion of realizability for which intuitionistic predicate calculus is complete
+    year: 1970
+
+  - author: J. van Leeuwen
+    title: Handbook of theoretical computer science
+    year: 1990
+
+  - author: D. Leivant
+    title: Reasoning about functional programs and complexity classes associated with type disciplines
+    year: 1983
+
+  - author: D. Leivant
+    title: Contracting proofs to programs
+    year: 1990
+
+  - author: M. Löb
+    title: Embedding first order predicate logic in fragments of intuitionistic logic
+    year: 1976
+
+  - authors:
+      - G. Longo
+      - E. Moggi
+    title: Constructive natural deduction and its modest interpretation
+    year: 1988
+
+  - author: Z. Luo
+    title: An extended calculus of constructions
+    year: 1990
+
+  - authors:
+      - D. MacQueen
+      - G.D. Plotkin
+      - R. Sethi
+    title: An ideal model for recursive polymorphic types
+    year: 1984
+
+  - author: S. Malecki
+    title: Private communication
+    year: 1989
+
+  - author: P. Martin-Löf
+    title: A construction of the provable wellorderings of the theory of species
+    year: 1971
+
+  - author: P. Martin-Löf
+    title: Intuitionistic type theory
+    year: 1984
+
+  - author: E. Mendelson
+    title: Introduction to mathematical logic
+    year: 1987
+
+  - author: P. Mendler
+    title: Inductive types and type constraints in second-order lambda calculus
+    year: 1987
+
+  - author: A.R. Meyer
+    title: Personal communication
+    year: 1988
+
+  - author: R. Milner
+    title: A theory of type polymorphism in programming
+    year: 1978
+
+  - author: R. Milner
+    title: A proposal for Standard ML
+    year: 1984
+
+  - author: J.C. Mitchell
+    title: Type inference and type containment
+    year: 1984
+
+  - author: J.C. Mitchell
+    title: Polymorphic type inference and containment
+    year: 1988
+
+  - author: J.C. Mitchell
+    title: Type systems for programming languages
+    year: 1990
+
+  - author: D. Mirimanoff
+    title: Les antinomies de Russell et de Burali-Forti et le problème fondamental de la théorie des ensembles
+    year: 1917
+
+  - author: A. Mostowski
+    title: On the rules of proof in the pure functional calculus of first order
+    year: 1951
+
+  - author: R.P. Nederpelt
+    title: Strong normalization in a typed lambda calculus with lambda structured types
+    year: 1973
+
+  - authors:
+      - A. Nerode
+      - P. Odifreddi
+    title: Lambda calculi and constructive logics
+
+  - author: P. Odifreddi
+    title: Logic in computer science
+    year: 1990
+
+  - author: D. Pavlović
+    title: Predicates and fibrations
+    year: 1990
+
+  - author: W. Peremans
+    title: Een opmerking over intuitionistische logica
+    year: 1949
+
+  - author: F. Pfenning
+    title: Partial polymorphic type inference and higher order unification
+    year: 1988
+
+  - author: D. Prawitz
+    title: "Natural deduction: A proof-theoretical study"
+    year: 1965
+
+  - author: W. V. O. Quine
+    title: Set theory and its logics
+    year: 1963
+
+  - author: G.R. Renardel de Lavalette
+    title: Strictness analysis via abstract interpretation for recursively defined types
+
+  - author: J.C. Reynolds
+    title: Towards a theory of type structure
+    year: 1974
+
+  - author: J.C. Reynolds
+    title: Polymorphism is not set-theoretic
+    year: 1984
+
+  - author: J.C. Reynolds
+    title: Three approaches to type theory
+    year: 1985
+
+  - author: J.A. Robinson
+    title: A machine oriented logic based on the resolution principle
+    year: 1965
+
+  - author: M. Schönfinkel
+    title: Über die Bausteine der mathematischen Logik
+    year: 1924
+
+  - author: H. Schwichtenberg
+    title: "Proof theory: Applications of cut-elimination"
+    year: 1977
+
+  - author: R. Smullyan
+    title: To mock a mockingbird
+    year: 1985
+
+  - author: D.S. Scott
+    title: Data types as lattices
+    year: 1976
+
+  - author: S. Stenlund
+    title: Combinators, λ-terms, and proof theory
+    year: 1972
+
+  - author: M.D.G. Swaen
+    title: Weak and strong sum-elimination in intuitionistic type theory
+    year: 1989
+
+  - author: W.W. Tait
+    title: Intensional interpretation of functionals of finite type I
+    year: 1967
+
+  - author: W.W. Tait
+    title: A realizability interpretation of the theory of species
+    year: 1975
+
+  - author: J. Terlouw
+    title: "On definition trees of ordinal recursive functionals: Reduction of the recursion orders by means of type level raising"
+    year: 1982
+
+  - author: J. Terlouw
+    title: Een nadere bewijstheoretische analyse van GSTT’s
+    year: 1989
+
+  - author: A.S. Troelstra
+    title: Metamathematical investigations of intuitionistic arithmetic and analysis
+    year: 1973
+
+  - author: A.M. Turing
+    title: Computability and λ-definability
+    year: 1937
+
+  - author: R. de Vrijer
+    title: Big trees in a λ-calculus with λ-expressions as types
+    year: 1975
+
+  - author: C.P. Wadsworth
+    title: Semantics and pragmatics of the lambda-calculus
+    year: 1971
+
+  - author: M. Wand
+    title: A simple algorithm and proof for type inference
+    year: 1987
+
+  - authors:
+      - A.N. Whitehead
+      - B. Russell
+    title: Principia mathematica
+    year: 1910
+
+  - author: W. Zwicker
+    title: "Playing games with games: The hypergame paradox"
+    year: 1987

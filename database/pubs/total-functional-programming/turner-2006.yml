@@ -20,7 +20,7 @@ citations:
     year: 1936
 
   - author: A. Church
-    title: Review of A.M. Turing (1936) “On computable numbers…”
+    title: Review of A. M. Turing (1936) “On computable numbers…”
     year: 1937
 
   - author: A. Church
@@ -208,5 +208,5 @@ citations:
     year: 2004
 
   - author: Christopher P. Wadsworth
-    title: The semantics and pragmatics of the lambda calculus
+    title: Semantics and pragmatics of the lambda-calculus
     year: 1971

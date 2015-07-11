@@ -1,0 +1,114 @@
+title: Unified semantics for modality and λ-terms via proof polynomials
+author: Sergei N. Artëmov
+year: 2001
+tag: Intensional lambda calculus
+abstract: |
+  <p>It is shown that the modal logic S4, simple λ-calculus and modal λ-calculus admit a realization in a very simple propositional logical system LP, which has an exact provability semantics. In LP both modality and λ-terms become objects of the same nature, namely, proof polynomials. The provability interpretation of modal λ-terms presented here may be regarded as a system-independent generalization of the Curry-Howard isomorphism of proofs and λ-terms.</p>
+citations:
+
+  - authors:
+      - Sergei N. Artëmov
+      - T. Strassen
+    title: Functionality in the basic logic of proofs
+    year: 1993
+
+  - author: Sergei N. Artëmov
+    title: Logic of proofs
+    year: 1994
+
+  - author: Sergei N. Artëmov
+    title: Operational modal logic
+    year: 1995
+
+  - author: Sergei N. Artëmov
+    title: Proof realizations of typed λ-calculi
+    year: 1997
+
+  - author: J. van Benthem
+    title: Reflections on epistemic logic
+    year: 1991
+
+  - authors:
+      - G. Bierman
+      - V. de Paiva
+    title: Intuitionistic necessity revisited
+    year: 1996
+
+  - author: G. Boolos
+    title: "The unprovability of consistency: An essay in modal logic"
+    year: 1979
+
+  - author: G. Boolos
+    title: Logic of provability
+    year: 1993
+
+  - author: V.A.J. Borghuis
+    title: "Coming to terms with modal logic: On the interpretation of modalities in typed λ-calculus"
+    year: 1994
+
+  - author: D. van Dalen
+    title: Logic and structure
+    year: 1994
+
+  - author: D.M. Gabbay
+    title: Labelled deductive systems
+    year: 1994
+
+  - authors:
+      - J.-Y. Girard
+      - Y. Lafont
+      - P. Taylor
+    title: Proofs and types
+    year: 1990
+
+  - author: K. Gödel
+    title: Vortrag bei Zilsel
+    year: 1995
+
+  - author: V.N. Krupski
+    title: Operational logic of proofs with functionality condition on proof predicate
+    year: 1997
+
+  - authors:
+      - S. Martini
+      - A. Masini
+    title: A computational interpretation of modal proofs
+    year: 1994
+
+  - author: Per Martin-Löf
+    title: Constructive mathematics and computer programming
+    year: 1982
+
+  - author: Per Martin-Löf
+    title: Intuitionistic type theory
+    year: 1984
+
+  - author: E. Mendelson
+    title: Introduction to mathematical logic
+    year: 1987
+
+  - authors:
+      - C. Parsons
+      - W. Sieg
+    title: Introductory note to *1938a
+    year: 1995
+
+  - authors:
+      - F. Pfenning
+      - H.C. Wong
+    title: On a modal lambda-calculus for S4
+    year: 1995
+
+  - author: R. Smullyan
+    title: Diagonalization and self-reference
+    year: 1994
+
+  - author: G. Takeuti
+    title: Proof theory
+    year: 1975
+
+  - authors:
+      - A.S. Troelstra
+      - H. Schwichtenberg
+    title: Basic proof theory
+    year: 1996
