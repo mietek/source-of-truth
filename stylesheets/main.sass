@@ -38,6 +38,7 @@ $small-offset: -2px
 
 *, *:before, *:after
   box-sizing: border-box
+  -webkit-tap-highlight-color: transparent
 
 
 html
@@ -64,7 +65,6 @@ body
 
 @mixin clickable
   cursor: pointer
-  -webkit-tap-highlight-color: transparent
 
 .clickable
   @include clickable
