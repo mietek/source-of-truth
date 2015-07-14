@@ -2,7 +2,6 @@
   "name": "source-of-truth",
   "description": "TODO",
   "dependencies": {
-    "react": "~0.13",
     "ease-scroll": "~1.0.15"
   }
 }

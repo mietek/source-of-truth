@@ -1,1 +1,1 @@
-../../bower_components/react/react-with-addons.js
+../../node_modules/react/dist/react-with-addons.js
